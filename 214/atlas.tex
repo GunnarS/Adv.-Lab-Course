@@ -7,10 +7,69 @@
 \begin{document}
 
 \section{Einleitung}
-mööp
-\section{Theoretische Grundlagen}
+In diesem Praktikumsversuch soll die Physik des ATLAS-Experimentes kennengelernt und untersucht werden. So wird sich einleitend anhand von \emph{event displays} mit den zu Grunde liegenden Prozessen und dem ATLAS vertraut gemacht. Anschließend wird die Messung der Elektronenenergie anhand der $Z^0$-Masse kalibriert, woraufhin dann entweder eine Bestimmung der W-Boson-Masse oder aber die Suche nach neuer Physik anhand von simulierten ATLAS Daten erfolgt.
 
-\section{Versuchsaufbau}
+\section{Theoretische Grundlagen}
+\subsection{Das Standardmodell}
+\subsubsection{Teilchen}
+\subsubsection{Wechselwirkungen}
+
+\subsection{Neue Physik}
+
+\subsection{Kinematik}
+
+\subsection{Der LHC}
+
+\subsection{ATLAS}
+
+\subsection{Koordinatensysteme}
+Bei der Wahl eines angemessenen Koordinatensystems bieten sich im Wesentlichen drei an. Zum einen besteht die Möglichkeit in einem kartesischen Koordinatensystem die Strahlrichtung als z-Achse zu wählen, zum Mittelpunkt des LHC-Ringes zeigt die x-Achse und orthogonal auf beiden steht die y-Achse.
+Zum anderen steht die Wahl eines kanonischen Kugelkoordinatensystems zur Verfügung. Da jedoch die Ereignisse nicht gleichverteilt auftreten, sondern auf Grund der nur geringen Transversalimpulse eine Häufung bei kleinen Winkeln zu erwarten ist, modifiziert man das Koordinatensystem und führt eine neue Größe ein, die Rapidität $y \equiv \frac{1}{2} \ln{\frac{E+p_z}{E-p_z}}$. Rapiditätsdifferenzen sind invariant unter Lorentz-Boosts parallel zu z-Achse. In Systemen mit einer verschwindenden invarianten Masse erhält man mit dem Winkel $\theta$ zur Strahlachse stattdessen die sogenannte Pseudo-Rapidität
+\begin{align}
+\eta = - \ln{\left(\tan{\frac{\theta}{2}}\right)}  \ \ldotp
+\end{align}
+Der ATLAS-Detektor kann Pseudo-Rapiditäten $|\eta| < 2.5$ für Leptonen sowie $|\eta| < 5$ für Hadronen auflösen.
+
+
+\section{Aufgaben vor Versuchsbeginn}
+\subsection*{Frage A: Zerfall des $Z^0$-Bosons}
+\emph{Welchen Wert hat der Impuls eines Elektrons beim Zerfall des $Z^0$-Bosons ($Z^0 \rightarrow e^+ e^-$) im Ruhesystem des $Z^0$-Bosons?}
+
+Das $Z^0$-Boson wird in Ruhe betrachten, hat also einen verschwindenden Dreier-Impuls $\vec{p}_Z$. Da Vierer-Impuls-Erhaltung gilt, verschwindet auch die Summe der Dreier-Impulse von Positron und Elektron ($\vec{p}_{e^+} = - \vec{p}_{e^-}$). Man betrachte also die 0-Komponente der Vierer-Impulse:
+
+%noch schöner machen:
+\begin{eqnarray*}
+               E_{Z^0} &=& E_{e^+} + E_{e^-} \\
+\Rightarrow  m^2_{Z^0} &=& 2 E_{e^-} \\
+                       &=& 2 \sqrt{m^2_e + \vec{p_e}^2} \\
+\Rightarrow  \vec{p_e}^2 &=& \frac{m^2_{Z^0}}{4} - m^2_e \\
+\Rightarrow  \vec{p_e}   &=& \sqrt{\frac{m^2_{Z^0}}{4} - m^2_e} \\
+                         &=& \unit[45.6]{GeV}
+\end{eqnarray*}
+
+\subsection*{Frage B: Elektron-Positron-Streuung}
+\emph{Wie groß ist der Impuls der $\tau$-Leptonen bei der Reaktion $e^+ e^- \rightarrow \tau^+ \tau^-$ im CMS ($\sqrt{s} = \unit[5]{GeV}$)?}
+
+Es gilt Energieerhaltung ($s = s'$), somit folgt:
+\begin{eqnarray*}
+    \sqrt{s} &=& E_{\tau^+} + E_{\tau^-} \\
+             &=& 2 E_{\tau^+} \\
+             &=& 2 \sqrt{m^2_{\tau} + p^2_{\tau}} \\
+\Rightarrow  p^2_{\tau} &=& \frac{s}{4} - m^2_{\tau} \\
+\Rightarrow  p_{\tau}   &=& \sqrt{\frac{s}{4} - m^2_{\tau}} \\
+\Rightarrow  p_{\tau}   &=& \unit[1.76]{GeV}
+\end{eqnarray*}
+
+\subsection*{Frage C: Transversalimpuls des W-Bosons}
+\emph{Wie kann der Transversalimpuls des W-Bosons bestimmt werden? Wie können Sie die Variable} \texttt{ptw} \emph{aus den anderen ROOT-Variablen bestimmen?}
+
+%noch hinschreiben
+
+\subsection*{Frage D: Kinematik}
+\emph{Leiten Sie aus Gleichung (4.4) die Gleichung (4.5) her.~\cite{skript}}
+
+%noch hinschreiben
+
 
 \section{Versuchsdurchführung und Auswertung}
 

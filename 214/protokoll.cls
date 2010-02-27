@@ -58,6 +58,12 @@ stringstyle=\color{red}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{8pt}
 
+
+%%%% === Vektor fett darstellen ===
+\let\oldvec\vec
+\def\vec#1{{\boldsymbol{#1}}} %Fetter Vektor
+%\newcommand{\ve}{\vec}
+
 \usepgflibrary{plotmarks}
 
 \author{Kian Salimkhani und Matthias Schmitz}
