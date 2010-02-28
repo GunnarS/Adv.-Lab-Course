@@ -4,6 +4,19 @@
 \newcommand{\versuch}{ATLAS}
 \newcommand{\nummer}{E214}
 
+\lstset{language=[Visual]C++,
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+tabsize=2,	                % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},          % if you want to add a comment within your code
+keywordstyle=\color{blue}\bfseries,
+commentstyle=\color{MidnightBlue}\itshape,
+basicstyle=\footnotesize
+}
+
 \begin{document}
 
 \section{Einleitung}
@@ -24,7 +37,7 @@ In diesem Praktikumsversuch soll die Physik des ATLAS-Experimentes kennengelernt
 
 \subsection{Koordinatensysteme}
 Bei der Wahl eines angemessenen Koordinatensystems bieten sich im Wesentlichen drei an. Zum einen besteht die Möglichkeit in einem kartesischen Koordinatensystem die Strahlrichtung als z-Achse zu wählen, zum Mittelpunkt des LHC-Ringes zeigt die x-Achse und orthogonal auf beiden steht die y-Achse.
-Zum anderen steht die Wahl eines kanonischen Kugelkoordinatensystems zur Verfügung. Da jedoch die Ereignisse nicht gleichverteilt auftreten, sondern auf Grund der nur geringen Transversalimpulse eine Häufung bei kleinen Winkeln zu erwarten ist, modifiziert man das Koordinatensystem und führt eine neue Größe ein, die Rapidität $y \equiv \frac{1}{2} \ln{\frac{E+p_z}{E-p_z}}$. Rapiditätsdifferenzen sind invariant unter Lorentz-Boosts parallel zu z-Achse. In Systemen mit einer verschwindenden invarianten Masse erhält man mit dem Winkel $\theta$ zur Strahlachse stattdessen die sogenannte Pseudo-Rapidität
+Zum anderen steht die Wahl eines kanonischen Kugelkoordinatensystems zur Verfügung. Da jedoch die Ereignisse nicht gleichverteilt auftreten, sondern auf Grund der nur geringen Transversalimpulse eine Häufung bei kleinen Winkeln zu erwarten ist, modifiziert man das Koordinatensystem und führt eine neue Größe ein, die Rapidität $y \equiv \frac{1}{2} \ln{\frac{E+p_z}{E-p_z}}$. Rapiditätsdifferenzen sind invariant unter Lorentz-Boosts parallel zu z-Achse. In Systemen in denen die Partonenmassen vernachlässigt werden können erhält man mit dem Winkel $\theta$ zur Strahlachse stattdessen die sogenannte Pseudo-Rapidität
 \begin{align}
 \eta = - \ln{\left(\tan{\frac{\theta}{2}}\right)}  \ \ldotp
 \end{align}
@@ -88,10 +101,91 @@ Es gilt Energieerhaltung ($s = s'$), somit folgt:
 
 
 \section{Versuchsdurchführung und Auswertung}
-
+\subsection{Teil 2: Kalibration der Elektronen}\label{subsec:ElektronKalibration}
+Die genauste Methode um die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen besteht, die alle verschiedene Eigenschaften haben und aufgrund systematischer Energieverluste durch inaktive Regionen im Detektor und Energieverluste der Elektronen bevor sie das Kalorimeter erreichen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich aufgrund der sehr genau bekannten Eigenschaften des $Z^0$, anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mithilfe des Programms ROOT analysieren.\\
+Zuerst plotten wir ein Histogramm der Invarianten Masse des Elektron-Positron-Paars und fitten eine Voigt Funktion an den erhaltenen Graph (siehe Abbildung \ref{fig:Zee_raw}). Die Voigt-Funktion ist das Ergebnis einer Faltung der Breit-Wigner-Resonanzkurve mit einer Gaußverteilung, die die Verbreiterung der Kurve durch Detektoreffekte approximiert. Wie erwartet zeigt der Graph einen Peak, der aufgrund der mangelnden Kalibration der Energiemessung nicht genau mit der $Z^0$ Masse übereinstimmt. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Zee_raw.pdf}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung.}
+	\label{fig:Zee_raw}
+\end{figure}
+Zur Kalibration betrachtet man nun die Position des $Z^0$ Peaks in Abhängigkeit verschiedener Variablen, anschließend kann man diese durch Multiplikation der Energiewerte mithilfe eines C++ Scriptes auf die bekannte $Z^0$ Masse korrigieren. Im C++ Script stehen folgende Variablen zur Verfügung:
+\begin{itemize}
+\item $E_\textit{raw}$: Die unkalibrierte Energie.\\
+\item $pt$: Der transversale Impuls.\\
+\item $phi, eta$: Richtung des Elektrons (azimutaler Winkel $\phi$ und $\eta$).\\
+\item $etiso$: Transversale Energie im Kalorimeter in der Umgebung des Elektrons.\\
+\item $eoverp$: Verhältnis zwischen Elektron-Energie und -Impuls.\\
+\item $drjet$: Abstand des Elektrons zum nächsten Jet (in der $\eta\phi$ Ebene)
+\end{itemize}
+Als Beispiel sei in Abbildung \ref{fig:Zee_eta} die gemessene $Z^0$ Resonanz für verschiedene $\eta$-Bereiche dargestellt.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Zee_eta.pdf}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons vor der Kalibration.}
+	\label{fig:Zee_eta}
+\end{figure}
+Für die verschiedenen $\eta$ Bereiche lassen sich nun verschiedene Multiplikatoren für die Energiewerte bestimmen um die $Z^0$ Resonanz jeweils auf den richtigen Wert zu verschieben. Dieses Verfahren kann man iterativ auch auf die anderen Variablen anwenden. Das von uns auf diese Weise geschriebene Skript findet sich im Anhang \ref{subsec:eleccalib}. In Abbildung  \ref{fig:Zee_eta_calib} ist analog zu Abbilung \ref{fig:Zee_eta} die gemessene $Z^0$ Resonanz für verschiedene Werte von $\eta$ nach der Kalibration dargestellt. In Abbilung \ref{fig:Zee_calib} findet sich der Fit an die Gesamtverteilung nach der Kalibration mit den Fitparametern. Die gemessene $Z^0$ liegt nun mit $91.17 \pm 0.02$ GeV sehr gut verträglich mit dem Literaturwert von $91.1876 \pm 0.0021$ GeV. Die Auflösung des Detektors hat sich von $3.977 \pm 0.026$ GeV auf $1.963 \pm 0.02$ GeV verbessert. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Zee_eta_calib.pdf}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons nach der Kalibration.}
+	\label{fig:Zee_eta_calib}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{Zee_calib.pdf}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ nach der Kalibration mit VoigtFit und Parametern.}
+	\label{fig:Zee_calib}
+\end{figure}
 \section{Zusammenfassung}
 
 \begin{appendix}
+  \section{Quellcode}\label{sec:sourcecode}
+\subsection{ElecCalib.cpp}\label{subsec:eleccalib}
+\begin{lstlisting}
+double ElecCalib(double e_raw, double pt, double eta, 
+		 double phi, double etiso, double eoverp, double mindrjet)
+{
+  double energy = e_raw;
+  if ((eta)>2.0) energy = energy * 91.1876/81.25*91.1876/88.93*91.1876/90.41*91.1876/90.87;
+  else if ((eta)>1.5) energy = energy * 91.1876/82.03*91.1876/89.06*91.1876/90.3*91.1876/90.77;
+  else if ((eta)>1.0) energy = energy * 91.1876/85.25*91.1876/90.88*91.1876/91.28*91.1876/91.29;
+  else if ((eta)>0.0) energy = energy * 91.1876/88.29*91.1876/91.67*91.1876/91.42*91.1876/91.27;
+  else if ((eta)>-1.0) energy = energy * 91.1876/91.2641*91.1876/88.4924*91.1876/91.2573*91.1876/91.4781*91.1876/91.3602;
+  else if ((eta)>-1.5) energy = energy * 91.1876/91.1872*91.1876/85.7911*91.1876/90.4713*91.1876/91.1639*91.1876/91.2424;
+  else if ((eta)>-2.0) energy = energy * 91.1876/90.7617*91.1876/82.0698*91.1876/88.7481*91.1876/90.4027*91.1876/90.869;
+  else if ((eta)>-2.5) energy = energy * 91.1876/90.8539*91.1876/81.5198*91.1876/88.6939*91.1876/90.4605*91.1876/90.8548;
+
+  if (fabs(phi)>2.0) energy = energy * 91.1876/91.3577*91.1876/91.1852;
+  else if (fabs(phi)>1.5) energy = energy * 91.1876/91.2691*91.1876/91.1819;
+  else if (fabs(phi)>1.0) energy = energy * 91.1876/91.2028*91.1876/91.253;
+  else if (fabs(phi)>0.0) energy = energy * 91.1876/91.2374*91.1876/91.2807;
+
+  if (pt>75) energy = energy * 91.1876/90.3534*91.1876/90.8199*91.1876/90.9337*91.1876/91.0716;
+  else if (pt>50) energy = energy * 91.1876/91.2934*91.1876/91.2528*91.1876/91.2152*91.1876/91.1986;
+  else if (pt>25) energy = energy * 91.1876/91.1039*91.1876/91.1697*91.1876/91.1801*91.1876/91.1844;
+  else if (pt>0) energy = energy * 91.1876/91.4275*91.1876/91.2845*91.1876/91.2393*91.1876/91.2064;
+
+  if (eoverp>7.5) energy = energy*91.1876/92.5439*91.1876/92.3647*91.1876/92.5107;
+  else if (eoverp>5.0) energy = energy*91.1876/91.3806*91.1876/91.3122*91.1876/91.3581;
+  else if (eoverp>2.5) energy = energy*91.1876/90.3963*91.1876/90.334*91.1876/90.3737;
+  else if (eoverp>0) energy = energy*91.1876/91.1876*91.1876/91.1876*91.1876/91.1876;
+
+  if (etiso>1.5) energy = energy*91.1876/91.3671*91.1876/91.1977;
+  else if (etiso>1.0) energy = energy*91.1876/91.3977*91.1876/91.2983;
+  else if (etiso>0.5) energy = energy*91.1876/91.3588*91.1876/91.2324;
+  else if (etiso>0) energy = energy*91.1876/91.1515*91.1876/91.0749;
+
+  if (mindrjet>7.5) energy = energy*91.1876/91.1876*91.1876/91.1876*91.1876/91.1876;
+  else if (mindrjet>5.0) energy = energy*91.1876/90.7937*91.1876/91.1729;
+  else if (mindrjet>2.5) energy = energy*91.1876/91.1319*91.1876/91.1002;
+  else if (mindrjet>0) energy = energy*91.1876/91.0853*91.1876/91.0663;
+
+  return energy;
+} 
+\end{lstlisting}
   \section{Tabellen}
 
   \Literatur{quellen}
