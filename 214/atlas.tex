@@ -56,7 +56,13 @@ Higgs     & $H$         & $0$  & $?$               & $0$ &   \\
 Das Higgs (siehe Kapitel \ref{cha:newph}) wird zwar vom Standardmodell postuliert, wurde bisher aber nicht experimentell nachgewiesen. 
 
 \subsubsection{Wechselwirkungen}
+Das Standardmodell kennt drei fundamentale Wechselwirkungen: die elektromagnetische, die schwache und die starke Wechselwirkung. 
 
+Die elektromagnetische Wechselwirkung wird mittels einer abelschen U(1) Eichgruppe beschrieben, die Eichbosonen (Photonen) können also nicht aneinander koppeln. Da Photonen masselos sind, ist die elektromagnetische Wechselwirkung unendlichreichweitig.
+
+Die über die Eichgruppe SU(2) beschreibbare schwache Wechselwirkung lässt sich mit der elektromagnetischen zur sogenannten elektroschwachen Wechselwirkung $SU(2) \times U(1)$ vereinheitlichen. Auf Grund ihrer massiven Eichbosonen ist die Reichweite der schwachen Wechselwirkung sehr klein, jedoch koppeln diese an alle Teilchen.
+
+Die starke Wechselwirkung wird von Gluonen vermittelt, welche die Ladung der starken Wechselwirkung, die Farbladung, selbst tragen, Selbstwechselwirkung ist also möglich. Beschrieben wird die Theorie der starken Wechselwirkung durch die nicht-abelsche Eichgruppe $SU(3)$. Gluonen sind zwar masselos, haben aber auf Grund der Selbstwechselwirkung nur eine geringe Reichweite. Es existieren nur gebundene, farblose Zustände, freie Quarks oder Gluonen gibt es nicht (\emph{confinement}). Bei sehr kleinen Abständen, also hohen Übertragsimpulsen, sind Quarks "`asymptotisch frei"'.
 
 \subsection{Neue Physik}
 \label{cha:newph}
@@ -71,6 +77,8 @@ Die hier relevanten Kandidaten für neue Physik sind:
 
 \subsection{Kinematik}
 
+\subsubsection{Virtuelle Teilchen}
+Teilchen können nach der \textsc{Heisenberg}schen Unschärferelation für kurze Zeit die für reelle Teilchen geltende Relation $E^2 - p^2 = m^2$ verletzen. Solche Teilchen bezeichnet man als "`virtuell"' oder als nicht auf der Massenschale liegend. Sie können nicht experimentell gemessen werden, vermitteln aber nach der Theorie die jeweilige Wechselwirkung. Um ein virtuelles Teilchen als solches zu kennzeichnen, verwendet man ein $^*$.
 
 \subsection{Der LHC}
 
@@ -115,7 +123,7 @@ Es gilt Energieerhaltung ($s = s'$), somit folgt:
 \end{eqnarray*}
 
 \subsection*{Fragen zu Versuchsteil 2}
-\emph{Wie kann der Transversalimpuls des W-Bosons bestimmt werden? Wie können Sie die Variable} \texttt{ptw} \emph{aus den anderen ROOT-Variablen bestimmen?}
+\emph{Wie kann der Transversalimpuls des W-Bosons bestimmt werden? Wie können Sie die Variable} \texttt{ptw} \emph{aus den anderen \texttt{ROOT}-Variablen bestimmen?}
 %antwort
 
 \emph{Leiten Sie aus Gleichung (4.4) die Gleichung (4.5) her.~\cite{skript}}
@@ -143,54 +151,55 @@ Es gilt Energieerhaltung ($s = s'$), somit folgt:
 
 \section{Versuchsdurchführung und Auswertung}
 \subsection{Teil 2: Kalibration der Elektronen}\label{subsec:ElektronKalibration}
-Die genauste Methode um die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen besteht, die alle verschiedene Eigenschaften haben und aufgrund systematischer Energieverluste durch inaktive Regionen im Detektor und Energieverluste der Elektronen bevor sie das Kalorimeter erreichen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich aufgrund der sehr genau bekannten Eigenschaften des $Z^0$, anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mithilfe des Programms ROOT analysieren.\\
-Zuerst plotten wir die in Abbilung \ref{fig:el_energy} bzw. Abbildung \ref{fig:pos_energy} dargestellten Histogramme der gemessenen Elektron- bzw. Positron-Energie. Wir stellen fest, dass beide Histogramme einen Peak bei etwa der halben $Z^0$ Masse enthalten. Entsteht bei dem harten Streuprozess ein im Laborsystem ruhendes $Z^0$, so kann es in ein Leptonpaar mit genau entgegengesetzten Impulsen zerfallen. Die beiden Leptonen haben dann jeweils die Energie der halben $Z^0$ Masse, sodass der beschriebene Peak im Histogramm entsteht.  
+Die genauste Methode, die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen mit verschiedenen Eigenschaften besteht und  systematische Energieverluste durch inaktive Regionen im Detektor sowie Energieverluste der Elektronen vor Erreichen des Kalorimeters vorliegen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich auf Grund der sehr genau bekannten Eigenschaften des $Z^0$ anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mit Hilfe des Programms \texttt{ROOT} analysieren.
+
+Zuerst plotten wir die in Abbildung \ref{fig:el_energy} bzw. Abbildung \ref{fig:pos_energy} dargestellten Histogramme der gemessenen Elektron- bzw. Positron-Energie. Wir stellen fest, dass beide Histogramme einen Peak bei etwa der halben $Z^0$-Masse enthalten. Entsteht bei dem harten Streuprozess ein im Laborsystem ruhendes $Z^0$, so kann es in ein Leptonpaar mit genau entgegengesetzten Impulsen zerfallen. Die beiden Leptonen haben dann jeweils die Energie der halben $Z^0$-Masse, sodass der beschriebene Peak im Histogramm entsteht.  
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/el_energy}
-	\caption{Energie des Elektrons beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung.}
+	\caption{Energie des Elektrons beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung}
 	\label{fig:el_energy}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/pos_energy}
-	\caption{Energie des Positrons beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung.}
+	\caption{Energie des Positrons beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung}
 	\label{fig:pos_energy}
 \end{figure}
-Als nächstes plotten wir ein Histogramm der Invarianten Masse des Elektron-Positron-Paars und fitten eine Voigt Funktion an den erhaltenen Graph (siehe Abbildung \ref{fig:Zee_raw}). Die Voigt-Funktion ist das Ergebnis einer Faltung der Breit-Wigner-Resonanzkurve mit einer Gaußverteilung, die die Verbreiterung der Kurve durch Detektoreffekte approximiert. Wie erwartet zeigt der Graph einen Peak, der aufgrund der mangelnden Kalibration der Energiemessung nicht genau mit der $Z^0$ Masse übereinstimmt. 
+Als nächstes plotten wir ein Histogramm der invarianten Masse des Elektron-Positron-Paars und passen eine \textsc{Voigt}-Funktion an den erhaltenen Graphen an (siehe Abbildung \ref{fig:Zee_raw}). Die \textsc{Voigt}-Funktion ist das Ergebnis einer Faltung der \textsc{Breit-Wigner}-Resonanzkurve mit einer \textsc{Gauß}-Verteilung, welche die Verbreiterung der Kurve durch Detektoreffekte approximiert. Wie erwartet zeigt der Graph einen Peak, der aufgrund der mangelnden Kalibration der Energiemessung nicht genau mit der $Z^0$-Masse übereinstimmt. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/Zee_raw}
-	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung.}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ mit unkalibrierter Energiemessung}
 	\label{fig:Zee_raw}
 \end{figure}
-Zur Kalibration betrachtet man nun die Position des $Z^0$ Peaks in Abhängigkeit verschiedener Variablen, anschließend kann man diese durch Multiplikation der Energiewerte mithilfe eines C++ Scriptes auf die bekannte $Z^0$ Masse korrigieren. Im C++ Script stehen folgende Variablen zur Verfügung:
+Zur Kalibration betrachtet man nun die Position des $Z^0$-Peaks in Abhängigkeit verschiedener Variablen. Anschließend kann man diese durch Multiplikation der Energiewerte mithilfe eines \texttt{C++}-Skriptes auf die bekannte $Z^0$-Masse korrigieren. Es stehen folgende Variablen zur Verfügung:
 \begin{itemize}
-\item $E_\textit{raw}$: Die unkalibrierte Energie.\\
-\item $pt$: Der transversale Impuls.\\
-\item $phi, eta$: Richtung des Elektrons (azimutaler Winkel $\phi$ und $\eta$).\\
-\item $etiso$: Transversale Energie im Kalorimeter in der Umgebung des Elektrons.\\
-\item $eoverp$: Verhältnis zwischen Elektron-Energie und -Impuls.\\
-\item $drjet$: Abstand des Elektrons zum nächsten Jet (in der $\eta\phi$ Ebene)
+\item \texttt{E\_raw}: Die unkalibrierte Energie\\
+\item \texttt{pt}: Der transversale Impuls\\
+\item \texttt{phi, eta}: Richtung des Elektrons (azimutaler Winkel $\phi$ und $\eta$)\\
+\item \texttt{etiso}: Transversale Energie im Kalorimeter in der Umgebung des Elektrons\\
+\item \texttt{eoverp}: Verhältnis zwischen Elektron-Energie und -Impuls\\
+\item \texttt{drjet}: Abstand des Elektrons zum nächsten Jet (in der $\eta\phi$-Ebene)
 \end{itemize}
-Als Beispiel sei in Abbildung \ref{fig:Zee_eta} die gemessene $Z^0$ Resonanz für verschiedene $\eta$-Bereiche dargestellt.
+Als Beispiel sei in Abbildung \ref{fig:Zee_eta} die gemessene $Z^0$-Resonanz für verschiedene $\eta$-Bereiche dargestellt.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/Zee_eta}
-	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons vor der Kalibration.}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons vor der Kalibration}
 	\label{fig:Zee_eta}
 \end{figure}
-Für die verschiedenen $\eta$ Bereiche lassen sich nun verschiedene Multiplikatoren für die Energiewerte bestimmen um die $Z^0$ Resonanz jeweils auf den richtigen Wert zu verschieben. Dieses Verfahren kann man iterativ auch auf die anderen Variablen anwenden. Das von uns auf diese Weise geschriebene Skript findet sich im Anhang \ref{subsec:eleccalib}. In Abbildung  \ref{fig:Zee_eta_calib} ist analog zu Abbilung \ref{fig:Zee_eta} die gemessene $Z^0$ Resonanz für verschiedene Werte von $\eta$ nach der Kalibration dargestellt. In Abbilung \ref{fig:Zee_calib} findet sich der Fit an die Gesamtverteilung nach der Kalibration inklusive der Fitparameter. Die gemessene $Z^0$ Masse liegt nun mit $(91.17 \pm 0.02)$ GeV sehr gut verträglich mit dem Literaturwert von $(91.1876 \pm 0.0021)$ GeV. Die Auflösung des Detektors hat sich von $(3.977 \pm 0.026)$ GeV auf $(1.963 \pm 0.020)$ GeV verbessert. 
+Für die verschiedenen $\eta$-Bereiche lassen sich nun verschiedene Multiplikatoren für die Energiewerte bestimmen um die $Z^0$-Resonanz jeweils auf den richtigen Wert zu verschieben. Dieses Verfahren kann man iterativ auch auf die anderen Variablen anwenden. Das von uns auf diese Weise geschriebene Skript findet sich im Anhang \ref{subsec:eleccalib}. In Abbildung  \ref{fig:Zee_eta_calib} ist analog zu Abbildung \ref{fig:Zee_eta} die gemessene $Z^0$-Resonanz für verschiedene Werte von $\eta$ nach der Kalibration dargestellt. In Abbildung \ref{fig:Zee_calib} findet sich der Fit an die Gesamtverteilung nach der Kalibration inklusive der Fitparameter. Die gemessene $Z^0$-Masse ist nun mit $\unit[(91.17 \pm 0.02)]{GeV}$ sehr gut verträglich mit dem Literaturwert von $\unit[(91.1876 \pm 0.0021)]{GeV}$. Die Auflösung des Detektors hat sich von $\unit[(3.977 \pm 0.026)]{GeV}$ auf $\unit[(1.963 \pm 0.020)]{GeV}$ verbessert.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/Zee_eta_calib}
-	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons nach der Kalibration.}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ für verschiedene Bereiche der Pseudorapidität $\eta$ des Elektrons nach der Kalibration}
 	\label{fig:Zee_eta_calib}
 \end{figure}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{graphics/Zee_calib}
-	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ nach der Kalibration mit VoigtFit und Parametern.}
+	\caption{Invariante Masse des Leptonpaars beim Zerfall $Z^0\rightarrow e^+e^-$ nach der Kalibration mit Voigt-Fit und Parametern}
 	\label{fig:Zee_calib}
 \end{figure}
 \subsection{Teil 3: Suche nach neuer Physik}\label{subsec:NuPhysics}
@@ -234,6 +243,8 @@ d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\
 \item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit vier-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
 \section{Zusammenfassung}
+
+
 
 \begin{appendix}
   \section{Quellcode}\label{sec:sourcecode}
