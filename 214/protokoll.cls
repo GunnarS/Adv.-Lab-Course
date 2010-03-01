@@ -7,9 +7,11 @@
 \RequirePackage{amsmath, amsthm, amssymb, amsrefs}
 \RequirePackage[ngerman]{babel}
 \RequirePackage[latin1]{inputenc}
+\RequirePackage{booktabs,multirow,xspace,gnuplot-lua-tikz}
 \RequirePackage{makeidx, graphicx, tikz, units, calc, pgfplots, fancyhdr}
 \RequirePackage{wrapfig, subfig, caption, booktabs, floatrow, listings}
-
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern,luximono}
 \pgfplotstableset{ 
     every head row/.style={before row=\toprule,after row=\midrule}, 
     every last row/.style={after row=\bottomrule}
@@ -26,7 +28,6 @@
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
 }
-
 
 \lstset{ %
 language=C++,                   % choose the language of the code
@@ -54,6 +55,7 @@ keywordstyle=\bfseries\color{black},
 commentstyle=\color{blue},
 stringstyle=\color{red}
 }
+
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{8pt}

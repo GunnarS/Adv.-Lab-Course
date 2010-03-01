@@ -1,21 +1,8 @@
 \documentclass{protokoll}
-\usepackage{booktabs,multirow,xspace,gnuplot-lua-tikz}
 \newcommand{\assistent}{M. Schmitz}
 \newcommand{\versuch}{ATLAS}
 \newcommand{\nummer}{E214}
 
-\lstset{language=[Visual]C++,
-basicstyle=\footnotesize,       % the size of the fonts that are used for the code
-backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-tabsize=2,	                % sets default tabsize to 2 spaces
-captionpos=b,                   % sets the caption-position to bottom
-breaklines=true,                % sets automatic line breaking
-breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
-escapeinside={\%*}{*)},          % if you want to add a comment within your code
-keywordstyle=\color{blue}\bfseries,
-commentstyle=\color{MidnightBlue}\itshape,
-basicstyle=\footnotesize
-}
 
 \begin{document}
 
@@ -25,6 +12,24 @@ In diesem Praktikumsversuch soll die Physik des ATLAS-Experimentes kennengelernt
 \section{Theoretische Grundlagen}
 \subsection{Das Standardmodell}
 \subsubsection{Teilchen}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcccc}
+    \toprule
+    & 1. Familie & 2. Familie & 3. Familie & Ladung \\
+    \midrule[0.75pt]
+    \multirow{2}{*}{Quarks} & $u$ & $c$ & $t$ & $+ \frac{2}{3}$\\
+                            & $d$ & $s$ & $b$ & $- \frac{1}{3}$ \\
+    \midrule[0.5pt]
+    \multirow{2}{*}{Leptonen} & $\nu_e$ & $\nu_{\mu}$ & $\nu_{\tau}$ & $0$\\
+                            & $e$     & $\mu$       & $\tau$       & $-1$\\
+    \bottomrule
+  \end{tabular}
+  \caption{Teilchen des Standardmodells}
+  \label{tab:teilchen}
+\end{table}
+
 \subsubsection{Wechselwirkungen}
 
 \subsection{Neue Physik}
@@ -32,12 +37,13 @@ Die über das Standardmodell hinausgehenden theoretischen Überlegungen werden auc
 Die hier relevanten Kandidaten für neue Physik sind:
 \begin{enumerate}
 \item{Das \textbf{\textsc{Higgs}-Boson} ist zwar Teil des Standardmodells und wird dort benötigt, um den schweren Eichbosonen sowie den übrigen Teilchen ihre Masse zu geben, wurde bisher aber noch nicht experimentell nachgewiesen, weshalb es hier unter "`neuer Physik"' aufgeführt wird. In der einfachsten Theorie ist das \textsc{Higgs}-Boson ein reelles skalares Feld, hat also Spin 0 und würde sich über einen Peak in der Verteilung der invarianten Masse zeigen.}
-\item{In der Theorie der \textbf{Supersymmetrie} werden Partnerteilchen zu den Standardmodell-Teilchen postuliert und zwar zu jedem Fermion ein bosonischer supersymmetrischer Partner und zu jedem Boson ein fermionischer supersymmetrischer Partner. Die Massen der SuSy-Teilchen sind nicht bekannt, sie sollten jedoch deutlich höher liegen als die ihrer Partnerteilchen, da man sie sonst bereits schon gefunden haben müsste. Auch hier gibt es mehrere zur Auswahl stehende Theorien, wobei wir uns hier auf eine Theorie mit Neutralino als LSP (lightest supersymmetric particle) beschränken. Das Neutralino müsste sich im Experiment durch fehlenden Impuls kennzeichnen.}
+\item{In der Theorie der \textbf{Supersymmetrie} werden Partnerteilchen zu den Standardmodell-Teilchen postuliert und zwar zu jedem Fermion ein bosonischer supersymmetrischer Partner und zu jedem Boson ein fermionischer supersymmetrischer Partner. Die Massen der SuSy-Teilchen sind nicht bekannt, sie sollten jedoch deutlich höher liegen als die ihrer Partnerteilchen, da man sonst beispielsweise den SuSy-Partner zum Elektron bereits gefunden haben müsste. Auch hier gibt es mehrere zur Auswahl stehende Theorien, wobei wir uns hier auf eine Theorie mit Neutralino als LSP (lightest supersymmetric particle) beschränken. Das Neutralino müsste sich im Experiment durch fehlenden Transversalimpuls kennzeichnen.}
 \item{Eine weitere Möglichkeit für neue Physik sind \textbf{schwere Quarks}. So ist es durchaus denkbar, dass es noch eine weitere, vierte Leptonen- und Quark-Generation gibt. Aus der Breite des $Z^0$-Peaks erhält man jedoch als obere Grenze für die Anzahl der leichten Neutrinos drei, gäbe es also eine vierte Familie, so müssten die Teilchen dieser  deutlich schwerer sein als die bisherigen. Die Quarks dieser Familie wären also schwer und würden sich vor allem durch eine hohe Anzahl hadronischer Jets auszeichnen.}
 \item{In verschiedenen Theorien werden \textbf{weitere schwere Eichbosonen $Z'$} vorhergesagt. Hier sollen die Daten beispielsweise darauf untersucht werden, ob es ein weiteres schweres Eichboson mit ähnlichen Eigenschaften wie das $Z^0$ gibt, das aber deutlich schwerer wäre als dieses. Es soll ebenfalls an Quarks und Leptonen gleichermaßen koppeln und würde in ein Leptonenpaar oder ein Quarkpaar zerfallen. Es kann nicht nur einzeln, sondern auch paarweise oder zusammen mit einem $Z^0$ produziert werden und würde mit letzteren beiden Möglichkeiten zu einem Vier-Leptonen-Endzustand beitragen, was für die Auswertung der Daten interessant ist.}
 \end{enumerate}
 
 \subsection{Kinematik}
+
 
 \subsection{Der LHC}
 
