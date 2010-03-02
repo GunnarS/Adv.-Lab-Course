@@ -102,6 +102,13 @@ Des Weiteren wird der eigentlich noch vorhandene $\gamma Z^0$-Interferenzterm ni
 Teilchen können nach der \textsc{Heisenberg}schen Unschärferelation für kurze Zeit die für reelle Teilchen geltende Relation $E^2 - p^2 = m^2$ verletzen. Solche Teilchen bezeichnet man als "`virtuell"' oder als nicht auf der Massenschale liegend. Sie können nicht experimentell gemessen werden, vermitteln aber nach der Theorie die jeweilige Wechselwirkung. Um ein virtuelles Teilchen als solches zu kennzeichnen, verwendet man ein $^*$.
 
 \subsubsection{Feynman-Diagramme}
+Mit Hilfe von \textsc{Feynman}-Diagrammen lassen sich quantenfeldtheoretische Prozesse (wie Streuprozesse) graphisch darstellen. Ein- und auslaufenden (reellen) Teilchen weist man hierzu meist durchgezogene Linien zu, internen (virtuellen oder reellen) Teilchen z.\ B.\ gestrichelte, wobei die Zeitachse von links nach rechts läuft. An den Linien angebrachte Pfeile unterscheiden über die Pfeilrichtung bezüglich der Zeitachse zwischen Teilchen- (in Zeitrichtung) und Antiteilchen (gegen Zeitrichtung). Die Knotenpunkte der Reaktionen nennt man Vertices. 
+
+Jedem graphischen Symbol entspricht dabei ein mathematischer Ausdruck. Mit Hilfe der aus dem jeweiligen Lagrangian extrahierbaren \textsc{Feynman}-Regeln lässt sich dann das zum \textsc{Feynman}-Diagramm gehörende Matrixelement aufschreiben.
+
+Beispiele für \textsc{Feynman}-Diagramme sind in im nächsten Abschnitt sowie in \ref{subsec:NuPhysics} aufgeführt.
+
+\subsubsection{Drell-Yan-Prozess}
 
 \subsubsection{Transversalimpuls}
 
@@ -268,38 +275,41 @@ d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\
 \end{align*}
 \item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
-Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$ Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der anderen Prozesse möglichst herausfiltern. Dazu stehen uns simulierte Daten von vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
-Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:\\
-Es werden alle Ereignisse herausgefiltert, bei denen
-\begin{itemize}
-\item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen.
-\item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8GeV. 
-\end{itemize}
-Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt.
 
-In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um 31,3\% gesunken ist, konnten wir 100\% aller $t$-Paar-Ereignisse und 98,8\% der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.7\textwidth]{graphics/CompareDatasets_SumEtiso}
-	\caption{Verteilung der Summe der Transversalenergie in Kegeln um die Leptonen für die drei Standardmodellprozesse mit vier-Lepton-Endzuständen}
-	\label{fig:CompareDatasets_SumEtiso}
-\end{figure}
-\begin{figure}[H]
-\begin{floatrow}
-\ffigbox{}
-{
-	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_NoCuts}
-	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse ohne Schnitt}
-	\label{fig:CompareDatasets_NoCuts}
+
+\begin{table}[H]
+  \centering
+\resizebox{0.7\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+ & $Z^0 Z^0$ & $Z^0 Z^{0*}$ & $Z^{0*} Z^{0*}$  \\
+    \midrule[0.75pt]
+             unter kin. Schwelle & $0$       & $76$         & $50$   \\
+             über kin. Schwelle  & $410$     & $133$        & $133$  \\
+    \bottomrule
+  \end{tabular}
 }
-\ffigbox{}
-{
-	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_WCuts}
-	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse bei Anwendung der Schnittkriterien}
-	\label{fig:CompareDatasets_WCuts}
+  \caption{Anzahl reeller und virtueller Z-Bosonen im (simulierten) ATLAS-Datensatz}
+  \label{tab:atlaszs}
+\end{table}
+
+\begin{table}[H]
+  \centering
+\resizebox{0.7\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+ & $Z^0 Z^0$ & $Z^0 Z^{0*}$ & $Z^{0*} Z^{0*}$  \\
+    \midrule[0.75pt]
+             unter kin. Schwelle  & $0$       & $119$        & $72$   \\
+             über  kin. Schwelle  & $1149$    & $364$        & $295$  \\
+    \bottomrule
+  \end{tabular}
 }
-\end{floatrow}
-\end{figure}
+  \caption{Anzahl reeller und virtueller Z-Bosonen im simulierten Z-Paar-Datensatz}
+  \label{tab:zzzs}
+\end{table}
+
+
 \section{Zusammenfassung}
 
 
