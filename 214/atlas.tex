@@ -268,6 +268,7 @@ d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\
 \end{align*}
 \item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
+\subsubsection{Z-Paar Ereignisse}\label{subsubsec:ZPairs}
 Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$ Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der anderen Prozesse möglichst herausfiltern. Dazu stehen uns simulierte Daten von vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
 Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:\\
 Es werden alle Ereignisse herausgefiltert, bei denen
@@ -275,7 +276,12 @@ Es werden alle Ereignisse herausgefiltert, bei denen
 \item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen.
 \item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8GeV. 
 \end{itemize}
-Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt.
+Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt. Im C++ Quelltext lauten damit unsere Schnittbedingungen:
+\begin{lstlisting}
+if (ev->lep_id[0]*ev->lep_id[1]*ev->lep_id[2]*ev->lep_id[3]<0) continue;
+if (ev->lep_etiso[0]+ev->lep_etiso[1]+ev->lep_etiso[2]+ev->lep_etiso[3]>8) continue;
+\end{lstlisting}
+wobei \texttt{continue} zum Abbruch des aktuellen Schleifendurchlaufs und damit zum aussortieren des Ereignisses führt.
 
 In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um 31,3\% gesunken ist, konnten wir 100\% aller $t$-Paar-Ereignisse und 98,8\% der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
 \begin{figure}[H]
@@ -300,6 +306,7 @@ In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invariante
 }
 \end{floatrow}
 \end{figure}
+Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0\,Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen wird. Nur in solchen Fällen lassen die Leptonpaare sich aufgrund ihrer unterschiedlichen Eigenschaften zusammenfassen, und die invariante Masse des zerfallenen $Z^0$ kann bestimmt werden.
 \section{Zusammenfassung}
 
 
@@ -348,6 +355,91 @@ double ElecCalib(double e_raw, double pt, double eta,
 
   return energy;
 } 
+\end{lstlisting}
+
+\subsection{countZZ.cpp}\label{subsec:countZZ}
+\begin{lstlisting}
+{
+// Make Event-Objects for each MC Training Set. 
+event *atlas_event = new event("ATLASDATA-ZZ-calib.root", "ATLAS");
+event *zz_event = new event("testsample-ZZ.root", "ZZ");
+
+// Get hDrawer and Event-Objects
+hDrawer *drawer = new hDrawer();
+
+// Add Event Data
+drawer->Add(atlas_event);
+drawer->Add(zz_event);
+	
+// MAIN LOOP
+while (drawer->go_on)
+{
+  //Get the next event
+  event* ev = drawer->GetNextEvent();
+
+  //event selection
+  if (ev->lep_etiso[0]+ev->lep_etiso[1]+ev->lep_etiso[2]+ev->lep_etiso[3]>8) continue;
+  if (ev->lep_id[0]*ev->lep_id[1]*ev->lep_id[2]*ev->lep_id[3] != 11*11*13*13) continue;
+
+  // define binning
+  drawer->Binning(20,0., 10.);
+
+  //determine which leptons belong together
+  TLorentzVector InvMass1, InvMass2;
+  if( ev->lep_id[0] == -ev->lep_id[1] )
+  {
+    InvMass1 = ev->lep[0]+ev->lep[1];
+    InvMass2 = ev->lep[2]+ev->lep[3];
+  }
+  else if ( ev->lep_id[0] == -ev->lep_id[2] )
+  {
+    InvMass1 = ev->lep[0]+ev->lep[2];
+    InvMass2 = ev->lep[1]+ev->lep[3];
+  }
+  else if ( ev->lep_id[0] == -ev->lep_id[3] )
+  {
+    InvMass1 = ev->lep[0]+ev->lep[3];
+    InvMass2 = ev->lep[1]+ev->lep[2];
+  }
+
+  // determine what kind of Z pair occured
+  // zztype =1 both are real, ZZtype=2 both are virtual, ZZtype=3 mixed case
+  int zztype;  
+  
+  zztype = 3; //if nothing is set, mixed case has occured
+  if ( fabs(InvMass1.M() - 91.1876) <5 )		//first Z is real
+  {
+     if ( fabs( InvMass2.M() - 91.1876) <5 )	    //second Z is real
+     {
+         zztype = 1;
+     }
+  }
+  else											//first Z is virtual
+  {
+     if ( fabs(InvMass2.M() - 91.1876) < 5 ) 	//second Z is virtual
+     {
+         zztype = 2;
+     }
+  }
+
+  //calculate four-lepton-invariant mass
+  TLorentzVector l4=ev->lep[0]+ev->lep[1]+ev->lep[2]+ev->lep[3]; 
+
+  //the results are now filled into a histogram, different slots for below and above threshold!
+  if ( l4.M() < 2.*91.2 - 6.25) // well below threshold
+  {
+     drawer->Fill(zztype);
+  }
+  else if ( l4.M() > 2.*91.2 + 6.25) // well above threshold             
+  {
+     drawer->Fill(zztype+5); 
+  }
+
+}
+
+//Draw Histograms
+drawer->DrawCanvas();
+}
 \end{lstlisting}
   \section{Tabellen}
 
