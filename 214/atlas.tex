@@ -102,6 +102,13 @@ Des Weiteren wird der eigentlich noch vorhandene $\gamma Z^0$-Interferenzterm ni
 Teilchen können nach der \textsc{Heisenberg}schen Unschärferelation für kurze Zeit die für reelle Teilchen geltende Relation $E^2 - p^2 = m^2$ verletzen. Solche Teilchen bezeichnet man als "`virtuell"' oder als nicht auf der Massenschale liegend. Sie können nicht experimentell gemessen werden, vermitteln aber nach der Theorie die jeweilige Wechselwirkung. Um ein virtuelles Teilchen als solches zu kennzeichnen, verwendet man ein $^*$.
 
 \subsubsection{Feynman-Diagramme}
+Mit Hilfe von \textsc{Feynman}-Diagrammen lassen sich quantenfeldtheoretische Prozesse (wie Streuprozesse) graphisch darstellen. Ein- und auslaufenden (reellen) Teilchen weist man hierzu meist durchgezogene Linien zu, internen (virtuellen oder reellen) Teilchen z.\ B.\ gestrichelte, wobei die Zeitachse von links nach rechts läuft. An den Linien angebrachte Pfeile unterscheiden über die Pfeilrichtung bezüglich der Zeitachse zwischen Teilchen- (in Zeitrichtung) und Antiteilchen (gegen Zeitrichtung). Die Knotenpunkte der Reaktionen nennt man Vertices. 
+
+Jedem graphischen Symbol entspricht dabei ein mathematischer Ausdruck. Mit Hilfe der aus dem jeweiligen Lagrangian extrahierbaren \textsc{Feynman}-Regeln lässt sich dann das zum \textsc{Feynman}-Diagramm gehörende Matrixelement aufschreiben.
+
+Beispiele für \textsc{Feynman}-Diagramme sind in im nächsten Abschnitt sowie in \ref{subsec:NuPhysics} aufgeführt.
+
+\subsubsection{Drell-Yan-Prozess}
 
 \subsubsection{Transversalimpuls}
 
@@ -303,10 +310,38 @@ In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invariante
 	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_WCuts}
 	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse bei Anwendung der Schnittkriterien}
 	\label{fig:CompareDatasets_WCuts}
+  \caption{Anzahl reeller und virtueller Z-Bosonen im (simulierten) ATLAS-Datensatz}
 }
 \end{floatrow}
 \end{figure}
-Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0\,Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen wird. Nur in solchen Fällen lassen die Leptonpaare sich aufgrund ihrer unterschiedlichen Eigenschaften zusammenfassen, und die invariante Masse des zerfallenen $Z^0$ kann bestimmt werden.
+Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0\,Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden.
+\begin{table}[H]
+  \centering
+\resizebox{0.7\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+ & $Z^0 Z^0$ & $Z^0 Z^{0*}$ & $Z^{0*} Z^{0*}$  \\
+    \midrule[0.75pt]
+             unter kin. Schwelle & $0$       & $76$         & $50$   \\
+             über kin. Schwelle  & $410$     & $133$        & $133$  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:atlaszs}}
+\end{table}
+\begin{table}[H]
+  \centering
+\resizebox{0.7\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+ & $Z^0 Z^0$ & $Z^0 Z^{0*}$ & $Z^{0*} Z^{0*}$  \\
+    \midrule[0.75pt]
+             unter kin. Schwelle  & $0$       & $119$        & $72$   \\
+             über  kin. Schwelle  & $1149$    & $364$        & $295$  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Anzahl reeller und virtueller Z-Bosonen im simulierten Z-Paar-Datensatz}
+  \label{tab:zzzs}}
+\end{table}
 \section{Zusammenfassung}
 
 
