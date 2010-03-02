@@ -77,7 +77,26 @@ Die hier relevanten Kandidaten für neue Physik sind:
 
 \subsection{Kinematik}
 \subsubsection{Zwei-Körper-Zerfall}
+Der Zwei-Körper-Zerfall beschreibt den Zerfall eines Teilchens $A$ in zwei andere Teilchen ($A\ \rightarrow\ B\ C$), welche im Ruhesystem von $A$ genau entgegengesetzte Impulse mit Betrag
+\begin{align*}
+|\vec{p}_B| = |\vec{p}_C| = \frac{\left[ \left( M^2_A - \left( M_B + M_C \right)^2 \right) \left( M^2_A - \left( M_B - M_C \right)^2 \right) \right]^{\frac{1}{2}}}{2 M_A}
+\end{align*}
+besitzen. Können die Massen $M_B$ und $M_C$ im Vergleich zu $M_A$ vernachlässigt werden, erhält man $|\vec{p}_{B,C}| = \frac{1}{2} M_A$.
 
+Aus der Vier-Impuls-Erhaltung $p_A = p_B + p_C$ ergibt sich für die sogenannte invariante Masse $M^2_A = p^2_A$:
+\begin{align*}
+M^2_A = (p_B + p_C)^2 \ \ldotp
+\end{align*}
+Da $A$ jedoch eine gewisse Zerfallsbreite $\Gamma_A$ hat, folgt die gemessene invariante Masse $M_{BC}$ einer relativistischen \textsc{Breit-Wigner}-Verteilung mit Normierungsfaktor $a$:
+\begin{align*}
+N(M_{BC}) = \frac{a}{M_{BC} \left[ \left(M^2_{BC} - M^2_{A}\right)^2 + M^2_{A} \Gamma^2_A\right] } \ \ldotp
+\end{align*}
+Auch bei Hinzunahme von Untergrundereignissen bei einem idealen Detektor bleibt diese Form erhalten. Da ein realer Detektor jedoch eine endliche Auflösung hat, welches zu \textsc{gauß}verteilten Abweichungen führt, erhält man für einen realen Detektor eine \textsc{Voigt}-Verteilung (Faltung von \textsc{Gauß}- und \textsc{Breit-Wigner}-Verteilung). 
+Im Versuch verwenden wir die nicht-relativistische Näherung der \textsc{Breit-Wigner}-Verteilung:
+\begin{align*}
+N(M_{BC}) = \frac{\frac{\Gamma^2_A}{4}}{\left(M_{BC} - M_{A}\right)^2 + \frac{\Gamma^2_A}{4})} \ \ldotp
+\end{align*}
+Des Weiteren wird der eigentlich noch vorhandene $\gamma Z^0$-Interferenzterm nicht berücksichtigt. Der Fehler durch diese Approximationen ist vernachlässigbar. 
 
 \subsubsection{Virtuelle Teilchen}
 Teilchen können nach der \textsc{Heisenberg}schen Unschärferelation für kurze Zeit die für reelle Teilchen geltende Relation $E^2 - p^2 = m^2$ verletzen. Solche Teilchen bezeichnet man als "`virtuell"' oder als nicht auf der Massenschale liegend. Sie können nicht experimentell gemessen werden, vermitteln aber nach der Theorie die jeweilige Wechselwirkung. Um ein virtuelles Teilchen als solches zu kennzeichnen, verwendet man ein $^*$.
