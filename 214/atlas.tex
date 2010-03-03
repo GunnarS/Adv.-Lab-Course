@@ -276,12 +276,12 @@ d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\
 \item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
 \subsubsection{Z-Paar Ereignisse}\label{subsubsec:ZPairs}
-Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$ Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der anderen Prozesse möglichst herausfiltern. Dazu stehen uns simulierte Daten von vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
+Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$ Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der Standardmodell-Prozesse ohne $Z^0$-Paare möglichst herausfiltern. Dazu stehen uns simulierte Daten von vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
 Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:\\
 Es werden alle Ereignisse herausgefiltert, bei denen
 \begin{itemize}
 \item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen.
-\item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8GeV. 
+\item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8 GeV. 
 \end{itemize}
 Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt. Im C++ Quelltext lauten damit unsere Schnittbedingungen:
 \begin{lstlisting}
@@ -310,11 +310,10 @@ In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invariante
 	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_WCuts}
 	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse bei Anwendung der Schnittkriterien}
 	\label{fig:CompareDatasets_WCuts}
-  \caption{Anzahl reeller und virtueller Z-Bosonen im (simulierten) ATLAS-Datensatz}
 }
 \end{floatrow}
 \end{figure}
-Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0\,Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden.
+Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden. Für die Analyse verwenden wir das im Anhang \ref{subsec:countZZ} dargestellte ROOT Script. Die Leptonen werden anhand ihrer Lepton-ID zu Paaren zusammengefasst und die invariante Masse der beiden resultierenden Paare berechnet. Anhand dieser invarianten Massen wird die Anzahl der virtuellen $Z^0$ bestimmt. Dabei wird ein $Z^0$ als virtuell definiert, wenn seine invariante Masse um mehr als die doppelte Zerfallsbreite von der $Z^0$ Masse abweicht. Die Ergebnisse der Analyse sind in Tabellen \ref{tab:atlaszs} und \ref{tab:zzzs} zusammengefasst. Man erkennt deutlich, dass im (simulierten) ATLAS Datensatz ein größerer Anteil
 \begin{table}[H]
   \centering
 \resizebox{0.7\textwidth}{!}{
@@ -326,6 +325,7 @@ Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen d
              über kin. Schwelle  & $410$     & $133$        & $133$  \\
     \bottomrule
   \end{tabular}
+  \caption{Anzahl reeller und virtueller Z-Bosonen im (simulierten) ATLAS-Datensatz}
   \label{tab:atlaszs}}
 \end{table}
 \begin{table}[H]
