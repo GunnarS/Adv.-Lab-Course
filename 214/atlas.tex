@@ -124,8 +124,7 @@ Da die Protonenstrahlen selbst keine Transversalimpulse tragen und Impulserhaltu
 
 Bei vernachlässigbaren Teilchenmassen lässt sich folgende Definition des fehlenden Transversalimpulses (auch fehlende Transversalenergie genannt) angeben:
 \begin{align}
-%slash funzt nicht
-\slash{E}_T \equiv - \sum_k i E_k \sin{\theta_k} \vec{n}_{k,\perp} \ \ldotp
+\displaystyle{\not} E_T \equiv - \sum_k i E_k \sin{\theta_k} \vec{n}_{k,\perp} \ \ldotp
 \end{align}
 Hierbei bezeichnet $E_k$ die Energie des gemessenen Teilchens $k$, $\theta_k$ den dazugehörigen Streuwinkel und $\vec{n}_{k,\perp}$ den transversalen Richtungsvektor.
 
@@ -137,9 +136,20 @@ Die aus einer Wasserstoffquelle stammenden Protonen werden nach einer Vorbeschle
 An insgesamt vier Punkten können die beiden Protonen-Strahlen zur Kollision gebracht werden. Dort sind neben ATLAS die Experimente ALICE, CMS und LHC-b zu finden.
 
 \subsection{ATLAS}
+Da die (simulierten) Daten des ATLAS-Detektor (\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}) Gegenstand dieses Versuches sind, soll hier kurz auf selbigen eingegangen werden. Wie andere Detektoren auch besteht der $\unit[46]{m}$ lange, $\unit[25]{m}$ hohe und $\unit[7000]{t}$ schwere ATLAS-Detektor aus mehreren Komponenten.
 
+In einem Abstand von knapp $\unit[5-10]{cm}$ vom Strahlrohr befindet sich zunächst ein \textbf{Pixeldetektor} aus kleinen Siliziumdetektoren, den einzelnen "`Pixeln"'. Jeder dieser Pixel ist dabei mit einer eigenen Elektronik ausgestattet, um die Datenmenge zu reduzieren, wobei die Daten von bis zu 80 Millionen Pixeln zeitgleich verarbeitet werden können. Dieser Detektor hat die Aufgabe, den Wechselwirkungspunkt möglichst exakt zu rekonstruieren. Ebenfalls zur Spurrekonsstruktion wird der \textbf{SCT} (Silizium-Halbleiter-Tracker), ein  Streifendetektor, verwendet. 
 
-\subsection{Wechselwirkung von Teilchen mit Materie}
+Als nächstes ist ein Übergangsstrahlungsdetektor (\textbf{TRT}) aus dünnen Driftkammern installiert. Mit diesem wird die Übergangsstrahlung ionisierender Teilchen detektiert und hilft so helfen, Elektronen zu identifizieren.
+
+Es schließt sich nun eine \textbf{Magnetspule} an, welche ein Magnetfeld von etwa $\unit[2]{T}$ parallel zum Protonenstrahl bereitstellt. Auf diese Weise bleiben auch kurzlebige Teilchen detektierbar und geladene Teilchen können mittels der Spurkrümmung im Magnetfeld unterschieden werden.
+
+Diese vier Komponenten formen den inneren Detektor. Der äußere Detektor schließt sich an diesen mit dem \textbf{Presampler} an. Dieser detektiert die elektromagnetischen Schauer  und unterscheidet Photonen in Einzelphotonen und Photonenpaare. Dies hilft bei der Auswertung des sich anschließenden \textbf{elektromagnetischen Kalorimeters} (ECAL). Für den vorliegenden Versuch ist er allerdings ohne Relevanz. Im ECAL werden elektromagnetische Schauer erzeugt und detektiert. Im Wesentlichen elektromagnetisch wechselwirkende Teilchen sollen hier möglichst ihre gesamte Energie deponieren. Durch Materie propagierende Elektronen, Positronen und Photonen verlieren ihre Energie dabei v.\ a.\ durch Bremsstrahlung, Paarbildung und \textsc{Compton}streuung. Ein einfallendes Teilchen hat nach einer materialabhängigen Streulänge nur noch den Bruchteil $\frac{1}{e}$ seiner ursprünglichen Energie. Die Ausdehnung eines Schauers wird also von der Energie des den Schauer erzeugenden Teilchens bestimmt.
+
+Als nächstes Element folgt das \textbf{Hadronkalorimeter} (HCAL). Die hierhin gelangenden Hadronen treffen auf die Kerne des Kalorimetermaterials (Eisen) und generieren hadronische Schauer, wenn die Energie der Sekundärteilchen ausreicht, weitere Hadronen zu erzeugen. Deren Anzahl ist dabei erneut charakterisiert durch die Energie des Primärteilchens. Man definiert ferner eine Wechselwirkungslänge $\lambda$, nach welcher das Primärteilchen mit einer Wahrscheinlichkeit von $\frac{1}{e}$ noch nicht stark gewechselwirkt hat. Die Wechselwirkungslänge der starken Wechselwirkung ist dabei deutlich größer als die Streulänge der elekromagnetischen Strahlung. Die Anordnung der beiden Kalorimeter trägt dem Rechnung.
+
+Ganz außen befinden sich schließlich noch die Myonen-Kammern. Da Myonen deutlich schwerer sind als Elektronen haben sie eine sehr hohe Reichweite in Materie. Das Myonen-System nimmt deshalb auch die Hälfte des gesamten ATLAS-Detektors ein und ist mit einem eigenen Magnetsystem ausgestattet.
+
 
 \subsection{Koordinatensysteme}
 Bei der Wahl eines angemessenen Koordinatensystems bieten sich im Wesentlichen drei an. Zum einen besteht die Möglichkeit in einem kartesischen Koordinatensystem die Strahlrichtung als z-Achse zu wählen, zum Mittelpunkt des LHC-Ringes zeigt die x-Achse und orthogonal auf beiden steht die y-Achse.
@@ -196,7 +206,7 @@ Es gilt Energieerhaltung ($s = s'$), somit folgt:
 \emph{Ein Higgs-Boson zerfalle in zwei $Z^0$. Wie sieht die Verteilung der invarianten Masse der vier Leptonen aus?}
 %antwort
 
-\emph{Ein idealer Detektor wird vorrausgesetzt. Welches ist das typische $\slash{E}_T$, wenn ein $Z^0$-Paar in Elektronen oder Myonen-Paare zerfällt? Wie wird $\slash{E}_T$ bei einem realen Detektor aussehen?}
+\emph{Ein idealer Detektor wird vorrausgesetzt. Welches ist das typische $\displaystyle{\not} E_T$, wenn ein $Z^0$-Paar in Elektronen oder Myonen-Paare zerfällt? Wie wird $\displaystyle{\not} E_T$ bei einem realen Detektor aussehen?}
 %antwort
 
 \emph{noch ne frage ...}
