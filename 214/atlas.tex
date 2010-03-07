@@ -250,7 +250,9 @@ Für die verschiedenen $\eta$-Bereiche lassen sich nun verschiedene Multiplikator
 	\label{fig:Zee_calib}
 \end{figure}
 
-\subsection{Teil 3: Suche nach neuer Physik}\label{subsec:NuPhysics}
+
+\subsection{Teil 3: Suche nach neuer Physik}
+\label{subsec:NuPhysics}
 In diesem Versuchsteil wollen wir nach Hinweisen auf neue Physik (wie in Abschnitt \ref{cha:newph} beschrieben) suchen. Dazu betrachten wir Daten mit 4-Lepton-Endzuständen. 
 \begin{figure}[H]
 	\centering
@@ -290,28 +292,31 @@ d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\
 \end{align*}
 \item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
-\subsubsection{Z-Paar Ereignisse}\label{subsubsec:ZPairs}
-Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$ Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der Standardmodell-Prozesse ohne $Z^0$-Paare möglichst herausfiltern. Dazu stehen uns simulierte Daten von vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
+
+
+\subsubsection{Z-Paar Ereignisse}
+\label{subsubsec:ZPairs}
+\hyphenation{Neu-tra-li-no-Paar-pro-duk-tion}
+Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$-Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der Standardmodell-Prozesse ohne $Z^0$-Paare möglichst herausfiltern. Dazu stehen uns simulierte Daten von 4-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
 Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:\\
 Es werden alle Ereignisse herausgefiltert, bei denen
 \begin{itemize}
-\item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen.
+\item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen und
 \item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8 GeV. 
 \end{itemize}
-Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt. Im C++ Quelltext lauten damit unsere Schnittbedingungen:
+Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw. $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt. Im \texttt{C++}-Quelltext lauten damit unsere Schnittbedingungen:
 \begin{lstlisting}
 if (ev->lep_id[0]*ev->lep_id[1]*ev->lep_id[2]*ev->lep_id[3]<0) continue;
 if (ev->lep_etiso[0]+ev->lep_etiso[1]+ev->lep_etiso[2]+ev->lep_etiso[3]>8) continue;
 \end{lstlisting}
 wobei \texttt{continue} zum Abbruch des aktuellen Schleifendurchlaufs und damit zum aussortieren des Ereignisses führt.
-
-In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um 31,3\% gesunken ist, konnten wir 100\% aller $t$-Paar-Ereignisse und 98,8\% der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.7\textwidth]{graphics/CompareDatasets_SumEtiso}
+		\includegraphics[width=0.6\textwidth]{graphics/CompareDatasets_SumEtiso}
 	\caption{Verteilung der Summe der Transversalenergie in Kegeln um die Leptonen für die drei Standardmodellprozesse mit vier-Lepton-Endzuständen}
 	\label{fig:CompareDatasets_SumEtiso}
 \end{figure}
+In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um \unit[31,3]{\%} gesunken ist, konnten wir \unit[100]{\%} aller $t$-Paar-Ereignisse und \unit[98.8]{\%} der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
 \begin{figure}[H]
 \begin{floatrow}
 \ffigbox{}
@@ -328,8 +333,7 @@ In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invariante
 }
 \end{floatrow}
 \end{figure}
-Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden. Für die Analyse verwenden wir das im Anhang \ref{subsec:countZZ} dargestellte ROOT Script. Die Leptonen werden anhand ihrer Lepton-ID zu Paaren zusammengefasst und die invariante Masse der beiden resultierenden Paare berechnet. Anhand dieser invarianten Massen wird die Anzahl der virtuellen $Z^0$ bestimmt. Dabei wird ein $Z^0$ als virtuell definiert, wenn seine invariante Masse um mehr als die doppelte Zerfallsbreite von der $Z^0$ Masse abweicht. Die Ergebnisse der Analyse sind in Tabellen \ref{tab:atlaszs} und \ref{tab:zzzs} zusammengefasst.
-
+Nun soll die Anzahl der virtuellen $Z^0$-Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0 Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden. Für die Analyse verwenden wir das im Anhang \ref{subsec:countZZ} dargestellte \texttt{ROOT}-Skript. Die Leptonen werden anhand ihrer Lepton-ID zu Paaren zusammengefasst und die invariante Masse der beiden resultierenden Paare berechnet. Anhand dieser invarianten Massen wird die Anzahl der virtuellen $Z^0$ bestimmt. Dabei wird ein $Z^0$ als virtuell definiert, wenn seine invariante Masse um mehr als die doppelte Zerfallsbreite von der $Z^0$ Masse abweicht. Die Ergebnisse der Analyse sind in Tabellen \ref{tab:atlaszs} und \ref{tab:zzzs} zusammengefasst.
 \begin{table}[H]
   \centering
 \resizebox{0.7\textwidth}{!}{
@@ -358,17 +362,20 @@ Nun soll die Anzahl der virtuellen $Z^0$ Bosonen in den $Z^0$-Paar-Ereignissen d
   \caption{Anzahl reeller und virtueller Z-Bosonen im simulierten Z-Paar-Datensatz}
   \label{tab:zzzs}}
 \end{table}
-
 Betrachtet man die Ergebnisse, so fällt auf, dass die Anzahl der Ereignisse mit der Anzahl der virtuellen $Z^0$ Bosonen abfällt. Unterhalb der kinematischen Schwelle treten wie erwartet keine kinematisch verbotenen Ereignisse mit zwei reellen $Z^0$ Bosonen auf. Die Anzahl der Ereignisse bei denen die invariante Masse aller vier Leptonen oberhalb der kinematischen Schwelle der doppelten $Z^0$ Masse liegt überwiegt gegenüber den Ereignissen unterhalb der kinematischen Schwelle. Dies erklärt sich durch den größeren Wirkungsquerschnitt der Erzeugung eines reellen als eines virtuellen Teilchens.
 
-Vergleicht man die Ergebnisse von ATLAS- und $Z^0$-Paar-Datensatz, so fällt auf, dass beim ATLAS Datensatz der Anteil der Ereignisse unterhalb der kinematischen Schwelle größer ausfällt. Dies lässt eine neue Resonanz mit einer Masse unterhalb der doppelten $Z^0$ Masse vermuten.  
-\subsubsection{Neue Physik}\label{subsubsec:NuPhysics}
+Vergleicht man die Ergebnisse von ATLAS- und $Z^0$-Paar-Datensatz, so fällt auf, dass beim ATLAS Datensatz der Anteil der Ereignisse unterhalb der kinematischen Schwelle größer ausfällt. Dies lässt eine neue Resonanz mit einer Masse unterhalb der doppelten $Z^0$ Masse vermuten.
+
+\subsubsection{Neue Physik}
+\label{subsubsec:NuPhysics}
+
+
 Schnittkriterien:
 
 HIGGS: ETISO, 0 reelle Zs(impliziert 2e2$\mu$)
 SUSY: missing transverse momentum
 4th gen: viele jets
-Z':
+Z': nu peak in 2lepton invariant mass
 \section{Zusammenfassung}
 
 
