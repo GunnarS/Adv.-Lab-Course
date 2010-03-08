@@ -217,6 +217,36 @@ Es gilt Energieerhaltung ($s = s'$), somit folgt:
 
 
 \section{Versuchsdurchführung und Auswertung}
+\subsection{Teil 1: Graphische Darstellung von Teilchenreaktionen}
+\subsubsection*{ATLANTIS}
+%oder auch woanders n bissl dazu schreiben
+\subsubsection*{Durchschnittliche Jet-Anzahl bei W-Ereignissen}
+Zur Bestimmung der durchschnittlichen Anzahl zusätzlicher Jets bei Ereignissen mit W-Bosonen werten wir anhand des Programmes \texttt{ATLANTIS} graphisch einige simulierte  \emph{event displays} aus. Der Datensatz enthält nur rein leptonische W-Prozesse, sodass jeder auftretende Jet ein zusätzlicher ist.
+
+Zu den Indizien für einen hadronischen Jet zählen wir eine Häufung von Einträgen im hadronischen Kalorimeter und zugehörigen Spuren sowie keinen ebenfalls vorhandenen Eintrag im Myonendetektor, da auch Myonen Energie im hadronischen Kalorimeter deponieren können. Wir erhalten die in Tabelle \ref{tab:njet} aufgeführte Verteilung.
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lc}
+    \toprule
+     $\mathrm{n_{Jets}}$ & Ereignisanzahl \\
+    \midrule[0.75pt]
+    $0$ & $22$ \\
+    $1$ & $15$ \\
+    $2$ & $10$ \\
+    $3$ & $1$  \\
+    \bottomrule
+  \end{tabular}
+}
+  \caption{Häufigkeiten zusätzlicher Jet-Ereignisse bei W-Boson-Produktion}
+  \label{tab:njet}
+\end{table}
+Anhand dieser Daten bestimmen wir die durchschnittliche Jet-Anzahl zu $0.79 \pm ...$. Dies entspricht jedoch nicht unserer Erwartung.
+%noch zu ende und fehler ausrechnen
+
+
+\subsubsection*{lglhgjg}
+
 \subsection{Teil 2: Kalibration der Elektronen}\label{subsec:ElektronKalibration}
 Die genauste Methode, die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen mit verschiedenen Eigenschaften besteht und  systematische Energieverluste durch inaktive Regionen im Detektor sowie Energieverluste der Elektronen vor Erreichen des Kalorimeters vorliegen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich auf Grund der sehr genau bekannten Eigenschaften des $Z^0$ anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mit Hilfe des Programms \texttt{ROOT} analysieren.
 
