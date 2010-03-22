@@ -428,11 +428,73 @@ Aus diesen Überlegungen entwickeln wir die folgenden Schnittkriterien:
 
 \begin{itemize}
 \item \textbf{Higgs}: Da wir in Abeschnitt \ref{subsubsec:ZPairs} bereits Hinweise darauf gefunden haben, dass das Higgs-Boson eine kleinere Masse hat als die doppelte $Z^0$ Masse, verwenden wir ein Schnittkriterium, dass alle Ereignisse herausfilter in denen beide $Z^0$ Bosonen reell sind. Außerdem verwenden wir das bereits in Abschnitt \ref{subsubsec:ZPairs} verwendete Schnittkriterium, das alle Ereignisse herausfilert in denen die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8 GeV, da das Higgs Boson über ein $Z^0$ Paar zerfällt. 
-\item \textbf{SUSY}: Das Histogramm der fehlenden Transversalenergie des $Z^0$ Paar Standardmodell-Datensatzes besitzt den großteil der Einträge im Regime bis ca 100 MeV. Aus diesem Grund setzen wir ein Schnittkriterium, das Ereignisse herausfiltert bei denen die fehlende Transversalenergie kleiner ist als 100 MeV.
-\item \textbf{schwere Quarks}: Beim Betrachten der Verteilung der Jet-Anzahl im $Z^0$ Paar Standardmodell-Datensatz stellen wir fest, dass die meisten Einträge eine Jet-Anzahl kleiner als 4 aufweisen. Daher verwenden wir ein Schnittkriterium, das nur Ereignisse zulässt die mehr als 4 Jets aufweisen.
+\item \textbf{SUSY}: Das Histogramm der fehlenden Transversalenergie des $Z^0$ Paar Standardmodell-Datensatzes besitzt (wie in Abbildung \ref{fig:NuPhysicsSearch_ETMis} zu sehen) den großteil der Einträge im Regime bis ca 100 GeV. Aus diesem Grund setzen wir ein Schnittkriterium, das Ereignisse herausfiltert bei denen die fehlende Transversalenergie kleiner ist als 100 GeV.
+\item \textbf{schwere Quarks}: Beim Betrachten der Verteilung der Jet-Anzahl im $Z^0$ Paar Standardmodell-Datensatz (siehe Abbildung \ref{fig:NuPhysicsSearch_NJets} stellen wir fest, dass die meisten Einträge eine Jet-Anzahl kleiner als 4 aufweisen. Daher verwenden wir ein Schnittkriterium, das nur Ereignisse zulässt die mehr als 4 Jets aufweisen.
 \item \textbf{schwere Eichbosonen}: Da sich die neuen Eichbosonen wie $Z^0$ Bosonen verhalten sollten, verwenden wir die Schnittkriterien aus Abschnitt \ref{subsubsec:ZPairs}.
 \end{itemize}
-
+In den Abbildungen \ref{fig:NuPhysSearch_Higgs} bis \ref{fig:NuPhysSearch_SUSY} sind die Histogramme der invarianten Vierleptonenmassen nach Anwendung der Schnittkriterien dargestellt. 
+Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:NuPhysicsSearch_NJets} die Histogramme von Jetzahl und fehlender Transversalenergie ohne Schnitt dargestellt.
+\begin{figure}[H]
+\begin{floatrow}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_ETMis}
+	\caption{Histogram der fehlenden Transversalenergie für ATLAS- und $Z^0$-Datensatz}
+	\label{fig:NuPhysicsSearch_ETMis}
+}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_NJets}
+	\caption{Histogram der Anzahl Jets für ATLAS- und $Z^0$-Datensatz}
+	\label{fig:NuPhysicsSearch_NJets}
+}
+\end{floatrow}
+\end{figure}
+\begin{figure}[H]
+\begin{floatrow}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_Higgs}
+	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach einem Higgs Boson.  Dargestellt ist auch die Differenz zwischen auf die Luminosität korrigierten ATLAS Daten und den als Untergrund angenommenen $Z^0$ Daten.}
+	\label{fig:NuPhysSearch_Higgs}
+}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_HeavyQuarks}
+	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Quarks}
+	\label{fig:NuPhysSearch_HeavyQuarks}
+}
+\end{floatrow}
+\end{figure}
+\begin{figure}[H]
+\begin{floatrow}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_HeavyZ}
+	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Eichbosonen}
+	\label{fig:NuPhysSearch_HeavyZ}
+}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_SUSY}
+	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach SUSY}
+	\label{fig:NuPhysSearch_SUSY}
+}
+\end{floatrow}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/NuPhysSearch_Higgs_Zoom}
+	\caption{Zoom auf den Higgs Peak aus Abbildung \ref{fig:NuPhysSearch_Higgs}}
+	\label{fig:NuPhysSearch_Higgs_Zoom}
+\end{figure}
+Man erkennt in Abbildung \ref{fig:NuPhysSearch_Higgs} deutlich einen Peak bei ca  $\unit[141]{GeV}$. Er ist in Abbildung \ref{fig:NuPhysSearch_Higgs_Zoom} noch einmal vergrößert dargestellt. Wir deuten dies als ein Zeichen auf ein Higgs Boson mit einer Masse von $\unit[(141\pm 1)]{GeV}$. Trotz der bereits abgezogenen $Z^0$-Paar-Ereignisse hat der Peak noch etwas einen Untergrund von ca 7 Ereignissen pro Bin. Damit hat unser Fund eine Signifikanz von $\frac{25+65+67+95+92+98+38+36-56}{\sqrt{56}}=61,3$ und wäre damit eine Entdeckung. Wie man in Abbildungen \ref{fig:NuPhysSearch_HeavyQuarks} bis \ref{fig:NuPhysSearch_SUSY} sieht, weisen auch die Histogramme die mit anderen Schnittkriterien erstellt wurden den Higgs-Peak auf. Die hohe Anzahl Jets bei einem Prozess mit Higgs Boson erklärt sich durch die bei einer Masse von 140 GeV hohe Wahrscheinlichkeit des Zerfalls in ein $b\bar{b}$-Paar, der große fehlende Transversalimpuls durch die ebenfalls hohe Wahrscheinlichkeit des Zerfalls in ein $W^+W^-$-Paar (siehe auch Abbildung \ref{fig:higgs_br}). Anzeichen für andere Szenarien neuer Physik können wir (auch in höheren Energiebereichen als den dargestellten) nicht erkennen. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/higgs_br}
+	\caption{Wahrscheinlichkeiten der verschiedenen Higgs Zerfallskanäle in Abhängigkeit von der Higgsmasse (Aus \cite{higgspaper})}
+	\label{fig:higgs_br}
+\end{figure}
 
 \section{Zusammenfassung}
 
