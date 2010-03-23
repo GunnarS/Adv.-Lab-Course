@@ -10,3 +10,10 @@
     year={1997},
     publisher={Phys. Rev. Letters \textbf{79}}
 }
+
+\bib{higgspaper}{article}{
+    title={The Anatomy of Electro-Weak Symmetry Breaking, Tome I: The Higgs boson in the Standard Model},
+    author={Abdelhak Djouadi},
+    year={2005},
+    publisher={Phys.Rept.457:1-216,2008}
+}
