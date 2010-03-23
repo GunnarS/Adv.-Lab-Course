@@ -299,7 +299,7 @@ Satz & & Energie$/\unit{GeV}$ & Impuls$/\unit{GeV}$ & Transversalimpuls$/\unit{G
   \caption{Mithilfe von ATLANTIS bestimmte Daten der Endzustandsleptonen von $Z^0 \rightarrow e^+e^-$ Zerfällen }
   \label{tab:Zee_ATLANTIS}
 \end{table}
-Beim Betrachten der Daten fällt auf, dass in vielen Fällen der Betrag des Impulses eines Leptons größer ist als die Energie desselben. Weiterhin ergeben sich in einigen Fällen Widersprüche zwischen dem Anteil des Transversalimpulses und dem Azimuthalwinkel des Leptons. So sollte eigentlich gelten: $p^2_\mathrm{T} \leq \left( p^2 - p^2_\mathrm{T}\right)\cot^2 (\Phi) = p^2_\mathrm{z}\cot^2(\Phi) = p^2_\mathrm{x}$. Leider sind uns diese Widersprüche nicht zum Zeitpunkt der Datennahme aufgefallen, sodass wir keine alternativen Daten bestimmen konnten.
+Beim Betrachten der Daten fällt auf, dass in vielen Fällen der Betrag des Impulses eines Leptons größer ist als die Energie desselben. Weiterhin ergeben sich in einigen Fällen Widersprüche zwischen dem Anteil des Transversalimpulses und dem Azimuthalwinkel des Leptons. So sollte eigentlich gelten: $p^2_\mathrm{T} \leq \left( p^2 - p^2_\mathrm{T}\right)\cot^2 (\phi) = p^2_\mathrm{z}\cot^2(\phi) = p^2_\mathrm{x}$. Leider sind uns diese Widersprüche nicht zum Zeitpunkt der Datennahme aufgefallen, sodass wir keine alternativen Daten bestimmen konnten.
 
 Wären die Daten widerspruchsfrei hätten wir die invariante Masse der Leptonpaare vermöge der Formel:
 \begin{align*}
@@ -313,7 +313,7 @@ bestimmt. Wobei das Skalarprodukt der Dreiervektoren gegeben ist durch
 und:
 \begin{align*}
 {p_j}_\mathrm{z} &= \sqrt{p^2_j - \left({p_j}_\mathrm{T}\right)^2}\\
-{p_j}_\mathrm{x} &= {p_j}_\mathrm{z}\cot \Phi_j \hspace{3cm} j\in\{\textrm{e},\textrm{p}\}\\
+{p_j}_\mathrm{x} &= {p_j}_\mathrm{z}\cot \phi_j \hspace{3cm} j\in\{\textrm{e},\textrm{p}\}\\
 {p_j}_\mathrm{y} &= \sqrt{\left({p_j}_\mathrm{T}\right)^2 - \left({p_j}_\mathrm{x}\right)^2}.
 \end{align*}
 Für den Fall vernachlässigter Elektronmasse würde sich die Formel für die invariante Masse vereinfachen zu:
@@ -321,6 +321,7 @@ Für den Fall vernachlässigter Elektronmasse würde sich die Formel für die invari
 p^2
 &= 2\left(E_\mathrm{e}E_\mathrm{p} - \vec{p}_\mathrm{e}\vec{p}_\mathrm{p}\right) \label{eq:ATLANTIS_LEP_INVMASS}
 \end{align}
+Als Ergebnis der Bestimmung der invarianten Masse erwarten wir das Quadrat der Masse des in das Leptonpaar zerfallenden Teilchens. In diesem Fall also das Quadrat der $Z^0$-Masse.
 
 \subsection{Teil 2: Kalibration der Elektronen}\label{subsec:ElektronKalibration}
 Die genauste Methode, die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen mit verschiedenen Eigenschaften besteht und  systematische Energieverluste durch inaktive Regionen im Detektor sowie Energieverluste der Elektronen vor Erreichen des Kalorimeters vorliegen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich auf Grund der sehr genau bekannten Eigenschaften des $Z^0$ anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mit Hilfe des Programms \texttt{ROOT} analysieren.
@@ -509,23 +510,7 @@ Aus diesen Überlegungen entwickeln wir die folgenden Schnittkriterien:
 \item \textbf{schwere Eichbosonen}: Da sich die neuen Eichbosonen wie $Z^0$-Bosonen verhalten sollten, verwenden wir die Schnittkriterien aus Abschnitt \ref{subsubsec:ZPairs}.
 \end{itemize}
 In den Abbildungen \ref{fig:NuPhysSearch_Higgs} bis \ref{fig:NuPhysSearch_SUSY} sind die Histogramme der invarianten Vier-Leptonen-Massen nach Anwendung der Schnittkriterien dargestellt. 
-Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:NuPhysicsSearch_NJets} die Histogramme von Jetzahl und fehlender Transversalenergie ohne Schnitt dargestellt.
-\begin{figure}[H]
-\begin{floatrow}
-\ffigbox{}
-{
-	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_ETMis}
-	\caption{Histogramm der fehlenden Transversalenergie für ATLAS- und $Z^0$-Datensatz}
-	\label{fig:NuPhysicsSearch_ETMis}
-}
-\ffigbox{}
-{
-	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_NJets}
-	\caption{Histogramm der Anzahl Jets für ATLAS- und $Z^0$-Datensatz}
-	\label{fig:NuPhysicsSearch_NJets}
-}
-\end{floatrow}
-\end{figure}
+Außerdem sind im Anhang in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:NuPhysicsSearch_NJets} die Histogramme von Jetzahl und fehlender Transversalenergie ohne Schnitt dargestellt.
 \begin{figure}[H]
 \begin{floatrow}
 \ffigbox{}
@@ -574,11 +559,16 @@ Man erkennt in Abbildung \ref{fig:NuPhysSearch_Higgs} deutlich einen Peak bei ca
 Anzeichen für andere Szenarien neuer Physik können wir (auch in höheren Energiebereichen als den dargestellten) nicht erkennen. 
 
 \section{Zusammenfassung}
+Die durchschnittliche zusätzliche Jet-Anzahl bei W-Ereignissen bestimmen wir mit $\bar{n} = 0.79 \pm 0.29$ in deutlicher Abweichung vom erwarteten Wert ($\bar{n} \approx 0.26$~\cite{paper}). Die Identifizierung von Jets bereitete uns offensichtlich nicht nur Schwierigkeiten, sondern war teilweise offenbar falsch.
 
+Bei der beispielhaften Bestimmung der invarianten Masse des Leptonpaars bei Zerfällen der Form $Z^0 \rightarrow e^+e^-$ stellten sich im Nachhinein unsere Daten als widersprüchlich heraus. Als Ergebnis der Bestimmung der invarianten Masse erwarten wir aber das Quadrat der Masse des in das Leptonpaar zerfallenden Teilchens, also das Quadrat der $Z^0$-Masse.
 
+Anschließend kalibrierten wir anhand der $Z^0$-Masse die Energiemessung. Der dabei bestimmte Wert für die $Z^0$-Masse ist mit $\unit[(91.17 \pm 0.02)]{GeV}$ sehr gut verträglich mit dem Literaturwert von $\unit[(91.1876 \pm 0.0021)]{GeV}$. Auch konnten wir die Auflösung des Detektors von $\unit[(3.977 \pm 0.026)]{GeV}$ bis auf $\unit[(1.963 \pm 0.020)]{GeV}$ verbessern.
+
+An neuer Physik ergibt sich bei uns "`nur"' die Entdeckung des Higgs-Bosons mit einer Masse von $\unit[(141 \pm 1)]{GeV}$, wobei wir eine Signifikanz von $61.3$ erreichen. Anzeichen für andere Szenarien neuer Physik können wir (auch in höheren Energiebereichen als den dargestellten) nicht ausmachen.
 
 \begin{appendix}
-  \section{Quellcode}\label{sec:sourcecode}
+\section{Quellcode}\label{sec:sourcecode}
 \subsection{ElecCalib.cpp}\label{subsec:eleccalib}
 \begin{lstlisting}
 double ElecCalib(double e_raw, double pt, double eta, 
@@ -707,9 +697,24 @@ while (drawer->go_on)
 drawer->DrawCanvas();
 }
 \end{lstlisting}
-  \section{Tabellen}
-
-  \Literatur{quellen}
+\section{Abbildungen}
+\begin{figure}[H]
+\begin{floatrow}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_ETMis}
+	\caption{Histogramm der fehlenden Transversalenergie für ATLAS- und $Z^0$-Datensatz}
+	\label{fig:NuPhysicsSearch_ETMis}
+}
+\ffigbox{}
+{
+	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_NJets}
+	\caption{Histogramm der Anzahl Jets für ATLAS- und $Z^0$-Datensatz}
+	\label{fig:NuPhysicsSearch_NJets}
+}
+\end{floatrow}
+\end{figure}
+\Literatur{quellen}
 
 \end{appendix}
 \end{document}
