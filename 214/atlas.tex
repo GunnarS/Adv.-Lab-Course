@@ -328,14 +328,14 @@ Für die verschiedenen $\eta$-Bereiche lassen sich nun verschiedene Multiplikator
 
 \subsection{Teil 3: Suche nach neuer Physik}
 \label{subsec:NuPhysics}
-In diesem Versuchsteil wollen wir nach Hinweisen auf neue Physik (wie in Abschnitt \ref{cha:newph} beschrieben) suchen. Dazu betrachten wir Daten mit 4-Lepton-Endzuständen. 
+In diesem Versuchsteil wollen wir nach Hinweisen auf neue Physik (wie in Abschnitt \ref{cha:newph} beschrieben) suchen. Dazu betrachten wir Daten mit Vier-Lepton-Endzuständen. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{graphics/SM}
-	\caption{Dominante Standardmodell-Prozesse mit vier-Lepton-Endzuständen}
+	\caption{Dominante Standardmodell-Prozesse mit Vier-Lepton-Endzuständen}
 	\label{fig:SM}
 \end{figure}
-Aus dem Standardmodell (ohne Higgs Boson) ergeben sich drei dominante Prozesse, die zu 4-Lepton-Endzuständen führen können. Sie sind in Abbildung \ref{fig:SM} dargestellt. Daneben gibt es einige Szenarios neuer Physik die weitere Prozesse mit solchen Endzuständen vorhersagen:
+Aus dem Standardmodell (ohne Higgs Boson) ergeben sich drei dominante Prozesse, die zu Vier-Lepton-Endzuständen führen können. Sie sind in Abbildung \ref{fig:SM} dargestellt. Daneben gibt es einige Szenarios neuer Physik die weitere Prozesse mit solchen Endzuständen vorhersagen:
 \begin{itemize} 
 \item Das \textbf{Higgs Boson} kann über den Prozess $H \rightarrow Z\; Z \rightarrow l^+\; l^- \;\;l'^+ \;l'^-$ zerfallen (Siehe Abbildung \ref{fig:Higgs_Decay}).
 \begin{figure}[H]
@@ -356,7 +356,7 @@ Aus dem Standardmodell (ohne Higgs Boson) ergeben sich drei dominante Prozesse, 
 \ffigbox{}
 {
 	\includegraphics[width=0.4\textwidth]{graphics/ggsusy}
-	\caption{SUSY Zerfallskaskade mit b-squark-Paarproduktion}
+	\caption{SUSY Zerfallskaskade mit b-Squark-Paarproduktion}
 	\label{fig:ggsusy}
 }
 \end{floatrow}
@@ -365,19 +365,20 @@ Aus dem Standardmodell (ohne Higgs Boson) ergeben sich drei dominante Prozesse, 
 \begin{align*}
 d_4 \; \bar{d_4} \rightarrow t\; W^- \;\; \bar{t}\;W^+\rightarrow b\;W^+\;W^-\;\;\bar{b}\;W^-\;W^-
 \end{align*}
-\item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$ Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
+\item In Theorien mit zusätzlichen \textbf{schweren Eichbosonen}, die ähnliche Eigenschaften wie das $Z^0$-Boson haben können ebenfalls Prozesse mit 4-Lepton-Endzuständen auftreten, da die zusätzlichen Eichbosonen ebenfalls in Leptonpaare zerfallen können.
 \end{itemize}
 
 
 \subsubsection{Z-Paar Ereignisse}
 \label{subsubsec:ZPairs}
 \hyphenation{Neu-tra-li-no-Paar-pro-duk-tion}
-Da der Zerfall des Higgs-Bosons sowie die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$-Paare stattfinden, entwickeln wir zuerst Schnittkriterien die Ereignisse der Standardmodell-Prozesse ohne $Z^0$-Paare möglichst herausfiltern. Dazu stehen uns simulierte Daten von 4-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
-Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:\\
+Da sowohl der Zerfall des Higgs-Bosons als auch die SUSY Zerfallskaskade mit Neutralino-Paarproduktion über $Z^0$-Paare stattfinden, entwickeln wir zuerst Schnittkriterien, welche Ereignisse der Standardmodell-Prozesse ohne $Z^0$-Paare möglichst herausfiltern. Dazu stehen uns simulierte Daten von Vier-Lepton-Endzuständen aus $Z^0$-Paaren, $Z^0\,b\,\bar{b}$ und $t$-Paaren zur Verfügung. Die Histogramme dieser Daten ohne Schnittkriterien sind in Abbildung \ref{fig:CompareDatasets_NoCuts} dargestellt.
+Als Ergebnis der Untersuchung der Auswirkungen verschiedener Schnittkriterien auf die Histogramme der drei Prozesse erhalten wir folgende Schnittkriterien:
+
 Es werden alle Ereignisse herausgefiltert, bei denen
 \begin{itemize}
 \item nicht genauso viele Anti-Leptonen wie Leptonen vorkommen und
-\item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8 GeV. 
+\item die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als $\unit[8]{GeV}$. 
 \end{itemize}
 Das zweite Schnittkriterium ergibt sich aus dem Fakt, dass bei den Zerfällen von $Z^0\,b\,\bar{b}$ bzw. $t$-Paaren Hadronenjets mit Transversalenergie enstehen. Die Verteilung der Summe dieser transversalen Energie in Kegeln um die Leptonen ist für die drei Prozesse in Abbildung \ref{fig:CompareDatasets_SumEtiso} dargestellt. Im \texttt{C++}-Quelltext lauten damit unsere Schnittbedingungen:
 \begin{lstlisting}
@@ -391,24 +392,24 @@ wobei \texttt{continue} zum Abbruch des aktuellen Schleifendurchlaufs und damit 
 	\caption{Verteilung der Summe der Transversalenergie in Kegeln um die Leptonen für die drei Standardmodellprozesse mit vier-Lepton-Endzuständen}
 	\label{fig:CompareDatasets_SumEtiso}
 \end{figure}
-In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um \unit[31,3]{\%} gesunken ist, konnten wir \unit[100]{\%} aller $t$-Paar-Ereignisse und \unit[98.8]{\%} der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
+In Abbildung \ref{fig:CompareDatasets_WCuts} sind die Histogramme der invarianten Masse nach Anwendung der Schnittkriterien für die drei Datensätze dargestellt. Während die Anzahl der $Z^0$-Paar-Ereignisse durch unsere Schnittbedingungen um $\unit[31.3]{\%}$ gesunken ist, konnten wir $\unit[100]{\%}$ aller $t$-Paar-Ereignisse und $\unit[98.8]{\%}$ der $Z^0\,b\,\bar{b}$-Paar-Ereignisse herausfiltern.
 \begin{figure}[H]
 \begin{floatrow}
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_NoCuts}
-	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse ohne Schnitt}
+	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von Vier-Lepton-Endzuständen für verschiedene Prozesse ohne Schnitt}
 	\label{fig:CompareDatasets_NoCuts}
 }
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/CompareDatasets_WCuts}
-	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von vier-Lepton Endzuständen für verschiedene Prozesse bei Anwendung der Schnittkriterien}
+	\caption{Vergleich der Histogramme der invarianten Masse der Leptonen von Vier-Lepton-Endzuständen für verschiedene Prozesse bei Anwendung der Schnittkriterien}
 	\label{fig:CompareDatasets_WCuts}
 }
 \end{floatrow}
 \end{figure}
-Nun soll die Anzahl der virtuellen $Z^0$-Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0 Z^0$ Datensatzes und eines (simulierten) ATLAS Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, dass nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen, und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden. Für die Analyse verwenden wir das im Anhang \ref{subsec:countZZ} dargestellte \texttt{ROOT}-Skript. Die Leptonen werden anhand ihrer Lepton-ID zu Paaren zusammengefasst und die invariante Masse der beiden resultierenden Paare berechnet. Anhand dieser invarianten Massen wird die Anzahl der virtuellen $Z^0$ bestimmt. Dabei wird ein $Z^0$ als virtuell definiert, wenn seine invariante Masse um mehr als die doppelte Zerfallsbreite von der $Z^0$ Masse abweicht. Die Ergebnisse der Analyse sind in Tabellen \ref{tab:atlaszs} und \ref{tab:zzzs} zusammengefasst.
+Nun soll die Anzahl der virtuellen $Z^0$-Bosonen in den $Z^0$-Paar-Ereignissen des simulierten $Z^0 Z^0$-Datensatzes und eines (simulierten) ATLAS-Datensatzes bestimmt werden. Dazu führen wir zusätzlich zu den bereits diskutierten ein weiteres Schnittkriterium ein, welches nur solche Ereignisse zulässt, in denen genau ein Elektron- und ein Myon-Paar gemessen werden. Nur in solchen Fällen lassen die Leptonen sich aufgrund ihrer unterschiedlichen Eigenschaften zu zwei Paaren zusammenfassen und die invariante Masse der zerfallenen $Z^0$ kann bestimmt werden. Für die Analyse verwenden wir das im Anhang \ref{subsec:countZZ} dargestellte \texttt{ROOT}-Skript. Die Leptonen werden anhand ihrer Lepton-ID zu Paaren zusammengefasst und die invariante Masse der beiden resultierenden Paare berechnet. Anhand dieser invarianten Massen wird die Anzahl der virtuellen $Z^0$ bestimmt. Dabei wird ein $Z^0$ als virtuell definiert, wenn seine invariante Masse um mehr als die doppelte Zerfallsbreite von der $Z^0$-Masse abweicht. Die Ergebnisse der Analyse sind in en Tabellen \ref{tab:atlaszs} und \ref{tab:zzzs} zusammengefasst.
 \begin{table}[H]
   \centering
 \resizebox{0.7\textwidth}{!}{
@@ -437,40 +438,40 @@ Nun soll die Anzahl der virtuellen $Z^0$-Bosonen in den $Z^0$-Paar-Ereignissen d
   \caption{Anzahl reeller und virtueller Z-Bosonen im simulierten Z-Paar-Datensatz}
   \label{tab:zzzs}}
 \end{table}
-Betrachtet man die Ergebnisse, so fällt auf, dass die Anzahl der Ereignisse mit der Anzahl der virtuellen $Z^0$ Bosonen abfällt. Unterhalb der kinematischen Schwelle treten wie erwartet keine kinematisch verbotenen Ereignisse mit zwei reellen $Z^0$ Bosonen auf. Die Anzahl der Ereignisse bei denen die invariante Masse aller vier Leptonen oberhalb der kinematischen Schwelle der doppelten $Z^0$ Masse liegt überwiegt gegenüber den Ereignissen unterhalb der kinematischen Schwelle. Dies erklärt sich durch den größeren Wirkungsquerschnitt der Erzeugung eines reellen als eines virtuellen Teilchens.
+Betrachtet man die Ergebnisse, so fällt auf, dass die Anzahl der Ereignisse mit der Anzahl der virtuellen $Z^0$-Bosonen abfällt. Unterhalb der kinematischen Schwelle treten wie erwartet keine kinematisch verbotenen Ereignisse mit zwei reellen $Z^0$-Bosonen auf. Die Anzahl der Ereignisse, bei denen die invariante Masse aller vier Leptonen oberhalb der kinematischen Schwelle der doppelten $Z^0$-Masse liegt, überwiegt gegenüber den Ereignissen unterhalb der kinematischen Schwelle. Dies erklärt sich durch den größeren Wirkungsquerschnitt der Erzeugung eines reellen als eines virtuellen Teilchens.
 
-Vergleicht man die Ergebnisse von ATLAS- und $Z^0$-Paar-Datensatz, so fällt auf, dass beim ATLAS Datensatz der Anteil der Ereignisse unterhalb der kinematischen Schwelle größer ausfällt. Dies lässt eine neue Resonanz mit einer Masse unterhalb der doppelten $Z^0$ Masse vermuten.
+Vergleicht man die Ergebnisse von ATLAS- und $Z^0$-Paar-Datensatz, so fällt auf, dass beim ATLAS-Datensatz der Anteil der Ereignisse unterhalb der kinematischen Schwelle größer ausfällt. Dies lässt eine neue Resonanz mit einer Masse unterhalb der doppelten $Z^0$-Masse vermuten.
 
 \subsubsection{Neue Physik}
 \label{subsubsec:NuPhysics}
-Um im ATLAS-Datensatz nach neuer Physik zu suchen, identifizieren wir zuerst die Observablen die sensitiv auf diese sein könnten. Im Falle eines \textbf{Higgs}-Bosons oder zusätzlichen \textbf{schweren Eichbosonen} erwarten wir Ergebnisse analog zum $Z^0$-Paar-Zerfall des Standardmodells. Es sollte sich in beiden Fällen ein neuer Peak in der \textit{invarianten vier-Leptonen-Masse} zeigen. Da keine Neutrinos oder andere lediglich schwach wechselwirkende Teilchen entstehen erwarten wir einen geringen fehlenden Transversalimpuls. Außerdem erwarten wir keine Jets, da keine Quarks oder Gluonen im Endzustand auftreten.
+Um im ATLAS-Datensatz nach neuer Physik zu suchen, identifizieren wir zuerst die Observablen, die sensitiv auf diese sein könnten. Im Falle eines \textbf{Higgs}-Bosons oder zusätzlicher \textbf{schwerer Eichbosonen} erwarten wir Ergebnisse analog zum $Z^0$-Paar-Zerfall des Standardmodells. Es sollte sich in beiden Fällen ein neuer Peak in der \textit{invarianten Vier-Leptonen-Masse} zeigen. Da keine Neutrinos oder andere lediglich schwach wechselwirkende Teilchen entstehen erwarten wir einen geringen fehlenden Transversalimpuls. Außerdem erwarten wir keine Jets, da keine Quarks oder Gluonen im Endzustand auftreten.
 
 Im Falle von \textbf{SUSY} entstehen dagegen viele lediglich schwach wechselwirkende Teilchen, die im Detektor nicht gemessen werden und so einen hohen \textit{fehlenden Transversalimpuls} verursachen. 
 
-Für das Szenario zusätzlicher \textbf{schwerer Quarks} erwarten wir eine hohe \textit{Anzahl jets} sowie aufgrund der enstehenden Neutrinos einen nicht verschwindenden \textit{fehlenden Transversalimpuls}, der aber aufgrund der geringen Masse der Neutrinos kleiner sein sollte als derjenige im Falle von SUSY.
+Für das Szenario zusätzlicher \textbf{schwerer Quarks} erwarten wir eine hohe \textit{Jet-Anzahl} sowie auf Grund der enstehenden Neutrinos einen nicht verschwindenden \textit{fehlenden Transversalimpuls}, der aber aufgrund der geringen Masse der Neutrinos kleiner sein sollte als derjenige im Falle von SUSY.
 
 Aus diesen Überlegungen entwickeln wir die folgenden Schnittkriterien:
 
 \begin{itemize}
-\item \textbf{Higgs}: Da wir in Abeschnitt \ref{subsubsec:ZPairs} bereits Hinweise darauf gefunden haben, dass das Higgs-Boson eine kleinere Masse hat als die doppelte $Z^0$ Masse, verwenden wir ein Schnittkriterium, dass alle Ereignisse herausfilter in denen beide $Z^0$ Bosonen reell sind. Außerdem verwenden wir das bereits in Abschnitt \ref{subsubsec:ZPairs} verwendete Schnittkriterium, das alle Ereignisse herausfilert in denen die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als 8 GeV, da das Higgs Boson über ein $Z^0$ Paar zerfällt. 
-\item \textbf{SUSY}: Das Histogramm der fehlenden Transversalenergie des $Z^0$ Paar Standardmodell-Datensatzes besitzt (wie in Abbildung \ref{fig:NuPhysicsSearch_ETMis} zu sehen) den großteil der Einträge im Regime bis ca 100 GeV. Aus diesem Grund setzen wir ein Schnittkriterium, das Ereignisse herausfiltert bei denen die fehlende Transversalenergie kleiner ist als 100 GeV.
-\item \textbf{schwere Quarks}: Beim Betrachten der Verteilung der Jet-Anzahl im $Z^0$ Paar Standardmodell-Datensatz (siehe Abbildung \ref{fig:NuPhysicsSearch_NJets} stellen wir fest, dass die meisten Einträge eine Jet-Anzahl kleiner als 4 aufweisen. Daher verwenden wir ein Schnittkriterium, das nur Ereignisse zulässt die mehr als 4 Jets aufweisen.
-\item \textbf{schwere Eichbosonen}: Da sich die neuen Eichbosonen wie $Z^0$ Bosonen verhalten sollten, verwenden wir die Schnittkriterien aus Abschnitt \ref{subsubsec:ZPairs}.
+\item \textbf{Higgs}: Da wir in Abschnitt \ref{subsubsec:ZPairs} bereits Hinweise darauf gefunden haben, dass das Higgs-Boson eine kleinere Masse hat als die doppelte $Z^0$-Masse, verwenden wir ein Schnittkriterium, das alle Ereignisse herausfilter in denen beide $Z^0$-Bosonen reell sind. Außerdem verwenden wir das bereits in Abschnitt \ref{subsubsec:ZPairs} verwendete Schnittkriterium, das alle Ereignisse herausfiltert, in denen die Summe der transversalen Energie in Kegeln um die Leptonen größer ist als $\unit[8]{GeV}$, da das Higgs-Boson über ein $Z^0$-Paar zerfällt. 
+\item \textbf{SUSY}: Das Histogramm der fehlenden Transversalenergie des vorliegenden $Z^0$-Paar-Standardmodell-Datensatzes besitzt (wie in Abbildung \ref{fig:NuPhysicsSearch_ETMis} zu sehen) den Großteil der Einträge im Regime bis etwa $\unit[100]{GeV}$. Aus diesem Grund setzen wir ein Schnittkriterium, das Ereignisse herausfiltert, bei denen die fehlende Transversalenergie kleiner ist als $\unit[100]{GeV}$.
+\item \textbf{schwere Quarks}: Beim Betrachten der Verteilung der Jet-Anzahl im $Z^0$-Paar-Standardmodell-Datensatz (siehe Abbildung \ref{fig:NuPhysicsSearch_NJets}) stellen wir fest, dass die meisten Einträge eine Jet-Anzahl kleiner als vier aufweisen. Daher verwenden wir ein Schnittkriterium, das nur Ereignisse zulässt, die mehr als vier Jets aufweisen.
+\item \textbf{schwere Eichbosonen}: Da sich die neuen Eichbosonen wie $Z^0$-Bosonen verhalten sollten, verwenden wir die Schnittkriterien aus Abschnitt \ref{subsubsec:ZPairs}.
 \end{itemize}
-In den Abbildungen \ref{fig:NuPhysSearch_Higgs} bis \ref{fig:NuPhysSearch_SUSY} sind die Histogramme der invarianten Vierleptonenmassen nach Anwendung der Schnittkriterien dargestellt. 
+In den Abbildungen \ref{fig:NuPhysSearch_Higgs} bis \ref{fig:NuPhysSearch_SUSY} sind die Histogramme der invarianten Vier-Leptonen-Massen nach Anwendung der Schnittkriterien dargestellt. 
 Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:NuPhysicsSearch_NJets} die Histogramme von Jetzahl und fehlender Transversalenergie ohne Schnitt dargestellt.
 \begin{figure}[H]
 \begin{floatrow}
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_ETMis}
-	\caption{Histogram der fehlenden Transversalenergie für ATLAS- und $Z^0$-Datensatz}
+	\caption{Histogramm der fehlenden Transversalenergie für ATLAS- und $Z^0$-Datensatz}
 	\label{fig:NuPhysicsSearch_ETMis}
 }
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_NJets}
-	\caption{Histogram der Anzahl Jets für ATLAS- und $Z^0$-Datensatz}
+	\caption{Histogramm der Anzahl Jets für ATLAS- und $Z^0$-Datensatz}
 	\label{fig:NuPhysicsSearch_NJets}
 }
 \end{floatrow}
@@ -480,13 +481,13 @@ Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:Nu
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_Higgs}
-	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach einem Higgs Boson.  Dargestellt ist auch die Differenz zwischen auf die Luminosität korrigierten ATLAS Daten und den als Untergrund angenommenen $Z^0$ Daten.}
+	\caption{Invariante Vier-Leptonen-Masse aus dem ATLAS und dem $Z^0$-Datensatz nach Anwendung der Schnittkriterien für die Suche nach einem Higgs Boson. Dargestellt ist auch die Differenz zwischen den auf die Luminosität korrigierten ATLAS-Daten und den als Untergrund angenommenen $Z^0$-Daten.}
 	\label{fig:NuPhysSearch_Higgs}
 }
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_HeavyQuarks}
-	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Quarks}
+	\caption{Invariante Vier-Leptonen-Masse aus dem ATLAS- und dem $Z^0$-Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Quarks}
 	\label{fig:NuPhysSearch_HeavyQuarks}
 }
 \end{floatrow}
@@ -496,13 +497,13 @@ Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:Nu
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_HeavyZ}
-	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Eichbosonen}
+	\caption{Invariante Vier-Leptonen-Masse aus dem ATLAS- und dem $Z^0$-Datensatz nach Anwendung der Schnittkriterien für die Suche nach schweren Eichbosonen}
 	\label{fig:NuPhysSearch_HeavyZ}
 }
 \ffigbox{}
 {
 	\includegraphics[width=0.5\textwidth]{graphics/NuPhysSearch_SUSY}
-	\caption{Invariante Vierleptonenmasse aus dem ATLAS und dem $Z^0$ Datensatz nach Anwendung der Schnittkriterien für die Suche nach SUSY}
+	\caption{Invariante Vier-Leptonen-Masse aus dem ATLAS- und dem $Z^0$-Datensatz nach Anwendung der Schnittkriterien für die Suche nach SUSY}
 	\label{fig:NuPhysSearch_SUSY}
 }
 \end{floatrow}
@@ -510,16 +511,17 @@ Außerdem sind in den Abbildungen \ref{fig:NuPhysicsSearch_ETMis} und \ref{fig:Nu
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/NuPhysSearch_Higgs_Zoom}
-	\caption{Zoom auf den Higgs Peak aus Abbildung \ref{fig:NuPhysSearch_Higgs}}
+	\caption{Zoom auf den Higgs-Peak aus Abbildung \ref{fig:NuPhysSearch_Higgs}}
 	\label{fig:NuPhysSearch_Higgs_Zoom}
 \end{figure}
-Man erkennt in Abbildung \ref{fig:NuPhysSearch_Higgs} deutlich einen Peak bei ca  $\unit[141]{GeV}$. Er ist in Abbildung \ref{fig:NuPhysSearch_Higgs_Zoom} noch einmal vergrößert dargestellt. Wir deuten dies als ein Zeichen auf ein Higgs Boson mit einer Masse von $\unit[(141\pm 1)]{GeV}$. Trotz der bereits abgezogenen $Z^0$-Paar-Ereignisse hat der Peak noch etwas einen Untergrund von ca 7 Ereignissen pro Bin. Damit hat unser Fund eine Signifikanz von $\frac{25+65+67+95+92+98+38+36-56}{\sqrt{56}}=61,3$ und wäre damit eine Entdeckung. Wie man in Abbildungen \ref{fig:NuPhysSearch_HeavyQuarks} bis \ref{fig:NuPhysSearch_SUSY} sieht, weisen auch die Histogramme die mit anderen Schnittkriterien erstellt wurden den Higgs-Peak auf. Die hohe Anzahl Jets bei einem Prozess mit Higgs Boson erklärt sich durch die bei einer Masse von 140 GeV hohe Wahrscheinlichkeit des Zerfalls in ein $b\bar{b}$-Paar, der große fehlende Transversalimpuls durch die ebenfalls hohe Wahrscheinlichkeit des Zerfalls in ein $W^+W^-$-Paar (siehe auch Abbildung \ref{fig:higgs_br}). Anzeichen für andere Szenarien neuer Physik können wir (auch in höheren Energiebereichen als den dargestellten) nicht erkennen. 
+Man erkennt in Abbildung \ref{fig:NuPhysSearch_Higgs} deutlich einen Peak bei ca.  $\unit[141]{GeV}$. Er ist in Abbildung \ref{fig:NuPhysSearch_Higgs_Zoom} noch einmal vergrößert dargestellt. Wir deuten dies als ein Zeichen auf ein Higgs-Boson mit einer Masse von $\unit[(141 \pm 1)]{GeV}$. Trotz der bereits abgezogenen $Z^0$-Paar-Ereignisse hat der Peak noch einen Untergrund von etwa sieben Ereignissen pro Bin. Damit hat unser Fund eine Signifikanz von $(25+65+67+95+92+98+38+36-56)/\sqrt{56}=61.3$ und wäre somit eine Entdeckung. Wie man in den Abbildungen \ref{fig:NuPhysSearch_HeavyQuarks} bis \ref{fig:NuPhysSearch_SUSY} sieht, weisen auch die Histogramme, welche mit anderen Schnittkriterien erstellt wurden, den Higgs-Peak auf. Die hohe Jet-Anzahl bei einem Prozess mit Higgs-Boson erklärt sich dabei durch die bei einer Masse von $\unit[140]{GeV}$ hohe Wahrscheinlichkeit des Zerfalls in ein $b\bar{b}$-Paar, der große fehlende Transversalimpuls durch die ebenfalls hohe Wahrscheinlichkeit des Zerfalls in ein $W^+W^-$-Paar (siehe auch Abbildung \ref{fig:higgs_br}). 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.5\textwidth]{graphics/higgs_br}
-	\caption{Wahrscheinlichkeiten der verschiedenen Higgs Zerfallskanäle in Abhängigkeit von der Higgsmasse (Aus \cite{higgspaper})}
+	\caption{Wahrscheinlichkeiten der verschiedenen Higgs Zerfallskanäle in Abhängigkeit von der Higgsmasse~\cite{higgspaper}}
 	\label{fig:higgs_br}
 \end{figure}
+Anzeichen für andere Szenarien neuer Physik können wir (auch in höheren Energiebereichen als den dargestellten) nicht erkennen. 
 
 \section{Zusammenfassung}
 
