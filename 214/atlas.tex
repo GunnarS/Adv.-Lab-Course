@@ -3,6 +3,7 @@
 \newcommand{\versuch}{ATLAS}
 \newcommand{\nummer}{E214}
 
+\newcommand{\vr}[2]{\ensuremath{\left(\begin{array}{c}#1\\#2\end{array}\right)}}
 
 \begin{document}
 
@@ -161,11 +162,9 @@ Der ATLAS-Detektor kann Pseudo-Rapiditäten $|\eta| < 2.5$ für Leptonen sowie $|\
 
 
 \section{Aufgaben vor Versuchsbeginn}
-\subsection*{Frage A: Zerfall des $Z^0$-Bosons}
-\emph{Welchen Wert hat der Impuls eines Elektrons beim Zerfall des $Z^0$-Bosons ($Z^0 \rightarrow e^+ e^-$) im Ruhesystem des $Z^0$-Bosons?}
-
+\subsection*{Fragen zu Versuchsteil 2}
+\emph{Welchen Wert hat der Impuls eines Elektrons beim Zerfall des $Z^0$-Bosons ($Z^0 \rightarrow e^+ e^-$) im Ruhesystem des $Z^0$-Bosons?}\\
 Das $Z^0$-Boson wird in Ruhe betrachten, hat also einen verschwindenden Dreier-Impuls $\vec{p}_Z$. Da Vierer-Impuls-Erhaltung gilt, verschwindet auch die Summe der Dreier-Impulse von Positron und Elektron ($\vec{p}_{e^+} = - \vec{p}_{e^-}$). Man betrachte also die 0-Komponente der Vierer-Impulse:
-
 %noch schöner machen:
 \begin{eqnarray*}
                E_{Z^0} &=& E_{e^+} + E_{e^-} \\
@@ -173,47 +172,73 @@ Das $Z^0$-Boson wird in Ruhe betrachten, hat also einen verschwindenden Dreier-I
                        &=& 2 \sqrt{m^2_e + \vec{p_e}^2} \\
 \Rightarrow  \vec{p_e}^2 &=& \frac{m^2_{Z^0}}{4} - m^2_e \\
 \Rightarrow  \vec{p_e}   &=& \sqrt{\frac{m^2_{Z^0}}{4} - m^2_e} \\
-                         &=& \unit[45.6]{GeV}
+                         &=& \unit[45.6]{GeV} \ \ldotp
 \end{eqnarray*}
 
-\subsection*{Frage B: Elektron-Positron-Streuung}
-\emph{Wie groß ist der Impuls der $\tau$-Leptonen bei der Reaktion $e^+ e^- \rightarrow \tau^+ \tau^-$ im CMS ($\sqrt{s} = \unit[5]{GeV}$)?}
-
+\emph{Wie groß ist der Impuls der $\tau$-Leptonen bei der Reaktion $e^+ e^- \rightarrow \tau^+ \tau^-$ im CMS ($\sqrt{s} = \unit[5]{GeV}$)?} \\
 Es gilt Energieerhaltung ($s = s'$), somit folgt:
+%noch schöner machen:
 \begin{eqnarray*}
     \sqrt{s} &=& E_{\tau^+} + E_{\tau^-} \\
              &=& 2 E_{\tau^+} \\
              &=& 2 \sqrt{m^2_{\tau} + p^2_{\tau}} \\
 \Rightarrow  p^2_{\tau} &=& \frac{s}{4} - m^2_{\tau} \\
 \Rightarrow  p_{\tau}   &=& \sqrt{\frac{s}{4} - m^2_{\tau}} \\
-\Rightarrow  p_{\tau}   &=& \unit[1.76]{GeV}
+\Rightarrow  p_{\tau}   &=& \unit[1.76]{GeV} \ \ldotp
 \end{eqnarray*}
 
-\subsection*{Fragen zu Versuchsteil 2}
-\emph{Wie kann der Transversalimpuls des W-Bosons bestimmt werden? Wie können Sie die Variable} \texttt{ptw} \emph{aus den anderen \texttt{ROOT}-Variablen bestimmen?}
-%antwort
-
-\emph{Leiten Sie aus Gleichung (4.4) die Gleichung (4.5) her.~\cite{skript}}
-%antwort
-
 \subsection*{Fragen zu Versuchsteil 3}
-%...
+\emph{Wie kann der Transversalimpuls des W-Bosons bestimmt werden? Wie können Sie die Variable} \texttt{ptw} \emph{aus den anderen \texttt{ROOT}-Variablen bestimmen?}\\
+Die Transversalimpulse von Elektron bzw.\ Positron und Neutrino addieren sich zum Transversalimpuls des W-Bosons. Da der Transversalimpuls des Elektrons bzw.\ Positrons gemessen und der des Neutrinos mittels $\displaystyle{\not} E_T$ bestimmt werden kann, ergibt sich auf diese Weise der Transversalimpuls des W-Bosons.
+
+\emph{Leiten Sie aus Gleichung (4.4) die Gleichung (4.5) her.~\cite{skript}}\\
+Zunächst einmal gilt $p_T = p sin{\theta}$ sowie $p_L = p cos{\theta}$ und $p^2 = p^2_T + p^2_L$. Des Weiteren können alle Lepton-Massen gegenüber den Vektor-Boson-Massen vernachlässigt werden, sodass die Leptonen im Ruhesystem des Bosons einen exakt entgegengesetzten, betragsmäßig gleichen Impuls $p = \frac{1}{2} M_W$ besitzen. Somit folgt:
+%noch schöner machen:
+\begin{eqnarray*}
+             p_T &=& p sin{\theta} \\
+                 &=& p (1- \cos{\theta})^{\frac{1}{2}} \\
+\Rightarrow  \left| \frac{\mathrm{d} p_T}{\mathrm{d} \cos{\theta}} \right| 
+                 &=& p \ \frac{\cos{\theta}}{\sin{\theta}} \\
+\Rightarrow  {\left| \frac{\mathrm{d} p_T}{\mathrm{d} \cos{\theta}} \right|}^{-1}
+                 &=& \frac{\sin{\theta}}{p \cos{\theta}} \\
+                 &=& \frac{p_T}{p\ p_L} \\
+                 &=& \frac{2 p_T}{M_W p_L} \\
+                 &=& \frac{2 p_T}{M_W (p^2 - p^2_T)^{\frac{1}{2}}} \ \ldotp
+\end{eqnarray*}
+Es folgt also:
+%noch schöner machen:
+\begin{eqnarray*}
+\frac{\mathrm{d} \sigma}{\mathrm{d} p_T} 
+   &=& \frac{\mathrm{d} \sigma}{\mathrm{d} \cos{\theta}} {\left| \frac{\mathrm{d} p_T}{\mathrm{d} \cos{\theta}} \right|}^{-1} \\
+   &=& \frac{\mathrm{d} \sigma}{\mathrm{d} \cos{\theta}} \frac{2 p_T}{M_W (\frac{M^2_W}{4} - p^2_T)^{\frac{1}{2}}} \ \ldotp \\
+\end{eqnarray*}
+\begin{flushright}
+$\square$
+\end{flushright}
 
 \subsection*{Fragen zu Versuchsteil 4}
-\emph{Was ist die minimale invariante Masse der vier Leptonen aus einem $Z^0$-Paar? Weshalb findet man auch unterhalb dieser Schwelle Vier-Lepton-Ereignisse?}
-%antwort
+\emph{Was ist die minimale invariante Masse der vier Leptonen aus einem $Z^0$-Paar? Weshalb findet man auch unterhalb dieser Schwelle Vier-Lepton-Ereignisse?}\\
+Die minimale invariante Masse ist die Ruhemasse der beiden Bosonen, also $M_{inv} = 2 M_Z$. Auch unterhalb dieser Schwelle findet man jedoch Vier-Lepton-Ereignisse, da noch die Möglichkeit virtueller Austauschbosonen besteht, welche auch unterhalb dieser Schwelle erzeugt werden können.
 
-\emph{Ein Higgs-Boson zerfalle in zwei $Z^0$. Wie sieht die Verteilung der invarianten Masse der vier Leptonen aus?}
-%antwort
+\emph{Ein Higgs-Boson zerfalle in zwei $Z^0$. Wie sieht die Verteilung der invarianten Masse der vier Leptonen aus?}\\
+Man erhält einen Peak der Verteilung bei der Higgs-Masse.
 
-\emph{Ein idealer Detektor wird vorrausgesetzt. Welches ist das typische $\displaystyle{\not} E_T$, wenn ein $Z^0$-Paar in Elektronen oder Myonen-Paare zerfällt? Wie wird $\displaystyle{\not} E_T$ bei einem realen Detektor aussehen?}
-%antwort
+\emph{Ein idealer Detektor wird vorrausgesetzt. Welches ist das typische $\displaystyle{\not} E_T$, wenn ein $Z^0$-Paar in Elektronen oder Myonen-Paare zerfällt? Wie wird $\displaystyle{\not} E_T$ bei einem realen Detektor aussehen?}\\
+Typisch ist hier ein verschwindender Gesamttransversalimpuls aller Z-Bosonen. Elektronen und Myonen sind vollständig detektierbar ($\displaystyle{\not} E_T = 0$). 
+Im Gegensatz dazu wird bei einem realen Detektor die Energie bei Propagation eines Teilchens durch den Detektor nicht vollständig im Detektor deponiert und ferner tritt auch Teilchenpropagation in Strahlrichtung auf (keine Möglichkeit der Detektion). In einem realen Detektor wird somit im Allgemeinen dennoch eine fehlende Transversalenergie $\displaystyle{\not} E_T$ auftreten.
 
-\emph{noch ne frage ...}
-%antwort
 
-\emph{un noch eine ...}
-%antwort
+\emph{Die Zerfallsrate von $t \rightarrow W b$ ist nahezu $\unit[100]{\%}$. Wenn ein $t \bar{t}$-Paar vorliegt, zerfallen beide Teilchen sofort dementsprechend. Zerfallen dann beide W-Bosonen leptonisch ($W \rightarrow l \nu$), finden sich zwei Leptonen im Ereignis. Was könnte ein Vier-Lepton-Ereigniss in einem $t \bar{t}$-Prozess erklären?}\\
+Zusätzlich zu den zwei Leptonen aus den beiden Zerfällen der W-Bosonen, können zwei weitere (nachweisbare) Leptonen aus dem (unterdrückten) Zerfall der beiden $b$-Quarks in Hadronen und Leptonen erzeugt werden (siehe Abbildung \ref{fig:SM} Mitte).
+
+\emph{Machen Sie folgendes Gedankenexperiment: Es werden zufällig natürliche Zahlen zwischen 1 und 200 erzeugt und in 200 Bins sortiert. Nach 20.000 aufgenommenen Zahlen erwartet man im Durchschnitt 100 Einträge pro Bin. Wie lautet der statistische Fehler für die Anzahl der Einträge in einem Bin? Wie wahrscheinlich ist es, in einem Bin 130 Einträge zu finden? Wie viele solcher Bins erwarten Sie? Also: Mit welcher Wahrscheinlichkeit findet man eine Abweichung von drei Standardabweichungen in einer der Bins?}\\
+Die Wahrscheinlichkeit $k$ Einträge in einem Bin zu finden folgt einer Binomial-Verteilung:
+\begin{align}
+P(k) = \vr{n}{k} p^k (1-p)^{n-k} \ ,
+\end{align}
+wobei $p$ die Wahrscheinlichkeit (hier $p=1/200$) und $n$ die Gesamtereignisanzahl (hier $n=20000$) darstellt. Die Standardabweichung beträgt somit also $\sigma = \sqrt{n p (1-p)} \approx 10$.\\
+Um zu bestimmen, wie wahrscheinlich es ist, in einem Bin $k=130$ Einträge zu finden, wird die Binomial-Verteilungs-Formel verwendet. Man erhält $P(130) = 5.6 \cdot 10^{-4}$. Die mittlere Anzahl von Bins mit 130 Einträgen beträgt also $N_{130} = P(130) \cdot 200 \approx 0.11$. Ferner ergibt sich die Wahrscheinlichkeit, ein Ereignis außerhalb des $3\sigma$-Bereichs zu finden, zu $P_{3\sigma} = 1 - \sum^{129}_{k=1} P(k) \approx 3.2 \cdot 10^{-3}$. Für die erwartete Anzahl der Bins mit Ereignisanzahlen außerhalb des $3\sigma$-Bereichs erhält man also $N_{3\sigma} = P_{3\sigma} \cdot 200 \approx 0.64$. Hierbei wird stets in guter Näherung die Wahrschlichkeit als über alle Bins konstant angenommen.\\
+Für die Wahrscheinlichkeit, dass mindestens einer der Bins eine Ereignisanzahl außerhalb des $3\sigma$-Bereichs aufweist, ergibt sich schließlich: $P = 1 - (1 - P_{3\sigma})^{200} \approx 0.47$.
 
 
 \section{Versuchsdurchführung und Auswertung}
@@ -226,7 +251,7 @@ Zur Bestimmung der durchschnittlichen Anzahl zusätzlicher Jets bei Ereignissen m
 Zu den Indizien für einen hadronischen Jet zählen wir eine Häufung von Einträgen im hadronischen Kalorimeter und zugehörigen Spuren sowie keinen ebenfalls vorhandenen Eintrag im Myonendetektor, da auch Myonen Energie im hadronischen Kalorimeter deponieren können. Wir erhalten die in Tabelle \ref{tab:njet} aufgeführte Verteilung.
 \begin{table}[H]
   \centering
-\resizebox{0.5\textwidth}{!}{
+\resizebox{0.3\textwidth}{!}{
   \begin{tabular}{lc}
     \toprule
      $\mathrm{n_{Jets}}$ & Ereignisanzahl \\
