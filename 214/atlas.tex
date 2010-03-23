@@ -243,8 +243,21 @@ Für die Wahrscheinlichkeit, dass mindestens einer der Bins eine Ereignisanzahl a
 
 \section{Versuchsdurchführung und Auswertung}
 \subsection{Teil 1: Graphische Darstellung von Teilchenreaktionen}
+Eingangs machen wir uns mit den \emph{event displays} des ATLAS-Experiments und dem Programm \texttt{ATLANTIS}, welches wir im Folgenden kurz vorstellen, vertraut und beginnen dann mit den konkreten Versuchsaufgaben.
+
 \subsubsection*{ATLANTIS}
-%oder auch woanders n bissl dazu schreiben
+Mit Hilfe von \texttt{ATLANTIS} können die ATLAS-Ereignisse graphisch angezeigt werden. 
+Innerhalb einer schematischen Darstellung des ATLAS-Detektors in verschiedenen wählbaren Perspektiven (siehe Abbildung \ref{fig:atlantis}) werden die zuvor eingelesenen Daten simuliert. Dabei werden die Spurdetektoren im Inneren schwarz, das elektromagnetische Kalorimeter grün, das hadronische Kalorimeter rot und die Myon-Chambers schwarzblau dargestellt (in der Abbildung auf Grund eines Zooms nicht zu sehen).
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/atlantis}
+	\caption{Screenshot der Programmoberfläche von \texttt{ATLANTIS} mit Querschnitt durch den ATLAS-Detektor orthogonal zur Strahlachse (oben links), Längsschnitt durch den Detektor entlang der Strahlachse (unten), Darstellung der Signale in der $\eta \phi$-Ebene (oben rechts) und eine Darstellung der deponierten Energien (rechts mitte)}
+	\label{fig:atlantis}
+\end{figure}
+Entsprechend der Messung (bzw. in unserem Fall der simulierten Daten) finden sich dann gelbe Einträge in den beiden Kalorimetern und weiße Spuren in den Spurdetektoren. Detektierte Myonen geben sich dann beispielsweise auf Grund ihrer hohen Masse durch eine vorhandene Spur, Einträgen in beiden Kalorimetern und einer Spur im äußeren Detektor zu erkennen.
+
+Das Programm erlaubt eine Vielzahl an Darstellungen und eignet sich auch zur Datenverarbeitung. So kann beispielsweise der fehlende Transversalimpuls rekonstruiert und im Detektor-Schema angezeigt werden.
+
 \subsubsection*{Durchschnittliche Jet-Anzahl bei W-Ereignissen}
 Zur Bestimmung der durchschnittlichen Anzahl zusätzlicher Jets bei Ereignissen mit W-Bosonen werten wir anhand des Programmes \texttt{ATLANTIS} graphisch einige simulierte  \emph{event displays} aus. Der Datensatz enthält nur rein leptonische W-Prozesse, sodass jeder auftretende Jet ein zusätzlicher ist.
 
