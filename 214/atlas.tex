@@ -270,8 +270,49 @@ Anhand dieser Daten bestimmen wir die durchschnittliche Jet-Anzahl zu $0.79 \pm 
 %noch zu ende und fehler ausrechnen
 
 
-\subsubsection*{lglhgjg}
+\subsubsection*{Invariante Masse bei $Z^0 \rightarrow e^+e^-$ Zerfällen}
+Aus dem Datensatz mit Zerfällen der Art $Z^0 \rightarrow e^+e^-$ wollen wir für drei Events die invariante Masse des Leptonpaars bestimmen. Dazu bestimmen wir für die Events Energie, Impuls, Transversalimpuls und Azimuthalwinkel der beiden Leptonen. Die Ergebnisse sind in Tabelle \ref{tab:Zee_ATLANTIS} dargestellt.
+\begin{table}[H]
+  \centering
+\resizebox{1\textwidth}{!}{
+  \begin{tabular}{llcccc}
+    \toprule[0.75pt]
+Satz & & Energie$/\unit{GeV}$ & Impuls$/\unit{GeV}$ & Transversalimpuls$/\unit{GeV}$ & Azimuthalwinkel\\
+    \midrule[0.75pt]
+1 & $e^-$ & 36,0 & 37,04 & 8,71 & 262,16\\
+& $e^+$ & 32,6 & 43,98 & 20,28 & 71,61\\
+2&$e^-$&56,6&55,16&32,08&31,58\\
+&$e^+$&70,3&72,13&45,51&204,79\\
+3&$e^-$&75,8&46,56&16,82&60,83\\
+&$e^+$&27,3&33,67&32,62&237,07\\
+    \bottomrule
+  \end{tabular}
+}
+  \caption{Mithilfe von ATLANTIS bestimmte Daten der Endzustandsleptonen von $Z^0 \rightarrow e^+e^-$ Zerfällen }
+  \label{tab:Zee_ATLANTIS}
+\end{table}
+Beim Betrachten der Daten fällt auf, dass in vielen Fällen der Betrag des Impulses eines Leptons größer ist als die Energie desselben. Weiterhin ergeben sich in einigen Fällen widersprüche zwischen Anteil des Transversalimpulses und Azimuthalwinkel des Leptons (Es sollte gelten: $p^2_\mathrm{T} \leq \left( p^2 - p^2_\mathrm{T}\right)\cot^2 (\Phi) = p^2_\mathrm{z}\cot^2(\Phi) = p^2_\mathrm{x}$). Leider sind uns diese widersprüche nicht zum Zeitpunkt der Datennahme aufgefallen, sodass wir keine alternativen Daten bestimmen konnten.
 
+Wären die Daten widerspruchsfrei hätten wir die invariante Masse der Leptonpaare vermöge der Formel:
+\begin{align*}
+p^2 &= |p_\mathrm{e}+p_\mathrm{p}|^2 = |p_\mathrm{e}|^2 + |p_\mathrm{p}|^2 + 2p_\mathrm{e}p_\mathrm{p} \\
+ &= 2\left( |p_\mathrm{e}|^2+E_\mathrm{e}E_\mathrm{p} - \vec{p}_\mathrm{e}\vec{p}_\mathrm{p}\right)
+\end{align*}
+bestimmt. Wobei das Skalarprodukt der Dreiervektoren gegeben ist durch
+\begin{equation*}
+\vec{p}_\mathrm{e}\vec{p}_\mathrm{p} = \sum_{i}{p_\mathrm{e}}_\mathrm{i}{p_\mathrm{p}}_\mathrm{i}\hspace{3cm} i \in \{\mathrm{x},\mathrm{y},\mathrm{z}\}
+\end{equation*}
+und:
+\begin{align*}
+{p_j}_\mathrm{z} &= \sqrt{p^2_j - \left({p_j}_\mathrm{T}\right)^2}\\
+{p_j}_\mathrm{x} &= {p_j}_\mathrm{z}\cot \Phi_j \hspace{3cm} j\in\{\textrm{e},\textrm{p}\}\\
+{p_j}_\mathrm{y} &= \sqrt{\left({p_j}_\mathrm{T}\right)^2 - \left({p_j}_\mathrm{x}\right)^2}.
+\end{align*}
+Für den Fall vernachlässigter Elektronmasse würde sich die Formel für die invariante Masse vereinfachen zu:
+\begin{align}
+p^2
+&= 2\left(E_\mathrm{e}E_\mathrm{p} - \vec{p}_\mathrm{e}\vec{p}_\mathrm{p}\right) \label{eq:ATLANTIS_LEP_INVMASS}
+\end{align}
 \subsection{Teil 2: Kalibration der Elektronen}\label{subsec:ElektronKalibration}
 Die genauste Methode, die Energie eines Elektrons zu bestimmen, ist die Messung der Energie des elektromagnetischen Schauers, den das Elektron im Kalorimeter auslöst. Da das Kalorimeter aus vielen hundert Einzelteilen mit verschiedenen Eigenschaften besteht und  systematische Energieverluste durch inaktive Regionen im Detektor sowie Energieverluste der Elektronen vor Erreichen des Kalorimeters vorliegen, muss diese Energiemessung kalibriert werden. Diese Kalibration lässt sich auf Grund der sehr genau bekannten Eigenschaften des $Z^0$ anhand dessen Zerfall in ein $e^+e^-$-Paar durchführen. Dazu stehen uns Daten solcher gemessener Zerfälle zur Verfügung, die wir mit Hilfe des Programms \texttt{ROOT} analysieren.
 
