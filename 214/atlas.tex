@@ -231,7 +231,7 @@ Zusätzlich zu den zwei Leptonen aus den beiden Zerfällen der W-Bosonen, können z
 \emph{Machen Sie folgendes Gedankenexperiment: Es werden zufällig natürliche Zahlen zwischen 1 und 200 erzeugt und in 200 Bins sortiert. Nach 20.000 aufgenommenen Zahlen erwartet man im Durchschnitt 100 Einträge pro Bin. Wie lautet der statistische Fehler für die Anzahl der Einträge in einem Bin? Wie wahrscheinlich ist es, in einem Bin 130 Einträge zu finden? Wie viele solcher Bins erwarten Sie? Also: Mit welcher Wahrscheinlichkeit findet man eine Abweichung von drei Standardabweichungen in einer der Bins?}\\
 Die Wahrscheinlichkeit $k$ Einträge in einem Bin zu finden folgt einer Binomial-Verteilung:
 \begin{align}
-P(k) = \vr{n}{k} p^k (1-p)^{n-k} \ ,
+P(k) = \vr{n}{k} p^k \ (1-p)^{n-k} \ ,
 \end{align}
 wobei $p$ die Wahrscheinlichkeit (hier $p=1/200$) und $n$ die Gesamtereignisanzahl (hier $n=20000$) darstellt. Die Standardabweichung beträgt somit also $\sigma = \sqrt{n p (1-p)} \approx 10$.\\
 Um zu bestimmen, wie wahrscheinlich es ist, in einem Bin $k=130$ Einträge zu finden, wird die Binomial-Verteilungs-Formel verwendet. Man erhält $P(130) = 5.6 \cdot 10^{-4}$. Die mittlere Anzahl von Bins mit 130 Einträgen beträgt also $N_{130} = P(130) \cdot 200 \approx 0.11$. Ferner ergibt sich die Wahrscheinlichkeit, ein Ereignis außerhalb des $3\sigma$-Bereichs zu finden, zu $P_{3\sigma} = 1 - \sum^{129}_{k=1} P(k) \approx 3.2 \cdot 10^{-3}$. Für die erwartete Anzahl der Bins mit Ereignisanzahlen außerhalb des $3\sigma$-Bereichs erhält man also $N_{3\sigma} = P_{3\sigma} \cdot 200 \approx 0.64$. Hierbei wird stets in guter Näherung die Wahrschlichkeit als über alle Bins konstant angenommen.\\
