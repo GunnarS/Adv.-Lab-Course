@@ -8,10 +8,15 @@
 \begin{document}
 
 \section{Einleitung}
+Dieser Versuch soll einen Einblick in die Anwendung von Lasern für hochauflösende atomare Spektroskopie geben. Hierzu werden zunächst die Leistung des Diodenlasers in Abhängigkeit vom Injektionsstrom und Finesse des zur Verfügung stehenden \textsc{Fabry-Perot}-Interferometers bestimmt. Zur Ausmessung ausgewählter Linien von Rubidium wird anschließend der Aufbau erweitert, um lineare Spektroskopie sowie Sättigungsspektroskopie durchführen zu können.
 
 \section{Theoretische Grundlagen}
+\subsection{Diodenlaser}
+\subsection{Fabry-Perot-Interferometer}
+\subsection{Lineare Spektroskopie}
+\subsection{Sättigungsspektroskopie}
+\subsection{Eigenschaften von Rubidium}
 
-\section{Aufgaben vor Versuchsbeginn}
 
 \section{Versuchsdurchführung und Auswertung}
 \subsection{Charakteristik des Diodenlasers}\label{subsec:DiodeLaser}
@@ -22,15 +27,44 @@ Zuerst sollen einige Kenngrößen des Diodenlasers, nämlich Schwellenstrom $I_\mat
 	\caption{Aufbau zur Bestimmung der Kenngrößen der Laserdiode}
 	\label{fig:Aufbau_Laserdiode}
 \end{figure}
-Wir erhalten die in Tabelle \ref{tab:Laserdiode} dargestellten und in Abbildung \ref{fig:Laserdiode_Plot} geplotteten Daten. Man erkennt für kleine Ströme einen langsamen Anstieg der Leistung mit dem Eingangsstrom, der ab dem so genannten Schwellenstrom deutlich stärker wird. Ein Geradenfit an diesen als linear approximierten Anstieg liefert:
-\begin{equation}
-P = m\cdotp I + b=\unit{(41,218 \pm 0,009)}{\frac{\mu\mathrm{W}}{\mathrm{mA}}} \,\cdotp\, I - \unit{(1412,3 \pm 0,4)}{\mu\mathrm{W}}
-\end{equation}
+Wir erhalten die in Tabelle \ref{tab:Laserdiode} im Anhang aufgeführten und in Abbildung \ref{fig:Laserdiode_Plot} graphisch dargestellten Daten. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.6\textwidth]{graphics/Laserdiode_Plot}
+	\caption{Plot der Messergebnisse zur Bestimmung der Kenngrößen der Laserdiode mit Fit an den linearen Bereich}
+	\label{fig:Laserdiode_Plot}
+\end{figure}
+Man erkennt für kleine Ströme einen langsamen Anstieg der Leistung mit dem Eingangsstrom, der ab dem so genannten Schwellenstrom deutlich stärker wird. Ein Geradenfit an diesen als linear approximierten Anstieg liefert:
+\begin{align}
+P = m\cdotp I + b=\unit[(41.218 \pm 0.009)]{\frac{\mu W}{mA}} \,\cdotp\, I - \unit[(1412.3 \pm 0.4)]{\mu W}
+\end{align}
 Der differentielle Wirkungsgrad ist identisch zur Steigung der Geraden, der Schwellenstrom berechnet sich nach $I_\mathrm{thr}=-\frac{b}{m}$ und für die Quanteneffizienz gilt:
-\begin{equation}
-\eta = \frac{N_\gamma}{N_\mathrm{e}} = \frac{Pe}{I h \nu} = \frac{\partial P}{\partial I} \frac{e\lambda}{hc}.
-\end{equation}
+\begin{align}
+\eta = \frac{N_\gamma}{N_\mathrm{e}} = \frac{Pe}{I h \nu} = \frac{\partial P}{\partial I} \frac{e\lambda}{hc} \ldotp
+\end{align}
 Damit ergeben sich die in Tabelle \ref{tab:Laserdiode_Kenngroessen} zusammengefassten Kenngrößen der Diode.
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lc}
+    \toprule
+      & bestimmter Wert\\
+    \midrule[0.75pt]
+Schwellenstrom & $\unit[(34.26 \pm 0.01)]{mA}$\\
+differentieller Wirkungsgrad & $\unit[(41.218 \pm 0,009)]{\frac{\mu W}{mA}}$\\
+Quanteneffizienz & $26.422 \pm 0.006$\\
+    \bottomrule
+  \end{tabular}
+}
+ \caption{Zusammenfassung der Kenngrößen der Laserdiode}
+  \label{tab:Laserdiode_Kenngroessen}
+\end{table}
+
+
+\section{Zusammenfassung}
+
+\begin{appendix}
+\section{Tabellen}
 \begin{table}[H]
   \centering
 \resizebox{0.5\textwidth}{!}{
@@ -71,33 +105,7 @@ $69$	&$1440$\\
   \caption{Messergebnisse bei Messung der Diodenausgangsleistung in Abhängigkeit vom Eingangsstrom}
   \label{tab:Laserdiode}
 \end{table}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.6\textwidth]{graphics/Laserdiode_Plot}
-	\caption{Plot der Messergebnisse zur Bestimmung der Kenngrößen der Laserdiode mit Fit an den Linearen Bereich}
-	\label{fig:Laserdiode_Plot}
-\end{figure}
-\begin{table}[H]
-  \centering
-\resizebox{0.5\textwidth}{!}{
-  \begin{tabular}{lc}
-    \toprule
-      &\\
-    \midrule[0.75pt]
-Schwellenstrom & $\unit{(34,26 \pm 0,01)}{\mathrm{mA}}$\\
-differentieller Wirkungsgrad & $\unit{(41,218 \pm 0,009)}{\frac{\mu\mathrm{W}}{\mathrm{mA}}}$  \\
-Quanteneffizienz & $26,422 \pm 0,006$\\
-    \bottomrule
-  \end{tabular}
-}
- \caption{Zusammenfassung der Kenngrößen der Laserdiode}
-  \label{tab:Laserdiode_Kenngroessen}
-\end{table}
-\section{Zusammenfassung}
 
-\begin{appendix}
-
-\section{Abbildungen}
 
 \Literatur{quellen}
 
