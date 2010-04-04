@@ -20,18 +20,18 @@ Dieser Versuch soll einen Einblick in die Anwendung von Lasern für hochauflösend
 
 
 \section{Versuchsdurchführung und Auswertung}
-\subsection{Charakteristik des Diodenlasers}\label{subsec:DiodeLaser}
+\subsection{Charakteristik des Diodenlasers}\label{subsec:Ana_DiodeLaser}
 Zuerst sollen einige Kenngrößen des Diodenlasers, nämlich Schwellenstrom $I_\mathrm{thr}$, differentieller Wirkungsgrad $\partial P_\mathrm{out} / \partial I$ und Quanteneffizienz $\eta$, bestimmt werden. Dazu verwenden wir den in Abbildung \ref{fig:Aufbau_Laserdiode} gezeigten Aufbau und messen die Ausgangsleistung der Diode in Abhängigkeit vom Eingangsstrom. 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.6\textwidth]{graphics/Aufbau_Laserdiode}
+		\includegraphics[width=0.8\textwidth]{graphics/Aufbau_Laserdiode}
 	\caption{Aufbau zur Bestimmung der Kenngrößen der Laserdiode}
 	\label{fig:Aufbau_Laserdiode}
 \end{figure}
 Wir erhalten die in Tabelle \ref{tab:Laserdiode} im Anhang aufgeführten und in Abbildung \ref{fig:Laserdiode_Plot} graphisch dargestellten Daten. 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.6\textwidth]{graphics/Laserdiode_Plot}
+		\includegraphics[width=1.0\textwidth]{graphics/Laserdiode_Plot}
 	\caption{Plot der Messergebnisse zur Bestimmung der Kenngrößen der Laserdiode mit Fit an den linearen Bereich}
 	\label{fig:Laserdiode_Plot}
 \end{figure}
@@ -62,6 +62,80 @@ Quanteneffizienz & $26.422 \pm 0.006$\\
 \end{table}
 
 
+
+\subsection{Fabry-Perot Interferometer}\label{subsec:Ana_FabryPerot}
+Zur Untersuchung des Fabry-Perot Interferometers (FPI) verwenden wir den in Abbildung \ref{fig:Aufbau_FPI} dargestellten Versuchsaufbau.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/Aufbau_FPI}
+	\caption{Aufbau zur Untersuchung des Fabry-Perot Interferometers}
+	\label{fig:Aufbau_FPI}
+\end{figure}
+Mittels eines Glaskeils wird der Laserstrahl in drei Teilstrahlen aufgespalten, von denen zwei mithilfe geschwärzter Platten blockiert werden. Der verbleidende Srahl wird nach Durchgang durch eine Lochblende, die Rückreflexionen in den Laser vermeiden soll, mithilfe zweier Spiegel durch das Interferometer gelenkt. Der vom Interferometer transmittierte Strahl wird mithilfe einer Linse auf eine Photodiode fokussiert, deren Ausganssignal wir auf einem Oszilloskop betrachten. Mithilfe des in der Laserbox enthaltenen Littrow-Gitters stimmen wir den Laser periodisch durch anlegen einer Sägezahn-Spannung durch. Dabei benutzen wir den Trigger Ausgang des Funktionsgenerators zum Triggern des Oszilloskops. Nach Optimierung der Justage durch Maximierung der Spannungsamplitude der Photodiode erhalten wir das in Abbildung \ref{fig:FPI_Plot} ausschnittsweise gezeigte Oszillogramm.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{graphics/FPI_Plot}
+	\caption{Ausschnitt aus dem an der Photodiode gemessenen Oszillogramm mit Lorentz-Fits}
+	\label{fig:FPI_Plot}
+\end{figure}
+Zur Bestimmung der Finesse des Fabry-Perot Interferometers passen wir Lorentz Kurven an die Peaks des Oszillogramms an. Aus den Fit-Parametern ergibt sich die Finesse gemäß:
+\begin{equation}
+\mathcal{F} = \frac{\delta \nu}{\Delta \nu}
+\end{equation}
+Wir schätzen auf die Spannungswerte einen Fehler von 0,01V, auf die Zeitablenkung jeweils einen Fehler von 0,0005$\mu$s. Aus den Fits erhalten wir die in Tabelle \ref{tab:FPI_Data} zusammengefassten Werte. Dabei berechnen wir die Finesse für jeden Peak einzeln. Wobei sich der Fehler jeweils aus Gaußscher Fehlerfortpflanzung ergibt.
+\begin{table}[H]
+  \centering
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cc|cc}
+    \toprule
+      Peak & $\nu_0$ [$10^{-8}$s] & $\Delta \nu$ [$10^{-8}$s] & $\delta \nu$ [$10^{-8}$s] & $\mathcal{F}$\\
+    \midrule[0.75pt]
+$1$ & $6,206 \pm 0,003$ & $1,441 \pm 0,009$ & $10,819 \pm 0,004$ & $7,509 \pm 0,045$\\
+$2$ & $17,025 \pm 0,003$ & $1,299 \pm 0,008$ & $10,252 \pm 0,004$ & $7,893 \pm 0,051$\\
+$3$ & $27,277 \pm 0,003$ & $1,404 \pm 0,009$ & $10,420 \pm 0,004$ & $7,421 \pm 0,047$\\
+$4$ & $37,697 \pm 0,003$ & $1,375 \pm 0,009$ & $10,088 \pm 0,004$ & $7,334 \pm 0,046$\\
+$5$ & $47,785 \pm 0,003$ & $1,343 \pm 0,009$ & $10,011 \pm 0,004$ & $7,455 \pm 0,048$\\
+$6$ & $57,795 \pm 0,003$ & $1,338 \pm 0,009$ & $9,900 \pm 0,004$ & $7,397 \pm 0,049$\\
+$7$ & $67,696 \pm 0,003$ & $1,415 \pm 0,010$ & $9,903 \pm 0,005$ & $7,000 \pm 0,048$\\
+$8$ & $77,599 \pm 0,003$ & $1,473 \pm 0,010$ & $9,791 \pm 0,005$ & $6,646 \pm 0,045$\\
+$9$ & $87,389 \pm 0,003$ & $1,322 \pm 0,009$ & $9,518 \pm 0,004$ & $7,200 \pm 0,049$\\
+$10$ & $96,907 \pm 0,003$ & $1,391 \pm 0,009$ & $9,639 \pm 0,004$ & $6,931 \pm 0,046$\\
+$11$ & $106,546 \pm 0,003$ & $1,213 \pm 0,010$ & $9,244 \pm 0,004$ & $7,619 \pm 0,062$\\
+$12$ & $115,790 \pm 0,003$ & $1,277 \pm 0,011$ &  & \\
+    \bottomrule
+  \end{tabular}
+}
+ \caption{Fit-Ergebnisse der Bestimmung der Finesse des Interferometers}
+  \label{tab:FPI_Data}
+\end{table}
+Der fehlergewichtete Mittelwert ergibt:
+\begin{equation}
+\mathcal{F} = (7,282 \pm 0,002)
+\end{equation}
+Nach Abschnitt XXX ist die Finesse gegeben durch:
+\begin{equation}
+\mathcal{F} = \frac{\pi \sqrt{R}}{1-R}
+\end{equation}
+und die Reflektivität der Spiegel des Interferometers ist (nach \cite{skript}) $R=0,9$. Damit ergibt sich die theoretische Finesse zu
+\begin{equation}
+\mathcal{F}_\mathrm{th} = 29,804
+\end{equation}
+Die von uns gemessene Finesse beträgt also nur ca 1/4 des theoretischen Werts dies liegt wahrscheinlich an einer zu ungenauen Justage, könnte aber auch durch eine Reflektivitätsminderung der Spiegel durch Alterung bedingt sein.
+
+Nun soll anhand des bekannten Frequenzabstands der Peaks des Interferometers eine Eichkurve für die Zeitachse bestimmt werden. Dazu fitten wir Lorentz Kurven an eine große Zahl von Peaks im Spektrum des FPI und tragen die Peakpositionen gegen ihre relative Frequenz auf. Der Nullpunkt der Frequenzskala wird dabei willkürlich gewählt. Das Ergebnis ist in Abbildung \ref{fig:FPI_GaugeFit} zu sehen.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{graphics/FPI_GaugeFit}
+	\caption{Positionen der Peaks des FPI gegen relative Frequenz mit Fit}
+	\label{fig:FPI_GaugeFit}
+\end{figure}
+Da die Kurve leicht nichtlinear verläuft passen wir ein Polynom zweiten Grades an die Daten an. Das Ergebnis des Fits lautet:
+\begin{align}
+f(t) &= a + b\,\cdotp\, t + c\, \cdotp\, t^2 \hspace{2cm}\mathrm{mit:}\\
+\notag a &= \unit{(-5739,032 \pm 0,002)}{\mathrm{MHz}} \\
+\notag b &= (6,73776 \pm 0,00005)\\
+\notag c &=\unit{(2,3302300 \pm 0,0000004)}{\frac{1}{\mu \mathrm{s}}}
+\end{align}
 \section{Zusammenfassung}
 
 \begin{appendix}
@@ -106,7 +180,6 @@ $69$	&$1440$\\
   \caption{Messergebnisse bei Messung der Diodenausgangsleistung in Abhängigkeit vom Eingangsstrom}
   \label{tab:Laserdiode}
 \end{table}
-
 
 \Literatur{quellen}
 
