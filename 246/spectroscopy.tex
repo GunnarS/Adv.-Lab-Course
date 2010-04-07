@@ -112,8 +112,57 @@ Da die Kurve leicht nicht-linear verläuft, passen wir ein Polynom zweiten Grades
 \notag b &= (6.73776 \pm 0.00005)\\
 \notag c &=\unit[(2.3302300 \pm 0.0000004)]{\frac{1}{\mu s}}
 \end{align}
-
-
+\subsection{Lineare Spektroskopie}\label{subsec:Ana_LinSpec}
+Als nächstes soll das Spektrum von Rubidium untersucht werden. Dazu verwenden wir den in Abbildung \ref{fig:Aufbau_LinSpec} gezeigten Versuchsaufbau.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/Aufbau_LinSpec}
+	\caption{Aufbau zur linearen Absorptionsspektroskopie}
+	\label{fig:Aufbau_LinSpec}
+\end{figure}
+Einer der Teilstrahlen aus dem Glaskeil wird nach Durchgang durch einen Abschwächer mittels zweier Spiegel durch eine Zelle mit Rubidiumdampf (natürliche Mischung der Isotope $^{85}\mathrm{Rb}$ und $^{87}\mathrm{Rb}$)geführt und dann durch eine Linse auf eine Photodiode fokussiert. Während der Laser mittels des \textsc{Littrow}-Gitters durchgestimmt wird, nehmen wir das Spektrum am Ausgang der Photodiode auf. Wir erhalten das in Abbildung \ref{fig:LinearSpectroscopy_Spectra} dargestellte Oszillogramm. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{graphics/LinearSpectroscopy_Spectra}
+	\caption{Aufgenommene Spektren von Rubidiumzelle und FPI}
+	\label{fig:LinearSpectroscopy_Spectra}
+\end{figure}
+Man erkennt im Spektrum der Rubidiumzelle einen nahezu linearen Anstieg der durch die \textit{feed-forward}-Technik hervorgerufen wird. Man variiert den Injektionsstrom der Laserdiode zusammen mit der Piezo-Spannung des \textsc{Littrow}-Gitters um den Laser über einen größeren Bereich durchstimmen zu können. Nachdem wir mithilfe der im letzten Abschnitt erarbeiteten Eichung die Zeitskala in relative Frequenzen umgerechnet haben, fitten wir ein Polynom zweiten Grades an diesen Anstieg und ziehen es vom Spektrum ab. Als Fitkurve erhalten wir:
+\begin{align}
+    f(t) &= a + b\,\cdotp\, t + c\, \cdotp\, t^2 \hspace{2cm}\mathrm{mit:}\\
+\notag a &= \unit[(-19,55241 \pm 0,30309)]{V} \\
+\notag b &= \unit[(0,0045 \pm 0,0001)\cdotp 10^{-6}]{Vs}\\
+\notag c &=\unit[(1,4 \pm 0,1)\cdotp 10^{-19}]{Vs^2}
+\end{align}
+Nun plotten wir die Daten gegen die relative Frequenz und erhalten den in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} gezeigten Graph.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{graphics/LinearSpectroscopy_Spectrum_Fits}
+	\caption{Untergrundbereinigtes Spektrum der Rubidiumzelle mit Gaußfits}
+	\label{fig:LinearSpectroscopy_Spectrum_Fits}
+\end{figure}
+Nun passen wir Gaußkurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen ihnen anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des $^{85}\mathrm{Rb}$ nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt YYY) zeigen sich jeweils als ein breiter Peak.
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+     Peak & $A$ [$\unit[10^{-6}]{\frac{V}{s}}$] & $\nu_0$ [$\unit[]{MHz}$] & $\Delta \nu$ [$\unit[]{MHz}$]\\
+    \midrule[0.75pt]
+1\&2 & $3614 \pm 271$ & $5030 \pm 3$ & $504 \pm 20$\\
+3\&4 & $7579 \pm 215$ & $1896 \pm 2$ & $643 \pm 10$\\
+5 & $13603 \pm 5367$ & $7534 \pm 3$ & $1127 \pm 171$\\
+6 & $124 \pm 61$ & $6679 \pm 24$ & $240 \pm 83$\\
+7 & $7579 \pm 215$ & $1896 \pm 2$ & $643 \pm 10$\\
+8 & $360 \pm 40$ & $161 \pm 6$ & $238 \pm 19$\\
+    \bottomrule
+  \end{tabular}
+}
+  \caption{Fitergebnisse der Gaußfits an die Peaks des Rubidiumspektrums}
+  \label{tab:LinSpec_Fits}
+\end{table}
+Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt was sich auch im vergleichsweise hohen Fehler der Resonanzfrequenz niederschlägt.
+\textit{Morgen weiter, gleich is ManU-Bayern Rückspiel}
 \section{Zusammenfassung}
 
 \begin{appendix}
