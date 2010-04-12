@@ -12,6 +12,40 @@ Dieser Versuch soll einen Einblick in die Anwendung von Lasern für hochauflösend
 
 \section{Theoretische Grundlagen}
 \subsection{Diodenlaser}
+Ein LASER (\emph{Light Amplification by Stimulated Emission of Radiation}) verstärkt, wie der Name bereits andeutet, Licht mit Hilfe eines Resonators durch stimulierte Emission. Hauptbestandteile sind bei allen Lasertypen dementsprechend ein aktives Medium, welches über einen Pumpvorgang in Inversion gebracht wird, und ein Resonator. Die einzelnen Lasertypen weisen dabei unterschiedliche Bauformen auf. Der Aufbau des hier verwendeten Diodenlasers ist in Abbildung \ref{fig:laser} skizziert. Er ist auf Grund der kostengünstigen Herstellung und seinem hohen Wirkungsgrad von bis zu $\unit[50]{\%}$ inzwischen weitverbreitet. Des Weiteren operiert er in einem großen Wellenlängenbereich von $\unit[550]{nm}$ bis $\unit[60]{\mu m}$.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/laser}
+	\caption{Aufbauskizze eines Diodenlasers~\cite{demtroed}}
+	\label{fig:laser}
+\end{figure}
+So wird als aktives Medium beim Diodenlaser ein in Durchlassrichtung betriebener p-n-Übergang verwendet. Legt man eine Spannung an den p-n-Übergang an (siehe Abbildung \ref{fig:pn} rechts), so können die Elektronen die Grenzschicht überwinden und mit den Löchern rekombinieren. Hierbei wird ein Photon der Gap-Energie des Halbleiters emittiert.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/pn}
+	\caption{p-n-Übergang eines Diodenlasers ohne (links) und mit (rechts) angelegter Spannung~\cite{demtroed}}
+	\label{fig:pn}
+\end{figure}
+Da der Halbleiterkristall einen hohen Brechungsindex im Vergleich zu Luft ($n_{\mathrm{Luft}} \approx 1$) besitzt (beispielsweise $n_{\mathrm{GaAs}} = 3.6$), ergibt sich die Reflexivität der Grenzflächen des Kristalls zu $R=[(n_{\mathrm{GaAs}}-1)/(n_{\mathrm{GaAs}}+1)]^2 = 0.32$, wobei sich dieser Reflexivitätswert durch Polierung der Grenzflächen noch erhöhen lässt. Die orthogonalen Grenzflächen des Kristalls sind somit als Resonator nutzbar.
+
+Zur Leistungsanpassung des Diodenlasers ist der Diodenstrom zu variieren. Es muss jedoch berücksichtigt werden, dass ein Schwellenstrom $I_{\mathrm{thr}}$ existiert, da die Photonen im Resonator absorbiert oder gestreut werden können, was einem Energieverlust entspricht. Erst oberhalb von $I_{\mathrm{thr}}$ tritt der Laser in den (linearen) Arbeitsbereich ein und beginnt effizient zu pumpen. 
+
+Im Arbeitsbereich der Laserspektroskopie muss ein Laser bezüglich seiner Frequenz durchstimmbar sein. Beim Diodenlaser existieren hierzu folgende Möglichkeiten:
+\begin{enumerate}
+\item{\textbf{Variation des Lasertemperatur:} Die Laserfrequenz ist abhängig von der Temperatur des Halbleitermaterials, da sich bei einer Temperaturerhöhung das Verstärkungsprofil verschiebt, die Grenzschicht vergrößert und der Resonator thermisch bedingt seine Länge ändert. Das System reagiert auf Temperaturvariation jedoch sehr träge. Für Feinabstimmungen der Frequenz ist dies also nicht gut geeignet.}
+\item{\textbf{Variation des Diodenstroms:} Über Variation des Diodenstroms kann zum einen in geringerem Maße Einfluss auf die Ladungsträgerdichte und somit auf die Brechzahl genommen und zum anderen die Grenzschicht sehr effizient ($\unit[50]{\%}$ Wirkungsgrad) erwärmt werden. Mit der Veränderung des Diodenstromes steht also im Wesentlichen ein Mittel zur schnellen Temperaturvariation zur Verfügung.}
+\item{\textbf{Rückkoppelndes Gitter:} Mit Hilfe einer externen Rückkopplung über ein sogenanntes \textsc{Littrow}-Gitter (siehe Abbildung \ref{fig:littrow}) kann ebenfalls eine Durchstimmung der Frequenzen gesteuert werden.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/littrow}
+	\caption{Resonator in \textsc{Littrow}-Konfiguration~\cite{skript}}
+	\label{fig:littrow}
+\end{figure}
+Hierzu wird die minus erste Beugungsordnung zur Beeinflussung der Resonanzfrequenz in den Laserresonator rückgekoppelt und die nullte ausgekoppelt. Mit einem Piezoelement kann nun die Position des Gitters feinjustiert und somit die Frequenz des Laser variiert werden. Auf diese Weise kann die Bandbreite des Diodenlasers von etwa $\unit[20]{MHz}$ auf ca. $\unit[1]{MHz}$ reduziert werden. Dies entspricht einer für den Anwendungsbereich der Spektroskopie interessanten Erhöhung der Auflösung des Lasers.
+}
+\end{enumerate}
+
+
 
 \subsection{Fabry-Perot-Interferometer}
 \subsection{Lineare Spektroskopie}
@@ -120,14 +154,14 @@ Als nächstes soll das Spektrum von Rubidium untersucht werden. Dazu verwenden wi
 	\caption{Aufbau zur linearen Absorptionsspektroskopie}
 	\label{fig:Aufbau_LinSpec}
 \end{figure}
-Einer der Teilstrahlen aus dem Glaskeil wird nach Durchgang durch einen Abschwächer mittels zweier Spiegel durch eine Zelle mit Rubidiumdampf (natürliche Mischung der Isotope $^{85}\mathrm{Rb}$ und $^{87}\mathrm{Rb}$)geführt und dann durch eine Linse auf eine Photodiode fokussiert. Während der Laser mittels des \textsc{Littrow}-Gitters durchgestimmt wird, nehmen wir das Spektrum am Ausgang der Photodiode auf. Wir erhalten das in Abbildung \ref{fig:LinearSpectroscopy_Spectra} dargestellte Oszillogramm. 
+Einer der Teilstrahlen aus dem Glaskeil wird nach Durchgang durch einen Abschwächer mittels zweier Spiegel durch eine Zelle mit Rubidiumdampf (natürliche Mischung der Isotope $^{85}\mathrm{Rb}$ und $^{87}\mathrm{Rb}$) geführt und dann mit einer Linse auf eine Photodiode fokussiert. Während der Laser mittels des \textsc{Littrow}-Gitters durchgestimmt wird, nehmen wir das Spektrum am Ausgang der Photodiode auf. Wir erhalten das in Abbildung \ref{fig:LinearSpectroscopy_Spectra} dargestellte Oszillogramm. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{graphics/LinearSpectroscopy_Spectra}
-	\caption{Aufgenommene Spektren von Rubidiumzelle und FPI}
+	\caption{Aufgenommene Spektren von Rubidiumzelle (schwarz) und FPI (blau)}
 	\label{fig:LinearSpectroscopy_Spectra}
 \end{figure}
-Man erkennt im Spektrum der Rubidiumzelle einen nahezu linearen Anstieg der durch die \textit{feed-forward}-Technik hervorgerufen wird. Man variiert den Injektionsstrom der Laserdiode zusammen mit der Piezo-Spannung des \textsc{Littrow}-Gitters um den Laser über einen größeren Bereich durchstimmen zu können. Nachdem wir mithilfe der im letzten Abschnitt erarbeiteten Eichung die Zeitskala in relative Frequenzen umgerechnet haben, fitten wir ein Polynom zweiten Grades an diesen Anstieg und ziehen es vom Spektrum ab. Als Fitkurve erhalten wir:
+Man erkennt im Spektrum der Rubidiumzelle einen nahezu linearen Anstieg der durch die \textit{feed-forward}-Technik hervorgerufen wird. Man variiert den Injektionsstrom der Laserdiode zusammen mit der Piezo-Spannung des \textsc{Littrow}-Gitters, um den Laser über einen größeren Bereich durchstimmen zu können. Nachdem wir mit Hilfe der im letzten Abschnitt erarbeiteten Eichung die Zeitskala in relative Frequenzen umgerechnet haben, fitten wir ein Polynom zweiten Grades an diesen Anstieg und subtrahieren es vom Spektrum. Als Fitkurve erhalten wir:
 \begin{align}
     f(t) &= a + b\,\cdotp\, t + c\, \cdotp\, t^2 \hspace{2cm}\mathrm{mit:}\\
 \notag a &= \unit[(-19,55241 \pm 0,30309)]{V} \\
@@ -138,10 +172,10 @@ Nun plotten wir die Daten gegen die relative Frequenz und erhalten den in Abbild
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{graphics/LinearSpectroscopy_Spectrum_Fits}
-	\caption{Untergrundbereinigtes Spektrum der Rubidiumzelle mit Gaußfits}
+	\caption{Untergrundbereinigtes Spektrum der Rubidiumzelle mit \textsc{Gauß}-Fits}
 	\label{fig:LinearSpectroscopy_Spectrum_Fits}
 \end{figure}
-Nun passen wir Gaußkurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen ihnen anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des $^{85}\mathrm{Rb}$ nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt YYY) zeigen sich jeweils als ein breiter Peak.
+Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen sie anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des $^{85}\mathrm{Rb}$ nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt YYY) zeigen sich jeweils als ein breiter Peak.
 \begin{table}[H]
   \centering
 \resizebox{0.5\textwidth}{!}{
@@ -158,14 +192,10 @@ Nun passen wir Gaußkurven an die dopplerverbreiterten Peaks des Spektrums an und
     \bottomrule
   \end{tabular}
 }
-  \caption{Fitergebnisse der Gaußfits an die Peaks des Rubidiumspektrums}
+  \caption{Ergebnisse der Gaußfits an die Peaks des Rubidiumspektrums}
   \label{tab:LinSpec_Fits}
 \end{table}
-Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt was sich auch im vergleichsweise hohen Fehler der Breite niederschlägt.
-
-\textit{Morgen weiter, gleich is ManU-Bayern Rückspiel}
-
-\textit{Bayern 3:2 verloren un trotzdem weiter, so kanns gehn}
+Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt, was sich auch im vergleichsweise hohen Fehler der Breite niederschlägt.
 
 Aus den relativen Abständen der Linien lassen sich gemäß Abschnitt YYY die Hyperfeinstrukturkonstanten bestimmen. Unsere Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants} zusammengefasst. 
 \begin{table}[H]
@@ -189,9 +219,9 @@ $^{85}\mathrm{Rb}$ $^{2}\mathrm{S}_{1/2}$ & 1-3 / 2-4& $3135 \pm 3$&&$1045\pm 1$
   \caption{Ergebnisse zur Berechnung der Hyperfeinstrukturkonstanten. Angegeben sind auch die Literaturwerte}
   \label{tab:Hyperfinestructureconstants}
 \end{table}
-Die von uns bestimmten Werte für die Hyperfeinstrukturkonstanten sind zumindest größenordnungsmäßig mit den Literaturwerten vereinbar. Die Fehler scheinen aber viel zu klein, was wohl an einem zu klein geschätzten Fehler für die aufgenommenen Werte von Spannung und Zeit liegt.
+Die von uns bestimmten Werte für die Hyperfeinstrukturkonstanten sind zumindest größenordnungsmäßig mit den Literaturwerten vereinbar. Die Fehler scheinen aber deutlich zu klein zu sein. Dies wird wohl an einer zu geringen Fehlerschätzung für die aufgenommenen Werte von Spannung und Zeit liegen.
 
-Um die spektrale Auflösung unseres Aufbaus zu bestimmen berechnen wir aus den Breiten der an die Peaks gefitteten Gaußkurven ihre vollen Halbwertsbreiten (FWHM) und bilden den fehlergewichteten Mittelwert zu:
+Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir aus den Breiten der an die Peaks gefitteten \textsc{Gauß}-Kurven ihre vollen Halbwertsbreiten (FWHM) und bilden den fehlergewichteten Mittelwert zu:
 \begin{align}
 \Delta \nu = \unit[(640 \pm 24)]{MHz}
 \end{align}
