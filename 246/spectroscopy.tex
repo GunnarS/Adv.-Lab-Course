@@ -483,6 +483,95 @@ Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \frac{\nu}{\Delta \nu} = (9 \pm 1)\cdotp 10^6
 \end{align}
 Damit ist das Auflösungsvermögen um etwa eine Größenordnung besser als im Falle der linearen Spektroskopie.
+
+Zur Bestimmung der Sättigungsintensität analysieren wir den Lamb-Dip des Übergangs $5\textrm{S}_{1/2}(F = 2) \rightarrow 5\textrm{P}_{1/2}(F' = 1)$ unter Verwendung verschiedener Abschwächer im Pumpstrahl. Wir nehmen dazu das Spektrum der Rubidiumzelle für verschieden stark abgeschwächte Pumpstrahlen auf, und fitten jeweils Lorentz-Kurven an die Lamp-Dips der Linie 8. Ein solcher Fit ist exemplarisch in Abbildung \ref{fig:Peak8_0,135} dargestellt. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{graphics/Peak8_0,135}
+	\caption{Lorentz Fit an den Lamp-Dip der Linie 8 bei Verwendung eines Abschwächers mit einer Transmission von $T=0,135$ }
+	\label{fig:Peak8_0,135}
+\end{figure}
+Die Ergebnisse der Fitparameter sind in Tabelle \ref{tab:SatSpec_Fits_T} zusammengefasst.
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{l|ccc}
+    \toprule
+     T & $A$ [$\unit[10^{-6}]{\frac{V}{s}}$] & $\Delta \nu$ [$\unit[]{MHz}$] & Amplitude [$\unit[]{V}$]\\
+    \midrule[0.75pt]
+$1.000$&$39 \pm 5$&$33 \pm 4$&$0.76 \pm 0.13$\\
+$0.628$&$41 \pm 6$&$41 \pm 6$&$0.63 \pm 0.13$\\
+$0.264$&$29 \pm 6$&$40 \pm 7$&$0.46 \pm 0.12$\\
+$0.166$&$7 \pm 2$&$11 \pm 3$&$0.38 \pm 0.16$\\
+$0.135$&$31 \pm 8$&$48 \pm 10$&$0.42 \pm 0.14$\\
+$0.084$&$14 \pm 3$&$26 \pm 6$&$0.34 \pm 0.11$\\
+$0.035$&$19 \pm 10$&$34 \pm 14$&$0.35 \pm 0.23$\\
+    \bottomrule
+  \end{tabular}
+}
+  \caption{Fitergebnisse der Lorentzfits an die Lamb-Dips der Linie 8 für verschieden stark abgeschwächte Pumpstrahlen}
+  \label{tab:SatSpec_Fits_T}
+\end{table}
+Wie in Abschnitt YYY beschrieben, hängt die Amplitude der Lamb-Dips von der Pumpleistung $P$ ab gemäß:
+\begin{align}
+A\propto \Delta P \propto \frac{S}{1+S} = \frac{1}{1+\frac{P_\textrm{sat}}{P}}.
+\end{align}
+Die Pumpleistung hängt gemäß $P = P_\textrm{Laser}\cdotp T$ ab von der Laserleistung und der Transmission der eingesetzten Abschwächer. Die Laserleistung bestimmen wir mithilfe von Abschnitt \ref{subsec:Ana_DiodeLaser} aus dem Laserstrom von $I = \unit[(59 \pm 1)]{mA}$ zu:
+\begin{align}
+P_\textrm{Laser} = \unit[(1.02 \pm 0.04)]{mW}
+\end{align}
+Wir plotten nun die aus den Lorentz-Fits bestimmten Amplituden gegen die jeweilige Transmission und fitten an den erhaltenen Graphen eine Funktion der Form
+\begin{align}
+A(T) = \frac{A_1}{1+A_2/T}
+\end{align}
+Der Fit an die in Abbildung \ref{fig:dip_amplitude} dargestellten Daten liefert:
+\begin{align}
+A_1 &=  \unit[(0.79 \pm 0.08)]{V}\\
+\notag A_2 &= \unit[(0.13 \pm 0.04)]{}\\
+\end{align}
+Damit erhalten wir:
+\begin{align*}
+P_\textrm{sat}= \unit[(0.1\pm 0.05)]{mW}
+\end{align*}
+
+ \begin{figure}[H]
+  \resizebox{0.6\textwidth}{!}{
+    \input{graphics/saturation.tex}
+}
+  \caption{Amplitude der Lamp-Dips von Linie 8 in Abhängigkeit von der Transmission der Abschwächer im Pumpstrahl. Dargestellt ist auch die Fitkurve gemäß Abschnitt YYY.}
+  \label{fig:dip_amplitude}
+\end{figure}
+
+Die Sättigungsleistung kann auch anhand der Leistungsverbreiterung bestimmt werden. In Abschnitt YYY wurde argumentiert, dass für die Peakbreite im Sättigungsfall gilt:
+\begin{align*}
+\Delta \nu_\textrm{Sat} = \Delta \nu_\textrm{Lin} \sqrt{1+S}
+\end{align*}
+Damit gilt also:
+\begin{align}
+(\Delta \nu)^2 = c\,\cdotp\, \left(1+\frac{P_\textrm{Laser}\,\cdotp\, T}{P_\textrm{sat}}\right) = b + m\,\cdotp\, T
+\end{align}
+Wir tragen also $(\Delta \nu)^2$ gegen $T$ auf und fitten eine lineare Funktion an den erhaltenen und in Abbildung \ref{fig:PSat2nd} gezeigten Graphen. Die Ergebnisse des Fits lauten:
+\begin{align}
+b &= \unit[(11 \pm 102)\cdotp 10^{12}]{\frac{1}{s^2}}\\
+\notag m &= \unit[(1211 \pm 316)\cdotp 10^{12}]{\frac{1}{s^2}}
+\end{align}
+ \begin{figure}[H]
+  \resizebox{1.0\textwidth}{!}{
+    \includegraphics{graphics/PSat2nd}
+}
+  \caption{Quadrierte Breite der Lamb-Dips in Abhängigkeit der Transmission der in den Pumpstrahl gebrachten Abschwächer}
+  \label{fig:PSat2nd}
+\end{figure}
+Wie man am Graphen und auch deutlich am Fehler des Achsenabschnitts $m$ erkennt, scheint der lineare Zusammenhang recht 'aufgezwungen'. Trotzdem soll hier noch die Sättigungsleistung bestimmt werden:
+\begin{align}
+P_\textrm{sat} = \unit[(0.01 \pm 0.09)]{mW}
+\end{align}
+Wie aufgrund der schlechten Zwischenergebnisse erwartet, ist dieser Wert nicht verwertbar. Schon sein Fehler ist um einen Faktor 10 größer.
+
+Mithilfe des ersten Wertes für die Sättigungsleistung soll nun die Sättigungsintensität bestimmt werden. Dazu schätzen wir den Durchmesser des Laserstrahls auf $d= \unit{(5 \pm 1)}[mm]$ ab. Damit ergibt sich:
+\begin{align}
+I_\textrm{sat}= \frac{P_\textrm{sat}}{\frac{\pi d^2}{4}} = \unit[(5.1\pm 2.0)]{\frac{W}{m^2}}
+\end{align} 
 \section{Zusammenfassung}
 
 \begin{appendix}
