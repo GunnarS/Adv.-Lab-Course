@@ -3,7 +3,11 @@
 \newcommand{\versuch}{High Resolution Laser Spectroscopy}
 \newcommand{\nummer}{A246}
 
+\newcommand{\Isotop}[2]{\ensuremath{^{#2}\mathrm{#1}}\xspace}
 \newcommand{\vr}[2]{\ensuremath{\left(\begin{array}{c}#1\\#2\end{array}\right)}}
+\newcommand{\Rb}{\Isotop{Rb}{85}}
+\newcommand{\Rbi}{\Isotop{Rb}{87}}
+
 
 \begin{document}
 
@@ -22,7 +26,7 @@ Ein LASER (\emph{Light Amplification by Stimulated Emission of Radiation}) verst
 So wird als aktives Medium beim Diodenlaser ein in Durchlassrichtung betriebener p-n-Übergang verwendet. Legt man eine Spannung an den p-n-Übergang an (siehe Abbildung \ref{fig:pn} rechts), so können die Elektronen die Grenzschicht überwinden und mit den Löchern rekombinieren. Hierbei wird ein Photon der Gap-Energie des Halbleiters emittiert.
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.8\textwidth]{graphics/pn}
+		\includegraphics[width=0.9\textwidth]{graphics/pn}
 	\caption{p-n-Übergang eines Diodenlasers ohne (links) und mit (rechts) angelegter Spannung~\cite{demtroed}}
 	\label{fig:pn}
 \end{figure}
@@ -48,10 +52,169 @@ Hierzu wird die minus erste Beugungsordnung zur Beeinflussung der Resonanzfreque
 
 
 \subsection{Fabry-Perot-Interferometer}
-\subsection{Lineare Spektroskopie}
-\subsection{Sättigungsspektroskopie}
-\subsection{Eigenschaften von Rubidium}
+Zur Ausmessung des Rubidium-Spektrums ist eine Frequenzreferrenz erforderlich, mit welcher die Abszisse des Oszilloskops angepasst werden kann. Diese erhalten wir mit einem \textsc{Fabry-Perot}-Interferometer in konfokaler Anordnung ($d=r$, siehe auch Abbildung \ref{fig:fpi}).
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.4\textwidth]{graphics/fpi}
+	\caption{\textsc{Fabry-Perot}-Interferometer in konfokalem Aufbau~\cite{demtroed}}
+	\label{fig:fpi}
+\end{figure}
+Charakteristisch für das \textsc{Fabry-Perot}-Interferometer ist die periodisch resonante Transmission des Laserstrahls, die sich nach der \textsc{Airy}-Formel zu
+\begin{align}
+\label{eq:transmiss}
+T_{FPI} = \frac{1}{1+F \sin^2{\frac{\phi}{2}}}
+\end{align}
+ergibt, wobei $F=4R/(1-R)^2$ und $R$ die Spiegelreflexivität ist. Die im Resonator während eines Umlaufs hervorgerufene Phasendifferenz $\phi$ ist mit der Brechzahl $n$ (hier $n_{Luft} =1$) durch $\phi = 4 \pi n d/\lambda$ gegeben. Die Form der Transmissionskurve ist somit von $R$ abhängig, wie Abbildung \ref{fig:transmiss} verdeutlicht. Ferner ist die Periodizität zu entnehmen. So sind die Transmissionspeaks mit dem Abstand (\emph{free spectral range}, FSR) $\Delta \nu_{\mathrm{FSR}} = c/4nd$ (der Faktor $1/2$ ergibt sich durch die konfokale statt ebene Anordnung, wodurch transversale Moden entarten) äquidistant im Frequenzraum verteilt.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.8\textwidth]{graphics/transmiss}
+	\caption{Transmissionskurve eines \textsc{Fabry-Perot}-Interferometers~\cite{demtroed}}
+	\label{fig:transmiss}
+\end{figure}
+Im Falle hochreflexiver Spiegel ($F \gg 1$) ergibt sich die FWHM der Transmissionspeaks zu $\delta \nu_{\mathrm{FWHM}} = \Delta \nu_{\mathrm{FWHM}}/ \mathcal{F}$, wobei $\mathcal{F}$ die sogenannte Finesse des Interferometers darstellt und sich zu
+\begin{align}
+\mathcal{F} = \frac{\pi \sqrt{R}}{1-R}
+\end{align}
+ergibt. Sie ist ein Maß für die Anzahl der miteinander interferierenden Teilstrahlen im \textsc{Fabry-Perot}-Interferometer, also für den Kontrast des Interferenzbildes (siehe auch Abbildung \ref{fig:transmiss}. Im vorliegenden Fall erwartet man bei einer Spiegelreflexivität von $R=0.9$ eine Finesse von $\mathcal{F} = 29.8$.
 
+Für diesen Versuch soll das \textsc{Fabry-Perot}-Interferometer, wie erwähnt, als Frequenzreferrenz fungieren. Dies ist möglich, da wir die FSR des verwendeten \textsc{Fabry-Perot}-Interferometers kennen, sie beträgt nach Kalibration am IAP Bonn:
+\begin{align}
+\Delta \nu_{\mathrm{FSR}} = \unit[149.9348(2)]{MHz} \ \ldotp
+\end{align}
+Nach Gleichung (\ref{eq:transmiss}) lässt sich nun die Halbwertsbreite $\varepsilon = \phi_1 - \phi_2$ aus der Bedingung $I(\phi_1) = I(\phi_2) = I_0/2$ bestimmen. Man erhält dann:
+\begin{align}
+\sin^2{\frac{\phi_{1,2}}{2}} = \frac{1}{F} = \frac{(1-R)^2}{4R} \ \ldotp
+\end{align}
+Mit der (guten) Näherung von $R=1$ gilt dann schließlich:
+\begin{align}
+\varepsilon = 4 \arcsin{\left(\frac{1-R}{2 \sqrt{R}}\right)} \approx \frac{2 (1-R)}{\sqrt{R}} \ \ldotp
+\end{align}
+Für die Auswertung muss diese Halbwertsbreite nun noch als Frequenz angegeben werden. Da dem Dispersionsgebiet die Phase $2\pi$ entspricht, folgt:
+\begin{align}
+\frac{\delta \nu}{\Delta \nu} = \frac{2 \pi}{\varepsilon} = \frac{\pi \sqrt{R}}{1-R} \equiv \mathcal{F} \ldotp
+\end{align}
+
+\subsection{Lineare Spektroskopie}
+Wird nur ein Bruchteil der Atome des zu spektroskopierenden Gases angeregt, so spricht man von linearer Absorptionsspektroskopie. Ein Großteil der Photonen kann hierbei ungestört durch das Medium propagieren, das Medium ist also optisch dünn. Nach dem \textsc{Lambert-Beer}-Gesetz ergibt sich dann mit dem Absorptionskoeffizienten $\kappa(\nu)$ und der Länge der Absorptionszelle $L$:
+\begin{align}
+T \equiv \frac{I}{I_0} = e^{-\kappa(\nu)L} \approx 1 - \kappa(\nu) L \ \ldotp
+\end{align}
+Entsprechend gilt dann für die Absorption $A=1-T\approx\kappa(\nu)L$. Somit ist also $A \propto L$, was die Begrifflichkeit der \emph{linearen Absorption} noch einmal erläutert.
+
+Für den Absorptionskoeffizienten $\kappa(\nu)$ gilt in dieser Approximation mit der natürlichen Linienbreite $\Delta \nu$ und dem Absorptionskoeffizienten im Resonanzfall $\kappa(\nu_0) =\kappa_0$
+\begin{align}
+\kappa(\nu) = \kappa_0 \frac{\left( \frac{\Delta \nu}{2} \right)^2}{(\nu - \nu_0)^2 + \left( \frac{\Delta \nu}{2} \right)^2}
+\end{align}
+im Bereich der Resonanzfrequenz ruhender Atome. Man erhält also ein \textsc{Lorentz}-Profil. Die natürliche Linienbreite hängt dabei mit der Lebensdauer $\tau$ des Niveaus über $\tau = 1/\gamma = 1/2\pi\Delta\nu$ zusammen, wobei die Lebensdauer für einen erlaubten Zerfall bei einigen Nanosekunden liegt. Dieser idealisierte Fall ist jedoch nicht realisierbar. In der Tat bewegen sich die Atome mit einer \textsc{Maxwell}schen Geschwindigkeitsverteilung $N(v) = N_0 \exp{-(v/v_0)^2}$, wobei $v_0 = \sqrt{2k_{\mathrm{B}}T/m_{\mathrm{Atom}}}$ die mittlere thermische Geschwindigkeit der Atome darstellt, und sehen somit einen \textsc{Doppler} verschobenen Laserstrahl. Das spektrale Profil folgt dann entsprechend einer Faltung der Form 
+\begin{align}
+\kappa (\nu) = \int N(v)\ \kappa(\nu - k v)\ \mathrm{d}v
+\end{align}
+einem \textsc{Voigt}-Profil, wobei $k$ der Betrag des Wellenvektors des Lichtes und $v$ die Geschwindigkeitskomponente des Atoms in Richtung von $\vec{k}$ ist. Im \textsc{Doppler}-Limit für relativ warme Gase ($k_{\mathrm{B}} v_0 \gg 2 \pi \Delta\nu$) reduziert sich dies zu:
+\begin{align}
+\kappa_{\mathrm{D}} (\nu) = \kappa_{0, \mathrm{D}}\ \exp{\left[ - \frac{(\nu - \nu_0)^2}{2 \Delta \nu^2_{\mathrm{D}}} \right]} \ \ldotp
+\end{align}
+Hierbei ist $\Delta \nu_{\mathrm{D}} = \nu_0 \sqrt{k_{\mathrm{B}}T/m_{\mathrm{Atom}}c^2}$ die \textsc{Doppler}-Breite des Übergangs. Somit folgt $\kappa(\nu)$ hier einer \textsc{Gauss}-Kurve, welche im Allgemeinen die natürliche Linienbreite deutlich übersteigt (siehe auch Abb. \ref{fig:breiten}). Es gilt für die Umrechnung in die Halbwertsbreite $\mathrm{FWHM} = 2 \sqrt{2 \ln{2}}\ \Delta\nu_{\mathrm{D}} \approx 2.35 \Delta\nu_{\mathrm{D}}$.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/breiten}
+	\caption{\textsc{Lorentz}- und \textsc{Gauss}-Profil im Vergleich~\cite{demtroed}}
+	\label{fig:breiten}
+\end{figure}
+Alle weiteren Effekte, die zu einer Linienverbreiterung beitragen, wie beispielsweise die Stoßverbreiterung können auf Grund der Dominanz der \textsc{Doppler}-Verbreiterung vernachlässigt werden.
+
+\subsection{Sättigungsspektroskopie}
+Als Beispiel einer nicht-linearen Spektroskopie betrachten wir im vorliegenden Versuch die sogenannte Sättigungsspektroskopie. Der entscheidende Vorteil zur linearen Spektroskopie liegt in der Unterdrückung der \textsc{Doppler}-Verbreiterung und der daraus folgenden Erhöhung des Auflösungsvermögens bis zur Größenordnung der natürlichen Linienbreite.
+
+Wie der Name schon andeutet wird das Medium in Sättigung gebracht. Dies geschieht durch einen intensiven Pumpstrahl, welcher bis zu $\unit[50]{\%}$ der Atome in einen angeregten Zustand versetzt. Nun wird ein weiterer Strahl (Probestrahl) geringerer Intensität aber gleicher Frequenz ebenfalls durch das Medium geschickt. Das sich in Sättigung befindende Medium ist für diesen Strahl nun optisch dünn, da kaum zur Absorption fähige Atome im Grundzustand vorhanden sind.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/spekloech}
+	\caption{Spektrale Löcher im Absorptionsspektrum. Aufgetragen ist der Absorptionskoeffizient gegen die Frequenz.~\cite{demtroed}}
+	\label{fig:specklöch}
+\end{figure}
+Liegt die Frequenz $\nu$ des Lasers nicht exakt auf der Resonanzfrequenz $\nu_0$ des Übergangs, so werden von den \textsc{Maxwell} verteilten Atomen nur jene angeregt, deren Geschwindigkeitskomponente in Richtung des Strahls der Bedingung $\nu = \nu_0 (1+v/c)$ genügt. Pump- und Probestrahl laufen entgegengesetzt durch die Anordnung. Es ergibt sich also bei den Frequenzen $\nu = \nu_0 (1\pm v/c)$ durch die Sättigung eine verringerte Absorptionsfähigeit. Dies wird im Spektrum als Loch erkennbar (\textsc{Bennet} holes, siehe Abbildung \ref{fig:speklöch}).
+
+Ein spektrales Loch tritt ausschließlich dann auf, wen Pump- und Probestrahl mit der gleichen Geschwindigkeitsklasse ($v=0$) von Atomen wechselwirken. Man liegt dann also gerade auf der Resonanzfrequenz. In diesem Fall tritt ein sogenannter \textsc{Lamb}-Dip auf (siehe Abb. \ref{fig:specklöch} unten). Entscheidend ist, dass die Löcher ausschließlich durch die natürliche Linienbreite beschränkt sind. Man erhält auf diese Weise also ein deutlich erhöhtes Auflösungsvermögen im Vergleich zur linearen Spektroskopie.
+
+Ein weiteres auftretendes Phänomen ist die sogenannte \emph{cross-over}-Resonanz. Diese tritt dann auf, wenn sich die \textsc{Doppler}-Profile zweier nahe beieinander liegender Absorptionskurven überlagern (siehe Abb. \ref{fig:crossover}). Liegt die Frequenz der beiden Strahlen nun zwischen den Resonanzfrequenzen $\nu_1$ und $\nu_2$ der beiden Übergänge so wechselwirken beide Strahlen mit Atomen, welche eine Geschwindigkeitskomponente $\pm \tilde{v}$ haben, die der Bedingung $\nu_2 - \nu = \nu - \nu_1 = \pm \nu_0 \tilde{v}/c$ genügen. Es erscheint somit ein zusätzliches drittes Loch zwischen den beiden anderen (siehe Abb. \ref{fig:crossover}).
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.6\textwidth]{graphics/crossover}
+	\caption{Cross-over-Resonanz~\cite{skript}}
+	\label{fig:crossover}
+\end{figure}
+Für den Absorptionskoeffizienten im Fall der Sättigungsspektroskopie gilt mit dem Sättigungsparameter $S \equiv I/I_{\mathrm{Sätt}}$:
+\begin{align}
+\kappa(\nu) = \kappa_0 \frac{\left( \frac{\Delta \nu}{2} \right)^2}{(\nu-\nu_0)^2 + \left( \frac{\Delta \nu}{2} \right)^2 (1+S)} \ldotp
+\end{align}
+Dabei ist die Sättigungsintensität $I_{\mathrm{Sätt}}$ die Intensität, bei welcher der Absorptionskoeffizient in Resonanz gerade auf die Hälfte seines Wertes für ruhende Atome gefallen ist. Das Lorentsprofil ist hier sättigungsverbreitert (siehe Abb. \ref{fig:lorsätt}). Im Resonanzfall folgt nun $\kappa(\nu_0) = \kappa_0(\nu_0)/1+S$. Für thermisch verteilte Atome ergibt sich ferner $\kappa_{\mathrm{D}}(\nu_0) = \kappa_{\mathrm{D},0}(\nu_0)/1+S$. Mittels der Definition von $S$ folgt schließlich für die absorbierte Lichtleistung im Falle ruhender Atome $\Delta P \propto \kappa P \propto S/1+S$ und für bewegte Atome $\Delta P \propto \kappa P \propto S/\sqrt{1+S}$.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.6\textwidth]{graphics/lorsaett}
+	\caption{Gesättigtes \textsc{Lorentz}-Profil~\cite{demtroed}}
+	\label{fig:lorsätt}
+\end{figure}
+
+\subsection{Eigenschaften von Rubidium}
+Natürliches Rubidium besteht aus den beiden stabilen Isotopen \Rb ($\unit[72.17]{\%}$) und \Rbi ($\unit[27.83]{\%}$). Als Alkimetall sitzt in der $5\mathrm{s}$-Schale ein einzelnes Elektron, sodass sich für den Grundzustand die Konfiguration $^2\mathrm{S}_{1/2}$ ergibt. Rubidium zeichnet sich durch einen relativ hohen Dampfdruck aus und besitzt des Weiteren deutliche und einfach strukturierte Absorptionslinien, somit eignet sich Rubidium sehr gut für diesen Versuch.
+
+Im Versuch sollen Übergänge zwischen dem Grundzustand und dem niedrigsten angeregten Zustand $^2\mathrm{P}_{1/2}$ (Wellenlängen um $\unit[794]{nm}$) untersucht werden. Beide Niveaus spalten durch die Wechselwirkung von Kernspin $\vec{I}$ und Gesamtdrehimpuls $\vec{J}$ der Elektronen auf (Hyperfeinstruktur). Diese Aufspaltung wird durch den Hamiltonian $H=A_{\mathrm{HFS}} (\vec{I} \cdot \vec{J})$ beschrieben, wobei $A_{\mathrm{HFS}}$ die Hyperfeinstrukturkonstante ist. Diese ist von der Hauptquantenzahl $n$, der Bahndrehimpulsquantenzahl $L$ und der Gesamtdrehimpulsquantenzahl $J$ abhängig.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.6\textwidth]{graphics/rubidium}
+	\caption{Termschema der Rubidiumisotope \Rb und \Rbi~\cite{skript}}
+	\label{fig:rubidium}
+\end{figure}
+Durch die Hyperfeinaufspaltung spalten im vorliegenden Fall mit $J=1/2$ beide Niveaus in jeweils zwei Hyperfeinniveaus auf, da der Gesamtdrehimpuls $\vec{F} = \vec{I} + \vec{J}$ nach der Dreahimpulsaddition zwei Werte annehmen kann (siehe auch Tabelle \ref{tab:quantenzahlen} und Abbildung \ref{fig:rubidium}). Dabei fällt die Aufspaltung des S-Niveaus wegen des stärkeren Überlapps des (symmetrischen) S-Orbitals mit der Kern-Wellenfunktion größer aus. Zu beachten ist, dass sich die Isotope in ihrem Kernspin unterscheiden (siehe Tabelle \ref{tab:quantenzahlen}), man erhält also unterschiedliche Werte für $F$.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{llcccc}
+    \toprule
+     & & $J$ & $I$ & $F_{\mathrm{min}}=J-I$ & $F_{\mathrm{max}}=J+I$ \\
+    \midrule[0.75pt]
+    \multirow{2}{*}{\Rb} & $^2\mathrm{S}_{1/2}$ &  \multirow{2}{*}{$1/2$} &
+                           \multirow{2}{*}{$5/2$} & \multirow{2}{*}{$2$} & \multirow{2}{*}{$3$} \\
+                         & $^2\mathrm{P}_{1/2}$ &  &  &  &  \\
+    \midrule[0.5pt]
+    \multirow{2}{*}{\Rbi} & $^2\mathrm{S}_{1/2}$ & \multirow{2}{*}{$1/2$} &
+                           \multirow{2}{*}{$3/2$} & \multirow{2}{*}{$1$} & \multirow{2}{*}{$2$} \\
+                          & $^2\mathrm{P}_{1/2}$ & & & & \\
+    \bottomrule
+  \end{tabular}
+  \caption{Gesamtdrehimpulsquantenzahl $F$ der Rubidiumisotope}
+  \label{tab:quantenzahlen}
+\end{table}
+Zur Bestimmung der Energien verwendet man die Beziehung $\vec{I} \cdot \vec{J} = 1/2 \left( \vec{F}^2 - \vec{I}^2 - \vec{J}^2 \right)$. Man erhält dann über den Hamiltonian:
+\begin{align}
+E_{\mathrm{HFS}} 
+   = \frac{1}{2} A_{\mathrm{HFS}} \left[ F(F+1) - I(I+1) - J(J+1) \right] \ \ldotp
+\end{align}
+Mit $F_{\mathrm{min}} < F_{\mathrm{max}}$ ergibt sich dann für die Hyperfeinaufspaltung:
+\begin{align}
+\Delta E_{\mathrm{HFS}} = A_{\mathrm{HFS}} \left( F_{\mathrm{min}} +1  \right) \ \ldotp
+\end{align}
+Mit dieser Relation lässt sich schließlich aus der Ausmessung der Übergänge der Energieshift bestimmen und somit die Hyperfeinstrukturkonstante extrahieren (siehe auch Tabelle \ref{tab:hfskonst}).
+\begin{table}[H]
+  \centering
+  \begin{tabular}{llccc}
+    \toprule
+    & & $\Delta E$ & \multicolumn{2}{c}{Übergänge}\\
+    \midrule[0.75pt]
+    \multirow{2}{*}{\Rb} & $^2\mathrm{S}_{1/2}$ 
+          & $3 A_{\mathrm{S},85}$ & $1\ -\ 3$ & $2\ -\ 4$ \\
+                         & $^2\mathrm{P}_{1/2}$ 
+          & $3 A_{\mathrm{P},85}$ & $1\ -\ 2$ & $3\ -\ 4$ \\
+    \midrule[0.5pt]
+    \multirow{2}{*}{\Rbi}& $^2\mathrm{S}_{1/2}$ 
+          & $2 A_{\mathrm{S},87}$ & $5\ -\ 7$ & $6\ -\ 8$ \\
+                         & $^2\mathrm{P}_{1/2}$ 
+          & $2 A_{\mathrm{P},87}$ & $5\ -\ 6$ & $7\ -\ 8$ \\
+    \bottomrule
+  \end{tabular}
+  \caption{Hyperfeinstrukturkonstanten der Übergänge aus Abb. \ref{fig:rubidium}}
+  \label{tab:hfskonst}
+\end{table}
+Wie in Abbildung \ref{fig:rubidium} zu erkennen ist, treffen sich die nicht aufgespalteten P-Niveaus der beiden Isotope nicht. Dies ist der sogenannte Isotopenshift $\Delta E_{\mathrm{iso}}$, der ebenfalls bestimmt werden soll. Er resultiert zum einen aus einer Mitbewegung des Kerns, wobei dieser Beitrag mit steigender Kernmasse abnimmt, und zum anderen aus einer Änderung der Ladungsdichteverteilung, welche durch das mit der Nukleonenzahl wachsende Kernvolumen hervorgerufen wird. Der Isotopenshift liegt energetisch in der Größenordnung der Hyperfeinaufspaltung.
 
 \section{Versuchsdurchführung und Auswertung}
 \subsection{Charakteristik des Diodenlasers}\label{subsec:Ana_DiodeLaser}
