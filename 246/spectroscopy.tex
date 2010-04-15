@@ -239,11 +239,11 @@ Wir erhalten die in Tabelle \ref{tab:Laserdiode} im Anhang aufgeführten und in A
 \end{figure}
 Man erkennt für kleine Ströme einen langsamen Anstieg der Leistung mit dem Eingangsstrom, der ab dem so genannten Schwellenstrom deutlich stärker wird. Ein Geradenfit an diesen als linear approximierten Anstieg liefert:
 \begin{align}
-P = m\cdotp I + b=\unit[(41.218 \pm 0.009)]{\frac{\mu W}{mA}} \,\cdotp\, I - \unit[(1412.3 \pm 0.4)]{\mu W}
+P = m\cdotp I + b=\unit[(41.218 \pm 0.009)]{\frac{\mu W}{mA}} \,\cdotp\, I - \unit[(1412.3 \pm 0.4)]{\mu W} \ \ldotp
 \end{align}
 Der differentielle Wirkungsgrad ist identisch zur Steigung der Geraden, der Schwellenstrom berechnet sich nach $I_\mathrm{thr}=-\frac{b}{m}$ und für die Quanteneffizienz gilt:
 \begin{align}
-\eta = \frac{N_\gamma}{N_\mathrm{e}} = \frac{Pe}{I h \nu} = \frac{\partial P}{\partial I} \frac{e\lambda}{hc} \ldotp
+\eta = \frac{N_\gamma}{N_\mathrm{e}} = \frac{Pe}{I h \nu} = \frac{\partial P}{\partial I} \frac{e\lambda}{hc} \ \ldotp
 \end{align}
 Damit ergeben sich die in Tabelle \ref{tab:Laserdiode_Kenngroessen} zusammengefassten Kenngrößen der Diode.
 \begin{table}[H]
@@ -281,17 +281,17 @@ Mittels eines Glaskeils wird der Laserstrahl in drei Teilstrahlen aufgespalten, 
 \end{figure}
 Zur Bestimmung der Finesse des \textsc{Fabry-Perot}-Interferometers passen wir \textsc{Lorentz}-Kurven an die Peaks des Oszillogramms an. Aus den Fit-Parametern ergibt sich die Finesse gemäß Gleichung (\ref{eq:finesse}):
 \begin{align}
-\mathcal{F} = \frac{\delta \nu}{\Delta \nu} \ldotp
+\mathcal{F} = \frac{\delta \nu}{\Delta \nu}  \ \ldotp
 \end{align}
 Wir schätzen auf die Spannungswerte einen Fehler von $\unit[0.01]{V}$, auf die Zeitablenkung jeweils einen Fehler von $\unit[0.0005]{\mu s}$. Aus den Fits erhalten wir die in Tabelle \ref{tab:FPI_Data} im Anhang zusammengefassten Werte. Dabei berechnen wir die Finesse für jeden Peak einzeln. Wobei sich der Fehler jeweils aus \textsc{Gauß}scher Fehlerfortpflanzung ergibt.
 
 Der fehlergewichtete Mittelwert ergibt sich zu:
 \begin{align}
-\mathcal{F} = (7.282 \pm 0.002) \ldotp
+\mathcal{F} = (7.282 \pm 0.002) \ \ldotp
 \end{align}
 Nach Abschnitt \ref{cha:fpi} erwartet man für die Finesse den theoretischen Wert von
 \begin{align}
-\mathcal{F}_\mathrm{th} = 29.804 \ldotp
+\mathcal{F}_\mathrm{th} = 29.804 \ \ldotp
 \end{align}
 Die von uns gemessene Finesse beträgt also nur ca. $1/4$ des theoretischen Werts. Dies liegt wahrscheinlich an einer zu ungenauen Justage, könnte aber auch durch eine Reflexivitätsminderung der Spiegel durch Alterungsprozesse bedingt sein.
 
@@ -307,7 +307,7 @@ Da die Kurve leicht nicht-linear verläuft, passen wir ein Polynom zweiten Grades
     f(t) &= a + b\,\cdotp\, t + c\, \cdotp\, t^2 \hspace{2cm}\mathrm{mit:}\\
 \notag a &= \unit[(-5739.032 \pm 0.002)]{MHz} \\
 \notag b &= (6.73776 \pm 0.00005)\\
-\notag c &=\unit[(2.3302300 \pm 0.0000004)]{\frac{1}{\mu s}}
+\notag c &=\unit[(2.3302300 \pm 0.0000004)]{\frac{1}{\mu s}} \ \ldotp
 \end{align}
 
 
@@ -331,7 +331,7 @@ Man erkennt im Spektrum der Rubidiumzelle einen nahezu linearen Anstieg der durc
     f(t) &= a + b\,\cdotp\, t + c\, \cdotp\, t^2 \hspace{2cm}\mathrm{mit:}\\
 \notag a &= \unit[(-19,55241 \pm 0,30309)]{V} \\
 \notag b &= \unit[(0,0045 \pm 0,0001)\cdotp 10^{-6}]{Vs}\\
-\notag c &=\unit[(1,4 \pm 0,1)\cdotp 10^{-19}]{Vs^2}
+\notag c &=\unit[(1,4 \pm 0,1)\cdotp 10^{-19}]{Vs^2} \ \ldotp
 \end{align}
 Nun plotten wir die Daten gegen die relative Frequenz und erhalten den in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} gezeigten Graph.
 \begin{figure}[H]
@@ -402,6 +402,7 @@ Damit ergibt sich die theoretische Halbwertsbreite zu:
 \Delta \nu_\textrm{FWHM}^\textrm{theo} = \unit[506]{Mhz} \ \ldotp
 \end{align}
 Somit liegt die theoretisch erwartete Halbwertsbreite noch deutlich unter der von uns gemessenen, was auf eine unzureichende Justage hindeutet. Jedoch können auch andere Effekte, wie eine höhere Temperatur oder eine Verstimmung der Laserfrequenz dazu führen, dass die theoretische Breite in Wirklichkeit höher liegt.
+
 \subsubsection*{Untersuchung des \textsc{Lambert-Beer}-Gesetzes}
 Um den Einfluss der Länge der Zelle auf die Intensität der Linien zu untersuchen, nehmen wir das Spektrum noch einmal mit einer kürzeren Zelle auf. Nach dem \textsc{Lamber-Beer} Gesetz (siehe Abschnitt \ref{subsec:lin_spec_theo}) erwarten wir einen linearen Anstieg der Intensität mit der Länge der Zelle. 
 
@@ -409,16 +410,16 @@ Die von uns aufgenommenen Spektren mit ihren Fits finden sich zum direkten Vergl
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{graphics/Lambert_Beer}
-	\caption{Vergleich der Spektren von langer und kurzer Zelle mit Gaußfit an einen der Peaks}
+	\caption{Vergleich der Spektren von langer und kurzer Zelle mit \textsc{Gauß}-Fit an einen der Peaks}
 	\label{fig:LambertBeer}
 \end{figure}
 Nach dem \textsc{Lambert-Beer} Gesetz erwarten wir den folgenden Zusammenhang:
 \begin{align}
-\frac{A_\textrm{L}}{A_\textrm{K}} = \frac{L_\textrm{L}}{L_\textrm{K}}
+\frac{A_\textrm{L}}{A_\textrm{K}} = \frac{L_\textrm{L}}{L_\textrm{K}} \ ,
 \end{align}
-wobei $L_\textrm{L} = \unit[5]{cm}$ und $L_\textrm{K} = \unit[2.5]{cm}$ gemäß \cite{skript}. Unsere Fits ergeben allerdings:
+wobei $L_\textrm{L} = \unit[5]{cm}$ und $L_\textrm{K} = \unit[2.5]{cm}$ gemäß~\cite{skript}. Unsere Fits ergeben allerdings:
 \begin{align}
-\frac{A_\textrm{L}}{A_\textrm{K}} \approx 63
+\frac{A_\textrm{L}}{A_\textrm{K}} \approx 63 \ \ldotp
 \end{align}
 Man erkennt schon beim Vergleich der Spektren, dass die Werte für die längere Zelle um eine Größenordnung über denen der kurzen Zelle liegen. Leider konnten wir keine charakteristische Skala ausmachen, um die Werte besser vergleichen zu können. Die Messungen sind schlichtweg nicht für einen Vergleich geeignet. Leider stehen uns aber keine alternativen Ergebnisse zur Verfügung, da wir die Spektren nur ein einziges mal abgespeichert haben.
 
@@ -430,7 +431,7 @@ Um das Auflösungsvermögen zu verbessern soll nun Sättigungsspektroskopie betrieb
 	\caption{Aufbau zur Sättigungsspektroskopie}
 	\label{fig:Aufbau_SatSpec}
 \end{figure}
-Der zweite, schwächere Strahl aus dem Glaskeil wird nun entgegengesetzt zum starken Strahl durch die Rubidiumzelle geführt und dann mithilfe einer Linse auf eine Photodiode fokussiert. Dabei achten wir darauf, dass die beiden Strahlen sich innerhalb der Zelle möglichst gut überlagern. Selbstverständlich muss der stärke Strahl nach dem Durchgang durch die Zelle mithilfe einer geschwärzten Platte geblockt werden.
+Der zweite, schwächere Strahl aus dem Glaskeil wird nun entgegengesetzt zum starken Strahl durch die Rubidiumzelle geführt und dann mithilfe einer Linse auf eine Photodiode fokussiert. Dabei achten wir darauf, dass die beiden Strahlen sich innerhalb der Zelle möglichst gut überlagern. Selbstverständlich muss der stärke Strahl nach dem Durchgang durch die Zelle mit Hilfe einer geschwärzten Platte geblockt werden.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{graphics/SatSpec_Raw}
@@ -444,7 +445,7 @@ Zur Auswertung des Spektrums ziehen wir wieder ein an die Daten zwischen den Pea
     f(\nu) &= a + b\,\cdotp\, \nu + c\, \cdotp\, \nu^2 \hspace{2cm}\mathrm{mit:}\\
 \notag a &= \unit[(-6,9 \pm 0,1)]{V} \\
 \notag b &= \unit[(0,00149 \pm 0,00004)\cdotp 10^{-6}]{Vs}\\
-\notag c &=\unit[(-9 \pm 4)\cdotp 10^{-21}]{Vs^2}
+\notag c &=\unit[(-9 \pm 4)\cdotp 10^{-21}]{Vs^2} \ \ldotp
 \end{align}
 Das auf diese Weise untergrundkorrigierte Spektrum ist in Abbildung \ref{fig:SatSpec_UndergroundCorrected} zu sehen.
 \begin{figure}[H]
@@ -479,7 +480,7 @@ $8$&$-39 \pm 4$&$926 \pm 1$&$33 \pm 4$\\
 \end{table}
 
 \subsubsection*{Bestimmung der Hyperfeinstrukturkonstanten}
-Wir können mithilfe der \textsc{Lamb}-Dips wiederum die Hyperfeinstrukturkonstanten bestimmen. Die Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants_SatSpec} angegeben. 
+Wir können mit Hilfe der \textsc{Lamb}-Dips wiederum die Hyperfeinstrukturkonstanten bestimmen. Die Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants_SatSpec} angegeben. 
 \begin{table}[H]
   \centering
 \resizebox{1.0\textwidth}{!}{
@@ -506,11 +507,11 @@ Unsere Werte sind größenordnungsmäßig mit den Literaturwerten vereinbar, zeigen 
 \subsubsection*{Bestimmung der spektralen Auflösung}
 Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir den fehlergewichteten Mittelwert, der als Fitparameter auftretenden vollen Halbwertsbreiten der Peaks zu:
 \begin{align}
-\Delta \nu = \unit[(41 \pm 6)]{MHz}
+\Delta \nu = \unit[(41 \pm 6)]{MHz} \ \ldotp
 \end{align}
 Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \begin{align}
-\frac{\nu}{\Delta \nu} = (9 \pm 1)\cdotp 10^6
+\frac{\nu}{\Delta \nu} = (9 \pm 1)\cdotp 10^6 \ \ldotp
 \end{align}
 Damit ist das Auflösungsvermögen um etwa eine Größenordnung besser als im Falle der linearen Spektroskopie.
 
@@ -545,24 +546,24 @@ $0.035$&$19 \pm 10$&$34 \pm 14$&$0.35 \pm 0.23$\\
 \end{table}
 Wie in Abschnitt \ref{cha:sat} beschrieben, hängt die Amplitude der \textsc{Lamb}-Dips von der Pumpleistung $P$ ab gemäß:
 \begin{align}
-A\propto \Delta P \propto \frac{S}{1+S} = \frac{1}{1+\frac{P_\textrm{Sat}}{P}}.
+A\propto \Delta P \propto \frac{S}{1+S} = \frac{1}{1+\frac{P_\textrm{Sat}}{P}} \ \ldotp
 \end{align}
 Die Pumpleistung hängt gemäß $P = P_\textrm{Laser}\cdotp T$ ab von der Laserleistung und der Transmission der eingesetzten Abschwächer. Die Laserleistung bestimmen wir mithilfe von Abschnitt \ref{subsec:Ana_DiodeLaser} aus dem Laserstrom von $I = \unit[(59 \pm 1)]{mA}$ zu:
 \begin{align}
-P_\textrm{Laser} = \unit[(1.02 \pm 0.04)]{mW}
+P_\textrm{Laser} = \unit[(1.02 \pm 0.04)]{mW} \ \ldotp
 \end{align}
 Wir plotten nun die aus den \textsc{Lorentz}-Fits bestimmten Amplituden gegen die jeweilige Transmission und fitten an den erhaltenen Graphen eine Funktion der Form
 \begin{align}
-A(T) = \frac{A_1}{1+A_2/T}
+A(T) = \frac{A_1}{1+A_2/T} \ \ldotp
 \end{align}
 Der Fit an die in Abbildung \ref{fig:dip_amplitude} dargestellten Daten liefert:
 \begin{align}
 A_1 &=  \unit[(0.79 \pm 0.08)]{V}\\
-\notag A_2 &= \unit[(0.13 \pm 0.04)]{}\\
+\notag A_2 &= \unit[(0.13 \pm 0.04)]{} \ \ldotp
 \end{align}
 Damit erhalten wir:
 \begin{align*}
-P_\textrm{Sat}= \unit[(0.1\pm 0.05)]{mW}
+P_\textrm{Sat}= \unit[(0.1\pm 0.05)]{mW} \ \ldotp
 \end{align*}
 
  \begin{figure}[H]
@@ -575,16 +576,16 @@ P_\textrm{Sat}= \unit[(0.1\pm 0.05)]{mW}
 
 Die Sättigungsleistung kann auch anhand der Leistungsverbreiterung bestimmt werden. In Abschnitt \ref{cha:sat} wurde argumentiert, dass für die Peakbreite im Sättigungsfall gilt:
 \begin{align*}
-\Delta \nu_{\mathrm{Sat}} = \Delta \nu_{\mathrm{Lin}} \sqrt{1+S}
+\Delta \nu_{\mathrm{Sat}} = \Delta \nu_{\mathrm{Lin}} \sqrt{1+S} \ \ldotp
 \end{align*}
 Damit gilt also:
 \begin{align}
-(\Delta \nu)^2 = c\,\cdotp\, \left(1+\frac{P_{\mathrm{Laser}}\,\cdotp\, T}{P_{\mathrm{Sat}}}\right) = b + m\,\cdotp\, T
+(\Delta \nu)^2 = c\,\cdotp\, \left(1+\frac{P_{\mathrm{Laser}}\,\cdotp\, T}{P_{\mathrm{Sat}}}\right) = b + m\,\cdotp\, T \ \ldotp
 \end{align}
 Wir tragen also $(\Delta \nu)^2$ gegen $T$ auf und fitten eine lineare Funktion an den erhaltenen und in Abbildung \ref{fig:PSat2nd} gezeigten Graphen. Die Ergebnisse des Fits lauten:
 \begin{align}
 b &= \unit[(11 \pm 102)\cdotp 10^{12}]{\frac{1}{s^2}}\\
-\notag m &= \unit[(1211 \pm 316)\cdotp 10^{12}]{\frac{1}{s^2}}
+\notag m &= \unit[(1211 \pm 316)\cdotp 10^{12}]{\frac{1}{s^2}} \ \ldotp
 \end{align}
  \begin{figure}[H]
   \resizebox{1.0\textwidth}{!}{
@@ -595,18 +596,18 @@ b &= \unit[(11 \pm 102)\cdotp 10^{12}]{\frac{1}{s^2}}\\
 \end{figure}
 Wie man am Graphen und auch deutlich am Fehler des Achsenabschnitts $m$ erkennt, scheint der lineare Zusammenhang recht "`aufgezwungen"'. Trotzdem soll hier noch die Sättigungsleistung bestimmt werden:
 \begin{align}
-P_{\mathrm{Sat}} = \unit[(0.01 \pm 0.09)]{mW}
+P_{\mathrm{Sat}} = \unit[(0.01 \pm 0.09)]{mW} \ \ldotp
 \end{align}
 Wie aufgrund der schlechten Zwischenergebnisse erwartet, ist dieser Wert nicht verwertbar. Schon sein Fehler ist um einen Faktor 10 größer.
 
 Mithilfe des ersten Wertes für die Sättigungsleistung soll nun die Sättigungsintensität bestimmt werden. Dazu schätzen wir den Durchmesser des Laserstrahls auf $d=\unit[(5 \pm 1)]{mm}$ ab. Damit ergibt sich:
 \begin{align}
-I_{\mathrm{Sat}}= \frac{P_{\mathrm{Sat}}}{\frac{\pi d^2}{4}} = \unit[(5.1\pm 2.0)]{\frac{W}{m^2}}
+I_{\mathrm{Sat}}= \frac{P_{\mathrm{Sat}}}{\frac{\pi d^2}{4}} = \unit[(5.1\pm 2.0)]{\frac{W}{m^2}} \ \ldotp
 \end{align} 
 
 
 \section{Zusammenfassung}
-Zum Abschluss sollen die beiden Spektroskopie-Arten zusammenfassend verglichen werden: In Bezug auf die Bestimmung der Hyperfeinstrukturkonstanten fallen zum einen die in beiden Versuchsteilen zu geringen Fehler auf und zum anderen, dass mit der Sättigungsspektroskopie gewonnenen Werte mit den Literaturwerten besser verträglich sind als die der linearen Spektroskopie. Des Weiteren konnte mit der Sättigungsspektroskopie ein zusätzliches Linienpaar aufgelöst werden, sodass auch die Hyperfeinaufspaltung des angeregten Niveaus des \Rb bestimmt werden konnte. Dies ist selbstverständlich auf das um eine Größenordnung bessere Auflösungsvermögen zurückzuführen.
+Zum Abschluss sollen die beiden Spektroskopie-Arten zusammenfassend verglichen werden: In Bezug auf die Bestimmung der Hyperfeinstrukturkonstanten fallen zum einen die in beiden Versuchsteilen zu geringen Fehler auf und zum anderen, dass mit der Sättigungsspektroskopie gewonnene Werte mit den Literaturwerten besser verträglich sind als die der linearen Spektroskopie. Des Weiteren konnte mit der Sättigungsspektroskopie ein zusätzliches Linienpaar aufgelöst werden, sodass auch die Hyperfeinaufspaltung des angeregten Niveaus des \Rb bestimmt werden konnte. Dies ist selbstverständlich auf das um etwa eine Größenordnung bessere Auflösungsvermögen zurückzuführen.
 
 Bedauerlicherweise ist auch anzumerken, dass unsere Messwerte sicherlich durch eine exaktere Justage noch deutlich hätten verbessert werden können. Dennoch konnten die entscheidenden Ergebnisse reproduziert werden.
 
