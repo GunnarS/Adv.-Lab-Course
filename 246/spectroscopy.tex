@@ -76,7 +76,7 @@ Im Falle hochreflexiver Spiegel ($F \gg 1$) ergibt sich die FWHM der Transmissio
 \begin{align}
 \mathcal{F} = \frac{\pi \sqrt{R}}{1-R}
 \end{align}
-ergibt. Sie ist ein Maß für die Anzahl der miteinander interferierenden Teilstrahlen im \textsc{Fabry-Perot}-Interferometer, also für den Kontrast des Interferenzbildes (siehe auch Abbildung \ref{fig:transmiss}. Im vorliegenden Fall erwartet man bei einer Spiegelreflexivität von $R=0.9$ eine Finesse von $\mathcal{F} = 29.8$.
+ergibt. Sie ist ein Maß für die Anzahl der miteinander interferierenden Teilstrahlen im \textsc{Fabry-Perot}-Interferometer, also für den Kontrast des Interferenzbildes (siehe auch Abbildung \ref{fig:transmiss}. Im vorliegenden Fall erwartet man bei einer Spiegelreflexivität von $R=0.9$ (nach~\cite{skript}) eine Finesse von $\mathcal{F} = 29.804$.
 
 Für diesen Versuch soll das \textsc{Fabry-Perot}-Interferometer, wie erwähnt, als Frequenzreferrenz fungieren. Dies ist möglich, da wir die FSR des verwendeten \textsc{Fabry-Perot}-Interferometers kennen, sie beträgt nach Kalibration am IAP Bonn:
 \begin{align}
@@ -92,6 +92,7 @@ Mit der (guten) Näherung von $R=1$ gilt dann schließlich:
 \end{align}
 Für die Auswertung muss diese Halbwertsbreite nun noch als Frequenz angegeben werden. Da dem Dispersionsgebiet die Phase $2\pi$ entspricht, folgt:
 \begin{align}
+\label{eq:finesse}
 \frac{\delta \nu}{\Delta \nu} = \frac{2 \pi}{\varepsilon} = \frac{\pi \sqrt{R}}{1-R} \equiv \mathcal{F} \ldotp
 \end{align}
 
@@ -106,7 +107,7 @@ Für den Absorptionskoeffizienten $\kappa(\nu)$ gilt in dieser Approximation mit 
 \begin{align}
 \kappa(\nu) = \kappa_0 \frac{\left( \frac{\Delta \nu}{2} \right)^2}{(\nu - \nu_0)^2 + \left( \frac{\Delta \nu}{2} \right)^2}
 \end{align}
-im Bereich der Resonanzfrequenz ruhender Atome. Man erhält also ein \textsc{Lorentz}-Profil. Die natürliche Linienbreite hängt dabei mit der Lebensdauer $\tau$ des Niveaus über $\tau = 1/\gamma = 1/2\pi\Delta\nu$ zusammen, wobei die Lebensdauer für einen erlaubten Zerfall bei einigen Nanosekunden liegt. Dieser idealisierte Fall ist jedoch nicht realisierbar. In der Tat bewegen sich die Atome mit einer \textsc{Maxwell}schen Geschwindigkeitsverteilung $N(v) = N_0 \exp{-(v/v_0)^2}$, wobei $v_0 = \sqrt{2k_{\mathrm{B}}T/m_{\mathrm{Atom}}}$ die mittlere thermische Geschwindigkeit der Atome darstellt, und sehen somit einen \textsc{Doppler} verschobenen Laserstrahl. Das spektrale Profil folgt dann entsprechend einer Faltung der Form 
+im Bereich der Resonanzfrequenz ruhender Atome. Man erhält also ein \textsc{Lorentz}-Profil. Die natürliche Linienbreite hängt dabei mit der Lebensdauer $\tau$ des Niveaus über $\tau = 1/\gamma = 1/2\pi\Delta\nu$ zusammen, wobei die Lebensdauer für einen erlaubten Zerfall bei einigen Nanosekunden liegt. Dieser idealisierte Fall ist jedoch nicht realisierbar. In der Tat bewegen sich die Atome mit einer \textsc{Maxwell}schen Geschwindigkeitsverteilung $N(v) = N_0 \exp{-(v/v_0)^2}$, wobei $v_0 = \sqrt{2k_{\mathrm{B}}T/m_{\mathrm{Atom}}}$ die mittlere thermische Geschwindigkeit der Atome darstellt, und sehen somit einen \textsc{doppler}-verschobenen Laserstrahl. Das spektrale Profil folgt dann entsprechend einer Faltung der Form 
 \begin{align}
 \kappa (\nu) = \int N(v)\ \kappa(\nu - k v)\ \mathrm{d}v
 \end{align}
@@ -278,7 +279,7 @@ Mittels eines Glaskeils wird der Laserstrahl in drei Teilstrahlen aufgespalten, 
 	\caption{Ausschnitt aus dem an der Photodiode gemessenen Oszillogramm mit \textsc{Lorentz}-Fits}
 	\label{fig:FPI_Plot}
 \end{figure}
-Zur Bestimmung der Finesse des \textsc{Fabry-Perot}-Interferometers passen wir \textsc{Lorentz}-Kurven an die Peaks des Oszillogramms an. Aus den Fit-Parametern ergibt sich die Finesse gemäß:
+Zur Bestimmung der Finesse des \textsc{Fabry-Perot}-Interferometers passen wir \textsc{Lorentz}-Kurven an die Peaks des Oszillogramms an. Aus den Fit-Parametern ergibt sich die Finesse gemäß Gleichung (\ref{eq:finesse}):
 \begin{align}
 \mathcal{F} = \frac{\delta \nu}{\Delta \nu} \ldotp
 \end{align}
@@ -288,15 +289,11 @@ Der fehlergewichtete Mittelwert ergibt sich zu:
 \begin{align}
 \mathcal{F} = (7.282 \pm 0.002) \ldotp
 \end{align}
-Nach Abschnitt \ref{cha:fpi} ist die Finesse gegeben durch:
-\begin{align}
-\mathcal{F} = \frac{\pi \sqrt{R}}{1-R}
-\end{align}
-und die Reflektivität der Spiegel des Interferometers ist (nach~\cite{skript}) $R=0.9$. Damit erhält man für die Finesse den theoretischen Wert von
+Nach Abschnitt \ref{cha:fpi} erwartet man für die Finesse den theoretischen Wert von
 \begin{align}
 \mathcal{F}_\mathrm{th} = 29.804 \ldotp
 \end{align}
-Die von uns gemessene Finesse beträgt also nur ca. $1/4$ des theoretischen Werts. Dies liegt wahrscheinlich an einer zu ungenauen Justage, könnte aber auch durch eine Reflektivitätsminderung der Spiegel durch Alterungsprozesse bedingt sein.
+Die von uns gemessene Finesse beträgt also nur ca. $1/4$ des theoretischen Werts. Dies liegt wahrscheinlich an einer zu ungenauen Justage, könnte aber auch durch eine Reflexivitätsminderung der Spiegel durch Alterungsprozesse bedingt sein.
 
 Nun soll anhand des bekannten Frequenzabstands der Peaks des Interferometers eine Eichkurve für die Zeitachse bestimmt werden. Dazu fitten wir \textsc{Lorentz}-Kurven an eine möglichst große Zahl von Peaks im Spektrum des FPI und tragen die Peakpositionen gegen ihre relative Frequenz auf. Der Nullpunkt der Frequenzskala wird dabei willkürlich gewählt. Das Ergebnis ist in Abbildung \ref{fig:FPI_GaugeFit} zu sehen.
 \begin{figure}[H]
@@ -322,7 +319,7 @@ Als nächstes soll das Spektrum von Rubidium untersucht werden. Dazu verwenden wi
 	\caption{Aufbau zur linearen Absorptionsspektroskopie}
 	\label{fig:Aufbau_LinSpec}
 \end{figure}
-Einer der Teilstrahlen aus dem Glaskeil wird nach Durchgang durch einen Abschwächer mittels zweier Spiegel durch eine Zelle mit Rubidiumdampf (natürliche Mischung der Isotope $^{85}\mathrm{Rb}$ und $^{87}\mathrm{Rb}$) geführt und dann mit einer Linse auf eine Photodiode fokussiert. Während der Laser mittels des \textsc{Littrow}-Gitters durchgestimmt wird, nehmen wir das Spektrum am Ausgang der Photodiode auf. Wir erhalten das in Abbildung \ref{fig:LinearSpectroscopy_Spectra} dargestellte Oszillogramm. 
+Einer der Teilstrahlen aus dem Glaskeil wird nach Durchgang durch einen Abschwächer mittels zweier Spiegel durch eine Zelle mit Rubidiumdampf (natürliche Mischung der Isotope \Rb und \Rbi) geführt und dann mit einer Linse auf eine Photodiode fokussiert. Während der Laser mittels des \textsc{Littrow}-Gitters durchgestimmt wird, nehmen wir das Spektrum am Ausgang der Photodiode auf. Wir erhalten das in Abbildung \ref{fig:LinearSpectroscopy_Spectra} dargestellte Oszillogramm. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.0\textwidth]{graphics/LinearSpectroscopy_Spectra}
@@ -343,7 +340,7 @@ Nun plotten wir die Daten gegen die relative Frequenz und erhalten den in Abbild
 	\caption{Untergrundbereinigtes Spektrum der Rubidiumzelle mit \textsc{Gauß}-Fits}
 	\label{fig:LinearSpectroscopy_Spectrum_Fits}
 \end{figure}
-Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen sie anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des \Rb nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt \ref{cha:rub}) zeigen sich jeweils als ein breiter Peak.
+Anschließend passen wir \textsc{Gauß}-Kurven an die \textsc{doppler}-verbreiterten Peaks des Spektrums an und ordnen sie anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der \textsc{Doppler}-Verbreiterung können wir die Hyperfeinstruktur des \Rb nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt \ref{cha:rub}) zeigen sich jeweils als ein breiter Peak.
 \begin{table}[H]
   \centering
 \resizebox{0.5\textwidth}{!}{
@@ -363,7 +360,7 @@ Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks d
   \caption{Ergebnisse der Gaußfits an die Peaks des Rubidiumspektrums}
   \label{tab:LinSpec_Fits}
 \end{table}
-Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt, was sich auch im vergleichsweise hohen Fehler der Breite niederschlägt.
+Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht, ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt, was sich auch im vergleichsweise hohen Fehler der Breite niederschlägt.
 
 \subsubsection*{Bestimmung der Hyperfeinstrukturkonstanten}
 Aus den relativen Abständen der Linien lassen sich gemäß Abschnitt \ref{cha:rub} die Hyperfeinstrukturkonstanten bestimmen. Unsere Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants} zusammengefasst. 
@@ -393,18 +390,18 @@ Die von uns bestimmten Werte für die Hyperfeinstrukturkonstanten sind zumindest 
 \subsubsection*{Bestimmung der spektralen Auflösung}
 Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir aus den Breiten der an die Peaks gefitteten \textsc{Gauß}-Kurven ihre vollen Halbwertsbreiten (FWHM) und bilden den fehlergewichteten Mittelwert zu:
 \begin{align}
-\Delta \nu_\textrm{FWHM} = \unit[(640 \pm 24)]{MHz}
+\Delta \nu_\textrm{FWHM} = \unit[(640 \pm 24)]{MHz} \ \ldotp
 \end{align}
 Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \begin{align}
-\frac{\nu}{\Delta \nu_\textrm{FWHM}} = (5.9 \pm 0.2)\cdotp 10^5
+\frac{\nu}{\Delta \nu_\textrm{FWHM}} = (5.9 \pm 0.2)\cdotp 10^5 \ \ldotp
 \end{align}
 Wie in Abschnitt \ref{subsec:lin_spec_theo} erläutert lässt sich mittels Gleichung \ref{eqn:doppler_fwhm_theo} die theoretisch erwartete Halbwertsbreite berechnen. Dazu schätzen wir die Raumtemperatur auf $T=\unit[300]{K}$ ab. Die Masse von Rubidiumatomen ist $m_\textrm{Rb}=\unit[85.4678]{u}$. 
 Damit ergibt sich die theoretische Halbwertsbreite zu:
 \begin{align}
-\Delta \nu_\textrm{FWHM}^\textrm{theo} = \unit[506]{Mhz}
+\Delta \nu_\textrm{FWHM}^\textrm{theo} = \unit[506]{Mhz} \ \ldotp
 \end{align}
-Damit liegt die theoretisch erwartete Halbwertsbreite noch deutlich unter der von uns gemessenen, was auf eine unzureichende Justage hindeutet. Jedoch können auch andere Effekte, wie eine höhere Temperatur oder eine Verstimmung der Laserfrequenz dazu führen, dass die theoretische Breite in Wirklichkeit höher liegt.
+Somit liegt die theoretisch erwartete Halbwertsbreite noch deutlich unter der von uns gemessenen, was auf eine unzureichende Justage hindeutet. Jedoch können auch andere Effekte, wie eine höhere Temperatur oder eine Verstimmung der Laserfrequenz dazu führen, dass die theoretische Breite in Wirklichkeit höher liegt.
 \subsubsection*{Untersuchung des \textsc{Lambert-Beer}-Gesetzes}
 \textit{hier fehlt noch der teil zum lambert beer gesetz}
 
