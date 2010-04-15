@@ -52,6 +52,7 @@ Hierzu wird die minus erste Beugungsordnung zur Beeinflussung der Resonanzfreque
 
 
 \subsection{Fabry-Perot-Interferometer}
+\label{cha:fpi}
 Zur Ausmessung des Rubidium-Spektrums ist eine Frequenzreferrenz erforderlich, mit welcher die Abszisse des Oszilloskops angepasst werden kann. Diese erhalten wir mit einem \textsc{Fabry-Perot}-Interferometer in konfokaler Anordnung ($d=r$, siehe auch Abbildung \ref{fig:fpi}).
 \begin{figure}[H]
 	\centering
@@ -123,6 +124,7 @@ Hierbei ist $\Delta \nu_{\mathrm{D}} = \nu_0 \sqrt{k_{\mathrm{B}}T/m_{\mathrm{At
 Alle weiteren Effekte, die zu einer Linienverbreiterung beitragen, wie beispielsweise die Stoßverbreiterung können auf Grund der Dominanz der \textsc{Doppler}-Verbreiterung vernachlässigt werden.
 
 \subsection{Sättigungsspektroskopie}
+\label{cha:sat}
 Als Beispiel einer nicht-linearen Spektroskopie betrachten wir im vorliegenden Versuch die sogenannte Sättigungsspektroskopie. Der entscheidende Vorteil zur linearen Spektroskopie liegt in der Unterdrückung der \textsc{Doppler}-Verbreiterung und der daraus folgenden Erhöhung des Auflösungsvermögens bis zur Größenordnung der natürlichen Linienbreite.
 
 Wie der Name schon andeutet wird das Medium in Sättigung gebracht. Dies geschieht durch einen intensiven Pumpstrahl, welcher bis zu $\unit[50]{\%}$ der Atome in einen angeregten Zustand versetzt. Nun wird ein weiterer Strahl (Probestrahl) geringerer Intensität aber gleicher Frequenz ebenfalls durch das Medium geschickt. Das sich in Sättigung befindende Medium ist für diesen Strahl nun optisch dünn, da kaum zur Absorption fähige Atome im Grundzustand vorhanden sind.
@@ -136,26 +138,27 @@ Liegt die Frequenz $\nu$ des Lasers nicht exakt auf der Resonanzfrequenz $\nu_0$
 
 Ein spektrales Loch tritt ausschließlich dann auf, wen Pump- und Probestrahl mit der gleichen Geschwindigkeitsklasse ($v=0$) von Atomen wechselwirken. Man liegt dann also gerade auf der Resonanzfrequenz. In diesem Fall tritt ein sogenannter \textsc{Lamb}-Dip auf (siehe Abb. \ref{fig:specklöch} unten). Entscheidend ist, dass die Löcher ausschließlich durch die natürliche Linienbreite beschränkt sind. Man erhält auf diese Weise also ein deutlich erhöhtes Auflösungsvermögen im Vergleich zur linearen Spektroskopie.
 
-Ein weiteres auftretendes Phänomen ist die sogenannte \emph{cross-over}-Resonanz. Diese tritt dann auf, wenn sich die \textsc{Doppler}-Profile zweier nahe beieinander liegender Absorptionskurven überlagern (siehe Abb. \ref{fig:crossover}). Liegt die Frequenz der beiden Strahlen nun zwischen den Resonanzfrequenzen $\nu_1$ und $\nu_2$ der beiden Übergänge so wechselwirken beide Strahlen mit Atomen, welche eine Geschwindigkeitskomponente $\pm \tilde{v}$ haben, die der Bedingung $\nu_2 - \nu = \nu - \nu_1 = \pm \nu_0 \tilde{v}/c$ genügen. Es erscheint somit ein zusätzliches drittes Loch zwischen den beiden anderen (siehe Abb. \ref{fig:crossover}).
+Ein weiteres auftretendes Phänomen ist die sogenannte \emph{cross-over}-Resonanz. Diese tritt dann auf, wenn sich die \textsc{Doppler}-Profile zweier nahe beieinander liegender Absorptionskurven überlagern (siehe Abb. \ref{fig:crossover}). Liegt die Frequenz der beiden Strahlen nun zwischen den Resonanzfrequenzen $\nu_1$ und $\nu_2$ der beiden Übergänge so wechselwirken beide Strahlen mit Atomen, welche eine Geschwindigkeitskomponente $\pm \tilde{v}$ haben, die der Bedingung $\nu_2 - \nu = \nu - \nu_1 = \pm \nu_0\, \tilde{v}/c$ genügen. Es erscheint somit ein zusätzliches drittes Loch zwischen den beiden anderen (siehe Abb. \ref{fig:crossover}).
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.6\textwidth]{graphics/crossover}
 	\caption{Cross-over-Resonanz~\cite{skript}}
 	\label{fig:crossover}
 \end{figure}
-Für den Absorptionskoeffizienten im Fall der Sättigungsspektroskopie gilt mit dem Sättigungsparameter $S \equiv I/I_{\mathrm{Sätt}}$:
+Für den Absorptionskoeffizienten im Fall der Sättigungsspektroskopie gilt mit dem Sättigungsparameter $S \equiv I/I_{\mathrm{Sat}}$:
 \begin{align}
 \kappa(\nu) = \kappa_0 \frac{\left( \frac{\Delta \nu}{2} \right)^2}{(\nu-\nu_0)^2 + \left( \frac{\Delta \nu}{2} \right)^2 (1+S)} \ldotp
 \end{align}
-Dabei ist die Sättigungsintensität $I_{\mathrm{Sätt}}$ die Intensität, bei welcher der Absorptionskoeffizient in Resonanz gerade auf die Hälfte seines Wertes für ruhende Atome gefallen ist. Das Lorentsprofil ist hier sättigungsverbreitert (siehe Abb. \ref{fig:lorsätt}). Im Resonanzfall folgt nun $\kappa(\nu_0) = \kappa_0(\nu_0)/1+S$. Für thermisch verteilte Atome ergibt sich ferner $\kappa_{\mathrm{D}}(\nu_0) = \kappa_{\mathrm{D},0}(\nu_0)/1+S$. Mittels der Definition von $S$ folgt schließlich für die absorbierte Lichtleistung im Falle ruhender Atome $\Delta P \propto \kappa P \propto S/1+S$ und für bewegte Atome $\Delta P \propto \kappa P \propto S/\sqrt{1+S}$.
+Dabei ist die Sättigungsintensität $I_{\mathrm{Sat}}$ die Intensität, bei welcher der Absorptionskoeffizient in Resonanz gerade auf die Hälfte seines Wertes für ruhende Atome gefallen ist. Das Lorentsprofil ist hier sättigungsverbreitert (siehe Abb. \ref{fig:lorsätt}). Im Resonanzfall folgt nun $\kappa(\nu_0) = \kappa_0(\nu_0)/1+S$. Für thermisch verteilte Atome ergibt sich ferner $\kappa_{\mathrm{D}}(\nu_0) = \kappa_{\mathrm{D},0}(\nu_0)/1+S$. Mittels der Definition von $S$ folgt schließlich für die absorbierte Lichtleistung im Falle ruhender Atome $\Delta P \propto \kappa P \propto S/1+S$ und für bewegte Atome $\Delta P \propto \kappa P \propto S/\sqrt{1+S}$.
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.6\textwidth]{graphics/lorsaett}
+		\includegraphics[width=0.5\textwidth]{graphics/lorsaett}
 	\caption{Gesättigtes \textsc{Lorentz}-Profil~\cite{demtroed}}
 	\label{fig:lorsätt}
 \end{figure}
 
 \subsection{Eigenschaften von Rubidium}
+\label{cha:rub}
 Natürliches Rubidium besteht aus den beiden stabilen Isotopen \Rb ($\unit[72.17]{\%}$) und \Rbi ($\unit[27.83]{\%}$). Als Alkimetall sitzt in der $5\mathrm{s}$-Schale ein einzelnes Elektron, sodass sich für den Grundzustand die Konfiguration $^2\mathrm{S}_{1/2}$ ergibt. Rubidium zeichnet sich durch einen relativ hohen Dampfdruck aus und besitzt des Weiteren deutliche und einfach strukturierte Absorptionslinien, somit eignet sich Rubidium sehr gut für diesen Versuch.
 
 Im Versuch sollen Übergänge zwischen dem Grundzustand und dem niedrigsten angeregten Zustand $^2\mathrm{P}_{1/2}$ (Wellenlängen um $\unit[794]{nm}$) untersucht werden. Beide Niveaus spalten durch die Wechselwirkung von Kernspin $\vec{I}$ und Gesamtdrehimpuls $\vec{J}$ der Elektronen auf (Hyperfeinstruktur). Diese Aufspaltung wird durch den Hamiltonian $H=A_{\mathrm{HFS}} (\vec{I} \cdot \vec{J})$ beschrieben, wobei $A_{\mathrm{HFS}}$ die Hyperfeinstrukturkonstante ist. Diese ist von der Hauptquantenzahl $n$, der Bahndrehimpulsquantenzahl $L$ und der Gesamtdrehimpulsquantenzahl $J$ abhängig.
@@ -243,7 +246,7 @@ Der differentielle Wirkungsgrad ist identisch zur Steigung der Geraden, der Schw
 Damit ergeben sich die in Tabelle \ref{tab:Laserdiode_Kenngroessen} zusammengefassten Kenngrößen der Diode.
 \begin{table}[H]
   \centering
-\resizebox{0.5\textwidth}{!}{
+\resizebox{0.6\textwidth}{!}{
   \begin{tabular}{lc}
     \toprule
       & bestimmter Wert\\
@@ -257,7 +260,6 @@ Quanteneffizienz & $26.422 \pm 0.006$\\
  \caption{Zusammenfassung der Kenngrößen der Laserdiode}
   \label{tab:Laserdiode_Kenngroessen}
 \end{table}
-
 
 
 \subsection{Fabry-Perot Interferometer}\label{subsec:Ana_FabryPerot}
@@ -285,7 +287,7 @@ Der fehlergewichtete Mittelwert ergibt sich zu:
 \begin{align}
 \mathcal{F} = (7.282 \pm 0.002) \ldotp
 \end{align}
-Nach Abschnitt XXX ist die Finesse gegeben durch:
+Nach Abschnitt \ref{cha:fpi} ist die Finesse gegeben durch:
 \begin{align}
 \mathcal{F} = \frac{\pi \sqrt{R}}{1-R}
 \end{align}
@@ -309,6 +311,8 @@ Da die Kurve leicht nicht-linear verläuft, passen wir ein Polynom zweiten Grades
 \notag b &= (6.73776 \pm 0.00005)\\
 \notag c &=\unit[(2.3302300 \pm 0.0000004)]{\frac{1}{\mu s}}
 \end{align}
+
+
 \subsection{Lineare Spektroskopie}\label{subsec:Ana_LinSpec}
 Als nächstes soll das Spektrum von Rubidium untersucht werden. Dazu verwenden wir den in Abbildung \ref{fig:Aufbau_LinSpec} gezeigten Versuchsaufbau.
 \begin{figure}[H]
@@ -338,7 +342,7 @@ Nun plotten wir die Daten gegen die relative Frequenz und erhalten den in Abbild
 	\caption{Untergrundbereinigtes Spektrum der Rubidiumzelle mit \textsc{Gauß}-Fits}
 	\label{fig:LinearSpectroscopy_Spectrum_Fits}
 \end{figure}
-Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen sie anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des $^{85}\mathrm{Rb}$ nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt YYY) zeigen sich jeweils als ein breiter Peak.
+Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks des Spektrums an und ordnen sie anhand ihrer Frequenzabstände und Intensitäten den Linien der Rubidiumisotope zu. Die Fit-Ergebnisse finden sich in Tabelle \ref{tab:LinSpec_Fits}. Aufgrund der Dopplerverbreiterung können wir die Hyperfeinstruktur des \Rb nicht auflösen und die Linien 1\&2 sowie 3\&4 (Notation wie in Abschnitt \ref{cha:rub}) zeigen sich jeweils als ein breiter Peak.
 \begin{table}[H]
   \centering
 \resizebox{0.5\textwidth}{!}{
@@ -360,7 +364,8 @@ Anschließend passen wir \textsc{Gauß}-Kurven an die dopplerverbreiterten Peaks d
 \end{table}
 Wie man in Abbildung \ref{fig:LinearSpectroscopy_Spectrum_Fits} sieht ist vor allem Peak 5 im aufgenommenen Spektrum nur sehr schwach ausgeprägt, was sich auch im vergleichsweise hohen Fehler der Breite niederschlägt.
 
-Aus den relativen Abständen der Linien lassen sich gemäß Abschnitt YYY die Hyperfeinstrukturkonstanten bestimmen. Unsere Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants} zusammengefasst. 
+\subsubsection*{Bestimmung der Hyperfeinstrukturkonstanten}
+Aus den relativen Abständen der Linien lassen sich gemäß Abschnitt \ref{cha:rub} die Hyperfeinstrukturkonstanten bestimmen. Unsere Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants} zusammengefasst. 
 \begin{table}[H]
   \centering
 \resizebox{1.0\textwidth}{!}{
@@ -379,11 +384,12 @@ $^{85}\mathrm{Rb}$ $^{2}\mathrm{S}_{1/2}$ & 1-3 / 2-4& $3135 \pm 3$&&$1045\pm 1$
     \bottomrule
   \end{tabular}
 }
-  \caption{Ergebnisse zur Berechnung der Hyperfeinstrukturkonstanten. Angegeben sind auch die Literaturwerte}
+  \caption{Ergebnisse zur Berechnung der Hyperfeinstrukturkonstanten (angegeben sind auch die Literaturwerte)}
   \label{tab:Hyperfinestructureconstants}
 \end{table}
 Die von uns bestimmten Werte für die Hyperfeinstrukturkonstanten sind zumindest größenordnungsmäßig mit den Literaturwerten vereinbar. Die Fehler scheinen aber deutlich zu klein zu sein. Dies wird wohl an einer zu geringen Fehlerschätzung für die aufgenommenen Werte von Spannung und Zeit liegen.
 
+\subsubsection*{Bestimmung der spektralen Auflösung}
 Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir aus den Breiten der an die Peaks gefitteten \textsc{Gauß}-Kurven ihre vollen Halbwertsbreiten (FWHM) und bilden den fehlergewichteten Mittelwert zu:
 \begin{align}
 \Delta \nu = \unit[(640 \pm 24)]{MHz}
@@ -393,25 +399,26 @@ Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \frac{\nu}{\Delta \nu} = (5.9 \pm 0.2)\cdotp 10^5
 \end{align}
 
+\subsubsection*{Untersuchung des \textsc{Lambert-Beer}-Gesetzes}
 \textit{hier fehlt noch ein vgl und der teil zum lambert beer gesetz}
 
 \subsection{Sättigungsspektroskopie}\label{subsec:ana_saturationspectroscopy}
 Um das Auflösungsvermögen zu verbessern soll nun Sättigungsspektroskopie betrieben werden. Dazu erweitern wir den Aufbau gemäß Abbildung \ref{fig:Aufbau_SatSpec}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{graphics/Aufbau_SatSpec}
+	\includegraphics[width=0.8\textwidth]{graphics/Aufbau_SatSpec}
 	\caption{Aufbau zur Sättigungsspektroskopie}
 	\label{fig:Aufbau_SatSpec}
 \end{figure}
 Der zweite, schwächere Strahl aus dem Glaskeil wird nun entgegengesetzt zum starken Strahl durch die Rubidiumzelle geführt und dann mithilfe einer Linse auf eine Photodiode fokussiert. Dabei achten wir darauf, dass die beiden Strahlen sich innerhalb der Zelle möglichst gut überlagern. Selbstverständlich muss der stärke Strahl nach dem Durchgang durch die Zelle mithilfe einer geschwärzten Platte geblockt werden.
-
-Das an der Photodiode aufgenommene und auf relative Frequenzen umgerechnete Spektrum ist in Abbildung \ref{fig:SatSpec_Raw} zu sehen. Es wurde hier kein Abschwächer eingesetzt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{graphics/SatSpec_Raw}
 	\caption{Ausschnit aus dem Spektrum der Sättigungsspektroskopie}
 	\label{fig:SatSpec_Raw}
 \end{figure}
+Das an der Photodiode aufgenommene und auf relative Frequenzen umgerechnete Spektrum ist in Abbildung \ref{fig:SatSpec_Raw} zu sehen. Es wurde hier kein Abschwächer eingesetzt.
+
 Zur Auswertung des Spektrums ziehen wir wieder ein an die Daten zwischen den Peaks gefittetes Polynom zweiten Grades ab. Die Fitparameter lauten:
 \begin{align}
     f(\nu) &= a + b\,\cdotp\, \nu + c\, \cdotp\, \nu^2 \hspace{2cm}\mathrm{mit:}\\
@@ -426,7 +433,7 @@ Das auf diese Weise untergrundkorrigierte Spektrum ist in Abbildung \ref{fig:Sat
 	\caption{Untergrundkorrigierter Ausschnitt aus dem Spektrum der Sättigungsspektroskopie}
 	\label{fig:SatSpec_UndergroundCorrected}
 \end{figure}
-An die deutlich zu erkennenden Lamp-Dips passen wir nun Lorentz-Kurven an. Die Ergebnisse sind in Tabelle \ref{tab:SatSpec_Fits} zusammengefasst.
+An die deutlich zu erkennenden \textsc{Lamb}-Dips passen wir nun \textsc{Lorentz}-Kurven an. Die Ergebnisse sind in Tabelle \ref{tab:SatSpec_Fits} zusammengefasst.
 
 \begin{table}[H]
   \centering
@@ -447,10 +454,12 @@ $8$&$-39 \pm 4$&$926 \pm 1$&$33 \pm 4$\\
     \bottomrule
   \end{tabular}
 }
-  \caption{Fitergebnisse der Lorentzfits an die Lamb-Dips im Rubidiumspektrum}
+  \caption{Fitergebnisse der \textsc{Lorentz}-Fits an die \text{Lamb}-Dips im Rubidiumspektrum}
   \label{tab:SatSpec_Fits}
 \end{table}
-Wir können mithilfe der Lamb-Dips wiederum die Hyperfeinstrukturkonstanten bestimmen. Die Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants_SatSpec} angegeben. 
+
+\subsubsection*{Bestimmung der Hyperfeinstrukturkonstanten}
+Wir können mithilfe der \textsc{Lamb}-Dips wiederum die Hyperfeinstrukturkonstanten bestimmen. Die Ergebnisse sind in Tabelle \ref{tab:Hyperfinestructureconstants_SatSpec} angegeben. 
 \begin{table}[H]
   \centering
 \resizebox{1.0\textwidth}{!}{
@@ -474,7 +483,8 @@ Wir können mithilfe der Lamb-Dips wiederum die Hyperfeinstrukturkonstanten besti
 \end{table}
 Unsere Werte sind größenordnungsmäßig mit den Literaturwerten vereinbar, zeigen jedoch eine Abweichung von bis zu 8\%. In Anbetracht dessen scheinen unsere Fehler wieder deutlich zu klein.
 
-Um die spektrale Auflösung unseres Aufbaus zu bestimmen berechnen wir den fehlergewichteten Mittelwert, der als Fitparameter auftretenden, vollen Halbwertsbreiten der Peaks zu:
+\subsubsection*{Bestimmung der spektralen Auflösung}
+Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir den fehlergewichteten Mittelwert, der als Fitparameter auftretenden vollen Halbwertsbreiten der Peaks zu:
 \begin{align}
 \Delta \nu = \unit[(41 \pm 6)]{MHz}
 \end{align}
@@ -484,11 +494,12 @@ Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \end{align}
 Damit ist das Auflösungsvermögen um etwa eine Größenordnung besser als im Falle der linearen Spektroskopie.
 
-Zur Bestimmung der Sättigungsintensität analysieren wir den Lamb-Dip des Übergangs $5\textrm{S}_{1/2}(F = 2) \rightarrow 5\textrm{P}_{1/2}(F' = 1)$ unter Verwendung verschiedener Abschwächer im Pumpstrahl. Wir nehmen dazu das Spektrum der Rubidiumzelle für verschieden stark abgeschwächte Pumpstrahlen auf, und fitten jeweils Lorentz-Kurven an die Lamp-Dips der Linie 8. Ein solcher Fit ist exemplarisch in Abbildung \ref{fig:Peak8_0,135} dargestellt. 
+\subsubsection*{Bestimmung der Sättigungsintensität}
+Zur Bestimmung der Sättigungsintensität analysieren wir den \textsc{Lamb}-Dip des Übergangs $5\textrm{S}_{1/2}(F = 2) \rightarrow 5\textrm{P}_{1/2}(F' = 1)$ unter Verwendung verschiedener Abschwächer im Pumpstrahl. Wir nehmen dazu das Spektrum der Rubidiumzelle für verschieden stark abgeschwächte Pumpstrahlen auf, und fitten jeweils \textsc{Lorentz}-Kurven an die \textsc{Lamb}-Dips der Linie 8. Ein solcher Fit ist exemplarisch in Abbildung \ref{fig:Peak8_0,135} dargestellt. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{graphics/Peak8_0,135}
-	\caption{Lorentz Fit an den Lamp-Dip der Linie 8 bei Verwendung eines Abschwächers mit einer Transmission von $T=0,135$ }
+	\caption{\textsc{Lorentz}-Fit an den \textsc{Lamb}-Dip der Linie 8 bei Verwendung eines Abschwächers mit einer Transmission von $T=0,135$ }
 	\label{fig:Peak8_0,135}
 \end{figure}
 Die Ergebnisse der Fitparameter sind in Tabelle \ref{tab:SatSpec_Fits_T} zusammengefasst.
@@ -509,18 +520,18 @@ $0.035$&$19 \pm 10$&$34 \pm 14$&$0.35 \pm 0.23$\\
     \bottomrule
   \end{tabular}
 }
-  \caption{Fitergebnisse der Lorentzfits an die Lamb-Dips der Linie 8 für verschieden stark abgeschwächte Pumpstrahlen}
+  \caption{Fitergebnisse der \textsc{Lorentz}-Fits an die \textsc{Lamb}-Dips der Linie 8 für verschieden stark abgeschwächte Pumpstrahlen}
   \label{tab:SatSpec_Fits_T}
 \end{table}
-Wie in Abschnitt YYY beschrieben, hängt die Amplitude der Lamb-Dips von der Pumpleistung $P$ ab gemäß:
+Wie in Abschnitt \ref{cha:sat} beschrieben, hängt die Amplitude der \textsc{Lamb}-Dips von der Pumpleistung $P$ ab gemäß:
 \begin{align}
-A\propto \Delta P \propto \frac{S}{1+S} = \frac{1}{1+\frac{P_\textrm{sat}}{P}}.
+A\propto \Delta P \propto \frac{S}{1+S} = \frac{1}{1+\frac{P_\textrm{Sat}}{P}}.
 \end{align}
 Die Pumpleistung hängt gemäß $P = P_\textrm{Laser}\cdotp T$ ab von der Laserleistung und der Transmission der eingesetzten Abschwächer. Die Laserleistung bestimmen wir mithilfe von Abschnitt \ref{subsec:Ana_DiodeLaser} aus dem Laserstrom von $I = \unit[(59 \pm 1)]{mA}$ zu:
 \begin{align}
 P_\textrm{Laser} = \unit[(1.02 \pm 0.04)]{mW}
 \end{align}
-Wir plotten nun die aus den Lorentz-Fits bestimmten Amplituden gegen die jeweilige Transmission und fitten an den erhaltenen Graphen eine Funktion der Form
+Wir plotten nun die aus den \textsc{Lorentz}-Fits bestimmten Amplituden gegen die jeweilige Transmission und fitten an den erhaltenen Graphen eine Funktion der Form
 \begin{align}
 A(T) = \frac{A_1}{1+A_2/T}
 \end{align}
@@ -531,24 +542,24 @@ A_1 &=  \unit[(0.79 \pm 0.08)]{V}\\
 \end{align}
 Damit erhalten wir:
 \begin{align*}
-P_\textrm{sat}= \unit[(0.1\pm 0.05)]{mW}
+P_\textrm{Sat}= \unit[(0.1\pm 0.05)]{mW}
 \end{align*}
 
  \begin{figure}[H]
   \resizebox{0.6\textwidth}{!}{
     \input{graphics/saturation.tex}
 }
-  \caption{Amplitude der Lamp-Dips von Linie 8 in Abhängigkeit von der Transmission der Abschwächer im Pumpstrahl. Dargestellt ist auch die Fitkurve gemäß Abschnitt YYY.}
+  \caption{Amplitude der \textsc{Lamb}-Dips von Linie 8 in Abhängigkeit von der Transmission der Abschwächer im Pumpstrahl. Dargestellt ist auch die Fitkurve gemäß Abschnitt \ref{cha:sat}.}
   \label{fig:dip_amplitude}
 \end{figure}
 
-Die Sättigungsleistung kann auch anhand der Leistungsverbreiterung bestimmt werden. In Abschnitt YYY wurde argumentiert, dass für die Peakbreite im Sättigungsfall gilt:
+Die Sättigungsleistung kann auch anhand der Leistungsverbreiterung bestimmt werden. In Abschnitt \ref{cha:sat} wurde argumentiert, dass für die Peakbreite im Sättigungsfall gilt:
 \begin{align*}
-\Delta \nu_\textrm{Sat} = \Delta \nu_\textrm{Lin} \sqrt{1+S}
+\Delta \nu_{\mathrm{Sat}} = \Delta \nu_{\mathrm{Lin}} \sqrt{1+S}
 \end{align*}
 Damit gilt also:
 \begin{align}
-(\Delta \nu)^2 = c\,\cdotp\, \left(1+\frac{P_\textrm{Laser}\,\cdotp\, T}{P_\textrm{sat}}\right) = b + m\,\cdotp\, T
+(\Delta \nu)^2 = c\,\cdotp\, \left(1+\frac{P_{\mathrm{Laser}}\,\cdotp\, T}{P_{\mathrm{Sat}}}\right) = b + m\,\cdotp\, T
 \end{align}
 Wir tragen also $(\Delta \nu)^2$ gegen $T$ auf und fitten eine lineare Funktion an den erhaltenen und in Abbildung \ref{fig:PSat2nd} gezeigten Graphen. Die Ergebnisse des Fits lauten:
 \begin{align}
@@ -559,20 +570,28 @@ b &= \unit[(11 \pm 102)\cdotp 10^{12}]{\frac{1}{s^2}}\\
   \resizebox{1.0\textwidth}{!}{
     \includegraphics{graphics/PSat2nd}
 }
-  \caption{Quadrierte Breite der Lamb-Dips in Abhängigkeit der Transmission der in den Pumpstrahl gebrachten Abschwächer}
+  \caption{Quadrierte Breite der \textsc{Lamb}-Dips in Abhängigkeit der Transmission der in den Pumpstrahl eingebrachten Abschwächer}
   \label{fig:PSat2nd}
 \end{figure}
-Wie man am Graphen und auch deutlich am Fehler des Achsenabschnitts $m$ erkennt, scheint der lineare Zusammenhang recht 'aufgezwungen'. Trotzdem soll hier noch die Sättigungsleistung bestimmt werden:
+Wie man am Graphen und auch deutlich am Fehler des Achsenabschnitts $m$ erkennt, scheint der lineare Zusammenhang recht "`aufgezwungen"'. Trotzdem soll hier noch die Sättigungsleistung bestimmt werden:
 \begin{align}
-P_\textrm{sat} = \unit[(0.01 \pm 0.09)]{mW}
+P_{\mathrm{Sat}} = \unit[(0.01 \pm 0.09)]{mW}
 \end{align}
 Wie aufgrund der schlechten Zwischenergebnisse erwartet, ist dieser Wert nicht verwertbar. Schon sein Fehler ist um einen Faktor 10 größer.
 
-Mithilfe des ersten Wertes für die Sättigungsleistung soll nun die Sättigungsintensität bestimmt werden. Dazu schätzen wir den Durchmesser des Laserstrahls auf $d= \unit{(5 \pm 1)}[mm]$ ab. Damit ergibt sich:
+Mithilfe des ersten Wertes für die Sättigungsleistung soll nun die Sättigungsintensität bestimmt werden. Dazu schätzen wir den Durchmesser des Laserstrahls auf $d=\unit[(5 \pm 1)]{mm}$ ab. Damit ergibt sich:
 \begin{align}
-I_\textrm{sat}= \frac{P_\textrm{sat}}{\frac{\pi d^2}{4}} = \unit[(5.1\pm 2.0)]{\frac{W}{m^2}}
+I_{\mathrm{Sat}}= \frac{P_{\mathrm{Sat}}}{\frac{\pi d^2}{4}} = \unit[(5.1\pm 2.0)]{\frac{W}{m^2}}
 \end{align} 
+
+
 \section{Zusammenfassung}
+Zum Abschluss sollen die beiden Spektroskopie-Arten zusammenfassend verglichen werden: In Bezug auf die Bestimmung der Hyperfeinstrukturkonstanten fallen zum einen die in beiden Versuchsteilen zu geringen Fehler auf und zum anderen, dass mit der Sättigungsspektroskopie gewonnenen Werte mit den Literaturwerten besser verträglich sind als die der linearen Spektroskopie. Des Weiteren konnte mit der Sättigungsspektroskopie ein zusätzliches Linienpaar aufgelöst werden, sodass auch die Hyperfeinaufspaltung des angeregten Niveaus des \Rb bestimmt werden konnte. Dies ist selbstverständlich auf das um eine Größenordnung bessere Auflösungsvermögen zurückzuführen.
+
+Bedauerlicherweise ist auch anzumerken, dass unsere Messwerte sicherlich durch eine exaktere Justage noch deutlich hätten verbessert werden können. Dennoch konnten die entscheidenden Ergebnisse reproduziert werden.
+
+%noch was??? vll ergebnisse?
+
 
 \begin{appendix}
 \section{Tabellen}
