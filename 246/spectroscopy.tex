@@ -95,7 +95,7 @@ Für die Auswertung muss diese Halbwertsbreite nun noch als Frequenz angegeben we
 \frac{\delta \nu}{\Delta \nu} = \frac{2 \pi}{\varepsilon} = \frac{\pi \sqrt{R}}{1-R} \equiv \mathcal{F} \ldotp
 \end{align}
 
-\subsection{Lineare Spektroskopie}
+\subsection{Lineare Spektroskopie}\label{subsec:lin_spec_theo}
 Wird nur ein Bruchteil der Atome des zu spektroskopierenden Gases angeregt, so spricht man von linearer Absorptionsspektroskopie. Ein Großteil der Photonen kann hierbei ungestört durch das Medium propagieren, das Medium ist also optisch dünn. Nach dem \textsc{Lambert-Beer}-Gesetz ergibt sich dann mit dem Absorptionskoeffizienten $\kappa(\nu)$ und der Länge der Absorptionszelle $L$:
 \begin{align}
 T \equiv \frac{I}{I_0} = e^{-\kappa(\nu)L} \approx 1 - \kappa(\nu) L \ \ldotp
@@ -113,6 +113,7 @@ im Bereich der Resonanzfrequenz ruhender Atome. Man erhält also ein \textsc{Lore
 einem \textsc{Voigt}-Profil, wobei $k$ der Betrag des Wellenvektors des Lichtes und $v$ die Geschwindigkeitskomponente des Atoms in Richtung von $\vec{k}$ ist. Im \textsc{Doppler}-Limit für relativ warme Gase ($k_{\mathrm{B}} v_0 \gg 2 \pi \Delta\nu$) reduziert sich dies zu:
 \begin{align}
 \kappa_{\mathrm{D}} (\nu) = \kappa_{0, \mathrm{D}}\ \exp{\left[ - \frac{(\nu - \nu_0)^2}{2 \Delta \nu^2_{\mathrm{D}}} \right]} \ \ldotp
+\label{eqn:doppler_fwhm_theo}
 \end{align}
 Hierbei ist $\Delta \nu_{\mathrm{D}} = \nu_0 \sqrt{k_{\mathrm{B}}T/m_{\mathrm{Atom}}c^2}$ die \textsc{Doppler}-Breite des Übergangs. Somit folgt $\kappa(\nu)$ hier einer \textsc{Gauss}-Kurve, welche im Allgemeinen die natürliche Linienbreite deutlich übersteigt (siehe auch Abb. \ref{fig:breiten}). Es gilt für die Umrechnung in die Halbwertsbreite $\mathrm{FWHM} = 2 \sqrt{2 \ln{2}}\ \Delta\nu_{\mathrm{D}} \approx 2.35 \Delta\nu_{\mathrm{D}}$.
 \begin{figure}[H]
@@ -132,11 +133,11 @@ Wie der Name schon andeutet wird das Medium in Sättigung gebracht. Dies geschieh
 	\centering
 		\includegraphics[width=0.5\textwidth]{graphics/spekloech}
 	\caption{Spektrale Löcher im Absorptionsspektrum. Aufgetragen ist der Absorptionskoeffizient gegen die Frequenz.~\cite{demtroed}}
-	\label{fig:specklöch}
+	\label{fig:speckloech}
 \end{figure}
-Liegt die Frequenz $\nu$ des Lasers nicht exakt auf der Resonanzfrequenz $\nu_0$ des Übergangs, so werden von den \textsc{Maxwell} verteilten Atomen nur jene angeregt, deren Geschwindigkeitskomponente in Richtung des Strahls der Bedingung $\nu = \nu_0 (1+v/c)$ genügt. Pump- und Probestrahl laufen entgegengesetzt durch die Anordnung. Es ergibt sich also bei den Frequenzen $\nu = \nu_0 (1\pm v/c)$ durch die Sättigung eine verringerte Absorptionsfähigeit. Dies wird im Spektrum als Loch erkennbar (\textsc{Bennet} holes, siehe Abbildung \ref{fig:speklöch}).
+Liegt die Frequenz $\nu$ des Lasers nicht exakt auf der Resonanzfrequenz $\nu_0$ des Übergangs, so werden von den \textsc{Maxwell} verteilten Atomen nur jene angeregt, deren Geschwindigkeitskomponente in Richtung des Strahls der Bedingung $\nu = \nu_0 (1+v/c)$ genügt. Pump- und Probestrahl laufen entgegengesetzt durch die Anordnung. Es ergibt sich also bei den Frequenzen $\nu = \nu_0 (1\pm v/c)$ durch die Sättigung eine verringerte Absorptionsfähigeit. Dies wird im Spektrum als Loch erkennbar (\textsc{Bennet} holes, siehe Abbildung \ref{fig:speckloech}).
 
-Ein spektrales Loch tritt ausschließlich dann auf, wen Pump- und Probestrahl mit der gleichen Geschwindigkeitsklasse ($v=0$) von Atomen wechselwirken. Man liegt dann also gerade auf der Resonanzfrequenz. In diesem Fall tritt ein sogenannter \textsc{Lamb}-Dip auf (siehe Abb. \ref{fig:specklöch} unten). Entscheidend ist, dass die Löcher ausschließlich durch die natürliche Linienbreite beschränkt sind. Man erhält auf diese Weise also ein deutlich erhöhtes Auflösungsvermögen im Vergleich zur linearen Spektroskopie.
+Ein spektrales Loch tritt ausschließlich dann auf, wen Pump- und Probestrahl mit der gleichen Geschwindigkeitsklasse ($v=0$) von Atomen wechselwirken. Man liegt dann also gerade auf der Resonanzfrequenz. In diesem Fall tritt ein sogenannter \textsc{Lamb}-Dip auf (siehe Abb. \ref{fig:speckloech} unten). Entscheidend ist, dass die Löcher ausschließlich durch die natürliche Linienbreite beschränkt sind. Man erhält auf diese Weise also ein deutlich erhöhtes Auflösungsvermögen im Vergleich zur linearen Spektroskopie.
 
 Ein weiteres auftretendes Phänomen ist die sogenannte \emph{cross-over}-Resonanz. Diese tritt dann auf, wenn sich die \textsc{Doppler}-Profile zweier nahe beieinander liegender Absorptionskurven überlagern (siehe Abb. \ref{fig:crossover}). Liegt die Frequenz der beiden Strahlen nun zwischen den Resonanzfrequenzen $\nu_1$ und $\nu_2$ der beiden Übergänge so wechselwirken beide Strahlen mit Atomen, welche eine Geschwindigkeitskomponente $\pm \tilde{v}$ haben, die der Bedingung $\nu_2 - \nu = \nu - \nu_1 = \pm \nu_0\, \tilde{v}/c$ genügen. Es erscheint somit ein zusätzliches drittes Loch zwischen den beiden anderen (siehe Abb. \ref{fig:crossover}).
 \begin{figure}[H]
@@ -392,15 +393,20 @@ Die von uns bestimmten Werte für die Hyperfeinstrukturkonstanten sind zumindest 
 \subsubsection*{Bestimmung der spektralen Auflösung}
 Um die spektrale Auflösung unseres Aufbaus zu bestimmen, berechnen wir aus den Breiten der an die Peaks gefitteten \textsc{Gauß}-Kurven ihre vollen Halbwertsbreiten (FWHM) und bilden den fehlergewichteten Mittelwert zu:
 \begin{align}
-\Delta \nu = \unit[(640 \pm 24)]{MHz}
+\Delta \nu_\textrm{FWHM} = \unit[(640 \pm 24)]{MHz}
 \end{align}
 Aus diesem kann die spektrale Auflösung direkt bestimmt werden:
 \begin{align}
-\frac{\nu}{\Delta \nu} = (5.9 \pm 0.2)\cdotp 10^5
+\frac{\nu}{\Delta \nu_\textrm{FWHM}} = (5.9 \pm 0.2)\cdotp 10^5
 \end{align}
-
+Wie in Abschnitt \ref{subsec:lin_spec_theo} erläutert lässt sich mittels Gleichung \ref{eqn:doppler_fwhm_theo} die theoretisch erwartete Halbwertsbreite berechnen. Dazu schätzen wir die Raumtemperatur auf $T=\unit[300]{K}$ ab. Die Masse von Rubidiumatomen ist $m_\textrm{Rb}=\unit[85.4678]{u}$. 
+Damit ergibt sich die theoretische Halbwertsbreite zu:
+\begin{align}
+\Delta \nu_\textrm{FWHM}^\textrm{theo} = \unit[506]{Mhz}
+\end{align}
+Damit liegt die theoretisch erwartete Halbwertsbreite noch deutlich unter der von uns gemessenen, was auf eine unzureichende Justage hindeutet. Jedoch können auch andere Effekte, wie eine höhere Temperatur oder eine Verstimmung der Laserfrequenz dazu führen, dass die theoretische Breite in Wirklichkeit höher liegt.
 \subsubsection*{Untersuchung des \textsc{Lambert-Beer}-Gesetzes}
-\textit{hier fehlt noch ein vgl und der teil zum lambert beer gesetz}
+\textit{hier fehlt noch der teil zum lambert beer gesetz}
 
 \subsection{Sättigungsspektroskopie}\label{subsec:ana_saturationspectroscopy}
 Um das Auflösungsvermögen zu verbessern soll nun Sättigungsspektroskopie betrieben werden. Dazu erweitern wir den Aufbau gemäß Abbildung \ref{fig:Aufbau_SatSpec}.
@@ -505,10 +511,10 @@ Zur Bestimmung der Sättigungsintensität analysieren wir den \textsc{Lamb}-Dip de
 Die Ergebnisse der Fitparameter sind in Tabelle \ref{tab:SatSpec_Fits_T} zusammengefasst.
 \begin{table}[H]
   \centering
-\resizebox{0.5\textwidth}{!}{
+\resizebox{0.6\textwidth}{!}{
   \begin{tabular}{l|ccc}
     \toprule
-     T & $A$ [$\unit[10^{-6}]{\frac{V}{s}}$] & $\Delta \nu$ [$\unit[]{MHz}$] & Amplitude [$\unit[]{V}$]\\
+     T & Fläche [$\unit[10^{-6}]{\frac{V}{s}}$] & $\Delta \nu$ [$\unit[]{MHz}$] & Amplitude [$\unit[]{V}$]\\
     \midrule[0.75pt]
 $1.000$&$39 \pm 5$&$33 \pm 4$&$0.76 \pm 0.13$\\
 $0.628$&$41 \pm 6$&$41 \pm 6$&$0.63 \pm 0.13$\\
