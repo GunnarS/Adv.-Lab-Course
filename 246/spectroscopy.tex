@@ -406,7 +406,24 @@ Damit ergibt sich die theoretische Halbwertsbreite zu:
 \end{align}
 Damit liegt die theoretisch erwartete Halbwertsbreite noch deutlich unter der von uns gemessenen, was auf eine unzureichende Justage hindeutet. Jedoch können auch andere Effekte, wie eine höhere Temperatur oder eine Verstimmung der Laserfrequenz dazu führen, dass die theoretische Breite in Wirklichkeit höher liegt.
 \subsubsection*{Untersuchung des \textsc{Lambert-Beer}-Gesetzes}
-\textit{hier fehlt noch der teil zum lambert beer gesetz}
+Um den Einfluss der Länge der Zelle auf die Intensität der Linien zu untersuchen, nehmen wir das Spektrum noch einmal mit einer kürzeren Zelle auf. Nach dem \textsc{Lamber-Beer} Gesetz (siehe Abschnitt \ref{subsec:lin_spec_theo}) erwarten wir einen linearen Anstieg der Intensität mit der Länge der Zelle. 
+
+Die von uns aufgenommenen Spektren mit ihren Fits finden sich zum direkten Vergleich in Abbildung \ref{fig:LambertBeer}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{graphics/Lambert_Beer}
+	\caption{Vergleich der Spektren von langer und kurzer Zelle mit Gaußfit an einen der Peaks}
+	\label{fig:LambertBeer}
+\end{figure}
+Nach dem \textsc{Lambert-Beer} Gesetz erwarten wir den folgenden Zusammenhang:
+\begin{align}
+\frac{A_\textrm{L}}{A_\textrm{K}} = \frac{L_\textrm{L}}{L_\textrm{K}}
+\end{align}
+wobei $L_\textrm{L} = \unit[5]{cm}$ und $L_\textrm{K} = \unit[2.5]{cm}$ gemäß \cite{skript}. Unsere Fits ergeben allerdings:
+\begin{align}
+\frac{A_\textrm{L}}{A_\textrm{K}} \approx 63
+\end{align}
+Man erkennt schon beim Vergleich der Spektren, dass die Werte für die längere Zelle um eine Größenordnung über denen der kurzen Zelle liegen. Leider konnten wir keine charakteristische Skala ausmachen, um die Werte besser vergleichen zu können. Die Messungen sind schlichtweg nicht für einen Vergleich geeignet. Leider stehen uns aber keine alternativen Ergebnisse zur Verfügung, da wir die Spektren nur ein einziges mal abgespeichert haben.
 
 \subsection{Sättigungsspektroskopie}\label{subsec:ana_saturationspectroscopy}
 Um das Auflösungsvermögen zu verbessern soll nun Sättigungsspektroskopie betrieben werden. Dazu erweitern wir den Aufbau gemäß Abbildung \ref{fig:Aufbau_SatSpec}.
