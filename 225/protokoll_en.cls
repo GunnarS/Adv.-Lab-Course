@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{protokoll}[2009/05/03 v0.2]
+\ProvidesClass{protokoll_en}[2009/05/03 v0.2]
 
 \LoadClass[a4paper,oneside]{scrartcl}
 
@@ -79,14 +79,14 @@ stringstyle=\color{red}
     \begin{titlepage}
         \title{\Large{Advanced Laboratory Course}\\
                 \vspace{0.5cm}\textnormal{Winter Semester 09/10}\\
-                \vspace{2cm}\large\textnormal{Protokoll ad}\\
+                \vspace{2cm}\large\textnormal{Report ad}\\
                 \vspace{0.5cm}\Huge{\versuch}\vspace{1cm}
         }
         \author{Danielle Wills, Kian Salimkhani, Matthias Schmitz\\
                 Group $\mathrm{P} 24$\\
                  \\\large\textnormal{Assistent: \assistent}
         }
-        \date{\vspace{1cm} Universität Bonn \\ \today}
+        \date{\vspace{1cm} Bonn University \\ \today}
     \end{titlepage}
     \maketitle
     \newpage
