@@ -1,11 +1,6 @@
 \bib{skript}{article}{
-    title={Skript zum Versuch High Resolution Laser Spectroscopy},
-    author={Universität Bonn},
-    year={2000}
+    title={Script on experiment Positron Lifetime in Metals and Insulators},
+    author={Bonn University},
+    year={2001}
 }
 
-\bib{demtroed}{book}{
-    title={Laserspektroskopie},
-    author={Springer},
-    year={2000}
-}
