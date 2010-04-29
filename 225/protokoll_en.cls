@@ -5,7 +5,7 @@
 
 %\RequirePackage[a4paper,left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \RequirePackage{amsmath, amsthm, amssymb, amsrefs}
-\RequirePackage[ngerman]{babel}
+\RequirePackage[english]{babel}
 \RequirePackage[latin1]{inputenc}
 \RequirePackage{booktabs,multirow,xspace,gnuplot-lua-tikz}
 \RequirePackage{makeidx, graphicx, tikz, units, calc, fancyhdr}
@@ -68,7 +68,7 @@
 
 \usepgflibrary{plotmarks}
 
-\author{Danielle Wills, Kian Salimkhani und Matthias Schmitz}
+\author{Danielle Wills, Kian Salimkhani and Matthias Schmitz}
 
 \newcommand{\origdoc}{}
 \let\origdoc=\document
