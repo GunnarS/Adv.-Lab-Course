@@ -103,7 +103,7 @@ Before measuring the spectra we connect the SCA's and the amplifier's output to 
 \end{figure}
 \textbf{comment on the data.. }
 \subsection{Prompt curve and time calibration}\label{subsec:ana_time}
-To measure a prompt curve and do the time calibration we use the fact that the two 511keV photons are emitted at the same time. We set up both SCA windows to the 511keV line and check their simultaneousness using the oscilloscope. A small time difference of the signals, caused e.g. by different cable lengths, can be levelled using the SCA's built-in delays. Now we set up the experiment as shown in figure \ref{fig:setup_time}.
+To measure a prompt curve and do the time calibration we use the fact that the two 511keV photons are emitted at the same time. We set up both SCA windows to the 511keV line and check their simultaneousness using the oscilloscope. A small time difference of the signals, caused e.g. by different cable lengths, can be levelled using the SCA's built-in delays. Now we set up the experiment as shown in figure \ref{fig:setup_time} and check the outputs of the coincidence and the TAC for simultaneousness with an oscilloscope. To level a small time difference we put a delay between TAC and oscilloscope. Now we use the same cables to connect the coincidence unit and the TAC to the MCA, because a change of cable length could destroy the simultaneousness of the signals because of an additional delay.
 \begin{figure}[H]
   \resizebox{0.4\textwidth}{!}{
     \includegraphics{graphics/setup_time}
@@ -178,7 +178,7 @@ Now we want to measure the positron lifetime in indium. We set up the experiment
   \caption{Set up for measuring lifetime curves.}
   \label{fig:setup_lifetime}
 \end{figure}
-We adjust the left SCA to accept every event above the 511keV peak, because all these events originate from the 1275keV photon of the decay of \Ne. So the left detector yields the start signal for the TAC. The right SCA stays unchanged and accepts every event in the 511keV peak. The right detector therefore yields the stop signal for the TAC.
+We adjust the left SCA to accept every event above the 511keV peak, because all these events originate from the 1275keV photon of the decay of \Ne. So the left detector yields the start signal for the TAC. The right SCA stays unchanged and accepts every event in the 511keV peak. The right detector therefore yields the stop signal for the TAC. Again we check the signals of coincidence unit and TAC for simultaneousness with an oscilloscope.
 
 The indium probe is located between the two detectors and can be heated by the use of a soldering iron. In order to measure the temperature dependency of the positron lifetime we take lifetime curves for different values for the temperature. The curves are displayed in figures \ref{fig:ana_Indium_RT} to \ref{fig:ana_Indium_122} in the appendix. We fit exponential functions of the form $f(x)=y_0 + A \cdotp \exp\left(-\frac{x-x_0}{t}\right)$ to the right, sloping, flanks of the curves. The fit results for $t$ and the corresponding time constants are summarized in table \ref{tab:ana_indium}. The plot of time constant versus temperature is displayed in figure \ref{fig:ana_TemperatureTau}.
 \begin{table}[H]
@@ -214,16 +214,21 @@ The plot shows the expected S-curve form. Fitting a BOLTZMANN curve of the form 
 \tau_\textrm{f} = \unit[(421 \pm 17)]{ps}\\
 \tau_\textrm{f} = \unit[(522 \pm 28)]{ps}
 \end{align}
-The relatively big errors are conditional on the wideness of the s-curve and the lack of data in the regions of little pitch. \textbf{comment on the values themself, freedom in choosing fit range}
+The relatively big errors are conditional on the wideness of the s-curve and the lack of data in the regions of little pitch. 
 
-To obtain the vacancy formation enthalpy \textbf{(is this the way it's called?)} we plot $\ln\left(\frac{1-\bar{\tau}/\tau_\mathrm{f}}{\bar{\tau}-\tau_\mathrm{b}}\right)$ versus the inverse temperature and perform a linear fit to the graph. The plot is shown in figure \ref{fig:ana_enthalpy}. The linear fit yields:
+To obtain the vacancy formation enthalpy we plot $\ln\left(\frac{1-\bar{\tau}/\tau_\mathrm{f}}{\bar{\tau}-\tau_\mathrm{b}}\right)$ versus the inverse temperature and perform a linear fit to the graph. The plot is shown in figure \ref{fig:ana_enthalpy}. The linear fit yields:
 \begin{align}
 \ln\left(\frac{1-\bar{\tau}/\tau_\mathrm{f}}{\bar{\tau}-\tau_\mathrm{b}}\right) = \unit[(10.2 \pm 0.4)]{} + \unit[(-5394 \pm 145)]{K}\,\cdotp\,\frac{1}{T}
 \end{align}
 So eventually the vacancy formation enthalpy is given by:
 \begin{align}
-H_\textrm{gap} = \unit[(0.47 \pm 0.01)]{eV}
+H_\textrm{vac} = \unit[(0.47 \pm 0.01)]{eV}
 \end{align}
+This value is near the value given in \cite{paper}:
+\begin{align}
+H_\textrm{vac}^{lit} = \unit[(0.54 \pm 0.03)]{eV}
+\end{align}
+The error of our value seems to be significantly to small. A reason for this might be that the relatively large freedom in choosing the fit ranges for the lifetime curves, which significantly changes the obtained values, is not respected by the stated error.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_enthalpy.tex}
@@ -266,6 +271,7 @@ The fits yield the following values for the positon lifetime in Indium:
 \tau_\textrm{s} = \unit[(456.7 \pm 1.5)]{ps}\\
 \tau_\textrm{l} = \unit[(1.85 \pm 0.02)]{ns}
 \end{align}
+We couldn't find any values in literature to compare the obtained values to. At least it seems to be reasonable that the lifetime of bound positronium states is much bigger than the lifetime of free positrons in the crystal.
 \section{Abstract}
 
 \begin{appendix}

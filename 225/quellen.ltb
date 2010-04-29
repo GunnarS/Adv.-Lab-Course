@@ -4,3 +4,12 @@
     year={2001}
 }
 
+\bib{paper}{article}{
+    title={Vacancy formation in indium investigated by positron lifetime
+spectroscopy},
+    author={W. Weiler and H. E. Schaefer},
+    year={1984},
+    publisher={J. Phys. F: Met. Phys. 15 1651}
+}
+
+

@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{protokoll}[2009/05/03 v0.2]
+\ProvidesClass{protokoll_en}[2009/05/03 v0.2]
 
 \LoadClass[a4paper,oneside]{scrartcl}
 
