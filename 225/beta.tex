@@ -17,21 +17,20 @@ The object of this experiment is the measurement of the positron-lifetime in met
 \subsection{Positrons and Electrons}
 The positron $e^+$ is the antiparticle of the electron $e^-$, so they have the same quantum numbers (e.\ g.\ spin $1/2$) excepting electric charge ($\unit[\pm]{e}$). They are leptons and have a mass of $m_{\mathrm{e}} = \unit[511]{keV}$.
 
-Positrons are created via pair production or as it is the case in the present experimental setup via $\beta^+$-decay in atomic nuclei:
+Positrons are created via pair production or as it is the case in the present experimental set-up via $\beta^+$-decay in atomic nuclei:
 \begin{align*}
 p \rightarrow n + e^+ + \nu_\mathrm{e}
 \end{align*}
+If one injects a positron of some hundred $\unit{keV}$ into a solid state body, it will get thermalised due to \text{Coulomb}-scattering within a few picoseconds. The thermalised positron then diffuses through the solid until it annihilates with an electron. This produces $\gamma$-rays with an energy of $2 m_{\mathrm{e}}$. Due to conservation of total angular momentum and because photons are spin-one-bosons there will basically occur two processes. If the electron and positron have parallel spin, they will add to a total spin of $1$ (if $\hbar$ is set to $1$). This leads to an odd number of photons. Concerning momentum conservation at least three photons have to be created (higher number processes are suppressed and are therefore dropped). So in this case we indeed will observe a continuous $\gamma$ spectrum. If the electron and positron have antiparallel spin, total spin adds up to $0$. Now there will be two photons with an energy of $\unit[511]{keV}$ flying appart with an angle of $\unit[180]{^{\circ}}$. Because of the possibility of slightly different kinetic energies of the two fermions a small additional statistical angular distribution occurs.
 
-If one injects a positron of some hundred $\unit{keV}$ into a solid state body, it will get thermalised due to \text{Coulomb}-scattering within a few picoseconds. The thermalised positron then diffuses through the solid until it annihilates with an electron. This produces $\gamma$ rays with an energy of $2 m_{\mathrm{e}}$. Due to conservation of total angular momentum and because photons are spin-one-bosons there will basically occur two processes. If the electron and positron have parallel spin, they will add to a total spin of $1$ (if $\hbar$ is set to $1$). This leads to an odd number of photons. Concerning momentum conservation at least three photons have to be created (higher number processes are suppressed and are therefore dropped). So in this case we indeed will observe a continuous $\gamma$ spectrum. If the electron and positron have antiparallel spin, total spin adds up to $0$. Now there will be two photons with an energy of $\unit[511]{keV}$ flying appart with an angle of $\unit[180]{^{\circ}}$. Because of the possibility of slightly different kinetic energies of the two fermions a small additional statistical angular distribution occurs.
-
-In an insulator it is also possible that an electron and a positron form a bound state called positronium. This is not the case in a metall, because there the electron density is too high. Depending on the spin orientation there are ortho-positronium $1^3\mathrm{S}_1$ (parallel spin) and para-positronium $1^1\mathrm{S}_0$ (antiparallel spin). Due to vanishing angular momentum the ground state is not stable. Ortho-Positronium annihilates within $\unit[142]{ps}$ and para-positronium within $\unit[125]{ps}$. Because the first one decays via the suppressed (by a factor of $370$) three-photon-decay, its lifetime is longer. So in the present experimental set-up it is not possible to measure ortho-positronium, because a $\unit[511]{keV}$-photon is used to stop the measurement.
+In an insulator it is also possible that an electron and a positron form a bound state called positronium (similar to hydrogen-atom). This is not the case in a metall, because there the electron density is too high. Depending on the spin orientation there are ortho-positronium $1^3\mathrm{S}_1$ (total spin of $1$) and para-positronium $1^1\mathrm{S}_0$ (total spin of $0$). Due to vanishing angular momentum the ground state is not stable. Ortho-Positronium annihilates within $\unit[142]{ps}$ and para-positronium within $\unit[125]{ps}$. Because the first one decays via the suppressed (by a factor of $370$) three-photon-decay, its lifetime is longer. So in the present experimental set-up it is not possible to measure ortho-positronium, because a $\unit[511]{keV}$-photon is used to stop the measurement.
 
 \subsection{The Trapping Model}
 If there are lattice defects in the solid like in the present case, the injected positrons will mostly be captured in such lattice defects, because the electron density at the vacancy indeed is reduced as the electrons increase distances to each other on account of the missing atomic core. Due to being captured in such a lattice defect the positrons gain lifetime since only electrons of the conduction band are able to annihilate with them (see also figure \ref{fig:haftstellenmodell}).
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{graphics/haftstellenmodell}
-  \caption{Illustration of the trapping model~\cite{skript}}
+  \caption{Illustration of the trapping model~\cite{skript}, modified}
   \label{fig:haftstellenmodell}
 \end{figure}
 As it is illustrated in figure \ref{fig:haftstellenmodell} injected positrons can be free or are bound in a vacancy. In both cases they can annihilate as written above (at a rate $\lambda_{\mathrm{f}}$ or $\lambda_{\mathrm{v}}$). Furthermore free positrons are captured at a rate $\mu_{\mathrm{v}}$ and bounded ones are liberated at a rate $\xi_{\mathrm{v}}$, whereas $\mu_{\mathrm{v}} > \xi_{\mathrm{v}}$. Based on those considerations one can write down rate equations
@@ -67,7 +66,7 @@ We then use the detection of the $\unit[1245]{keV}$ line of excited \Ne into its
 \end{figure}
 If a positron annihilates, two $\unit[511]{keV}$-photons are created. The detection of one of these stops the measurement.
 
-\section{Experimental Setup}
+\section{Experimental Set-Up}
 
 
 \section{Experimentation and Analysis}
@@ -88,7 +87,7 @@ Before measuring the spectra we connect the SCA's and the amplifier's output to 
 \resizebox{0.5\textwidth}{!}{
 %	\input{graphics/ana_spectrum_left}
 }
-	\caption{\Na spectrum recorded with the left detector. The left peak is a compton back-scattering peak, with increasing energy the 511keV Peak and the 1275keV \Na peak are displayed.}
+	\caption{\Na spectrum recorded with the left detector. The left peak is a \textsc{Compton}-back-scattering-peak, with increasing energy the $\unit[511]{keV}$ Peak and the 1275keV \Na peak are displayed.}
 	\label{fig:ana_spectrum_left}
 }
 \ffigbox[0.5\textwidth]{}
@@ -102,13 +101,15 @@ Before measuring the spectra we connect the SCA's and the amplifier's output to 
 \end{floatrow}
 \end{figure}
 \textbf{comment on the data.. }
-\subsection{Prompt curve and time calibration}\label{subsec:ana_time}
-To measure a prompt curve and do the time calibration we use the fact that the two 511keV photons are emitted at the same time. We set up both SCA windows to the 511keV line and check their simultaneousness using the oscilloscope. A small time difference of the signals, caused e.g. by different cable lengths, can be levelled using the SCA's built-in delays. Now we set up the experiment as shown in figure \ref{fig:setup_time} and check the outputs of the coincidence and the TAC for simultaneousness with an oscilloscope. To level a small time difference we put a delay between TAC and oscilloscope. Now we use the same cables to connect the coincidence unit and the TAC to the MCA, because a change of cable length could destroy the simultaneousness of the signals because of an additional delay.
+
+\subsection{Prompt curve and time calibration}
+\label{subsec:ana_time}
+To measure a prompt curve and do the time calibration we use the fact that the two $\unit[511]{keV}$-photons are emitted at the same time. We set up both SCA windows to the $\unit[511]{keV}$-line and check their simultaneousness using the oscilloscope. A small time difference of the signals, caused e.g. by different cable lengths, can be levelled using the SCA's built-in delays. Now we set up the experiment as shown in figure \ref{fig:setup_time} and check the outputs of the coincidence and the TAC for simultaneousness with an oscilloscope. To level a small time difference we put a delay between TAC and oscilloscope. Now we use the same cables to connect the coincidence unit and the TAC to the MCA, because a change of cable length could destroy the simultaneousness of the signals because of an additional delay.
 \begin{figure}[H]
   \resizebox{0.4\textwidth}{!}{
     \includegraphics{graphics/setup_time}
 }
-  \caption{Set up for measuring the prompt curve and the time calibration.}
+  \caption{Set-up for measuring the prompt curve and the time calibration.}
   \label{fig:setup_time}
 \end{figure}
 We set the delay between one CFD and the TAC to $\unit[12]{ns}$ and record the prompt curve displayed in figure \ref{fig:ana_prompt}.
@@ -116,18 +117,18 @@ We set the delay between one CFD and the TAC to $\unit[12]{ns}$ and record the p
   \resizebox{0.8\textwidth}{!}{
 %    \input{graphics/ana_prompt.tex}
 }
-  \caption{Recorded prompt curve with GAUSS fit}
+  \caption{Recorded prompt curve with \textsc{Gauss}-fit}
   \label{fig:ana_prompt}
 \end{figure}
-In order to be able to interprete the channel numbers of the MCA as time values for the lifetime measurements we need a time calibration. We record several prompt curves with different delays between one of the CFDs and the TAC. The curves, recorded in steps of \unit[4]{ns} starting at \unit[4]{ns}, are shown in figure \ref{fig:ana_timegauge}.
+In order to be able to interprete the channel numbers of the MCA as time values for the lifetime measurements we need a time calibration. We record several prompt curves with different delays between one of the CFDs and the TAC. The curves, recorded in steps of \unit[4]{ns} starting at $\unit[4]{ns}$, are shown in figure \ref{fig:ana_timegauge}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
 %    \input{graphics/ana_timegauge.tex}
 }
-  \caption{Prompt curves for different delay times (in steps of \unit[4]{ns} starting at 4ns)}
+  \caption{Prompt curves for different delay times (in steps of $\unit[4]{ns}$ starting at $\unit[4]{ns}$)}
   \label{fig:ana_timegauge}
 \end{figure}
-To get a time calibration we fit GAUSS curves of the form $y_0 +\frac{A}{\sqrt{2\pi}\Delta x}\cdotp\exp\left\{-2\frac{(x-x_0)^2}{\Delta x}\right\}
+To get a time calibration we fit \textsc{Gauss}-curves of the form $y_0 +\frac{A}{\sqrt{2\pi}\Delta x}\cdotp\exp\left\{-2\frac{(x-x_0)^2}{\Delta x}\right\}
 $ curves to each prompt curve. The results are summarized in table \ref{tab:ana_timecalib} and drawn in figure \ref{fig:ana_timegaugefit}.
 \begin{table}[H]
   \centering
@@ -163,13 +164,13 @@ $44$ & $83 \pm 1$ & $7620.4 \pm 0.7$ & $161 \pm 2$ & $11.3 \pm 0.9$\\
 \end{figure}
 To eventually get a time calibration we fit a straight line to the obtained graph. The result reads:
 \begin{align}
-t = \unit[(-4.80 \pm 0.04)]{ns} + \unit[(6.414 \pm 0.008)]{ps}\cdotp \textrm{Channel}
+t = \unit[(-4.80 \pm 0.04)]{ns} + \unit[(6.414 \pm 0.008)]{ps} \, \cdotp \textrm{Channel}
 \end{align}
-With this time calibration we are now able to determine the time resolution of our setup by analyzing the prompt curve's width. From the GAUSS fit on the data shown in figure \ref{fig:ana_prompt} we get: 
+With this time calibration we are now able to determine the time resolution of our setup by analyzing the prompt curve's width. From the \textsc{Gauss}-fit on the data shown in figure \ref{fig:ana_prompt} we get: 
 \begin{align}
 \textrm{FWHM} = \unit[(1,298 \pm 0.006)]{ns}
 \end{align}
-\subsection{Lifetime measurement in Indium}\label{subsec:ana_indium}
+\subsection{Lifetime measurement in indium}\label{subsec:ana_indium}
 Now we want to measure the positron lifetime in indium. We set up the experiment as shown in figure \ref{fig:setup_lifetime}.
 \begin{figure}[H]
   \resizebox{0.4\textwidth}{!}{
@@ -178,7 +179,7 @@ Now we want to measure the positron lifetime in indium. We set up the experiment
   \caption{Set up for measuring lifetime curves.}
   \label{fig:setup_lifetime}
 \end{figure}
-We adjust the left SCA to accept every event above the 511keV peak, because all these events originate from the 1275keV photon of the decay of \Ne. So the left detector yields the start signal for the TAC. The right SCA stays unchanged and accepts every event in the 511keV peak. The right detector therefore yields the stop signal for the TAC. Again we check the signals of coincidence unit and TAC for simultaneousness with an oscilloscope.
+We adjust the left SCA to accept every event above the $\unit[511]{keV}$-peak, because all these events originate from the $\unit[1275]{keV}$-photon of the decay of \Ne. So the left detector yields the start signal for the TAC. The right SCA stays unchanged and accepts every event in the $\unit[511]{keV}$-peak. The right detector therefore yields the stop signal for the TAC. Again we check the signals of coincidence unit and TAC for simultaneousness with an oscilloscope.
 
 The indium probe is located between the two detectors and can be heated by the use of a soldering iron. In order to measure the temperature dependency of the positron lifetime we take lifetime curves for different values for the temperature. The curves are displayed in figures \ref{fig:ana_Indium_RT} to \ref{fig:ana_Indium_122} in the appendix. We fit exponential functions of the form $f(x)=y_0 + A \cdotp \exp\left(-\frac{x-x_0}{t}\right)$ to the right, sloping, flanks of the curves. The fit results for $t$ and the corresponding time constants are summarized in table \ref{tab:ana_indium}. The plot of time constant versus temperature is displayed in figure \ref{fig:ana_TemperatureTau}.
 \begin{table}[H]
@@ -186,7 +187,7 @@ The indium probe is located between the two detectors and can be heated by the u
 \resizebox{0.5\textwidth}{!}{
   \begin{tabular}{l|cc}
     \toprule
-      $T$ [$\unit[]{°C}$] & $t$ [Channel]& $\bar{\tau}$ [ps]\\
+      $T$ [$\unit[]{^\circ C}$] & $t$ [Channel]& $\bar{\tau}$ [ps]\\
     \midrule[0.75pt]
 $26$ & $67.9 \pm 0.3$ & $436 \pm 2$ \\
 $50$ & $71.7 \pm 0.4$ & $460 \pm 3$ \\
@@ -199,17 +200,17 @@ $122$ & $80.3 \pm 0.3$ & $515 \pm 2$ \\
     \bottomrule
   \end{tabular}
 }
-\caption{Fit results and time constants $\bar{\tau}$ for the Indium curves}
+\caption{Fit results and time constants $\bar{\tau}$ for the indium curves}
   \label{tab:ana_indium}
 \end{table}
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_TemperatureTau.tex}
 }
-  \caption{Time constant $\bar{\tau}$ versus Indium temperature with BOLTZMANN fit}
+  \caption{Time constant $\bar{\tau}$ versus indium temperature with \textsc{Boltzmann}-fit}
   \label{fig:ana_TemperatureTau}
 \end{figure}
-The plot shows the expected S-curve form. Fitting a BOLTZMANN curve of the form $f(x) = y_0 + \frac{A}{1+\exp\left(-B\cdotp(x-x_0)\right)}$ to the data we can determine the lifetimes of bound and free positrons. The results read:
+The plot shows the expected s-curve form. Fitting a \textsc{Boltzmann}-curve of the form $f(x) = y_0 + \frac{A}{1+\exp\left(-B\cdotp(x-x_0)\right)}$ to the data we can determine the lifetimes of bound and free positrons. The results read:
 \begin{align}
 \tau_\textrm{f} = \unit[(421 \pm 17)]{ps}\\
 \tau_\textrm{f} = \unit[(522 \pm 28)]{ps}
@@ -224,7 +225,7 @@ So eventually the vacancy formation enthalpy is given by:
 \begin{align}
 H_\textrm{vac} = \unit[(0.47 \pm 0.01)]{eV}
 \end{align}
-This value is near the value given in \cite{paper}:
+This value is near the value given in~\cite{paper}:
 \begin{align}
 H_\textrm{vac}^{lit} = \unit[(0.54 \pm 0.03)]{eV}
 \end{align}
@@ -233,11 +234,13 @@ The error of our value seems to be significantly to small. A reason for this mig
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_enthalpy.tex}
 }
-  \caption{Plot and fit to determine vacancy formation enthalpy for Indium}
+  \caption{Plot and fit to determine vacancy formation enthalpy for indium}
   \label{fig:ana_enthalpy}
 \end{figure}
-\subsection{Lifetime measurement in Plexiglas}\label{subsec:ana_plexiglas}
-To determine the positron lifetime in Plexiglas we use the same setup as in the case of Indium. To get a sufficient number of events the measurement is done overnight. 
+
+\subsection{Lifetime measurement in Plexiglas}
+\label{subsec:ana_plexiglas}
+To determine the positron lifetime in Plexiglas we use the same setup as in the case of indium. To get a sufficient number of events the measurement is done overnight. 
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_plexiglas_log.tex}
@@ -253,7 +256,7 @@ In figure \ref{fig:ana_plexiglas_log} the obtained spectrum is displayed logarit
 \resizebox{0.5\textwidth}{!}{
 	%\input{graphics/ana_plexiglas_long}
 }
-	\caption{Fit to the 'long' part of the lifetime curve for positrons in plexiglas}
+	\caption{Fit to the "long" part of the lifetime curve for positrons in plexiglas}
 	\label{fig:ana_plexiglas_long}
 }
 \ffigbox[0.5\textwidth]{}
@@ -261,17 +264,17 @@ In figure \ref{fig:ana_plexiglas_log} the obtained spectrum is displayed logarit
 \resizebox{0.5\textwidth}{!}{
 	%\input{graphics/ana_plexiglas_short}
 }
-	\caption{Fit to the 'short' part of the lifetime curve for positrons in plexiglas after subtraction of the 'long' part}
+	\caption{Fit to the "short" part of the lifetime curve for positrons in plexiglas after subtraction of the "long" part}
 	\label{fig:ana_plexiglas_short}
 }
 \end{floatrow}
 \end{figure}
-The fits yield the following values for the positon lifetime in Indium:
+The fits yield the following values for the positon lifetime in indium:
 \begin{align}
 \tau_\textrm{s} = \unit[(456.7 \pm 1.5)]{ps}\\
 \tau_\textrm{l} = \unit[(1.85 \pm 0.02)]{ns}
 \end{align}
-We couldn't find any values in literature to compare the obtained values to. At least it seems to be reasonable that the lifetime of bound positronium states is much bigger than the lifetime of free positrons in the crystal.
+We could not find any values in literature to compare the obtained values to. At least it seems to be reasonable that the lifetime of bound positronium states is much bigger than the lifetime of "free" positrons in the crystal.
 \section{Abstract}
 
 \begin{appendix}
@@ -280,49 +283,49 @@ We couldn't find any values in literature to compare the obtained values to. At 
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_RT.tex}
 }
-  \caption{Positron lifetime curve in Indium at 26°C}
+  \caption{Positron lifetime curve in indium at $\unit[26]{^\circ C}$}
   \label{fig:ana_Indium_RT}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_50.tex}
 }
-  \caption{Positron lifetime curve in Indium at 50°C}
+  \caption{Positron lifetime curve in indium at $\unit[50]{^\circ C}$}
   \label{fig:ana_Indium_50}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_56.tex}
 }
-  \caption{Positron lifetime curve in Indium at 56°C}
+  \caption{Positron lifetime curve in indium at $\unit[56]{^\circ C}$}
   \label{fig:ana_Indium_56}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_865.tex}
 }
-  \caption{Positron lifetime curve in Indium at 86.5°C}
+  \caption{Positron lifetime curve in indium at $\unit[86.5]{^\circ C}$}
   \label{fig:ana_Indium_865}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_1075.tex}
 }
-  \caption{Positron lifetime curve in Indium at 107.5°C}
+  \caption{Positron lifetime curve in indium at $\unit[107.5]{^\circ C}$}
   \label{fig:ana_Indium_1075}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
 %    \input{graphics/ana_Indium_112.tex}
 }
-  \caption{Positron lifetime curve in Indium at 112°C}
+  \caption{Positron lifetime curve in indium at $\unit[112]{^\circ C}$}
   \label{fig:ana_Indium_112}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
  %   \input{graphics/ana_Indium_122.tex}
 }
-  \caption{Positron lifetime curve in Indium at 122°C}
+  \caption{Positron lifetime curve in indium at $\unit[122]{^\circ C}$}
   \label{fig:ana_Indium_122}
 \end{figure}
 
