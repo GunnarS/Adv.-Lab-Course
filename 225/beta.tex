@@ -67,7 +67,18 @@ We then use the detection of the $\unit[1245]{keV}$ line of excited \Ne into its
 If a positron annihilates, two $\unit[511]{keV}$-photons are created. The detection of one of these stops the measurement.
 
 \section{Experimental Set-Up}
+The experimental set-up is given by a "fast-slow-coincidencecircle", which is familiar on account of the nuclear-electronics-experiment (P525). Therefore we will just recall the important aspects here and drop the details (illustrations of the experimental set-up can be found in the next chapter).
 
+\subsubsection*{Scintillation Detector and Photomuliplier}
+As mentioned above we are supposed to detect photons (start and stop signals). This is carried out by two $\mathrm{BaF}_2$-scintillators. Via disexcitation of exitons at doping-atoms light is generated and then guided by the silvering of the crystal to a photomultiplier, which detects it (amplification via dynodes). There are two outputs: The so-called "fast-output" is used for time measurements, because it possesses a high time resolution. The "slow-output" is characterised by a high energy resolution and is hence applied for energy measurements.
+
+\subsubsection*{Slow-Circle}
+The slow-circle is used to select specified signals in the experiment. For this the output of the photomultiplier is first of all amplified and then supplied to the single channel analyser (SCA). This constituent of the set-up offers the possibility to choose a energy range to just detect signals within a specified energy interval.
+
+The signals of both SCAs then attain a coincidence unit. If both signals coincide, that means that they arrived within a defined time interval, a logical 'true' is returned. If everything is aligned properly, this implies that the desired event took place. The coincidence signal ('true' or 'false') is applied to the gate of the so-called multi channel analyser (MCA). Only if the gate is set 'true', the value of the fast-circle will be saved.
+
+\subsubsection*{Fast-Circle}
+The fast-circle is used to measure a time difference (between two signals). To achieve this the fast-outputs of the photomultipliers are applied to constant friction discriminators (CFD). They provide the start and stop signals for the following time to amplitude converter (TAC). To adjust the experimental set-up a delay unit is implemented between CFD and TAC. The TAC returns a voltage proportional to a time difference (given by start and stop signal) by charging a capacitor to the MCA. If the gate is set 'true', the value will be saved.
 
 \section{Experimentation and Analysis}
 \subsection{Spectra}\label{subsec:ana_spectra}
