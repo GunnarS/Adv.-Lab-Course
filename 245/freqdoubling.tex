@@ -200,7 +200,7 @@ f_\textrm{optimal} = \unit[(63 \pm 9)]{mm}
 \end{align}
 \subsection{Properties of second-harmonic generation}\label{subsec:ana_props_2ndharmonic}
 \subsubsection{Dependency on temperature}\label{subsubsec:ana_temp_dep}
-Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{°C}$ and then raised in steps of \unit[0.2]{°C}. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} and plotted in figure \ref{fig:ana_temp_dep}.
+Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{°C}$ and then raised in steps of \unit[0.2]{°C}. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} in the appendix and plotted in figure \ref{fig:ana_temp_dep}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
     \input{graphics/ana_temp_dep.tex}
@@ -224,6 +224,24 @@ a &= \unit[(5.75 \pm 0.07)]{\mu W}\\
 \notag d &= \unit[(1.53 \pm 0.04)]{\mu W}
 \end{align}
 As one can see in figure \ref{fig:ana_temp_dep} does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model doesn't respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{°C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
+\subsubsection{Dependency on fundamental wave power}\label{subsubsec:ana_power_dep}
+In order to determine the dependency of the power of the second harmonic on the power of the fundamental wave, we measure the second harmonic power with the photodiode for different rotation angles of the $\lambda / 2$ plate. With the calibration of the variable attenuator from section \ref{subsec:var_att_calib} we can calculate the fundamental wave power from the rotation angle $\Phi$. The data is presented in table \ref{tab:ana_power_dep} in the appendix. Figure \ref{fig:ana_power_dep} shows the plot of the harmonic versus the fundamental wave power.
+\begin{figure}[H]
+  \resizebox{0.8\textwidth}{!}{
+    \input{graphics/ana_power_dep.tex}
+}
+  \caption{Power of the second harmonic generation versus fundamental wave power with corresponding fit}
+  \label{fig:ana_power_dep}
+\end{figure}
+Because of the \textsc{Malus} law we expect a quadratic relation between the two values and therefore fit a function of the form
+\begin{align}
+P_\textrm{harm} = a\cdotp P^2_\textrm{fun}
+\end{align}
+to the data. The fit result is given by
+\begin{align}
+a = \eta = \unit[(1.86 \pm 0.02)\cdotp 10^{-3}]{\frac{1}{W}}
+\end{align}
+with $\eta$ being the frequency doubling efficiency.
 \section{Abstract}
 
 \begin{appendix}
@@ -513,6 +531,40 @@ $40.0 \pm 0.1$ & $2.0$ & $0.30$ & $0.1$ \\
 \caption{Power of the second harmonic generation for different NLC temperatures}
   \label{tab:ana_temp_dep}
 \end{table}
+
+\begin{table}[H]
+  \centering
+\resizebox{0.8\textwidth}{!}{
+  \begin{tabular}{lccccc}
+    \toprule
+      $\Phi$ [$\unit[]{°}$] $\pm$ $\unit[1]{°}$ & $P_\textrm{fun}$ [$\unit[]{mW}$]  &  $P_\textrm{harm}$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+    \midrule[0.75pt]
+$0.0$ & $112.6 \pm 0.4$ & $23.7$ & $0.01$ & $0.1$\\
+$2.5$ & $111.7 \pm 0.8$ & $23.0$ & $0.01$ & $0.1$\\
+$5.0$ & $109 \pm 1$ & $21.4$ & $0.01$ & $0.1$\\
+$7.5$ & $105 \pm 2$ & $19.6$ & $0.01$ & $0.1$\\
+$10.0$ & $99 \pm 3$ & $17.5$ & $0.01$ & $0.1$\\
+$12.5$ & $92 \pm 3$ & $15.3$ & $0.01$ & $0.1$\\
+$15.0$ & $84 \pm 3$ & $12.6$ & $0.01$ & $0.1$\\
+$17.5$ & $75 \pm 4$ & $9.9$ & $0.01$ & $0.01$\\
+$20.0$ & $66 \pm 4$ & $7.0$ & $0.01$ & $0.01$\\
+$22.5$ & $56 \pm 4$ & $5.2$ & $0.01$ & $0.01$\\
+$25.0$ & $46 \pm 4$ & $3.5$ & $0.01$ & $0.01$\\
+$27.5$ & $37 \pm 4$ & $2.3$ & $0.01$ & $0.01$\\
+$30.0$ & $28 \pm 3$ & $1.3$ & $0.01$ & $0.01$\\
+$32.5$ & $20 \pm 3$ & $0.8$ & $0.01$ & $0.01$\\
+$35.0$ & $13 \pm 3$ & $0.4$ & $0.01$ & $0.01$\\
+$37.5$ & $7 \pm 2$ & $0.2$ & $0.01$ & $0.01$\\
+$40.0$ & $3 \pm 1$ & $0.11$ & $0.01$ & $0.01$\\
+$42.5$ & $0.8 \pm 0.7$ & $0.09$ & $0.01$ & $0.01$\\
+$45.0$ & $0.0 \pm 0.0$ & $0.09$ & $0.01$ & $0.01$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Power of the second harmonic generation for different rotation angles of the $\lambda / 2$ plate, with corresponding fundamental wave power}
+  \label{tab:ana_power_dep}
+\end{table}
+
 \Literatur{quellen}
 
 \end{appendix}
