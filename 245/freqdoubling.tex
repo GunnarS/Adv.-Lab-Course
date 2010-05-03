@@ -2,7 +2,6 @@
 \newcommand{\assistent}{U. Wiedemann}
 \newcommand{\versuch}{Optical Frequency Doubling}
 \newcommand{\nummer}{A245}
-
 \begin{document}
 
 \section{Preface}
@@ -149,7 +148,56 @@ $225$ & $0.40 \pm 0.01$\\
   \label{tab:ana_extinction}
 \end{table}
 \subsection{Optimization of second harmonic power}\label{subsec:ana_2nd_harmonic}
+In order to get frequency doubled light, we set up the experiment as shown in figure \ref{fig:setup_2ndharmonic}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{graphics/setup_2ndharmonic}
+  \caption{Setup to generate frequency doubled light}
+  \label{fig:setup_2ndharmonic}
+\end{figure}
+We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to 36°C and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
 
+In order to check our setup we calculate the beam waist and Rayleigh length of the laser beam in the crystal. Before the lens the collimated laser beam has the size $2\omega_0 = \unit[(3.5 \pm 0.5)]{mm}$. The lens used for focussing a refractive index of approximately $n = \unit[2.2]{}$ and the length of the crystal is given by $l=\unit[5]{mm}$.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{graphics/ana_gauss}
+  \caption{Illustration of the gauss beam}
+  \label{fig:ana_gauss}
+\end{figure}
+Because we assume that the radius of the beam waist in the crystal is the same as if the beam would propagate in air the following equation holds for the beam (see section XXX):
+\begin{align*}
+\theta_\textrm{div} = \arctan\left(\frac{\lambda}{\pi\omega_{0,\textrm{f}}}\right)
+\end{align*}
+where $2\omega_{0,\textrm{f}}$ is the beam diameter in the crystal and $\lambda$ is the wavelength of the laser beam. As shown in figure \ref{fig:ana_gauss} we know:
+\begin{align*}
+\theta_\textrm{div} = \arctan\left(\frac{\omega_0}{f}\right)
+\end{align*}
+and therefore
+\begin{align}
+\omega_{0,\textrm{f}} = \frac{\lambda f}{\pi\omega_0} \hspace{2cm} \Delta \omega_{0,\textrm{f}} = \frac{\lambda f}{\pi\omega_0^2}\Delta \omega_0
+\end{align}
+According to section XXX the length of the rayleigh zone (\textbf{REMARK: IN THIS SECTION 'RAYLEIGH ZONE' SHOULD BE EXPLAINED}) is given by:
+\begin{align}
+z_0 = \frac{\pi n\omega_{0,\textrm{f}}^2}{\lambda} \hspace{2cm} \Delta z_0 = \frac{2\pi n\omega_{0,\textrm{f}}}{\lambda}\Delta \omega_{0,\textrm{f}}
+\end{align}
+Additionally we define the relation $\zeta$ by
+\begin{align}
+\zeta = \frac{l}{2z_0} \hspace{2cm} \Delta \zeta = \frac{l}{2z_0^2}\Delta z_0
+\end{align}
+plugging in our values yields:
+\begin{align}
+\omega_{0,\textrm{f}} &= \unit[(0.013 \pm 0.002)]{mm} \\
+\notag z_0 &=  \unit[(1.2 \pm 0.4)]{mm}\\
+\notag \zeta &= \unit[(2.1 \pm 0.7)]{}
+\end{align}
+The Boyd-Kleinman condition for the optimal efficiency of second-harmonic generation is $\zeta = \unit[2.84]{}$. The focus of our achromat is therefore not optimal but sufficient for our purposes. The optimal focus length would be given by:
+\begin{align}
+f_\textrm{optimal} = \sqrt{\frac{\pi l \omega^2_0}{2n\lambda\zeta}} \hspace{1.5cm} \Delta f_\textrm{optimal} = \sqrt{\frac{2\pi l}{n\lambda\zeta}}\Delta\omega_0
+\end{align}
+which in our case yields:
+\begin{align}
+f_\textrm{optimal} = \unit[(63 \pm 9)]{mm}
+\end{align}
 \section{Abstract}
 
 \begin{appendix}
