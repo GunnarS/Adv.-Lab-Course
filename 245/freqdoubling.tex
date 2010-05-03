@@ -11,7 +11,7 @@
 
 \section{Experimentation and Analysis}
 \subsection{Diode Laser and power measurements}\label{ana_laserpower}
-To get familiar with the laser we first examine the laser power depencence on the input current. Therefore we put a gauged photodiode directly in front of the laser and record the laser power for different values of the input current. Do avoid the photodiode to leave its 'linear range' we put an attenuator in front of it. The measured values are displayed in table \ref{tab:ana_laserpower_att} in the appendix. In order to gauge the attenuator we also recorded some values in the range between threshold current and an output of $\unit[50]{\mu W}$ without using the attenuator. These values are displayed in table \ref{tab:ana_laserpower_woatt} in the appendix.
+To get familiar with the laser we first examine the laser power depencence on the input current. Therefore we put a gauged photodiode in front of the laser and record the laser power for different values of the input current. Do avoid the photodiode to leave its 'linear range' we put an attenuator in front of it. The measured values are displayed in table \ref{tab:ana_laserpower_att} in the appendix. In order to gauge the attenuator we also recorded some values in the range between threshold current and an output of $\unit[50]{\mu W}$ without using the attenuator. These values are displayed in table \ref{tab:ana_laserpower_woatt} in the appendix.
 
 Figure \ref{fig:ana_laser_watt} and \ref{fig:ana_laser_woatt} show plots of laser power with and without the attenuator as well as linear fits to the data taken above the threshold current. The fit results read:
 \begin{align}
@@ -72,6 +72,70 @@ with the error
 \begin{align}
 \Delta \eta = \frac{e\lambda}{hc}\Delta m
 \end{align}
+\subsection{Calibration of the variable attenuator}\label{subsec:var_att_calib}
+To realize a variable attenuator, we place a rotatable $\lambda /2$ plate and a polarization filter between the laser and the photodiode. The scale of the $\lambda /2$ plate faces towards the laser and the angle of the analyzer is set to 90°. The polarization filter is then used as an analyzer whose transmitted intensity is given by the Malus law:
+\begin{align*}
+I(\alpha)=I_0\cdot\cos^2(\alpha)
+\end{align*}
+where $I_0$ is the intensity of the laser and $\alpha$ is given by the angle between the polarization axis of the beam and the polarizer. Because the polarizer is aligned colinear to the polarization axis of the beam and a $\lambda /2$ plate rotates the polarization axis of the beam by $2\Phi$, with $\Phi$ being the angle between the optical axis of the $\lambda /2$ plate and the beam polarization axis, we expect the following intensity behind the polarizer:
+\begin{align*}
+I(\Phi)=I_0\cdot\cos^2(2\Phi)
+\end{align*}
+Our data is presented in table \ref{tab:ana_var_att} in the appendix. Figure \ref{fig:ana_var_att} shows the data with the corresponding fit. The graph shows only the attenuated power because these value's error is smaller since it does not depend on the error containing attenuation of the fixed attenuator. The fit parameters read:
+\begin{align*}
+P_\textrm{attenuated} = \unit[(117.9 \pm 0.6)]{\mu W}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{°}} \,\cdotp\, \Phi\right)\textrm{.}
+\end{align*}
+Therefore the transmitted power of the variable attenuator is:
+\begin{align}
+P = \unit[(124 \pm 4)]{mW}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{°}} \,\cdotp\, \Phi\right)\textrm{,}
+\end{align}
+where the error of the amplitude is given by
+\begin{align}
+\Delta P_0 = \sqrt{\left(P_0^\textrm{attenuated}\Delta \alpha\right)^2+\left(\alpha\Delta P_0^\textrm{attenuated}\right)^2}\textrm{.}
+\end{align}
+\begin{figure}[H]
+  \resizebox{0.8\textwidth}{!}{
+    \input{graphics/ana_var_att.tex}
+}
+  \caption{Transmission of the variable attenuator}
+  \label{fig:ana_var_att}
+\end{figure}
+To calculate the extinction ratio we determine the minimal and maximal values of the (attenuated) transmitted power. The values are given in table \ref{tab:ana_extinction}. For the error weighted mean values calculated via:
+\begin{align*}
+\bar{X} = \frac{\sum_{i=0}^N \frac{X_i}{(\Delta X_i)^2}}{\sum_{i=0}^N \frac{1}{(\Delta X_i)^2}}\hspace{2cm} \Delta \bar{X} = \frac{N}{\sum_{i=0}^N \frac{1}{(\Delta X_i)^2}}
+\end{align*}
+we get:
+\begin{align*}
+P_\textrm{max}^\textrm{att}&=\unit[(118 \pm 1)]{\mu W}\\
+P_\textrm{min}^\textrm{att}&=\unit[(0.51 \pm 0.01)]{\mu W}\textrm{.}
+\end{align*}
+So the extinction ratio is given by
+\begin{align}
+\Gamma=\frac{P_\textrm{max}^\textrm{att}}{P_\textrm{min}^\textrm{att}}=\unit[(229 \pm 5)]{}\textrm{,}
+\end{align}
+with the error
+\begin{align*}
+\Delta\Gamma=\sqrt{\left(\frac{\Delta P_\textrm{max}^\textrm{att}}{P_\textrm{min}^\textrm{att}}\right)^2+\left(\frac{ P_\textrm{max}^\textrm{att}}{\left(P_\textrm{min}^\textrm{att}\right)^2}\Delta P_\textrm{min}^\textrm{att}\right)^2}\textrm{.}
+\end{align*}
+\begin{table}[H]
+  \centering
+\resizebox{0.35\textwidth}{!}{
+  \begin{tabular}{lc}
+    \toprule
+      $\Phi$ [$\unit[]{°}$] $\pm$ $\unit[1]{°}$ & $P$ [$\unit[]{\mu W}$]\\
+    \midrule[0.75pt]
+$0$ & $118 \pm 1$\\
+$45$ & $0.34 \pm 0.01$\\
+$90$ & $117 \pm 1$\\
+$135$ & $0.80 \pm 0.01$\\
+$180$ & $118 \pm 1$\\
+$225$ & $0.40 \pm 0.01$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Minimal and maximal transmitted power of the $\lambda / 2$ plate (attenuated)}
+  \label{tab:ana_extinction}
+\end{table}
 \section{Abstract}
 
 \begin{appendix}
@@ -145,6 +209,130 @@ $100$ & $24.2$ & $0.0$ & $0.1$\\
 }
 \caption{Measured laser power for different input currents without attenuator}
   \label{tab:ana_laserpower_woatt}
+\end{table}
+
+\begin{table}[H]
+  \centering
+\begin{floatrow}
+\footnotesize
+\resizebox{0.33\textwidth}{!}{
+  \begin{tabular}{lcc}
+    \toprule
+      $\Phi$ [$\unit[]{°}$] $\pm$ $\unit[1]{°}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+    \midrule[0.75pt]
+$0.0$ & $118.0 \pm 1.0$ \\
+$2.5$ & $115.0 \pm 1.0$ \\
+$5.0$ & $113.0 \pm 1.0$ \\
+$7.5$ & $107.0 \pm 1.0$ \\
+$10.0$ & $101.0 \pm 1.0$ \\
+$12.5$ & $94.0 \pm 1.0$ \\
+$15.0$ & $85.0 \pm 1.0$ \\
+$17.5$ & $75.0 \pm 1.0$ \\
+$20.0$ & $65.0 \pm 1.0$ \\
+$22.5$ & $55.0 \pm 1.0$ \\
+$25.0$ & $46.0 \pm 1.0$ \\
+$27.5$ & $36.0 \pm 1.0$ \\
+$30.0$ & $26.0 \pm 1.0$ \\
+$32.5$ & $20.0 \pm 1.0$ \\
+$35.0$ & $13.0 \pm 1.0$ \\
+$37.5$ & $7.0 \pm 0.1$ \\
+$40.0$ & $3.0 \pm 0.1$ \\
+$42.5$ & $0.8 \pm 0.1$ \\
+$45.0$ & $0.34 \pm 0.01$ \\
+$47.5$ & $1.5 \pm 0.1$ \\
+$50.0$ & $4.8 \pm 0.1$ \\
+$52.5$ & $8.8 \pm 0.1$ \\
+$55.0$ & $16.0 \pm 1.0$ \\
+$57.5$ & $23.0 \pm 1.0$ \\
+$60.0$ & $32.0 \pm 1.0$ \\
+$62.5$ & $41.0 \pm 1.0$ \\
+$65.0$ & $51.0 \pm 1.0$ \\
+$67.5$ & $61.0 \pm 1.0$ \\
+$70.0$ & $72.0 \pm 1.0$ \\
+$72.5$ & $80.0 \pm 1.0$ \\
+$75.0$ & $90.0 \pm 1.0$ \\
+    \bottomrule
+  \end{tabular}
+}
+\resizebox{0.33\textwidth}{!}{
+  \begin{tabular}{lcc}
+    \toprule
+      $\Phi$ [$\unit[]{°}$] $\pm$ $\unit[1]{°}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+    \midrule[0.75pt]
+$77.5$ & $97.0 \pm 1.0$ \\
+$80.0$ & $105.0 \pm 1.0$ \\
+$82.5$ & $110.0 \pm 1.0$ \\
+$85.0$ & $115.0 \pm 1.0$ \\
+$87.5$ & $117.0 \pm 1.0$ \\
+$90.0$ & $117.0 \pm 1.0$ \\
+$92.5$ & $116.0 \pm 1.0$ \\
+$95.0$ & $113.0 \pm 1.0$ \\
+$97.5$ & $109.0 \pm 1.0$ \\
+$100.0$ & $102.0 \pm 1.0$ \\
+$102.5$ & $95.0 \pm 1.0$ \\
+$105.0$ & $87.0 \pm 1.0$ \\
+$107.5$ & $78.0 \pm 1.0$ \\
+$110.0$ & $67.0 \pm 1.0$ \\
+$112.5$ & $58.0 \pm 1.0$ \\
+$115.0$ & $46.0 \pm 1.0$ \\
+$117.5$ & $39.0 \pm 1.0$ \\
+$120.0$ & $28.0 \pm 1.0$ \\
+$122.5$ & $21.0 \pm 1.0$ \\
+$125.0$ & $13.0 \pm 1.0$ \\
+$127.5$ & $8.0 \pm 0.1$ \\
+$130.0$ & $4.0 \pm 0.1$ \\
+$132.5$ & $2.0 \pm 0.1$ \\
+$135.0$ & $0.80 \pm 0.01$ \\
+$137.5$ & $1.9 \pm 0.1$ \\
+$140.0$ & $5.0 \pm 0.1$ \\
+$142.5$ & $9.0 \pm 0.1$ \\
+$145.0$ & $16.0 \pm 1.0$ \\
+$147.5$ & $22.0 \pm 1.0$ \\
+$150.0$ & $31.0 \pm 1.0$ \\
+    \bottomrule
+  \end{tabular}
+}
+\resizebox{0.33\textwidth}{!}{
+  \begin{tabular}{lcc}
+    \toprule
+      $\Phi$ [$\unit[]{°}$] $\pm$ $\unit[1]{°}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+    \midrule[0.75pt]
+$152.5$ & $40.0 \pm 1.0$ \\
+$155.0$ & $50.0 \pm 1.0$ \\
+$157.5$ & $60.0 \pm 1.0$ \\
+$160.0$ & $71.0 \pm 1.0$ \\
+$162.5$ & $80.0 \pm 1.0$ \\
+$165.0$ & $90.0 \pm 1.0$ \\
+$167.5$ & $97.0 \pm 1.0$ \\
+$170.0$ & $106.0 \pm 1.0$ \\
+$172.5$ & $111.0 \pm 1.0$ \\
+$175.0$ & $115.0 \pm 1.0$ \\
+$177.5$ & $117.0 \pm 1.0$ \\
+$180.0$ & $118.0 \pm 1.0$ \\
+$182.5$ & $117.0 \pm 1.0$ \\
+$185.0$ & $113.0 \pm 1.0$ \\
+$187.5$ & $110.0 \pm 1.0$ \\
+$190.0$ & $102.0 \pm 1.0$ \\
+$192.5$ & $96.0 \pm 1.0$ \\
+$195.0$ & $86.0 \pm 1.0$ \\
+$197.5$ & $78.0 \pm 1.0$ \\
+$200.0$ & $67.0 \pm 1.0$ \\
+$202.5$ & $58.0 \pm 1.0$ \\
+$205.0$ & $46.0 \pm 1.0$ \\
+$207.5$ & $39.0 \pm 1.0$ \\
+$210.0$ & $28.0 \pm 1.0$ \\
+$212.5$ & $20.0 \pm 1.0$ \\
+$215.0$ & $13.0 \pm 1.0$ \\
+$217.5$ & $8.0 \pm 0.1$ \\
+$220.0$ & $4.0 \pm 0.1$ \\
+$222.5$ & $1.0 \pm 0.1$ \\
+$225.0$ & $0.40 \pm 0.01$ \\
+    \bottomrule
+  \end{tabular}
+}
+\end{floatrow}
+\caption{Transmission of the variable attenuator depending on the rotation angle of the $\lambda / 2$ plate}
+  \label{tab:ana_var_att}
 \end{table}
 \Literatur{quellen}
 

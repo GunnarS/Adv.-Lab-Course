@@ -11,10 +11,10 @@
 \begin{document}
 
 \section{Preface}
-The object of this experiment is the measurement of the positron-lifetime in metals, indium in this case, and insulators (here: acrylic glas). We are also supposed to prove the existence of positronium in acrylic glas. In addition the average lifetime of positrons in indium is determined with respect to temperature and the vacancy formation enthalpy is identified due to the trapping model.
+The object of this experiment is the measurement of the positron-lifetime in metals, indium in this case, and insulators (here: acrylic glas). We are also supposed to show the existence of positronium in acrylic glas. In addition the average lifetime of positrons in indium is determined with respect to temperature and the vacancy formation enthalpy is identified due to the trapping model.
 
 \section{Theoretical Background}
-\subsection{Positrons and Electrons}
+\subsection{Positrons and Electrons}\label{subsec:th_positrons}
 The positron $e^+$ is the antiparticle of the electron $e^-$, so they have the same quantum numbers (e.\ g.\ spin $1/2$) excepting electric charge ($\unit[\pm]{e}$). They are leptons and have a mass of $m_{\mathrm{e}} = \unit[511]{keV}$.
 
 Positrons are created via pair production or as it is the case in the present experimental set-up via $\beta^+$-decay in atomic nuclei:
@@ -38,7 +38,7 @@ As it is illustrated in figure \ref{fig:haftstellenmodell} injected positrons ca
 \frac{\mathrm{d} n_{\mathrm{f}}}{\mathrm{d}t} &=  N - \lambda_{\mathrm{f}} n_{\mathrm{f}} - \mu_{\mathrm{v}} c_{\mathrm{L}} n_{\mathrm{f}} + \xi_v n_{\mathrm{v}} \\
 \frac{\mathrm{d} n_{\mathrm{v}}}{\mathrm{d}t} &=  - \lambda_{\mathrm{v}} n_{\mathrm{v}} + \mu_{\mathrm{v}} c_{\mathrm{L}} n_{\mathrm{f}} + \xi_v n_{\mathrm{v}}
 \end{align}
-for free and bounded positrons in a solid state body. In thermal equilibrium the rates are equal and one can derive a relation for the average lifetime $\bar{\tau}$:
+for free and bound positrons in a solid state body. In thermal equilibrium the rates are equal and one can derive a relation for the average lifetime $\bar{\tau}$:
 \begin{align}
 \bar{\tau} = \frac{\lambda_{\mathrm{v}} + \mu_{\mathrm{v}} k(S) \exp{(H_{\mathrm{v}}/k_{\mathrm{B}} T)}}{\lambda_{\mathrm{v}} \lambda_{\mathrm{f}} + \mu_{\mathrm{v}} k(S) \exp{(H_{\mathrm{v}}/k_{\mathrm{B}} T)}} \ldotp
 \end{align}
@@ -53,7 +53,7 @@ Figure \ref{fig:skurve} demonstrates that the mean lifetime follows an s-curve w
 
 \subsection{Sodium}
 \label{cha:na}
-To measure the lifetime of positron we need signals which start and stop the measurement. In the present experimental configuration \Na decays with an half-life of $\unit[2.6]{y}$ and a probability of $\unit[99]{\%}$ in the excited $2+$-state of \Ne via emitting a positron.
+To measure the lifetime of positron we need signals which start and stop the measurement. In the present experimental configuration \Na decays with a half-life of $\unit[2.6]{y}$ and a probability of $\unit[99]{\%}$ into the excited $2+$-state of \Ne via emission of a positron.
 \begin{align*}
   \Na \rightarrow \Ne + e^+ + \nu_e
 \end{align*}
@@ -73,12 +73,12 @@ The experimental set-up is given by a "fast-slow-coincidencecircle", which is fa
 As mentioned above we are supposed to detect photons (start and stop signals). This is carried out by two $\mathrm{BaF}_2$-scintillators. Via disexcitation of exitons at doping-atoms light is generated and then guided by the silvering of the crystal to a photomultiplier, which detects it (amplification via dynodes). There are two outputs: The so-called "fast-output" is used for time measurements, because it possesses a high time resolution. The "slow-output" is characterised by a high energy resolution and is hence applied for energy measurements.
 
 \subsubsection*{Slow-Circle}
-The slow-circle is used to select specified signals in the experiment. For this the output of the photomultiplier is first of all amplified and then supplied to the single channel analyser (SCA). This constituent of the set-up offers the possibility to choose a energy range to just detect signals within a specified energy interval.
+Because of its better energy resolution, the slow-circle is used to select specified signals in the experiment. For this the output of the photomultiplier is first of all amplified and then supplied to the single channel analyser (SCA). This constituent of the set-up offers the possibility to choose a energy range to just detect signals within a specified energy interval.
 
 The signals of both SCAs then attain a coincidence unit. If both signals coincide, that means that they arrived within a defined time interval, a logical 'true' is returned. If everything is aligned properly, this implies that the desired event took place. The coincidence signal ('true' or 'false') is applied to the gate of the so-called multi channel analyser (MCA). Only if the gate is set 'true', the value of the fast-circle will be saved.
 
 \subsubsection*{Fast-Circle}
-The fast-circle is used to measure a time difference (between two signals). To achieve this the fast-outputs of the photomultipliers are applied to constant friction discriminators (CFD). They provide the start and stop signals for the following time to amplitude converter (TAC). To adjust the experimental set-up a delay unit is implemented between CFD and TAC. The TAC returns a voltage proportional to a time difference (given by start and stop signal) by charging a capacitor to the MCA. If the gate is set 'true', the value will be saved.
+The fast-circle is used to measure a time difference (between two signals). To achieve this the fast-outputs of the photomultipliers are applied to constant friction discriminators (CFD). They provide the start and stop signals for the following time to amplitude converter (TAC). To adjust the experimental set-up a delay unit is implemented between CFD and TAC. The TAC returns a voltage proportional to a time difference (given by start and stop signal) by charging a capacitor. This voltage is used as the MCA's direct input. If the gate is set 'true', the value will be saved.
 
 \section{Experimentation and Analysis}
 \subsection{Spectra}\label{subsec:ana_spectra}
@@ -87,32 +87,31 @@ First, we want to record the \Na spectrum with both scintillation detectors. In 
   \resizebox{0.4\textwidth}{!}{
     \includegraphics{graphics/setup_prompt}
 }
-  \caption{Set up for measuring the spectra and performing the adjustment for prompt curve measurement and the time calibration. This set up is used for each detector separately. '*' marks the position of an additional delay.}
+  \caption{Set up for measuring the spectra and performing the adjustment for prompt curve measurement and the time calibration. This set up is used for each detector separately. '*' marks the position of an additional delay. \cite{skript}}
   \label{fig:setup_prompt}
 \end{figure}
-Before measuring the spectra we connect the SCA's and the amplifier's output to an oscilloscope to check if the amplifier's signal is inside the gate signal. For adjustment we use the delay placed at '*'. The measured spectra are shown in figures \ref{fig:ana_spectrum_left} and \ref{fig:ana_spectrum_right}.
+Before measuring the spectra we connect the SCA's and the amplifier's output to an oscilloscope to check if the amplifier's signal is inside the gate signal. For adjustment we use the delay placed at '*'. The spectrum measured with the left detector is shown in figure \ref{fig:ana_spectrum_left}.
 \begin{figure}[H]
-\begin{floatrow}
-\ffigbox[0.5\textwidth]{}
-{
-\resizebox{0.5\textwidth}{!}{
-%	\input{graphics/ana_spectrum_left}
-}
+%\begin{floatrow}
+%\ffigbox[0.5\textwidth]{}
+%{
+%\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_spectrum_left}
+%}
 	\caption{\Na spectrum recorded with the left detector. The left peak is a \textsc{Compton}-back-scattering-peak, with increasing energy the $\unit[511]{keV}$ Peak and the 1275keV \Na peak are displayed.}
 	\label{fig:ana_spectrum_left}
-}
-\ffigbox[0.5\textwidth]{}
-{
-\resizebox{0.5\textwidth}{!}{
-%	\input{graphics/ana_spectrum_right}
-}
-	\caption{\Na spectrum recorded with the right detector.}
-	\label{fig:ana_spectrum_right}
-}
-\end{floatrow}
+%}
+%\ffigbox[0.5\textwidth]{}
+%{
+%\resizebox{0.5\textwidth}{!}{
+%%	\input{graphics/ana_spectrum_right}
+%}
+%	\caption{\Na spectrum recorded with the right detector.}
+%	\label{fig:ana_spectrum_right}
+%}
+%\end{floatrow}
 \end{figure}
-\textbf{comment on the data.. }
-
+The spectrum of the right detector looks in principle the same. Just the \textsc{Compton}-back-scattering-peak in the left of the spectrum is cut off at low energies and the global count rate is lower than that of the left detector. Unfortunately we forgot to save this spectrum so we aren't able to present it here. The 511keV peak is completely present and looks similar to the one of the left detector, so it is appropriate to use this detector for the stopping signal later.
 \subsection{Prompt curve and time calibration}
 \label{subsec:ana_time}
 To measure a prompt curve and do the time calibration we use the fact that the two $\unit[511]{keV}$-photons are emitted at the same time. We set up both SCA windows to the $\unit[511]{keV}$-line and check their simultaneousness using the oscilloscope. A small time difference of the signals, caused e.g. by different cable lengths, can be levelled using the SCA's built-in delays. Now we set up the experiment as shown in figure \ref{fig:setup_time} and check the outputs of the coincidence and the TAC for simultaneousness with an oscilloscope. To level a small time difference we put a delay between TAC and oscilloscope. Now we use the same cables to connect the coincidence unit and the TAC to the MCA, because a change of cable length could destroy the simultaneousness of the signals because of an additional delay.
@@ -120,13 +119,13 @@ To measure a prompt curve and do the time calibration we use the fact that the t
   \resizebox{0.4\textwidth}{!}{
     \includegraphics{graphics/setup_time}
 }
-  \caption{Set-up for measuring the prompt curve and the time calibration.}
+  \caption{Set-up for measuring the prompt curve and the time calibration. \cite{skript}}
   \label{fig:setup_time}
 \end{figure}
 We set the delay between one CFD and the TAC to $\unit[12]{ns}$ and record the prompt curve displayed in figure \ref{fig:ana_prompt}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-%    \input{graphics/ana_prompt.tex}
+    \input{graphics/ana_prompt.tex}
 }
   \caption{Recorded prompt curve with \textsc{Gauss}-fit}
   \label{fig:ana_prompt}
@@ -134,13 +133,13 @@ We set the delay between one CFD and the TAC to $\unit[12]{ns}$ and record the p
 In order to be able to interprete the channel numbers of the MCA as time values for the lifetime measurements we need a time calibration. We record several prompt curves with different delays between one of the CFDs and the TAC. The curves, recorded in steps of \unit[4]{ns} starting at $\unit[4]{ns}$, are shown in figure \ref{fig:ana_timegauge}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-%    \input{graphics/ana_timegauge.tex}
+    \input{graphics/ana_timegauge.tex}
 }
   \caption{Prompt curves for different delay times (in steps of $\unit[4]{ns}$ starting at $\unit[4]{ns}$)}
   \label{fig:ana_timegauge}
 \end{figure}
 To get a time calibration we fit \textsc{Gauss}-curves of the form $y_0 +\frac{A}{\sqrt{2\pi}\Delta x}\cdotp\exp\left\{-2\frac{(x-x_0)^2}{\Delta x}\right\}
-$ curves to each prompt curve. The results are summarized in table \ref{tab:ana_timecalib} and drawn in figure \ref{fig:ana_timegaugefit}.
+$ curves to each prompt curve. In principle the prompt curves should be very sharp peaks, but are convoluted with a gaussian resolution function of the detector setup. The results are summarized in table \ref{tab:ana_timecalib} and drawn in figure \ref{fig:ana_timegaugefit}.
 \begin{table}[H]
   \centering
 \resizebox{1.0\textwidth}{!}{
@@ -168,7 +167,7 @@ $44$ & $83 \pm 1$ & $7620.4 \pm 0.7$ & $161 \pm 2$ & $11.3 \pm 0.9$\\
 
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_timegaugefit.tex}
+    \input{graphics/ana_timegaugefit.tex}
 }
   \caption{Prompt curve peak positions versus delay time.}
   \label{fig:ana_timegaugefit}
@@ -187,12 +186,12 @@ Now we want to measure the positron lifetime in indium. We set up the experiment
   \resizebox{0.4\textwidth}{!}{
     \includegraphics{graphics/setup_lifetime}
 }
-  \caption{Set up for measuring lifetime curves.}
+  \caption{Set up for measuring lifetime curves.\cite{skript}}
   \label{fig:setup_lifetime}
 \end{figure}
 We adjust the left SCA to accept every event above the $\unit[511]{keV}$-peak, because all these events originate from the $\unit[1275]{keV}$-photon of the decay of \Ne. So the left detector yields the start signal for the TAC. The right SCA stays unchanged and accepts every event in the $\unit[511]{keV}$-peak. The right detector therefore yields the stop signal for the TAC. Again we check the signals of coincidence unit and TAC for simultaneousness with an oscilloscope.
 
-The indium probe is located between the two detectors and can be heated by the use of a soldering iron. In order to measure the temperature dependency of the positron lifetime we take lifetime curves for different values for the temperature. The curves are displayed in figures \ref{fig:ana_Indium_RT} to \ref{fig:ana_Indium_122} in the appendix. We fit exponential functions of the form $f(x)=y_0 + A \cdotp \exp\left(-\frac{x-x_0}{t}\right)$ to the right, sloping, flanks of the curves. The fit results for $t$ and the corresponding time constants are summarized in table \ref{tab:ana_indium}. The plot of time constant versus temperature is displayed in figure \ref{fig:ana_TemperatureTau}.
+The indium probe is located between the two detectors and can be heated by the use of a soldering iron. In order to measure the temperature dependency of the positron lifetime we take lifetime curves for different values for the temperature. The curves are displayed in figures \ref{fig:ana_Indium_RT} to \ref{fig:ana_Indium_122} in the appendix. The form of the curves is again given by the convolution of an exponential lifetime distribution with a gaussian function respecting detector effects. We fit exponential functions of the form $f(x)=y_0 + A \cdotp \exp\left(-\frac{x-x_0}{t}\right)$ to the right, sloping, flanks of the curves. The fit results for $t$ and the corresponding time constants are summarized in table \ref{tab:ana_indium}. The plot of time constant versus temperature is displayed in figure \ref{fig:ana_TemperatureTau}.
 \begin{table}[H]
   \centering
 \resizebox{0.5\textwidth}{!}{
@@ -216,7 +215,7 @@ $122$ & $80.3 \pm 0.3$ & $515 \pm 2$ \\
 \end{table}
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_TemperatureTau.tex}
+    \input{graphics/ana_TemperatureTau.tex}
 }
   \caption{Time constant $\bar{\tau}$ versus indium temperature with \textsc{Boltzmann}-fit}
   \label{fig:ana_TemperatureTau}
@@ -243,7 +242,7 @@ H_\textrm{vac}^{lit} = \unit[(0.54 \pm 0.03)]{eV}
 The error of our value seems to be significantly to small. A reason for this might be that the relatively large freedom in choosing the fit ranges for the lifetime curves, which significantly changes the obtained values, is not respected by the stated error.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_enthalpy.tex}
+    \input{graphics/ana_enthalpy.tex}
 }
   \caption{Plot and fit to determine vacancy formation enthalpy for indium}
   \label{fig:ana_enthalpy}
@@ -254,7 +253,7 @@ The error of our value seems to be significantly to small. A reason for this mig
 To determine the positron lifetime in acrylic glas we use the same setup as in the case of indium. To get a sufficient number of events the measurement is done overnight. 
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_plexiglas_log.tex}
+    \input{graphics/ana_plexiglas_log.tex}
 }
   \caption{Logarithmic plot of the measured positron lifetime spectrum in indium}
   \label{fig:ana_plexiglas_log}
@@ -265,7 +264,7 @@ In figure \ref{fig:ana_plexiglas_log} the obtained spectrum is displayed logarit
 \ffigbox[0.5\textwidth]{}
 {
 \resizebox{0.5\textwidth}{!}{
-	%\input{graphics/ana_plexiglas_long}
+	\input{graphics/ana_plexiglas_long}
 }
 	\caption{Fit to the "long" part of the lifetime curve for positrons in acrylic glas}
 	\label{fig:ana_plexiglas_long}
@@ -273,7 +272,7 @@ In figure \ref{fig:ana_plexiglas_log} the obtained spectrum is displayed logarit
 \ffigbox[0.5\textwidth]{}
 {
 \resizebox{0.5\textwidth}{!}{
-	%\input{graphics/ana_plexiglas_short}
+	\input{graphics/ana_plexiglas_short}
 }
 	\caption{Fit to the "short" part of the lifetime curve for positrons in acrylic glas after subtraction of the "long" part}
 	\label{fig:ana_plexiglas_short}
@@ -285,68 +284,66 @@ The fits yield the following values for the positron lifetime in acrylic glas:
 \tau_\textrm{s} = \unit[(456.7 \pm 1.5)]{ps}\\
 \tau_\textrm{l} = \unit[(1.85 \pm 0.02)]{ns}
 \end{align}
-We could not find any values in literature to compare the obtained values to. At least it seems to be reasonable that the lifetime of bound positronium states is much bigger than the lifetime of "free" positrons in the crystal. Thus we identify the smaller value with the lifetime due to the decay of free or captured positrons in the solid and the higher one with the lifetime of para-positronium.
+We could not find any values in literature to compare the obtained values to. At least it seems to be reasonable that the lifetime of bound positronium states is much bigger than the lifetime of "free" positrons in the crystal. Thus we identify the smaller value with the lifetime due to the decay of free or captured positrons in the solid and the higher one with the lifetime of para-positronium. The positronium lifetime measured here is much bigger than the one stated in section \ref{subsec:th_positrons}. We assume this to be caused by interactions, such as impacts, between the positronium and the solid state crystal, which can e.g. excite the positronium to a higher state with longer lifetime.
 
 \section{Abstract}
 The s-curve behaviour of the positron lifetime in dependence on temperature was reproduced. The lifetimes of bound and free positrons are $\tau_\textrm{f} = \unit[(421 \pm 17)]{ps}$ and $\tau_\textrm{f} = \unit[(522 \pm 28)]{ps}$. The relatively big errors are conditional on the wideness of the s-curve and the lack of data in the regions of little pitch. 
 
 The vacancy formation enthalpy has been determined to be $H_\textrm{vac} = \unit[(0.47 \pm 0.01)]{eV}$, which matches with the literature value of $H_\textrm{vac}^{lit} = \unit[(0.54 \pm 0.03)]{eV}$~\cite{paper}. Nevertheless the error of our value seems to be significantly to small. A reason for this might be that the relatively large freedom in choosing the fit ranges for the lifetime curves, which significantly changes the obtained values, is not respected by the stated error.
 
-The lifetime of free and captured positrons in acrylic glas is $\tau_\textrm{s} = \unit[(456.7 \pm 1.5)]{ps}$ and the positronium lifetime amounts to $\tau_\textrm{l} = \unit[(1.85 \pm 0.02)]{ns}$.
+The measured lifetime of free and captured positrons in acrylic glas is $\tau_\textrm{s} = \unit[(456.7 \pm 1.5)]{ps}$ and the positronium lifetime amounts to $\tau_\textrm{l} = \unit[(1.85 \pm 0.02)]{ns}$.
 
 \begin{appendix}
 \section{Figures}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_RT.tex}
+    \input{graphics/ana_Indium_RT.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[26]{^\circ C}$}
   \label{fig:ana_Indium_RT}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_50.tex}
+    \input{graphics/ana_Indium_50.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[50]{^\circ C}$}
   \label{fig:ana_Indium_50}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_56.tex}
+    \input{graphics/ana_Indium_56.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[56]{^\circ C}$}
   \label{fig:ana_Indium_56}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_865.tex}
+    \input{graphics/ana_Indium_865.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[86.5]{^\circ C}$}
   \label{fig:ana_Indium_865}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_1075.tex}
+    \input{graphics/ana_Indium_1075.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[107.5]{^\circ C}$}
   \label{fig:ana_Indium_1075}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-%    \input{graphics/ana_Indium_112.tex}
+    \input{graphics/ana_Indium_112.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[112]{^\circ C}$}
   \label{fig:ana_Indium_112}
 \end{figure}
  \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
- %   \input{graphics/ana_Indium_122.tex}
+    \input{graphics/ana_Indium_122.tex}
 }
   \caption{Positron lifetime curve in indium at $\unit[122]{^\circ C}$}
   \label{fig:ana_Indium_122}
 \end{figure}
-
-\section{Tables}
 
 \Literatur{quellen}
 
