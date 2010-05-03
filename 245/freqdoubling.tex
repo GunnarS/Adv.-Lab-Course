@@ -155,7 +155,7 @@ In order to get frequency doubled light, we set up the experiment as shown in fi
   \caption{Setup to generate frequency doubled light}
   \label{fig:setup_2ndharmonic}
 \end{figure}
-We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to 36°C and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
+We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal (NLC) and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to 36°C and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
 
 In order to check our setup we calculate the beam waist and Rayleigh length of the laser beam in the crystal. Before the lens the collimated laser beam has the size $2\omega_0 = \unit[(3.5 \pm 0.5)]{mm}$. The lens used for focussing a refractive index of approximately $n = \unit[2.2]{}$ and the length of the crystal is given by $l=\unit[5]{mm}$.
 \begin{figure}[H]
@@ -198,6 +198,32 @@ which in our case yields:
 \begin{align}
 f_\textrm{optimal} = \unit[(63 \pm 9)]{mm}
 \end{align}
+\subsection{Properties of second-harmonic generation}\label{subsec:ana_props_2ndharmonic}
+\subsubsection{Dependency on temperature}\label{subsubsec:ana_temp_dep}
+Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{°C}$ and then raised in steps of \unit[0.2]{°C}. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} and plotted in figure \ref{fig:ana_temp_dep}.
+\begin{figure}[H]
+  \resizebox{0.8\textwidth}{!}{
+    \input{graphics/ana_temp_dep.tex}
+}
+  \caption{Power of the second harmonic generation versus NLC temperature (semi-logarithmic scale) and corresponding fit}
+  \label{fig:ana_temp_dep}
+\end{figure}
+Due to the results of section XXX we expect the following dependency of the second harmonic power on the NLC's temperature:
+\begin{align}
+P_{sh} \propto \left( \frac{\sin\left(\textrm{const.} \cdotp \Delta n\right)}{\textrm{const.}\cdotp \Delta n}\right)^2 \propto \textrm{sinc}^2\left(\textrm{const.}\cdotp T\right)
+\end{align}
+if the refraction index $n$ changes linearly with the temperature $T$ of the NLC. Because of that we fit a function of the form
+\begin{align}
+f(x) = a\left(\frac{\sin\left(b(x-c)\right)}{x-c}\right)^2+d
+\end{align}
+to the plot. The fit results read:
+\begin{align}
+a &= \unit[(5.75 \pm 0.07)]{\mu W}\\
+\notag b &= \unit[(2.11 \pm 0.01)]{\frac{1}{°C}}\\
+\notag c &= \unit[(36.319 \pm 0.004)]{°C}\\
+\notag d &= \unit[(1.53 \pm 0.04)]{\mu W}
+\end{align}
+As one can see in figure \ref{fig:ana_temp_dep} does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model doesn't respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{°C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
 \section{Abstract}
 
 \begin{appendix}
@@ -395,6 +421,97 @@ $225.0$ & $0.40 \pm 0.01$ \\
 \end{floatrow}
 \caption{Transmission of the variable attenuator depending on the rotation angle of the $\lambda / 2$ plate}
   \label{tab:ana_var_att}
+\end{table}
+
+\begin{table}[H]
+  \centering
+\begin{floatrow}
+\footnotesize
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+      $T$ [$\unit[]{°C}$] & $P$ [$\unit[]{\mu W}$] &  $P_\textrm{bgr}$ [$\unit[]{\mu W}$] &  $\Delta P$ [$\unit[]{\mu W}$]\\
+    \midrule[0.75pt]
+$27.0 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$27.2 \pm 0.1$ & $1.86$ & $0.24$ & $0.01$ \\
+$27.4 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$27.6 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$27.8 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$28.0 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$28.2 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$28.4 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$28.6 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$28.8 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$29.0 \pm 0.1$ & $1.90$ & $0.24$ & $0.01$ \\
+$29.2 \pm 0.1$ & $1.90$ & $0.24$ & $0.01$ \\
+$29.4 \pm 0.1$ & $1.89$ & $0.24$ & $0.01$ \\
+$29.6 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$29.8 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
+$30.0 \pm 0.1$ & $1.88$ & $0.24$ & $0.01$ \\
+$30.2 \pm 0.1$ & $1.90$ & $0.24$ & $0.01$ \\
+$30.4 \pm 0.1$ & $1.92$ & $0.24$ & $0.01$ \\
+$30.6 \pm 0.1$ & $1.92$ & $0.24$ & $0.01$ \\
+$30.8 \pm 0.1$ & $1.92$ & $0.22$ & $0.01$ \\
+$31.0 \pm 0.1$ & $1.88$ & $0.22$ & $0.01$ \\
+$31.2 \pm 0.1$ & $1.87$ & $0.22$ & $0.01$ \\
+$31.4 \pm 0.1$ & $1.89$ & $0.22$ & $0.01$ \\
+$31.6 \pm 0.1$ & $1.92$ & $0.22$ & $0.01$ \\
+$31.8 \pm 0.1$ & $1.95$ & $0.22$ & $0.01$ \\
+$32.0 \pm 0.1$ & $1.94$ & $0.22$ & $0.01$ \\
+$32.2 \pm 0.1$ & $1.91$ & $0.22$ & $0.01$ \\
+$32.4 \pm 0.1$ & $1.88$ & $0.22$ & $0.01$ \\
+$32.6 \pm 0.1$ & $1.89$ & $0.22$ & $0.01$ \\
+$32.8 \pm 0.1$ & $1.94$ & $0.22$ & $0.01$ \\
+$33.0 \pm 0.1$ & $2.01$ & $0.22$ & $0.01$ \\
+$33.2 \pm 0.1$ & $2.03$ & $0.22$ & $0.01$ \\
+$33.4 \pm 0.1$ & $2.01$ & $0.22$ & $0.01$ \\
+    \bottomrule
+  \end{tabular}
+}
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lccc}
+    \toprule
+      $T$ [$\unit[]{°C}$] & $P$ [$\unit[]{\mu W}$] &  $P_\textrm{bgr}$ [$\unit[]{\mu W}$] &  $\Delta P$ [$\unit[]{\mu W}$]\\
+    \midrule[0.75pt]
+$33.6 \pm 0.1$ & $1.95$ & $0.22$ & $0.01$ \\
+$33.8 \pm 0.1$ & $1.94$ & $0.22$ & $0.01$ \\
+$34.0 \pm 0.1$ & $2.00$ & $0.22$ & $0.01$ \\
+$34.2 \pm 0.1$ & $2.09$ & $0.22$ & $0.01$ \\
+$34.4 \pm 0.1$ & $2.14$ & $0.22$ & $0.01$ \\
+$34.6 \pm 0.1$ & $2.13$ & $0.22$ & $0.01$ \\
+$34.8 \pm 0.1$ & $2.19$ & $0.22$ & $0.01$ \\
+$35.0 \pm 0.1$ & $2.79$ & $0.22$ & $0.01$ \\
+$35.2 \pm 0.1$ & $4.58$ & $0.22$ & $0.01$ \\
+$35.4 \pm 0.1$ & $7.60$ & $0.22$ & $0.01$ \\
+$35.6 \pm 0.1$ & $12.8$ & $0.30$ & $0.1$ \\
+$35.8 \pm 0.1$ & $18.9$ & $0.30$ & $0.1$ \\
+$36.0 \pm 0.1$ & $23.5$ & $0.30$ & $0.1$ \\
+$36.2 \pm 0.1$ & $26.9$ & $0.30$ & $0.1$ \\
+$36.4 \pm 0.1$ & $27.6$ & $0.30$ & $0.1$ \\
+$36.6 \pm 0.1$ & $24.0$ & $0.30$ & $0.1$ \\
+$36.8 \pm 0.1$ & $20.7$ & $0.30$ & $0.1$ \\
+$37.0 \pm 0.1$ & $13.9$ & $0.30$ & $0.1$ \\
+$37.2 \pm 0.1$ & $8.3$ & $0.30$ & $0.1$ \\
+$37.4 \pm 0.1$ & $4.5$ & $0.30$ & $0.1$ \\
+$37.6 \pm 0.1$ & $2.8$ & $0.30$ & $0.1$ \\
+$37.8 \pm 0.1$ & $2.2$ & $0.30$ & $0.1$ \\
+$38.0 \pm 0.1$ & $2.5$ & $0.30$ & $0.1$ \\
+$38.2 \pm 0.1$ & $2.7$ & $0.30$ & $0.1$ \\
+$38.4 \pm 0.1$ & $2.7$ & $0.30$ & $0.1$ \\
+$38.6 \pm 0.1$ & $2.4$ & $0.30$ & $0.1$ \\
+$38.8 \pm 0.1$ & $2.1$ & $0.30$ & $0.1$ \\
+$39.0 \pm 0.1$ & $1.9$ & $0.30$ & $0.1$ \\
+$39.2 \pm 0.1$ & $2.0$ & $0.30$ & $0.1$ \\
+$39.4 \pm 0.1$ & $2.1$ & $0.30$ & $0.1$ \\
+$39.6 \pm 0.1$ & $2.1$ & $0.30$ & $0.1$ \\
+$39.8 \pm 0.1$ & $2.1$ & $0.30$ & $0.1$ \\
+$40.0 \pm 0.1$ & $2.0$ & $0.30$ & $0.1$ \\
+    \bottomrule
+  \end{tabular}
+}
+\end{floatrow}
+\caption{Power of the second harmonic generation for different NLC temperatures}
+  \label{tab:ana_temp_dep}
 \end{table}
 \Literatur{quellen}
 
