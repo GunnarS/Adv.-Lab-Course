@@ -275,7 +275,58 @@ a &= \unit[(23.5 \pm 0.2)]{\mu W}\\
 \end{align} 
 again the value of $b$ is in good agreement with the theoretical expectation. We would have expected the offset $c$ to be zero. The fact that it is nonzero is most likely caused by background. Therefore our background measurement seems to be too low.
 \subsection{Wavelength analysis}\label{subsec:ana_wavelengths}
+\subsubsection{Analysis with diffraction grating}\label{subsubsec:ana_grating}
+In order to determine the wavelength of the optical frequency doubled light we set up the experiment as displayed in figure \ref{fig:setup_grating}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{graphics/setup_grating}
+  \caption{Setup of the experiment for wavelength analysis with grating}
+  \label{fig:setup_grating}
+\end{figure}
+For diffraction gratings the following equations hold:
+\begin{align*}
+\sin \alpha = \frac{m\lambda}{g} \hspace{2cm} \frac{\lambda}{\Delta \lambda} = mN = mg L
+\end{align*}
+where $m$ is the order of the interference, $g$ is the grating constant, $N$ the number of "slits" illuminated and $L$ is the width of the incoming beam at the grating. In our case $g = \unit[600]{Lines/mm}$ and the width of the beam may be approximated via 
+\begin{align*}
+L = 2\frac{\omega_{0,\textrm{f}}}{f}l
+\end{align*}
+where we assumed that the beam is completely collimated behind the 125mm achromatic lens and we adjusted the lens that way that $l = \unit[(130 \pm 5)]{mm}$ holds. So the theoretical spectral resolution is given by:
+\begin{align}
+\left(\frac{\lambda}{\Delta\lambda}\right)_\textrm{th} = 2mg\frac{\omega_{0,\textrm{f}}}{f}l \hspace{1.5cm} \Delta\left(\frac{\lambda}{\Delta\lambda}\right)_\textrm{th} = \sqrt{\left(2mg\frac{l}{f}\omega_{0,\textrm{f}}\Delta \right)^2+\left(2mg\frac{\omega_{0,\textrm{f}}}{f}\Delta l\right)^2}
+\end{align}
+plugging in the values yields:
+\begin{align}
+\left(\frac{\lambda}{\Delta\lambda}\right)_\textrm{th} = \unit[(7280 \pm 3875)]{}
+\end{align}
+The error of the theoretical spectral resolution is relatively big. This is caused by the large uncertainty in the size of $l$, which has such a large value because we removed the achromatic lens after having measured the distance to improve the beam collimation and forgot to remeasure the distance.
 
+To determine the experimental spectral resolution and the wavelengths of the beams we measure:
+\begin{align}
+a &= \unit[(193.4 \pm 0.1)]{cm}\\
+\notag b_\textrm{f} &= b_\textrm{h} = \unit[(120.3 \pm 0.1)]{cm}% \hspace{3cm} \textrm{(fundamental wave)}\\
+%\notag b_\textrm{h} &= \unit[(120.3 \pm 2.4)]{cm} \hspace{3cm} \textrm{(harmonic wave)}
+\end{align}
+For the wavelengths, the ratio of wavelengths and the spectral resolution we get
+\begin{align*}
+\lambda_i &= \frac{\sin\alpha_i}{m_ig}\hspace{2cm}\Delta \lambda_i = \frac{\Delta\sin\alpha_i}{m_ig}\\
+\frac{\lambda_\textrm{f}}{\lambda_\textrm{h}} &= 2 \frac{\sin\alpha_\textrm{f}}{\sin\alpha_\textrm{h}}\hspace{2cm} \Delta\frac{\lambda_\textrm{f}}{\lambda_\textrm{h}} = 2\sqrt{\left(\frac{\Delta\sin\alpha_\textrm{f}}{\sin\alpha_\textrm{h}}\right)^2+\left(\frac{\sin\alpha_\textrm{f}\Delta\sin\alpha_\textrm{h}}{\sin^2\alpha_\textrm{h}}\right)^2}\\
+\frac{\lambda}{\Delta \lambda}&=\frac{\sin\alpha}{\Delta\sin\alpha}
+\end{align*}
+where
+\begin{align*}
+\sin\alpha_i = \frac{b_i}{a}\hspace{2cm}\Delta \sin\alpha_i=\sqrt{\left(\frac{\Delta b_i}{a}\right)^2+\left(\frac{b_i\Delta a}{a^2}\right)^2}
+\end{align*}
+and $i \in \{h,f\}$. Plugging in our values we get:
+\begin{align}
+\lambda_\textrm{f}&=\unit[(1037 \pm 1)]{nm} \\
+ \lambda_\textrm{h}&=\unit[(518.4 \pm 0.5)]{nm}\\
+\frac{\lambda_\textrm{f}}{\lambda_\textrm{h}} &= \unit[(2.000 \pm 0.003)]{}\\
+\frac{\lambda}{\Delta \lambda} &\approx \unit[1022]{}
+\end{align}
+Our experimental resolution is therefore clearly smaller than the theoretical one. That is caused at most by the relatively large size of the spots on the wall and therefore a big error on the value of $b$.
+\subsubsection{Analysis with \textsc{Michelson} interferometer}\label{subsubsec:ana_michelson}
+a
 \section{Abstract}
 
 \begin{appendix}
