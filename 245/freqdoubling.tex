@@ -326,7 +326,71 @@ and $i \in \{h,f\}$. Plugging in our values we get:
 \end{align}
 Our experimental resolution is therefore clearly smaller than the theoretical one. That is caused at most by the relatively large size of the spots on the wall and therefore a big error on the value of $b$.
 \subsubsection{Analysis with \textsc{Michelson} interferometer}\label{subsubsec:ana_michelson}
-a
+Now we want to analyze the beams using a \textsc{Michelson} interferometer. Therefore we set up the experiment as shown in figure \ref{fig:setup_michelson}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{graphics/setup_michelson}
+  \caption{Setup of the experiment for wavelength analysis with \textsc{Michelson} interferometer}
+  \label{fig:setup_michelson}
+\end{figure}
+The achromatic lens ($f=30mm$) is used to get a small beam diameter and the thin blue filter infront of the interferometer is used to avoid back-reflections of the fundamental wave into the laser. We align the whole setup carefully. After finishing this procedure interference patterns become clearly visible in both beams on a screen placed in front of the 3mm blue filter. When touching the table the inference pattern changes. This is caused by a tiny change of the optical path length in the interferometer.
+
+Now we connect the fast photodiodes to the oscilloscope. When changing the position of the movable mirror we should see sinusoidal signals on the oscilloscope which we observed only one singel time. Though we tried carefully to improve the adjustment of the setup we were not able to reproduce the sinusoidal signal. Therefore the rest of this analysis is done in the opposite direction. We start from the well known dispersion of air and calculate what we should have measured.
+
+From \cite{paper} we know:
+\begin{align}
+10^8(n(\lambda_\textrm{vac})-1)=\unit[8342.13]{} + \frac{\unit[2406030]{}}{\unit[130]{} - s^2} + \frac{\unit[15997]{}}{\unit[38.9]{}-s^2} \hspace{1.5cm} s=\frac{1}{\lambda_\textrm{vac}[\mu\textrm{m}]}
+\end{align}
+Plugging in the wavelengths of the two beams yields:
+\begin{align}
+n(\unit[987]{nm}) &\approx \unit[1.000274197]{}\\
+\notag n(\unit[493.5]{nm}) &\approx \unit[1.000279135]{}\\
+\notag\Delta n &\approx \unit[4.937\cdotp 10^{-6}]{}
+\end{align}
+Considering one single beam, the phase difference between the beam components propagating in the different arms of the \textsc{Michelson} interferometer when moving the movable mirror by a length $\Delta x$ is giben by:
+\begin{align}
+\Delta \phi = \frac{4\pi\Delta x}{\lambda}=\frac{4\pi n\Delta x}{\lambda_\textrm{vac}}
+\end{align}
+Considering the fact that the frequency doubled light has half of the wavelength in vacuum we get for the total phase shift between fundamental and harmonic wave:
+\begin{align}
+\Delta \Phi &= \Delta \phi_\textrm{harm} - 2\Delta \phi_{fun}\\
+\notag &= 8\pi\left(\frac{\Delta x \cdotp n\left(\frac{1}{2}\lambda_0\right)}{\lambda_0} - \frac{\Delta x\cdotp n(\lambda_0)}{\lambda_0}\right)\\
+\notag &= 8\pi\frac{\Delta x}{\lambda_0} \Delta n
+\end{align}
+with $\Delta n = n\left(\frac{1}{2}\lambda_0\right)-n(\lambda_0)$ and $\lambda_0$ being the wavelength of the fundamental wave in vacuum.
+
+The signals of the fast photodiodes are supposed to be sinusoidal, where the frequency of the sine curve is proportional to the frequency of the beam hitting the corresponding photodiode. If one now adds the signals of the two photodiodes, one gets a signal which is proportional to the addition of two sine curves with one having twice the frequency as the other one. As illustrated in figure \ref{fig:ana_sines} the signal then looks like an M- or W-shape for specific phase differences, namely $\Delta \Phi = n\cdotp 2\pi$ for the W- and $\Delta \Phi = (2n+1)\cdotp\pi$ for the M-shape, where $n$ is an integer.
+\begin{figure}[H]
+\begin{floatrow}
+\resizebox{0.33\textwidth}{!}{
+	\input{graphics/ana_sines_0}
+}
+\resizebox{0.33\textwidth}{!}{
+	\input{graphics/ana_sines_1}
+}
+\resizebox{0.33\textwidth}{!}{
+	\input{graphics/ana_sines_pi}
+}
+\end{floatrow}
+	\caption{Illustration of the addition of two cosine curves (which are sine curves with constant phase shift) with one having twice the frequency of the other one for relative phase shifts of 0 (left), 1 (middle) and $\pi$ (right)}
+	\label{fig:ana_sines}
+\end{figure}
+With this in mind we can calculate the distance $\Delta x$ one would have to move the movable mirror in order to get from an M- to a W-shape on the oscilloscope:
+\begin{align}
+\Delta x (M\leftrightarrow W) = \frac{\lambda_0}{8\Delta n} \approx \unit[2.5]{cm}
+\end{align}
+and the following is valid: $\Delta x (M\leftrightarrow M) = \Delta x (W\leftrightarrow W) = 2\Delta x (M\leftrightarrow W)$.
+
+Using the value of $\Delta n$ we can determine the (theoretical) deviation of the 1/2 ratio of fundamental and harmonic wavelength:
+\begin{align}
+\frac{\lambda_\textrm{harm}}{\lambda_\textrm{fun}} - \frac{\lambda_{0,\textrm{harm}}}{\lambda_{0,\textrm{fun}}} = \frac{\lambda_{0,\textrm{harm}}}{\lambda_{0,\textrm{fun}}}\left(\frac{n(\lambda_0)}{n\left(\frac{1}{2}\lambda_0\right)}-1\right)\approx \unit[2.5\cdotp 10^{-6}]{}
+\end{align}
+and the (theoretical) resolution:
+\begin{align}
+\Delta \lambda &= \lambda_\textrm{fun}-2\lambda_\textrm{harm}=\lambda_{0,\textrm{fun}}\left(\frac{1}{n\left(\lambda_0\right)}-\frac{1}{n\left(\frac{1}{2}\lambda_0\right)}\right)\approx \unit[4.87\cdotp 10^{-12}]{m}\\
+\notag\frac{\lambda}{\Delta \lambda} &\approx 203\cdotp 10^{3}
+\end{align}
+The numerical values in this section are only given approximately and without an error, because we don't know the error of the formula for the refraction index, which would, with the assumption that the wavelength of the laser is exact (which we used in this whole report), be the only error source.
 \section{Abstract}
 
 \begin{appendix}

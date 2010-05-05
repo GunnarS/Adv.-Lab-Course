@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1030.6746"
-   height="520.66998"
+   width="1026.1686"
+   height="436.88474"
    id="svg1306"
    sodipodi:version="0.32"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="setup_grating.svg"
+   sodipodi:docname="setup_michelson.svg"
    version="1.1">
   <defs
      id="defs1308">
@@ -60,6 +60,20 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2876"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2876-0"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      inkscape:document-units="mm"
@@ -68,9 +82,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.53"
-     inkscape:cx="761.0597"
-     inkscape:cy="186.85976"
+     inkscape:zoom="1.01"
+     inkscape:cx="459.25272"
+     inkscape:cy="170.60251"
      inkscape:current-layer="layer1"
      id="namedview1310"
      inkscape:window-width="1440"
@@ -97,7 +111,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-6.2483656,357.61971)">
+     transform="translate(-6.2483656,356.61615)">
     <rect
        style="fill:none;stroke:#000000;stroke-width:1.2385031px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="rect1315"
@@ -295,9 +309,9 @@
        height="38.510815"
        width="15.689592"
        id="rect3713"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,1;stroke-dashoffset:0" />
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1,1;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
        d="m 902.0979,366.82383 0,39.16084"
        id="path3715"
        transform="translate(6.2483656,-357.61971)" />
@@ -356,5 +370,58 @@
        d="m 719.60784,285.37587 0,62.0915"
        id="path3753"
        transform="translate(6.2483656,-357.61971)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       id="rect5070"
+       width="85.57959"
+       height="42.789795"
+       x="-75.702385"
+       y="703.99554"
+       transform="matrix(0,-1,1,0,0,0)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5798"
+       transform="matrix(0,-1.238503,1.238503,0,372.03952,1059.8676)"><flowRegion
+         id="flowRegion5800"><rect
+           id="rect5802"
+           width="111.71039"
+           height="52.976063"
+           x="790.0343"
+           y="308.76944" /></flowRegion><flowPara
+         id="flowPara5804"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans">photodiode 2</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       id="rect5070-9"
+       width="85.57959"
+       height="42.789795"
+       x="539.3479"
+       y="-94.104492" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5798-4"
+       transform="matrix(1.238503,0,0,1.238503,-441.54939,-428.02132)"><flowRegion
+         id="flowRegion5800-8"><rect
+           id="rect5802-8"
+           width="111.71039"
+           height="52.976063"
+           x="790.0343"
+           y="308.76944" /></flowRegion><flowPara
+         id="flowPara5804-2"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans">photodiode 1</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="666.64441"
+       y="-122.70171"
+       id="text3865"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3867"
+         x="666.64441"
+         y="-122.70171" /><tspan
+         sodipodi:role="line"
+         x="666.64441"
+         y="-102.44594"
+         id="tspan3869"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Tahoma;-inkscape-font-specification:Tahoma">blue filter 3mm</tspan></text>
   </g>
 </svg>
