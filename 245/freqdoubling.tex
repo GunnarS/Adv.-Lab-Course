@@ -115,7 +115,7 @@ where the error is calculated via
 \ffigbox[0.5\textwidth]{}
 {
 \resizebox{0.5\textwidth}{!}{
-% \input{graphics/ana_laser_watt}
+ \input{graphics/ana_laser_watt}
 }
 \caption{Attenuated laser output power versus input current and corresponding linear fit}
 \label{fig:ana_laser_watt}
@@ -123,7 +123,7 @@ where the error is calculated via
 \ffigbox[0.5\textwidth]{}
 {
 \resizebox{0.5\textwidth}{!}{
-% \input{graphics/ana_laser_woatt}
+ \input{graphics/ana_laser_woatt}
 }
 \caption{Real laser output power versus input current and corresponding linear fit}
 \label{fig:ana_laser_woatt}
@@ -155,7 +155,7 @@ with the error
 \Delta \eta = \frac{e\lambda}{hc}\Delta m
 \end{align}
 \subsection{Calibration of the variable attenuator}\label{subsec:var_att_calib}
-To realize a variable attenuator, we place a rotatable $\lambda /2$ plate and a polarization filter between the laser and the photodiode. The scale of the $\lambda /2$ plate faces towards the laser and the angle of the analyzer is set to 90?. The polarization filter is then used as an analyzer whose transmitted intensity is given by the Malus law:
+To realize a variable attenuator, we place a rotatable $\lambda /2$ plate and a polarization filter between the laser and the photodiode. The scale of the $\lambda /2$ plate faces towards the laser and the angle of the analyzer is set to $\unit[90]{^\circ}$. The polarization filter is then used as an analyzer whose transmitted intensity is given by the Malus law:
 \begin{align*}
 I(\alpha)=I_0\cdot\cos^2(\alpha)
 \end{align*}
@@ -165,11 +165,11 @@ I(\Phi)=I_0\cdot\cos^2(2\Phi)
 \end{align*}
 Our data is presented in table \ref{tab:ana_var_att} in the appendix. Figure \ref{fig:ana_var_att} shows the data with the corresponding fit. The graph shows only the attenuated power because these value's error is smaller since it does not depend on the error containing attenuation of the fixed attenuator. The fit parameters read:
 \begin{align*}
-P_\textrm{attenuated} = \unit[(117.9 \pm 0.6)]{\mu W}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{?}} \,\cdotp\, \Phi\right)\textrm{.}
+P_\textrm{attenuated} = \unit[(117.9 \pm 0.6)]{\mu W}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{^\circ}} \,\cdotp\, \Phi\right)\textrm{.}
 \end{align*}
 Therefore the transmitted power of the variable attenuator is:
 \begin{align}
-P = \unit[(124 \pm 4)]{mW}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{?}} \,\cdotp\, \Phi\right)\textrm{,}
+P = \unit[(124 \pm 4)]{mW}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{^\circ}} \,\cdotp\, \Phi\right)\textrm{,}
 \end{align}
 where the error of the amplitude is given by
 \begin{align}
@@ -178,7 +178,7 @@ where the error of the amplitude is given by
 The proportionality factor inside the cosine is nearly two and therefore in accordance with our expectation.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-    % \input{graphics/ana_var_att.tex}
+     \input{graphics/ana_var_att.tex}
 }
   \caption{Transmission of the variable attenuator}
   \label{fig:ana_var_att}
@@ -205,7 +205,7 @@ with the error
 \resizebox{0.35\textwidth}{!}{
   \begin{tabular}{lc}
     \toprule
-      $\Phi$ [$\unit[]{?}$] $\pm$ $\unit[1]{?}$ & $P$ [$\unit[]{\mu W}$]\\
+      $\Phi$ [$\unit[]{^\circ}$] $\pm$ $\unit[1]{^\circ}$ & $P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $0$ & $118 \pm 1$\\
 $45$ & $0.34 \pm 0.01$\\
@@ -227,7 +227,7 @@ In order to get frequency doubled light, we set up the experiment as shown in fi
   \caption{Setup to generate frequency doubled light}
   \label{fig:setup_2ndharmonic}
 \end{figure}
-We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal (NLC) and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to 36?C and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
+We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal (NLC) and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to $\unit[36]{^\circ C}$ and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
 
 In order to check our setup we calculate the beam waist and Rayleigh length of the laser beam in the crystal. Before the lens the collimated laser beam has the size $2\omega_0 = \unit[(3.5 \pm 0.5)]{mm}$. The lens used for focussing a refractive index of approximately $n = \unit[2.2]{}$ and the length of the crystal is given by $l=\unit[5]{mm}$.
 \begin{figure}[H]
@@ -272,10 +272,10 @@ f_\textrm{optimal} = \unit[(63 \pm 9)]{mm}
 \end{align}
 \subsection{Properties of second-harmonic generation}\label{subsec:ana_props_2ndharmonic}
 \subsubsection{Dependency on temperature}\label{subsubsec:ana_temp_dep}
-Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{?C}$ and then raised in steps of \unit[0.2]{?C}. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} in the appendix and plotted in figure \ref{fig:ana_temp_dep}.
+Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{^\circ C}$ and then raised in steps of $\unit[0.2]{^\circ C}$. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} in the appendix and plotted in figure \ref{fig:ana_temp_dep}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-    % \input{graphics/ana_temp_dep.tex}
+     \input{graphics/ana_temp_dep.tex}
 }
   \caption{Power of the second harmonic generation versus NLC temperature (semi-logarithmic scale) and corresponding fit}
   \label{fig:ana_temp_dep}
@@ -291,16 +291,16 @@ f(x) = a\left(\frac{\sin\left(b(x-c)\right)}{x-c}\right)^2+d
 to the plot. The fit results read:
 \begin{align}
 a &= \unit[(5.75 \pm 0.07)]{\mu W}\\
-\notag b &= \unit[(2.11 \pm 0.01)]{\frac{1}{?C}}\\
-\notag c &= \unit[(36.319 \pm 0.004)]{?C}\\
+\notag b &= \unit[(2.11 \pm 0.01)]{\frac{1}{^\circ C}}\\
+\notag c &= \unit[(36.319 \pm 0.004)]{^\circ C}\\
 \notag d &= \unit[(1.53 \pm 0.04)]{\mu W}
 \end{align}
-As one can see in figure \ref{fig:ana_temp_dep} does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model doesn't respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{?C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
+As one can see in figure \ref{fig:ana_temp_dep} does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model doesn't respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{^\circ C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
 \subsubsection{Dependency on fundamental wave power}\label{subsubsec:ana_power_dep}
 In order to determine the dependency of the power of the second harmonic on the power of the fundamental wave, we measure the second harmonic power with the photodiode for different rotation angles of the $\lambda / 2$ plate. With the calibration of the variable attenuator from section \ref{subsec:var_att_calib} we can calculate the fundamental wave power from the rotation angle $\Phi$. The data is presented in table \ref{tab:ana_power_dep} in the appendix. Figure \ref{fig:ana_power_dep} shows the plot of the harmonic versus the fundamental wave power.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-    % \input{graphics/ana_power_dep.tex}
+     \input{graphics/ana_power_dep.tex}
 }
   \caption{Power of the second harmonic generation versus fundamental wave power with corresponding fit}
   \label{fig:ana_power_dep}
@@ -318,7 +318,7 @@ with $\eta$ being the frequency doubling efficiency.
 To analyze the dependency of the harmonic power on the polarization of the fundamental wave we use again the setup displayed in figure \ref{fig:setup_2ndharmonic} but remove the analyzer. With this setup we are able to rotate the polarization axis of the fundamental wave by rotating the $\lambda / 2$ plate. We measure the power of the transmitted frequency doubled light for different rotation angles of the $\lambda / 2$ plate. The results are gathered in table XXX in the appendix and plotted in figure \ref{fig:ana_pol_dep}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
-    % \input{graphics/ana_pol_dep.tex}
+     \input{graphics/ana_pol_dep.tex}
 }
   \caption{Power of the second harmonic generation versus rotation angle of the $\lambda / 2$ plate with corresponding fit}
   \label{fig:ana_pol_dep}
@@ -341,7 +341,7 @@ f(x) = a\cdotp \cos^4(b\cdotp x)+c
 to our data. The fit is displayed in figure \ref{fig:ana_pol_dep} and the results are:
 \begin{align}
 a &= \unit[(23.5 \pm 0.2)]{\mu W}\\
-\notag b &= \unit[(2.011 \pm 0.002)]{\frac{1}{?}}\\
+\notag b &= \unit[(2.011 \pm 0.002)]{\frac{1}{^\circ}}\\
 \notag c &= \unit[(0.7 \pm 0.1)]{\mu W}
 \end{align}
 again the value of $b$ is in good agreement with the theoretical expectation. We would have expected the offset $c$ to be zero. The fact that it is nonzero is most likely caused by background. Therefore our background measurement seems to be too low.
@@ -434,13 +434,13 @@ The signals of the fast photodiodes are supposed to be sinusoidal, where the fre
 \begin{figure}[H]
 \begin{floatrow}
 \resizebox{0.33\textwidth}{!}{
-% \input{graphics/ana_sines_0}
+ \input{graphics/ana_sines_0}
 }
 \resizebox{0.33\textwidth}{!}{
-% \input{graphics/ana_sines_1}
+ \input{graphics/ana_sines_1}
 }
 \resizebox{0.33\textwidth}{!}{
-% \input{graphics/ana_sines_pi}
+ \input{graphics/ana_sines_pi}
 }
 \end{floatrow}
 \caption{Illustration of the addition of two cosine curves (which are sine curves with constant phase shift) with one having twice the frequency of the other one for relative phase shifts of 0 (left), 1 (middle) and $\pi$ (right)}
@@ -544,7 +544,7 @@ $100$ & $24.2$ & $0.0$ & $0.1$\\
 \resizebox{0.33\textwidth}{!}{
   \begin{tabular}{lcc}
     \toprule
-      $\Phi$ [$\unit[]{?}$] $\pm$ $\unit[1]{?}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+      $\Phi$ [$\unit[]{^\circ}$] $\pm$ $\unit[1]{^\circ}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
     \midrule[0.75pt]
 $0.0$ & $118.0 \pm 1.0$ \\
 $2.5$ & $115.0 \pm 1.0$ \\
@@ -583,7 +583,7 @@ $75.0$ & $90.0 \pm 1.0$ \\
 \resizebox{0.33\textwidth}{!}{
   \begin{tabular}{lcc}
     \toprule
-      $\Phi$ [$\unit[]{?}$] $\pm$ $\unit[1]{?}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+      $\Phi$ [$\unit[]{^\circ}$] $\pm$ $\unit[1]{^\circ}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
     \midrule[0.75pt]
 $77.5$ & $97.0 \pm 1.0$ \\
 $80.0$ & $105.0 \pm 1.0$ \\
@@ -621,7 +621,7 @@ $150.0$ & $31.0 \pm 1.0$ \\
 \resizebox{0.33\textwidth}{!}{
   \begin{tabular}{lcc}
     \toprule
-      $\Phi$ [$\unit[]{?}$] $\pm$ $\unit[1]{?}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
+      $\Phi$ [$\unit[]{^\circ}$] $\pm$ $\unit[1]{^\circ}$ & $P_\textrm{attenuated}$ [$\unit[]{mW}$]\\
     \midrule[0.75pt]
 $152.5$ & $40.0 \pm 1.0$ \\
 $155.0$ & $50.0 \pm 1.0$ \\
@@ -668,7 +668,7 @@ $225.0$ & $0.40 \pm 0.01$ \\
 \resizebox{0.5\textwidth}{!}{
   \begin{tabular}{lccc}
     \toprule
-      $T$ [$\unit[]{?C}$] & $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+      $T$ [$\unit[]{^\circ C}$] & $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $27.0 \pm 0.1$ & $1.87$ & $0.24$ & $0.01$ \\
 $27.2 \pm 0.1$ & $1.86$ & $0.24$ & $0.01$ \\
@@ -709,7 +709,7 @@ $33.4 \pm 0.1$ & $2.01$ & $0.22$ & $0.01$ \\
 \resizebox{0.5\textwidth}{!}{
   \begin{tabular}{lccc}
     \toprule
-      $T$ [$\unit[]{?C}$] & $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+      $T$ [$\unit[]{^\circ C}$] & $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $33.6 \pm 0.1$ & $1.95$ & $0.22$ & $0.01$ \\
 $33.8 \pm 0.1$ & $1.94$ & $0.22$ & $0.01$ \\
@@ -757,7 +757,7 @@ $40.0 \pm 0.1$ & $2.0$ & $0.30$ & $0.1$ \\
 \resizebox{0.8\textwidth}{!}{
   \begin{tabular}{lccccc}
     \toprule
-      $\Phi$ [$\unit[]{?}$] $\pm$ $\unit[1]{?}$ & $P_\textrm{fun}$ [$\unit[]{mW}$] & $P_\textrm{harm}$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+      $\Phi$ [$\unit[]{^\circ}$] $\pm$ $\unit[1]{^\circ}$ & $P_\textrm{fun}$ [$\unit[]{mW}$] & $P_\textrm{harm}$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $0.0$ & $112.6 \pm 0.4$ & $23.7$ & $0.01$ & $0.1$\\
 $2.5$ & $111.7 \pm 0.8$ & $23.0$ & $0.01$ & $0.1$\\
@@ -792,7 +792,7 @@ $45.0$ & $0.0 \pm 0.0$ & $0.09$ & $0.01$ & $0.01$\\
 \resizebox{0.5\textwidth}{!}{
   \begin{tabular}{lcccc}
     \toprule
-      $\Phi$ [$\unit[]{?}$]& $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+      $\Phi$ [$\unit[]{^\circ}$]& $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $0.0 \pm 0.1$ & $32.0$ & $0.2$ & $0.1$\\
 $2.5 \pm 0.1$ & $28.5$ & $0.2$ & $0.1$\\
@@ -839,7 +839,7 @@ $95.0 \pm 0.1$ & $22.3$ & $0.2$ & $0.1$\\
 \resizebox{0.5\textwidth}{!}{
   \begin{tabular}{lcccc}
     \toprule
-      $\Phi$ [$\unit[]{?}$]& $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
+      $\Phi$ [$\unit[]{^\circ}$]& $P$ [$\unit[]{\mu W}$] & $P_\textrm{bgr}$ [$\unit[]{\mu W}$] & $\Delta P$ [$\unit[]{\mu W}$]\\
     \midrule[0.75pt]
 $97.5 \pm 0.1$ & $20.6$ & $0.2$ & $0.1$\\
 $100.0 \pm 0.1$ & $18.2$ & $0.2$ & $0.1$\\
