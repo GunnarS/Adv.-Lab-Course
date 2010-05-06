@@ -4,6 +4,34 @@
     year={2005}
 }
 
+
+\bib{demtroed}{book}{
+    title={Laserspektroskopie},
+    author={W. Demtröder},
+    year={2000}
+}
+
+
+\bib{demtroed2}{book}{
+    title={Experimental Physik 2},
+    author={W. Demtröder},
+    year={1995}
+
+\bib{meschi}{book}{ 
+title={Optik, Licht und Laser},
+author={Dieter Meschede},
+publisher={Teubner B.G. GmbH},
+year={2005},
+month={12},
+edition={2. A.},
+isbn={9783519132486},
+url={http://amazon.de/o/ASIN/3519132486/},
+price={EUR 36,90},
+totalpages={568},
+timestamp={2008.12.08},
+}
+
+
 %\bib{paper}{article}{
 %    title={Vacancy formation in indium investigated by positron lifetime
 %spectroscopy},
