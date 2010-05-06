@@ -29,11 +29,11 @@ As the semiconductor crystal has a high refraction index (i.\ e.\ $n_{\mathrm{Ga
 Of course it is neccessary to adjust the power of the laser. For this the diode current has to be varied. But one has to consider that a threshold current $I_{\mathrm{thr}}$ exists, because the photons can be absorbed or scattered in the resonator which results in an energyloss. Only above this threshold the laser enters the linear working regime and is pumped efficently.
 
 \subsection{Gaussian Beams}
-Because laser beams have a finite beam size, it is neccessary to go beyond the model of plane waves and introduce so-called \textsc{gaussian} beams (see figure \ref{fig:gaussianbeams}). In this theoretical approach the beam has a \textsc{gaussian} intensity distribution perpendicular to the wave vector $\vec{k}$. Furthermore it is characterized by its beam radius $w(z)$ and the \textsc{Rayleigh}-length $z_0 = \pi w^2_0/\lambda$. For $|z| \leq z_0$ the beam is focussed and has its smallest radius $w_0$ which is called waist at $z=0$. For $z \ll z_0$ nearly plane waves propagate and for large $z$ one observes spherical wavefronts. Furthermore the angle of divergence can be derived to $\theta_{\mathrm{div}} = w_0/z_0 = \lambda/\pi w_0$.
+Because laser beams have a finite beam size, it is neccessary to go beyond the model of plane waves and introduce so-called \textsc{gauss}ian beams (see figure \ref{fig:gaussianbeams}). In this theoretical approach the beam has a \textsc{gauss}ian intensity distribution perpendicular to the wave vector $\vec{k}$. Furthermore it is characterized by its beam radius $w(z)$ and the \textsc{Rayleigh}-length $z_0 = \pi w^2_0/\lambda$. For $|z| \leq z_0$ the beam is focussed and has its smallest radius $w_0$ which is called waist at $z=0$. For $z \ll z_0$ nearly plane waves propagate and for large $z$ one observes spherical wavefronts. Furthermore the angle of divergence can be derived to $\theta_{\mathrm{div}} = w_0/z_0 = \lambda/\pi w_0$.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/gaussianbeams}
-	\caption{Sketch of a \textsc{gaussian} beam~\cite{meschi}}
+	\caption{Sketch of a \textsc{gauss}ian beam~\cite{meschi}}
 	\label{fig:gaussianbeams}
 \end{figure}
 
@@ -50,16 +50,16 @@ Due to this the polarisation $\vec{P}$ induced by the electromagnetic wave is no
 
 
 \subsection{Nonlinear Optics and Frequency Doubling}
-The electrons of a crystal being exposed to electromagnetic waves are displaced from their position of rest. If these shifts are small, the restoring forces will depend linearly on the displacementamplitude, so indeed the \textsc{Hooke} law will apply. As a result the polarisation $\vec{P}$ is proportional to the present electric field $\vec{E}$. 
+The electrons of a crystal being exposed to electromagnetic waves are displaced from their position of rest. If these shifts are small, the restoring forces will depend linearly on the displacement amplitude, so indeed the \textsc{Hooke} law will apply. As a result the polarisation $\vec{P}$ is proportional to the present electric field $\vec{E}$. 
 
-At high intensities of (coherent) light (i.\ e.\ laser light) though this approximation is not applicable anymore. Thereby higher orders of the \textsc{Taylor}-expansion of the polarisation also have to be considered. Assuming an isotropic medium $P_\mathrm{x} = \varepsilon_0 \left( \chi_1 E_\mathrm{x} + \chi_2 E^2_\mathrm{x} + \dots \right)$ holds for the x-component of the polarisation. Now one can insert the electric field of a monochromatic light wave and yields:
+At high intensities of (coherent) light (i.\ e.\ laser light) though, this approximation is not applicable anymore. Thereby higher orders of the \textsc{Taylor}-expansion of the polarisation also have to be considered. Assuming an isotropic medium, $P_\mathrm{x} = \varepsilon_0 \left( \chi_1 E_\mathrm{x} + \chi_2 E^2_\mathrm{x} + \dots \right)$ holds for the x-component of the polarisation. Now one can insert the electric field of a monochromatic light wave and get:
 \begin{align}
 P_\mathrm{x} &\approx \varepsilon_0 \left( \chi_1 E_0 \cos{\omega t} + \chi_2 E^2_0 \cos^2{\omega t} \right) \\
              &= \varepsilon_0 \left( \frac{1}{2} \chi_2 E^2_0 + \chi_1 E_0 \cos{\omega t} + \frac{1}{2} \chi_2 E^2_0 \cos{2 \omega t} \right) \ \ldotp
 \end{align}
 So indeed one gets an oscillation term at twice of the original frequency and a constant polarisation term in addition to the one for the linear approximation. With correct phase relation those second harmonic oscillations can add up to a macroscopic wave. But in general the phases do not match due to dispersion at different frequencies. To obtain phase matching do the following considerations.
 
-Assuming plane waves and constant intensity $I_\mathrm{f}$ of the fundamental wave within a crystal of length $L$ the output intensity of the second harmonic $I_\mathrm{sh}$ after the crystal is given by:
+Assuming plane waves and constant intensity $I_\mathrm{f}$ of the fundamental wave within a crystal of length $L$ the output intensity of the second harmonic $I_\mathrm{sh}$ behind the crystal is given by:
 \begin{align}
 I_{\mathrm{sh}}\propto \, L^2 I^2_{\mathrm{f}} \left( \frac{\sin{\Delta k \frac{L}{2}}}{\Delta k \frac{L}{2}} \right)^2 \ ,
 \end{align}
@@ -69,7 +69,7 @@ whereas $\Delta k = k(2\omega) - 2 k(\omega) = \frac{2\omega}{v_\mathrm{sh}} - 2
 \end{align}
 On account of that nonlinear crystals have to be used, because such a phase matching is not possible with normally dispersive media. Indeed there $n(2\omega) > n(\omega)$ always holds. In anisotropic crystals though the refractive index of the second harmonic can be lowered for example by using the second harmonic as the extraordinary beam.
 
-For this the angle between the incident wave and the optical axis is adjusted such that the above condition holds. This method is called \emph{angle tuning}. But there is a problem with this approach. Of course as written in section \ref{cha:bi} the extraordinary beam experiences a walk off for $\theta \neq 0, \pi/2$. This is problematic because the beams should overlap behind the crystal to obtain an interference pattern. Therefore one uses \emph{temperature tuning}. This furthermore also allows a high conversion efficiency into the second harmonic, which improves the intensity.
+For this the angle between the incident wave and the optical axis is adjusted such that the above condition holds. This method is called \emph{angle tuning}. But there is a problem with this approach. Of course as written in section \ref{cha:bi} the extraordinary beam experiences a walk off for $\theta \neq 0, \pi/2$. This is problematic because the beams should overlap behind the crystal to obtain an interference pattern. Therefore one uses \emph{temperature tuning} which is based on the effective temperature dependency of the refractive index. This furthermore also allows a high conversion efficiency into the second harmonic, which improves the intensity.
 
 
 \subsection{Coherence}
@@ -88,7 +88,7 @@ The \textsc{Michelson} interferometer is a very common configuration for optical
 	\caption{\textsc{Michelson} interferometer~\cite{demtroed2}}
 	\label{fig:michelson}
 \end{figure}
-As depicted above the incoming beam hits a beam splitter, so one reflects off, propagates to the top mirror and then reflects back, goes through the semi-transparent mirror again and reaches the detector. The other beam first passes the beam splitter and hits the mirror on the right. It is then reflected back and reflects off the beam splitter into the detector. So both beams travel indeed along different paths. As the right mirror can be displaced on an optical bank one can change the distance $s_2$ and therefore change the relative path difference of the two beams. This results in a phase difference $\Delta \phi = 2\pi (s_1-s_2)/\lambda$.
+As depicted above the incoming beam hits a beam splitter, so one reflects off, propagates to the top mirror and then reflects back, goes through the semi-transparent mirror again and reaches the detector. The other beam first passes the beam splitter and hits the mirror on the right. It is then reflected back and reflects off the beam splitter into the detector. So both beams travel indeed along different paths. By displacing the right mirror one can change the distance $s_2$ and therefore change the relative path difference of the two beams. This results in a phase difference $\Delta \phi = 2\pi (s_1-s_2)/\lambda$.
 
 
 \section{Experimentation and Analysis}
