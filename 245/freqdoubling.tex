@@ -10,7 +10,7 @@ The object of this experiment is the production of frequency doubled visible (bl
 
 \section{Theoretical Background}
 \subsection{Diode laser}
-A LASER (\emph{Light Amplification by Stimulated Emission of Radiation}) amplifies as the name implies light by means of a resonator via stimulated emission. Principle constituents of all types of lasers are therefore an active medium which is converted into inversion thru pumping and a resonator. Nevertheless there are several diversified types of lasers. The typical construction of a diode laser is shown in figure \ref{fig:laser}. Due to its inexpensive production and its high efficiency (about $\unit[50]{\%}$) diode lasers are widely-used. Furthermore it operates within a long range of wavelengths ($\unit[550]{nm}$ to $\unit[60]{\mu m}$).
+A LASER (\emph{Light Amplification by Stimulated Emission of Radiation}), as the name implies, amplifies light by means of a resonator via stimulated emission. The principle constituents of all types of lasers therefore are an active medium which is converted into inversion thru pumping and a resonator. Nevertheless there are several diversified types of lasers. The typical construction of a diode laser is shown in figure \ref{fig:laser}. Due to its inexpensive production and its high efficiency (about $\unit[50]{\%}$) diode lasers are widely-used. Furthermore diode lasers operate within a long range of wavelengths ($\unit[550]{nm}$ to $\unit[60]{\mu m}$).
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.5\textwidth]{graphics/laser}
@@ -26,11 +26,11 @@ The active medium is represented by a biased p-n-junction. If a voltage is appli
 \end{figure}
 As the semiconductor crystal has a high refraction index (i.\ e.\ $n_{\mathrm{GaAs}} = 3.6$) in comparison to air ($n_{\mathrm{air}} \approx 1$), the reflectivity of the boundary surface of the crystal amounts to $R=[(n_{\mathrm{GaAs}}-1)/(n_{\mathrm{GaAs}}+1)]^2 = 0.32$. This can be optimized by polishing those surfaces. Therefore the orthogonal boundary layers of the crystal can indeed be used as a resonator.
 
-Of course it is neccessary to adjust the power of the laser. For this the diode current has to be varied. But one has to consider that a threshold current $I_{\mathrm{thr}}$ exists, because the photons can be absorbed or scattered in the resonator which results in an energyloss. Only above this threshold the laser enters the linear working regime and is pumped efficently.
+Of course it is neccessary to adjust the power of the laser. For this the diode current has to be varied. But one has to consider that a threshold current $I_{\mathrm{thr}}$ exists, because the photons can be absorbed or scattered in the resonator which results in an energy loss. Only above this threshold the laser enters the linear working regime and is pumped efficently.
 
 \subsection{Gaussian Beams}
 \label{cha:gauss}
-Because laser beams have a finite beam size, it is neccessary to go beyond the model of plane waves and introduce so-called \textsc{gauss}ian beams (see figure \ref{fig:gaussianbeams}). In this theoretical approach the beam has a \textsc{gauss}ian intensity distribution perpendicular to the wave vector $\vec{k}$. Furthermore it is characterized by its beam radius $w(z)$ and the \textsc{Rayleigh}-length $z_0 = \pi w^2_0/\lambda$. For $|z| \leq z_0$ the beam is focussed and has its smallest radius $w_0$ which is called waist at $z=0$. For $z \ll z_0$ nearly plane waves propagate and for large $z$ one observes spherical wavefronts. Furthermore the angle of divergence can be derived to $\theta_{\mathrm{div}} = w_0/z_0 = \lambda/\pi w_0$.
+Because laser beams have a finite beam size, it is neccessary to go beyond the model of plane waves and introduce so-called \textsc{gauss}ian beams (see figure \ref{fig:gaussianbeams}). In this theoretical approach the beam has a \textsc{gauss}ian intensity distribution perpendicular to the wave vector $\vec{k}$. Furthermore it is characterized by its beam radius $w(z)$ and the \textsc{Rayleigh}-length $z_0 = \pi w^2_0/\lambda$. For $|z| \leq z_0$ the beam is focussed and has its smallest radius $w_0$ which is called waist at $z=0$. For $z \ll z_0$ nearly plane waves propagate and for large $z$ one observes spherical wavefronts. Furthermore the angle of divergence can be derived to $\tan{\theta_{\mathrm{div}}} = w_0/z_0 = \lambda/\pi w_0$.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.8\textwidth]{graphics/gaussianbeams}
@@ -40,17 +40,18 @@ Because laser beams have a finite beam size, it is neccessary to go beyond the m
 
 \subsection{Birefringence}
 \label{cha:bi}
-If light propagates through an optical medium, the refraction index $n$ of this medium has to be considered. In addition crystals like $\mathrm{KNbO}_3$ with anisotropic refraction indices because of anisotropic linkage forces exist. The symmetry axis (if there is one) of the crystal is called optical axis. 
+If light propagates through an optical medium, the refraction index $n$ of this medium has to be considered. In addition, because of anisotropic linkage forces, crystals like $\mathrm{KNbO}_3$ with anisotropic refraction indices exist. The symmetry axis (if there is one) of the crystal is called optical axis. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.7\textwidth]{graphics/brech}
 	\caption{Walk off of the extraordinary beam~\cite{meschi}}
 	\label{fig:brech}
 \end{figure}
-Due to this the polarisation $\vec{P}$ induced by the electromagnetic wave is not parallel to $\vec{E}$ anymore, which is explained thru the dielectric constant which turns into a three dimensional tensor. Therefore different polarized beams take different paths. The one which follows \textsc{Snellius'} law is called ordinary beam, while the other one experiencing a walk off (see also figure \ref{fig:brech}) is called extraordinary beam. Those beams have orthogonal polarisations. This effect of splitting an incoming beam is called birefringence and is used for example in $\lambda/2$-plates.
+Due to this, the polarisation $\vec{P}$ induced by the electromagnetic wave is not parallel to $\vec{E}$ anymore, which is explained by the dielectric constant which turns into a three dimensional tensor. Therefore different polarized beams take different paths. The one which follows \textsc{Snellius'} law is called the ordinary beam, while the other one experiencing a walk off (see also figure \ref{fig:brech}) is called the extraordinary beam. These beams have orthogonal polarisations. This effect of splitting an incoming beam is called birefringence and is used for example in $\lambda/2$-plates.
 
 
 \subsection{Nonlinear Optics and Frequency Doubling}
+\label{cha:freqdoub}
 The electrons of a crystal being exposed to electromagnetic waves are displaced from their position of rest. If these shifts are small, the restoring forces will depend linearly on the displacement amplitude, so indeed the \textsc{Hooke} law will apply. As a result the polarisation $\vec{P}$ is proportional to the present electric field $\vec{E}$. 
 
 At high intensities of (coherent) light (i.\ e.\ laser light) though, this approximation is not applicable anymore. Thereby higher orders of the \textsc{Taylor}-expansion of the polarisation also have to be considered. Assuming an isotropic medium, $P_\mathrm{x} = \varepsilon_0 \left( \chi_1 E_\mathrm{x} + \chi_2 E^2_\mathrm{x} + \dots \right)$ holds for the x-component of the polarisation. Now one can insert the electric field of a monochromatic light wave and get:
@@ -58,7 +59,7 @@ At high intensities of (coherent) light (i.\ e.\ laser light) though, this appro
 P_\mathrm{x} &\approx \varepsilon_0 \left( \chi_1 E_0 \cos{\omega t} + \chi_2 E^2_0 \cos^2{\omega t} \right) \\
              &= \varepsilon_0 \left( \frac{1}{2} \chi_2 E^2_0 + \chi_1 E_0 \cos{\omega t} + \frac{1}{2} \chi_2 E^2_0 \cos{2 \omega t} \right) \ \ldotp
 \end{align}
-So indeed one gets an oscillation term at twice of the original frequency and a constant polarisation term in addition to the one for the linear approximation. With correct phase relation those second harmonic oscillations can add up to a macroscopic wave. But in general the phases do not match due to dispersion at different frequencies. To obtain phase matching do the following considerations.
+So indeed one gets an oscillation term at twice the original frequency and a constant polarisation term in addition to the one for the linear approximation. With the correct phase relation, these second harmonic oscillations can add up to a macroscopic wave. But in general the phases do not match due to dispersion at different frequencies. To obtain phase matching one should consider the following:
 
 Assuming plane waves and constant intensity $I_\mathrm{f}$ of the fundamental wave within a crystal of length $L$ the output intensity of the second harmonic $I_\mathrm{sh}$ behind the crystal is given by:
 \begin{align}
@@ -68,17 +69,17 @@ whereas $\Delta k = k(2\omega) - 2 k(\omega) = \frac{2\omega}{v_\mathrm{sh}} - 2
 \begin{align}
 \Delta k = 0 \hspace{1cm} \Leftrightarrow \hspace{1cm} n(2\omega) = n(\omega) \ \ldotp
 \end{align}
-On account of that nonlinear crystals have to be used, because such a phase matching is not possible with normally dispersive media. Indeed there $n(2\omega) > n(\omega)$ always holds. In anisotropic crystals though the refractive index of the second harmonic can be lowered for example by using the second harmonic as the extraordinary beam.
+On account of this nonlinear crystals have to be used, because such a phase matching is not possible with normally dispersive media. Indeed, in that case, $n(2\omega) > n(\omega)$ always holds. In anisotropic crystals, however, the refractive index of the second harmonic can be lowered for example by using the second harmonic as the extraordinary beam.
 
-For this the angle between the incident wave and the optical axis is adjusted such that the above condition holds. This method is called \emph{angle tuning}. But there is a problem with this approach. Of course as written in section \ref{cha:bi} the extraordinary beam experiences a walk off for $\theta \neq 0, \pi/2$. This is problematic because the beams should overlap behind the crystal to obtain an interference pattern. Therefore one uses \emph{temperature tuning} which is based on the effective temperature dependency of the refractive index. This furthermore also allows a high conversion efficiency into the second harmonic, which improves the intensity.
+For this the angle between the incident wave and the optical axis is adjusted such that the above condition holds. This method is called \emph{angle tuning}. But there is a problem with this approach. Of course as written in section \ref{cha:bi} the extraordinary beam experiences a walk off for $\theta \neq 0, \pi/2$. This is problematic because the beams should overlap behind the crystal to obtain an interference pattern. Therefore one uses \emph{temperature tuning} which is based on the effective temperature dependency of the refractive index. This furthermore allows a high conversion efficiency into the second harmonic, which improves the intensity.
 
 \subsection{Coherence}
 Coherence is a measure of the phase correlation of wavefronts. Two waves are called coherent, if roughly speaking their phase difference is constant within a relevant range. Indeed coherence is neccessary for interference. One distinguishes between time coherence and spatial coherence, but for means of brevity we will not discuss this further.
 
 \subsection{Optical Grating}
-A grating is used to create an interference pattern on a screen via illuminating it with coherent light. The maxima obtain the relation $\sin{\alpha} = n \lambda/g$, whereas $\alpha$ is the angle of diffraction of the maximum of $n^{\mathrm{th}}$ order, $\lambda$ is the wavelength of the light and $g$ the grating constant.
+A grating is used to create an interference pattern on a screen via illuminating it with coherent light. The maxima are described by the relation $\sin{\alpha} = n \lambda/g$, whereas $\alpha$ is the angle of diffraction of the maximum of $n^{\mathrm{th}}$ order, $\lambda$ is the wavelength of the light and $g$ the grating constant.
 
-The spectral resolution of such a grating amounts to $\lambda/\Delta\lambda = N n$, where $N$ is the number of illuminated slits, so indeed one can improve the resolution by illuminating the grating properly.
+The spectral resolution of such a grating amounts to $\lambda/\Delta\lambda = N n$, where $N$ is the number of illuminated "slits", so indeed one can improve the resolution by illuminating the grating properly.
 
 \subsection{Michelson Interferometer}
 The \textsc{Michelson} interferometer is a very common configuration for optical interferometry and was invented by Albert Abraham Michelson. 
@@ -88,11 +89,12 @@ The \textsc{Michelson} interferometer is a very common configuration for optical
 	\caption{\textsc{Michelson} interferometer~\cite{demtroed2}}
 	\label{fig:michelson}
 \end{figure}
-As depicted above the incoming beam hits a beam splitter, so one reflects off, propagates to the top mirror and then reflects back, goes through the semi-transparent mirror again and reaches the detector. The other beam first passes the beam splitter and hits the mirror on the right. It is then reflected back and reflects off the beam splitter into the detector. So both beams indeed travel along different paths. By displacing the right mirror one can change the distance $s_2$ and therefore change the relative path difference of the two beams. This results in a phase difference $\Delta \phi = 2\pi (s_1-s_2)/\lambda$.
+As depicted above the incoming beam hits a beam splitter, so one beam is reflected off, propagates to the top mirror and then is reflected back, goes through the semi-transparent mirror again and reaches the detector. The other beam first passes the beam splitter and hits the mirror on the right. It is then reflected back and reflected off the beam splitter into the detector. So both beams indeed travel along different paths. By displacing the right mirror one can change the distance $s_2$ and therefore change the relative path difference of the two beams. This results in a phase difference $\Delta \phi = 2\pi (s_1-s_2)/\lambda$.
 
 \section{Experimentation and Analysis}
-\subsection{Diode Laser and power measurements}\label{ana_laserpower}
-To get familiar with the laser we first examine the laser power depencence on the input current. Therefore we put a gauged photodiode in front of the laser and record the laser power for different values of the input current. Do avoid the photodiode to leave its 'linear range' we put an attenuator in front of it. The measured values are displayed in table \ref{tab:ana_laserpower_att} in the appendix. In order to gauge the attenuator we also recorded some values in the range between threshold current and an output of $\unit[50]{\mu W}$ without using the attenuator. These values are displayed in table \ref{tab:ana_laserpower_woatt} in the appendix.
+\subsection{Diode Laser and Power Measurements}
+\label{ana_laserpower}
+To get familiar with the laser we first examine the laser power depencence on the input current. Therefore we put a gauged photodiode in front of the laser and record the laser power for different values of the input current. To avoid the photodiode to leave its 'linear range' we put an attenuator in front of it. The measured values are displayed in table \ref{tab:ana_laserpower_att} in the appendix. In order to gauge the attenuator we also recorded some values in the range between threshold current and an output of $\unit[50]{\mu W}$ without using the attenuator. These values are displayed in table \ref{tab:ana_laserpower_woatt} in the appendix.
 
 Figure \ref{fig:ana_laser_watt} and \ref{fig:ana_laser_woatt} show plots of laser power with and without the attenuator as well as linear fits to the data taken above the threshold current. The fit results read:
 \begin{align}
@@ -153,16 +155,18 @@ with the error
 \begin{align}
 \Delta \eta = \frac{e\lambda}{hc}\Delta m
 \end{align}
-\subsection{Calibration of the variable attenuator}\label{subsec:var_att_calib}
-To realize a variable attenuator, we place a rotatable $\lambda /2$ plate and a polarization filter between the laser and the photodiode. The scale of the $\lambda /2$ plate faces towards the laser and the angle of the analyzer is set to $\unit[90]{^\circ}$. The polarization filter is then used as an analyzer whose transmitted intensity is given by the Malus law:
+
+\subsection{Calibration of the Variable Attenuator}
+\label{subsec:var_att_calib}
+To construct a variable attenuator, we place a rotatable $\lambda /2$ plate and a polarization filter between the laser and the photodiode. The scale of the $\lambda /2$ plate faces towards the laser and the angle of the analyzer is set to $\unit[90]{^\circ}$. The polarization filter is then used as an analyzer whose transmitted intensity is given by the \textsc{Malus} law:
 \begin{align*}
 I(\alpha)=I_0\cdot\cos^2(\alpha)
 \end{align*}
-where $I_0$ is the intensity of the laser and $\alpha$ is given by the angle between the polarization axis of the beam and the polarizer. Because the polarizer is aligned colinear to the polarization axis of the beam and a $\lambda /2$ plate rotates the polarization axis of the beam by $2\Phi$, with $\Phi$ being the angle between the optical axis of the $\lambda /2$ plate and the beam polarization axis, we expect the following intensity behind the polarizer:
+where $I_0$ is the intensity of the laser and $\alpha$ is given by the angle between the polarization axis of the beam and the polarizer. Because the polarizer is aligned collinearly to the polarization axis of the beam and a $\lambda /2$ plate rotates the polarization axis of the beam by $2\Phi$, with $\Phi$ being the angle between the optical axis of the $\lambda /2$ plate and the beam polarization axis, we expect the following intensity behind the polarizer:
 \begin{align*}
 I(\Phi)=I_0\cdot\cos^2(2\Phi)
 \end{align*}
-Our data is presented in table \ref{tab:ana_var_att} in the appendix. Figure \ref{fig:ana_var_att} shows the data with the corresponding fit. The graph shows only the attenuated power because these value's error is smaller since it does not depend on the error containing attenuation of the fixed attenuator. The fit parameters read:
+Our data is presented in table \ref{tab:ana_var_att} in the appendix. Figure \ref{fig:ana_var_att} shows the data with the corresponding fit. The graph shows only the attenuated power because the error corresponding to these values is smaller since it does not depend on the error containing attenuation of the fixed attenuator. The fit parameters read:
 \begin{align*}
 P_\textrm{attenuated} = \unit[(117.9 \pm 0.6)]{\mu W}\,\cdotp\,\cos^2\left(\unit[(2.0029 \pm 0.0009)]{\frac{1}{^\circ}} \,\cdotp\, \Phi\right)\textrm{.}
 \end{align*}
@@ -218,7 +222,9 @@ $225$ & $0.40 \pm 0.01$\\
 \caption{Minimal and maximal transmitted power of the $\lambda / 2$ plate (attenuated)}
   \label{tab:ana_extinction}
 \end{table}
-\subsection{Optimization of second harmonic power}\label{subsec:ana_2nd_harmonic}
+
+\subsection{Optimisation of Second Harmonic Power}
+\label{subsec:ana_2nd_harmonic}
 In order to get frequency doubled light, we set up the experiment as shown in figure \ref{fig:setup_2ndharmonic}.
 \begin{figure}[H]
   \centering
@@ -228,14 +234,14 @@ In order to get frequency doubled light, we set up the experiment as shown in fi
 \end{figure}
 We use a plano-convex lens with focal length $f = \unit[75]{mm}$ to focus the laser beam into a heatable non-linear potassium niobate crystal (NLC) and an achromatic lens (focal length $f=\unit[30]{mm}$) to collimate the light transmitted by this crystal. Behind the lens a BG40 glass filter is placed in order to filter out the infrared fundamental wave. The photodiode is used to measure the second harmonic wave's power. We increase the temperature of the crystal up to $\unit[36]{^\circ C}$ and optimize our alignment until the frequency doubled light has a power of $P_\textrm{harmonic} = \unit[(22.0 \pm 0.1)]{mW}$.
 
-In order to check our setup we calculate the beam waist and Rayleigh length of the laser beam in the crystal. Before the lens the collimated laser beam has the size $2\omega_0 = \unit[(3.5 \pm 0.5)]{mm}$. The lens used for focussing a refractive index of approximately $n = \unit[2.2]{}$ and the length of the crystal is given by $l=\unit[5]{mm}$.
+In order to check our setup we calculate the beam waist and \textsc{Rayleigh} length of the laser beam in the crystal. Before the lens the collimated laser beam has the size $2\omega_0 = \unit[(3.5 \pm 0.5)]{mm}$. The lens used for focussing has a refractive index of approximately $n = \unit[2.2]{}$ and the length of the crystal is given by $l=\unit[5]{mm}$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.0\textwidth]{graphics/ana_gauss}
   \caption{Illustration of the gauss beam}
   \label{fig:ana_gauss}
 \end{figure}
-Because we assume that the radius of the beam waist in the crystal is the same as if the beam would propagate in air the following equation holds for the beam (see section XXX):
+Because we assume that the radius of the beam waist in the crystal is the same as if the beam would propagate in air the following equation holds for the beam (see section \ref{cha:gauss}):
 \begin{align*}
 \theta_\textrm{div} = \arctan\left(\frac{\lambda}{\pi\omega_{0,\textrm{f}}}\right)
 \end{align*}
@@ -247,7 +253,7 @@ and therefore
 \begin{align}
 \omega_{0,\textrm{f}} = \frac{\lambda f}{\pi\omega_0} \hspace{2cm} \Delta \omega_{0,\textrm{f}} = \frac{\lambda f}{\pi\omega_0^2}\Delta \omega_0
 \end{align}
-According to section XXX the length of the rayleigh zone (\textbf{REMARK: IN THIS SECTION 'RAYLEIGH ZONE' SHOULD BE EXPLAINED}) is given by:
+According to section \ref{cha:gauss} the length of the \textsc{Rayleigh} zone is given by:
 \begin{align}
 z_0 = \frac{\pi n\omega_{0,\textrm{f}}^2}{\lambda} \hspace{2cm} \Delta z_0 = \frac{2\pi n\omega_{0,\textrm{f}}}{\lambda}\Delta \omega_{0,\textrm{f}}
 \end{align}
@@ -261,7 +267,7 @@ plugging in our values yields:
 \notag z_0 &= \unit[(1.2 \pm 0.4)]{mm}\\
 \notag \zeta &= \unit[(2.1 \pm 0.7)]{}
 \end{align}
-The Boyd-Kleinman condition for the optimal efficiency of second-harmonic generation is $\zeta = \unit[2.84]{}$. The focus of our achromat is therefore not optimal but sufficient for our purposes. The optimal focus length would be given by:
+The \textsc{Boyd-Kleinman} condition for the optimal efficiency of second-harmonic generation is $\zeta = \unit[2.84]{}$. The focus of our achromat is therefore not optimal but sufficient for our purposes. The optimal focus length would be given by:
 \begin{align}
 f_\textrm{optimal} = \sqrt{\frac{\pi l \omega^2_0}{2n\lambda\zeta}} \hspace{1.5cm} \Delta f_\textrm{optimal} = \sqrt{\frac{2\pi l}{n\lambda\zeta}}\Delta\omega_0
 \end{align}
@@ -269,8 +275,11 @@ which in our case yields:
 \begin{align}
 f_\textrm{optimal} = \unit[(63 \pm 9)]{mm}
 \end{align}
-\subsection{Properties of second-harmonic generation}\label{subsec:ana_props_2ndharmonic}
-\subsubsection{Dependency on temperature}\label{subsubsec:ana_temp_dep}
+
+\subsection{Properties of Second Harmonic Generation}
+\label{subsec:ana_props_2ndharmonic}
+\subsubsection{Dependency on Temperature}
+\label{subsubsec:ana_temp_dep}
 Now we want to examine the dependency of the second harmonic's power on the temperature of the NLC. Therefore we use the same setup as above. The temperature of the NLC is lowered to $\unit[27]{^\circ C}$ and then raised in steps of $\unit[0.2]{^\circ C}$. For each temperature of the NLC we measure the power of the second harmonic. The laser input current is set constantly to $I=\unit[(280.0 \pm 0.5)]{mA}$. The recorded data is shown in table \ref{tab:ana_temp_dep} in the appendix and plotted in figure \ref{fig:ana_temp_dep}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
@@ -279,7 +288,7 @@ Now we want to examine the dependency of the second harmonic's power on the temp
   \caption{Power of the second harmonic generation versus NLC temperature (semi-logarithmic scale) and corresponding fit}
   \label{fig:ana_temp_dep}
 \end{figure}
-Due to the results of section XXX we expect the following dependency of the second harmonic power on the NLC's temperature:
+Due to the results of section \ref{cha:freqdoub} we expect the following dependency of the second harmonic power on the NLC's temperature:
 \begin{align}
 P_{sh} \propto \left( \frac{\sin\left(\textrm{const.} \cdotp \Delta n\right)}{\textrm{const.}\cdotp \Delta n}\right)^2 \propto \textrm{sinc}^2\left(\textrm{const.}\cdotp T\right)
 \end{align}
@@ -294,8 +303,10 @@ a &= \unit[(5.75 \pm 0.07)]{\mu W}\\
 \notag c &= \unit[(36.319 \pm 0.004)]{^\circ C}\\
 \notag d &= \unit[(1.53 \pm 0.04)]{\mu W}
 \end{align}
-As one can see in figure \ref{fig:ana_temp_dep} does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model doesn't respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{^\circ C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
-\subsubsection{Dependency on fundamental wave power}\label{subsubsec:ana_power_dep}
+As one can see in figure \ref{fig:ana_temp_dep} this does not describe the data very well. The fitted function and the data conform well only in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model does not respect. The maximum power of the second harmonic generation is achieved at the temperature $T=\unit[(36.4 \pm 0.1)]{^\circ C}$, so we set the temperature of the NLC to this value for the subsequent measurements.
+
+\subsubsection{Dependency on Fundamental Wave Power}
+\label{subsubsec:ana_power_dep}
 In order to determine the dependency of the power of the second harmonic on the power of the fundamental wave, we measure the second harmonic power with the photodiode for different rotation angles of the $\lambda / 2$ plate. With the calibration of the variable attenuator from section \ref{subsec:var_att_calib} we can calculate the fundamental wave power from the rotation angle $\Phi$. The data is presented in table \ref{tab:ana_power_dep} in the appendix. Figure \ref{fig:ana_power_dep} shows the plot of the harmonic versus the fundamental wave power.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
@@ -304,7 +315,7 @@ In order to determine the dependency of the power of the second harmonic on the 
   \caption{Power of the second harmonic generation versus fundamental wave power with corresponding fit}
   \label{fig:ana_power_dep}
 \end{figure}
-Because of the what we know from section XXX we expect a quadratic relation between the two values and therefore fit a function of the form
+Because of what we know from section \ref{cha:freqdoub} we expect a quadratic relation between the two values and therefore fit a function of the form
 \begin{align}
 P_\textrm{harm} = a\cdotp P^2_\textrm{fun}
 \end{align}
@@ -313,8 +324,10 @@ to the data. The fit result is given by
 a = \eta = \unit[(1.86 \pm 0.02)\cdotp 10^{-3}]{\frac{1}{W}}
 \end{align}
 with $\eta$ being the frequency doubling efficiency.
-\subsubsection{Dependency on polarization of fundamental wave}\label{subsubsec:ana_pol_dep}
-To analyze the dependency of the harmonic power on the polarization of the fundamental wave we use again the setup displayed in figure \ref{fig:setup_2ndharmonic} but remove the analyzer. With this setup we are able to rotate the polarization axis of the fundamental wave by rotating the $\lambda / 2$ plate. We measure the power of the transmitted frequency doubled light for different rotation angles of the $\lambda / 2$ plate. The results are gathered in table XXX in the appendix and plotted in figure \ref{fig:ana_pol_dep}.
+
+\subsubsection{Dependency on Polarization of Fundamental Wave}
+\label{subsubsec:ana_pol_dep}
+To analyze the dependency of the harmonic power on the polarization of the fundamental wave we use again the setup displayed in figure \ref{fig:setup_2ndharmonic} but remove the analyzer. With this setup we are able to rotate the polarization axis of the fundamental wave by rotating the $\lambda / 2$ plate. We measure the power of the transmitted frequency doubled light for different rotation angles of the $\lambda / 2$ plate. The results are gathered in table \ref{tab:ana_pol_dep} in the appendix and plotted in figure \ref{fig:ana_pol_dep}.
 \begin{figure}[H]
   \resizebox{0.8\textwidth}{!}{
      \input{graphics/ana_pol_dep.tex}
@@ -344,8 +357,11 @@ a &= \unit[(23.5 \pm 0.2)]{\mu W}\\
 \notag c &= \unit[(0.7 \pm 0.1)]{\mu W}
 \end{align}
 again the value of $b$ is in good agreement with the theoretical expectation. We would have expected the offset $c$ to be zero. The fact that it is nonzero is most likely caused by background. Therefore our background measurement seems to be too low.
-\subsection{Wavelength analysis}\label{subsec:ana_wavelengths}
-\subsubsection{Analysis with diffraction grating}\label{subsubsec:ana_grating}
+
+\subsection{Wavelength Analysis}
+\label{subsec:ana_wavelengths}
+\subsubsection{Analysis with Diffraction Grating}
+\label{subsubsec:ana_grating}
 In order to determine the wavelength of the optical frequency doubled light we set up the experiment as displayed in figure \ref{fig:setup_grating}.
 \begin{figure}[H]
   \centering
@@ -357,11 +373,11 @@ For diffraction gratings the following equations hold:
 \begin{align*}
 \sin \alpha = \frac{m\lambda}{g} \hspace{2cm} \frac{\lambda}{\Delta \lambda} = mN = mg L
 \end{align*}
-where $m$ is the order of the interference, $g$ is the grating constant, $N$ the number of "slits" illuminated and $L$ is the width of the incoming beam at the grating. In our case $g = \unit[600]{Lines/mm}$ and the width of the beam may be approximated via
+where $m$ is the order of the interference, $g$ is the grating constant, $N$ the number of "slits" illuminated and $L$ is the width of the incoming beam at the grating. In our case $g = \unit[600]{lines/mm}$ and the width of the beam may be approximated via
 \begin{align*}
 L = 2\frac{\omega_{0,\textrm{f}}}{f}l
 \end{align*}
-where we assumed that the beam is completely collimated behind the 125mm achromatic lens and we adjusted the lens that way that $l = \unit[(130 \pm 5)]{mm}$ holds. So the theoretical spectral resolution is given by:
+where we assumed that the beam is completely collimated behind the $\unit[125]{mm}$ achromatic lens and we adjusted the lens in such a way that $l = \unit[(130 \pm 5)]{mm}$ holds. So the theoretical spectral resolution is given by:
 \begin{align}
 \left(\frac{\lambda}{\Delta\lambda}\right)_\textrm{th} = 2mg\frac{\omega_{0,\textrm{f}}}{f}l \hspace{1.5cm} \Delta\left(\frac{\lambda}{\Delta\lambda}\right)_\textrm{th} = \sqrt{\left(2mg\frac{l}{f}\omega_{0,\textrm{f}}\Delta \right)^2+\left(2mg\frac{\omega_{0,\textrm{f}}}{f}\Delta l\right)^2}
 \end{align}
@@ -394,8 +410,10 @@ and $i \in \{h,f\}$. Plugging in our values we get:
 \frac{\lambda_\textrm{f}}{\lambda_\textrm{h}} &= \unit[(2.000 \pm 0.003)]{}\\
 \frac{\lambda}{\Delta \lambda} &\approx \unit[1022]{}
 \end{align}
-Our experimental resolution is therefore clearly smaller than the theoretical one. That is caused at most by the relatively large size of the spots on the wall and therefore a big error on the value of $b$.
-\subsubsection{Analysis with \textsc{Michelson} interferometer}\label{subsubsec:ana_michelson}
+Our experimental resolution is therefore clearly smaller than the theoretical one. That is caused mostly by the relatively large size of the spots on the wall and therefore a big error on the value of $b$.
+
+\subsubsection{Analysis with the \textsc{Michelson} Interferometer}
+\label{subsubsec:ana_michelson}
 Now we want to analyze the beams using a \textsc{Michelson} interferometer. Therefore we set up the experiment as shown in figure \ref{fig:setup_michelson}.
 \begin{figure}[H]
   \centering
@@ -405,7 +423,7 @@ Now we want to analyze the beams using a \textsc{Michelson} interferometer. Ther
 \end{figure}
 The achromatic lens ($f=30mm$) is used to get a small beam diameter and the thin blue filter infront of the interferometer is used to avoid back-reflections of the fundamental wave into the laser. We align the whole setup carefully. After finishing this procedure interference patterns become clearly visible in both beams on a screen placed in front of the 3mm blue filter. When touching the table the inference pattern changes. This is caused by a tiny change of the optical path length in the interferometer.
 
-Now we connect the fast photodiodes to the oscilloscope. When changing the position of the movable mirror we should see sinusoidal signals on the oscilloscope which we observed only one singel time. Though we tried carefully to improve the adjustment of the setup we were not able to reproduce the sinusoidal signal. Therefore the rest of this analysis is done in the opposite direction. We start from the well known dispersion of air and calculate what we should have measured.
+Now we connect the fast photodiodes to the oscilloscope. When changing the position of the movable mirror we should see sinusoidal signals on the oscilloscope which we observed only one single time. Though we tried carefully to improve the adjustment of the setup we were not able to reproduce the sinusoidal signal. Therefore the rest of this analysis is done in the opposite direction. We start from the well known dispersion of air and calculate what we should have measured.
 
 From \cite{paper} we know:
 \begin{align}
@@ -417,7 +435,7 @@ n(\unit[987]{nm}) &\approx \unit[1.000274197]{}\\
 \notag n(\unit[493.5]{nm}) &\approx \unit[1.000279135]{}\\
 \notag\Delta n &\approx \unit[4.937\cdotp 10^{-6}]{}
 \end{align}
-Considering one single beam, the phase difference between the beam components propagating in the different arms of the \textsc{Michelson} interferometer when moving the movable mirror by a length $\Delta x$ is giben by:
+Considering one single beam, the phase difference between the beam components propagating in the different arms of the \textsc{Michelson} interferometer when moving the movable mirror by a length $\Delta x$ is given by:
 \begin{align}
 \Delta \phi = \frac{4\pi\Delta x}{\lambda}=\frac{4\pi n\Delta x}{\lambda_\textrm{vac}}
 \end{align}
@@ -460,11 +478,24 @@ and the (theoretical) resolution:
 \Delta \lambda &= \lambda_\textrm{fun}-2\lambda_\textrm{harm}=\lambda_{0,\textrm{fun}}\left(\frac{1}{n\left(\lambda_0\right)}-\frac{1}{n\left(\frac{1}{2}\lambda_0\right)}\right)\approx \unit[4.87\cdotp 10^{-12}]{m}\\
 \notag\frac{\lambda}{\Delta \lambda} &\approx 203\cdotp 10^{3}
 \end{align}
-The numerical values in this section are only given approximately and without an error, because we don't know the error of the formula for the refraction index, which would, with the assumption that the wavelength of the laser is exact (which we used in this whole report), be the only error source.
+The numerical values in this section are only given approximately and without an error, because we do not know the error of the formula for the refraction index, which would, with the assumption that the wavelength of the laser is exact (which we used in this whole report), be the only error source.
+
 \section{Abstract}
+First of all, the determination of the laser characteristics and the calibration of the attenuator are performed without any discrepancy in expectation. After that we install the set-up and indeed produce blue frequency doubled light.
+
+The \textsc{Boyd-Kleinman} condition for the optimal efficiency of second-harmonic generation is not quite fulfilled, but sufficiently fulfilled for our purposes. 
+
+Analysing the dependency on temperature our fit only conforms accurately with the data in the range of the highest peak. Besides that the graph of the measured data is asymmetric. This is most likely caused by a non-linear dependency of the refraction index on the temperature, which our model does not respect. At $T=\unit[(36.4 \pm 0.1)]{^\circ C}$ the maximum power of the second harmonic generation is achieved.
+
+The dependency of the power of the second harmonic indeed is proportional to the power of the fundamental wave squared.
+
+The dependency of the power of the harmonic wave on the polarization of the fundamental wave is determined in accordance with theoretical expectation, although our background measurement seems to be too low, because we get an non-vanishing offset on the data.
+
+Because a length is not measured properly, the theoretical spectral resolution of the grating has a relatively big error and is not really consistent with our experimentational result, which also has a large uncertainty. Nevertheless our results seem to be meaningful.
+
+Finally we also analyse the beams with the \textsc{Michelson} interferometer. Though we try carefully to improve the adjustment of the set-up we unfortunately do not manage to reproduce the sinusoidal signal. Therefore the analysis is done in the opposite direction: starting from the well known dispersion of air we calculate what we should have measured. This yields sensible results.
 
 \begin{appendix}
-
 \section{Tables}
 \begin{table}[H]
   \centering
