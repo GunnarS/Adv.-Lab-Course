@@ -2,6 +2,7 @@
 \newcommand{\assistent}{D. Schütze}
 \newcommand{\versuch}{Holography}
 \newcommand{\nummer}{E215}
+\newcommand{\linbo}{\ensuremath{{\mathrm{LiNbO}_3}\;}}
 
 \begin{document}
 
@@ -34,12 +35,222 @@ First of all one has to consider that the object and the holographic film are il
   \label{fig:transmiss}
 \end{figure}
 If one uses normal light only a spectral pattern due to the mentioned grating-like structure of the developed film is observed.
+\subsection{Holography with Lithium Niobate}\label{subsec:ana_linbo3}
+\subsubsection{Recording the Writing Curve}{\label{subsubsec:ana_writing}
+In this part of the experiment we want to store a transmission phase hologram in a photorefractive lithium niobate crystal. In oder to do this we set up the experiment as shown in figure \ref{fig:setup_writing}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/setup_writing}
+	\caption{Setup for recording the writing curve \cite{skript}}
+	\label{fig:setup_writing}
+\end{figure}
+We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(20.0\pm 0.2)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{snellius} law:
+\begin{align}
+2\theta = 2\arcsin\left(\frac{n_\textrm{Air}}{n_\textrm{crystal}}\sin\gamma\right) = \unit[(8.6 \pm 0.4)]{^\circ}
+\end{align}
+because the refractive index of the \linbo crystal is given by $n_\textrm{crystal} = \unit[2.29]{}$ for light with a wavelength of $\lambda = \unit[633]{nm}$.
+After having optimized the setup we illuminate the crystal with a tungsten lamp for around one hour to erase possibly existing holograms. 
+
+Now we block the laser and perform background measurements for both photodiodes. Because they are connected to an amplifier, we do the measurement for each range. The results are displayed in table \ref{tab:ana_background}. Eventually we are ready to record the writing curve. We unblock the laser and measure the diffraction effiency in time intervalls of about 1 minute. To measure the intensities we block one of the writing beams so one of the photodiodes measures the diffracted and the other one the transmitted intensity.
+
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{l|cc}
+    \toprule
+     Range & $I_\textrm{diff}^\textrm{bgd}$ [$\unit[]{mW}$] & $I_\textrm{trans}^\textrm{bgd}$ [$\unit[]{mW}$]\\
+    \midrule[0.75pt]
+$3$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$4$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$5$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$6$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$7$ & $-2.0 \pm 0.5$ & $2.0 \pm 0.5$\\
+$8$ & $17.0 \pm 0.5$ & $25.0 \pm 0.5$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Background measurements for the two photodiodes}
+  \label{tab:ana_background}
+\end{table}
+
+The first curve we recorded this way behaved well for the first 20 minutes, but then began contrary to our expectation to fall again. So we realigned our setup, dropped the data and restarted the measurement. The data is shown in tables \ref{tab:ana_writing_first} and \ref{tab:ana_writing_second} in the appendix and plotted in figure \ref{fig:ana_writing}.
+\begin{figure}[H]
+\begin{floatrow}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_writing_eta.tex}
+}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_writing_n.tex}
+}
+	\caption{Diffraction intensity $\eta$ (left) and change in refractive index of the crystal (right) versus writing time}
+	\label{fig:ana_writing}
+\end{floatrow}
+\end{figure}
+
+The change of the refractive index should described by an exponential increase. Therefore we would fit a function of the form $\Delta n(t) = \Delta n(t=\infty) \left(1-e^{-\frac{t}{\tau_\textrm{w}}}\right)$ to the obtained graph. As one can see in figure \ref{fig:ana_writing} our data is not described by such a function. No fit with reasonable parameters can be performed, therefore we reject it.
+\subsubsection{Recording the Erasing Curve}{\label{subsubsec:ana_erasing}
+With the same experimental setup as before we now measure the erasing curve. In order to do that we block one of the writing beams and measure the transmitted and the diffracted intensity of the crystal in time intervalls of about one minute. The results are displayed in table \ref{tab:ana_erasing} in the appendix and plotted in figure \ref{fig:ana_erasing}.
+
+\begin{figure}[H]
+\begin{floatrow}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_erasing_eta.tex}
+}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_erasing_n.tex}
+}
+	\caption{Diffraction intensity $\eta$ (left) and change in refractive index of the crystal (right) versus erasing time}
+	\label{fig:ana_erasing}
+\end{floatrow}
+\end{figure}
+
+This time we fit a function of the form  $\Delta n(t) = \Delta n(t=\infty) \cdotp e^{-\frac{t}{\tau_\textrm{e}}} + \textrm{const.}$ to the graph. We get:
+\begin{align}
+\Delta n(t=\infty) &= \unit[(8.07 \pm 0.05)]{}\\
+\notag \tau_\textrm{e} &= \unit[(1726 \pm 23)]{s}\\
+\notag \textrm{const.} &= \unit[(97.40 \pm 0.06)]{}\\
+\end{align}
+\subsubsection{Measuring a rocking curve}\label{subsubsec:ana_rocking}
+In the last part of the experiment we want to measure the dependency of the diffraction effiency $\eta$ on the angle of incidence $\theta$ of the reading beam. This angle can be changed by rotating the \linbo crystal by using a micrometer screw at the rotation stage on which the crystal is mounted. In order to gauge the micrometer screw me take a gauge curve by measuring the rotation angle $\alpha$ of the crystal when rotating the micrometer screw.
 
 \section{Abstract}
 
 \begin{appendix}
 \section{Tables}
-
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$0$ & $545.5$ & $4$ & $355.8$ & $8$ & $0.0652 \pm 0.0001$ & $8.045 \pm 0.007$\\
+$65$ & $545.3$ & $4$ & $608.2$ & $8$ & $0.1115 \pm 0.0001$ & $10.520 \pm 0.006$\\
+$131$ & $544.3$ & $4$ & $109.7$ & $7$ & $0.202 \pm 0.001$ & $14.14 \pm 0.03$\\
+$199$ & $544.5$ & $4$ & $134.1$ & $7$ & $0.246 \pm 0.001$ & $15.63 \pm 0.03$\\
+$254$ & $543.9$ & $4$ & $170.8$ & $7$ & $0.314 \pm 0.001$ & $17.65 \pm 0.03$\\
+$305$ & $544.7$ & $4$ & $212.6$ & $7$ & $0.390 \pm 0.001$ & $19.68 \pm 0.02$\\
+$363$ & $544.0$ & $4$ & $256.5$ & $7$ & $0.471 \pm 0.001$ & $21.63 \pm 0.02$\\
+$430$ & $544.5$ & $4$ & $287.0$ & $7$ & $0.527 \pm 0.001$ & $22.87 \pm 0.02$\\
+$480$ & $544.5$ & $4$ & $340.6$ & $7$ & $0.625 \pm 0.001$ & $24.91 \pm 0.02$\\
+$546$ & $543.4$ & $4$ & $390.5$ & $7$ & $0.718 \pm 0.001$ & $26.69 \pm 0.02$\\
+$609$ & $544.1$ & $4$ & $447.8$ & $7$ & $0.822 \pm 0.001$ & $28.57 \pm 0.02$\\
+$674$ & $543.8$ & $4$ & $498.6$ & $7$ & $0.916 \pm 0.001$ & $30.15 \pm 0.02$\\
+$733$ & $543.7$ & $4$ & $568.3$ & $7$ & $1.044 \pm 0.001$ & $32.19 \pm 0.02$\\
+$799$ & $543.5$ & $4$ & $623.6$ & $7$ & $1.146 \pm 0.001$ & $33.73 \pm 0.02$\\
+$869$ & $543.2$ & $4$ & $674.7$ & $7$ & $1.241 \pm 0.001$ & $35.09 \pm 0.02$\\
+$919$ & $543.3$ & $4$ & $747.5$ & $7$ & $1.374 \pm 0.002$ & $36.93 \pm 0.02$\\
+$985$ & $543.1$ & $4$ & $805.0$ & $7$ & $1.480 \pm 0.002$ & $38.33 \pm 0.02$\\
+$1052$ & $543.5$ & $4$ & $871.2$ & $7$ & $1.600 \pm 0.002$ & $39.86 \pm 0.02$\\
+$1115$ & $542.0$ & $4$ & $939.2$ & $7$ & $1.730 \pm 0.002$ & $41.44 \pm 0.02$\\
+$1172$ & $542.7$ & $4$ & $103.0$ & $6$ & $1.894 \pm 0.009$ & $43.37 \pm 0.11$\\
+$1240$ & $542.3$ & $4$ & $111.5$ & $6$ & $2.052 \pm 0.009$ & $45.14 \pm 0.10$\\
+$1299$ & $541.8$ & $4$ & $119.4$ & $6$ & $2.199 \pm 0.009$ & $46.73 \pm 0.10$\\
+$1363$ & $541.8$ & $4$ & $128.0$ & $6$ & $2.356 \pm 0.009$ & $48.37 \pm 0.10$\\
+$1414$ & $542.1$ & $4$ & $135.8$ & $6$ & $2.498 \pm 0.009$ & $49.80 \pm 0.09$\\
+$1483$ & $542.1$ & $4$ & $146.1$ & $6$ & $2.69 \pm 0.01$ & $51.67 \pm 0.09$\\
+$1550$ & $542.0$ & $4$ & $154.6$ & $6$ & $2.84 \pm 0.01$ & $53.15 \pm 0.09$\\
+$1611$ & $541.1$ & $4$ & $166.1$ & $6$ & $3.06 \pm 0.01$ & $55.13 \pm 0.09$\\
+$1670$ & $540.8$ & $4$ & $177.7$ & $6$ & $3.28 \pm 0.01$ & $57.04 \pm 0.08$\\
+$1727$ & $541.4$ & $4$ & $190.4$ & $6$ & $3.50 \pm 0.01$ & $59.00 \pm 0.08$\\
+$1795$ & $540.8$ & $4$ & $202.5$ & $6$ & $3.73 \pm 0.01$ & $60.89 \pm 0.08$\\
+$1847$ & $540.5$ & $4$ & $218.3$ & $6$ & $4.02 \pm 0.01$ & $63.22 \pm 0.08$\\
+$1911$ & $540.5$ & $4$ & $231.1$ & $6$ & $4.26 \pm 0.01$ & $65.05 \pm 0.08$\\
+$1969$ & $540.2$ & $4$ & $245.2$ & $6$ & $4.52 \pm 0.01$ & $67.01 \pm 0.07$\\
+$2039$ & $540.7$ & $4$ & $262.7$ & $6$ & $4.84 \pm 0.01$ & $69.32 \pm 0.07$\\
+$2103$ & $540.2$ & $4$ & $278.7$ & $6$ & $5.13 \pm 0.01$ & $71.43 \pm 0.07$\\
+$2165$ & $539.5$ & $4$ & $293.2$ & $6$ & $5.41 \pm 0.01$ & $73.30 \pm 0.07$\\
+$2227$ & $539.7$ & $4$ & $313.0$ & $6$ & $5.77 \pm 0.01$ & $75.71 \pm 0.07$\\
+$2292$ & $539.1$ & $4$ & $332.2$ & $6$ & $6.12 \pm 0.01$ & $78.03 \pm 0.07$\\
+$2350$ & $539.1$ & $4$ & $349.7$ & $6$ & $6.45 \pm 0.01$ & $80.06 \pm 0.07$\\
+$2402$ & $539.6$ & $4$ & $369.9$ & $6$ & $6.81 \pm 0.01$ & $82.29 \pm 0.07$\\
+$2469$ & $539.1$ & $4$ & $392.8$ & $6$ & $7.23 \pm 0.01$ & $84.82 \pm 0.07$\\
+$2520$ & $538.5$ & $4$ & $416.1$ & $6$ & $7.67 \pm 0.01$ & $87.33 \pm 0.07$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the writing curve part 1. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_writing_first}
+\end{table}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$2587$ & $539.4$ & $4$ & $439.7$ & $6$ & $8.09 \pm 0.01$ & $89.69 \pm 0.07$\\
+$2644$ & $539.3$ & $4$ & $464.5$ & $6$ & $8.54 \pm 0.01$ & $92.18 \pm 0.07$\\
+$2696$ & $539.3$ & $4$ & $493.6$ & $6$ & $9.07 \pm 0.01$ & $95.01 \pm 0.06$\\
+$2763$ & $538.3$ & $4$ & $519.3$ & $6$ & $9.55 \pm 0.01$ & $97.52 \pm 0.06$\\
+$2826$ & $537.9$ & $4$ & $546.1$ & $6$ & $10.05 \pm 0.01$ & $100.03 \pm 0.06$\\
+$2892$ & $538.7$ & $4$ & $578.9$ & $6$ & $10.63 \pm 0.01$ & $102.90 \pm 0.06$\\
+$2955$ & $538.2$ & $4$ & $606.5$ & $6$ & $11.14 \pm 0.01$ & $105.35 \pm 0.06$\\
+$3008$ & $538.3$ & $4$ & $638.8$ & $6$ & $11.73 \pm 0.01$ & $108.09 \pm 0.07$\\
+$3061$ & $537.9$ & $4$ & $667.4$ & $6$ & $12.26 \pm 0.01$ & $110.50 \pm 0.07$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the writing curve part 2. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_writing_second}
+\end{table}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$0$ & $545.4$ & $4$ & $615.7$ & $6$ & $11.16 \pm 0.01$ & $105.44 \pm 0.06$\\
+$64$ & $545.4$ & $4$ & $612.0$ & $6$ & $11.10 \pm 0.01$ & $105.13 \pm 0.06$\\
+$134$ & $544.8$ & $4$ & $608.5$ & $6$ & $11.05 \pm 0.01$ & $104.89 \pm 0.06$\\
+$185$ & $545.7$ & $4$ & $607.1$ & $6$ & $11.00 \pm 0.01$ & $104.68 \pm 0.06$\\
+$239$ & $544.6$ & $4$ & $602.4$ & $6$ & $10.94 \pm 0.01$ & $104.38 \pm 0.06$\\
+$309$ & $545.4$ & $4$ & $601.1$ & $6$ & $10.90 \pm 0.01$ & $104.19 \pm 0.06$\\
+$371$ & $545.4$ & $4$ & $597.7$ & $6$ & $10.84 \pm 0.01$ & $103.91 \pm 0.06$\\
+$434$ & $545.8$ & $4$ & $595.8$ & $6$ & $10.80 \pm 0.01$ & $103.70 \pm 0.06$\\
+$494$ & $545.8$ & $4$ & $593.1$ & $6$ & $10.75 \pm 0.01$ & $103.46 \pm 0.06$\\
+$548$ & $545.2$ & $4$ & $589.8$ & $6$ & $10.70 \pm 0.01$ & $103.24 \pm 0.06$\\
+$614$ & $545.8$ & $4$ & $588.6$ & $6$ & $10.67 \pm 0.01$ & $103.07 \pm 0.06$\\
+$674$ & $544.8$ & $4$ & $585.1$ & $6$ & $10.62 \pm 0.01$ & $102.86 \pm 0.06$\\
+$734$ & $545.6$ & $4$ & $584.2$ & $6$ & $10.59 \pm 0.01$ & $102.71 \pm 0.06$\\
+$792$ & $545.4$ & $4$ & $581.6$ & $6$ & $10.55 \pm 0.01$ & $102.51 \pm 0.06$\\
+$849$ & $545.4$ & $4$ & $579.9$ & $6$ & $10.52 \pm 0.01$ & $102.35 \pm 0.06$\\
+$913$ & $546.1$ & $4$ & $578.2$ & $6$ & $10.48 \pm 0.01$ & $102.14 \pm 0.06$\\
+$979$ & $546.1$ & $4$ & $576.1$ & $6$ & $10.44 \pm 0.01$ & $101.96 \pm 0.06$\\
+$1041$ & $545.3$ & $4$ & $574.1$ & $6$ & $10.42 \pm 0.01$ & $101.85 \pm 0.06$\\
+$1101$ & $545.9$ & $4$ & $572.4$ & $6$ & $10.38 \pm 0.01$ & $101.65 \pm 0.06$\\
+$1157$ & $545.5$ & $4$ & $570.6$ & $6$ & $10.35 \pm 0.01$ & $101.53 \pm 0.06$\\
+$1216$ & $545.6$ & $4$ & $569.0$ & $6$ & $10.32 \pm 0.01$ & $101.38 \pm 0.06$\\
+$1274$ & $546.0$ & $4$ & $567.7$ & $6$ & $10.29 \pm 0.01$ & $101.22 \pm 0.06$\\
+$1331$ & $546.0$ & $4$ & $566.3$ & $6$ & $10.27 \pm 0.01$ & $101.10 \pm 0.06$\\
+$1392$ & $545.5$ & $4$ & $564.6$ & $6$ & $10.25 \pm 0.01$ & $101.00 \pm 0.06$\\
+$1449$ & $545.6$ & $4$ & $562.9$ & $6$ & $10.21 \pm 0.01$ & $100.83 \pm 0.06$\\
+$1518$ & $545.5$ & $4$ & $562.0$ & $6$ & $10.20 \pm 0.01$ & $100.76 \pm 0.06$\\
+$1582$ & $546.3$ & $4$ & $561.0$ & $6$ & $10.16 \pm 0.01$ & $100.59 \pm 0.06$\\
+$1633$ & $546.6$ & $4$ & $560.4$ & $6$ & $10.15 \pm 0.01$ & $100.52 \pm 0.06$\\
+$1702$ & $545.5$ & $4$ & $558.1$ & $6$ & $10.13 \pm 0.01$ & $100.41 \pm 0.06$\\
+$1768$ & $545.7$ & $4$ & $557.1$ & $6$ & $10.11 \pm 0.01$ & $100.31 \pm 0.06$\\
+$1834$ & $545.9$ & $4$ & $555.9$ & $6$ & $10.08 \pm 0.01$ & $100.18 \pm 0.06$\\
+$1887$ & $545.8$ & $4$ & $555.3$ & $6$ & $10.07 \pm 0.01$ & $100.14 \pm 0.06$\\
+$1951$ & $546.7$ & $4$ & $554.6$ & $6$ & $10.04 \pm 0.01$ & $99.99 \pm 0.06$\\
+$2003$ & $546.5$ & $4$ & $553.8$ & $6$ & $10.03 \pm 0.01$ & $99.94 \pm 0.06$\\
+$2066$ & $546.0$ & $4$ & $551.5$ & $6$ & $10.00 \pm 0.01$ & $99.79 \pm 0.06$\\
+$2135$ & $546.9$ & $4$ & $551.9$ & $6$ & $9.99 \pm 0.01$ & $99.73 \pm 0.06$\\
+$2202$ & $546.6$ & $4$ & $551.0$ & $6$ & $9.98 \pm 0.01$ & $99.67 \pm 0.06$\\
+$2269$ & $546.1$ & $4$ & $549.2$ & $6$ & $9.96 \pm 0.01$ & $99.56 \pm 0.06$\\
+$2322$ & $546.2$ & $4$ & $548.4$ & $6$ & $9.94 \pm 0.01$ & $99.48 \pm 0.06$\\
+$2386$ & $546.4$ & $4$ & $548.1$ & $6$ & $9.93 \pm 0.01$ & $99.44 \pm 0.06$\\
+$2450$ & $546.7$ & $4$ & $547.8$ & $6$ & $9.92 \pm 0.01$ & $99.38 \pm 0.06$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the erasing curve. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_erasing}
+\end{table}
 \Literatur{quellen}
 
 \end{appendix}
