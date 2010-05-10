@@ -1,0 +1,474 @@
+\documentclass{protokoll_en}
+\newcommand{\assistent}{D. Schütze}
+\newcommand{\versuch}{Holography}
+\newcommand{\nummer}{E215}
+\newcommand{\linbo}{\ensuremath{{\mathrm{LiNbO}_3}\;}}
+
+\begin{document}
+
+\section{Preface}
+The object of this experiment is to get familiar with basic characteristics of holography. First holograms on holographic films and plates are recorded and reconstructed. In a second step we write a elementary hologram in a \linbo crystal and determine some important parameters. For all these purposes we use a $\unit[633]{nm}$ He-Ne laser.
+
+\section{Theoretical Background}
+\subsection{Coherence and Interference}
+The theory of optical interference rests on the principle of linear superposition of electromagnetic fields. This principle, which is a consequence of \textsc{Maxwell}'s equation for the vacuum, states that the electric field produced at one point in space by several sources will be the vector sum of the contributions from each of the sources (linear superposition does not always hold in the presence of matter, however, as is widely exploited in non-linear optics). Consider two electric fields given by:
+\begin{align}
+\vec{E}_1 &= \vec{E}_0 \exp{i \left( \vec{k}_1 \cdot \vec{r} - \omega t + \phi_1 \right)} \\
+\vec{E}_2 &= \vec{E'}_0 \exp{i \left( \vec{k}_2 \cdot \vec{r} - \omega t + \phi_2 \right)}
+\end{align}
+The two fields (and resulting plane waves) are mutually coherent if the phase difference $\phi_1 - \phi_2$ is constant within a relevant range. When two coherent plane waves are incident on a point, the irradiance function caused by the superposition of the waves at that point becomes
+\begin{align}
+I = |\vec{E}|^2 = I_1 + I_2 + 2 |\vec{E}_1| |\vec{E}_2| \cos{\theta}
+\end{align}
+The final term is the interference term, and this gives rise to the spatial variations in intensity we see as the interference pattern between the two waves. If the two waves are mutually incoherent on the other hand, then the phase difference $\phi_1 - \phi_2$ varies randomly which causes the average value of $\cos{\theta}$ to fall to zero, and thus there is no interference produced.
+
+\subsection{The Principle of Holography}
+Holography is a technique that is used to record and reconstruct an image such that the image appears to be projected away from the surface of the film footage and into the position of the original object at the time of recording. One can distinguish holograms by the technique used to store them. In the case of \textit{amplitude holograms} the local transmittance of the material is changed, whereas the local optical path length is modulated in the case of \textit{phase holograms}. This can either be obtained by changing the thickness of the medium or the refractive index locally. The latter technique uses the \textit{photorefractive effect} which is explained in section \ref{subsec:theo_photorefractive}. Holograms can be further distinguished by the geometry used for recording and reconstruction of the holograms. These are compared in figure \ref{fig:theo_holograms}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{graphics/theo_holographs}
+  \caption{Comparison of writing and reconstructing geometrys for transmission and reflection holograms}
+  \label{fig:theo_holograms}
+\end{figure}
+ In order to record a hologram, coherent light must be split into a signal wave (that reflects off the object to be recorded) and a reference wave which is superposed onto the signal wave at the site of the film footage or crystal. The principle mode of operation of amplitude holograms can be demonstrated in the following way: Two interfering beams will produce an interference pattern with an intensity distribution as follows:
+\begin{align}
+I=|S+R|^2=|S|^2 + |R|^2 + S^* R + R^* S
+\end{align}
+Where $I$ is the intensity distribution, $R$ is the complex amplitude of the reference wave, and $S$ is the amplitude of the signal wave. This is the same situation as was discussed in the section about coherence and interference, where the interference term is composed of the mixing of the amplitudes of each respective wave. The interference term will give rise to the pattern of light and dark regions that are spatially projected onto the recording material. Once the film footage has been developed, the transmittance is related to the incident light according to:
+\begin{align}
+\tau = a-b \left| S+R \right|^2
+\end{align}
+When the footage is illuminated with the reference beam, the transmitted intensity becomes:
+\begin{align}
+R \tau &= R \left( a - b \left| S+R \right|^2 \right)\\
+       &= R \left( a - b \left[|S|^2 + |R|^2 + S^* R + R^* S \right] \right)
+\end{align}
+In this relation, the amplitude of the reference beam is modified by the factors $|S|^2$ and $|R|^2$, which results in the diffraction of the reference beam around its central axis. The term proportional to $RR^* S$ corresponds to a reconstructed signal beam with the original phase information but modified amplitude. The term proportional to $S^* R^2$ is the "conjugate signal beam" and it projects the real image of the object in the space behind the film footage. In this way, the hologram is reconstructed from the interference pattern that was written onto the holographic material.
+
+\subsection{Photorefractive Effect}\label{subsec:theo_photorefractive}
+When a photorefractive material is illuminated by coherent light, the resulting interference pattern that forms within the crystal is able to locally change the refractive index of the crystal. This occurs in various stages. Firstly, within the illuminated regions of the dark and bright fringes, electrons from an impurity level (which is in between the conduction band and the valence band) may be excited into the conduction band, where they are able to diffuse freely. Due to the density of electrons moving into the conduction band from the illuminated-fringe regions, the net diffusion in the conduction band is towards the dark-fringe regions. The electrons move until they encounter a hole and as such return to the impurity level, but in general this will occur in the dark-fringe regions to which the electrons have drifted. The result is a higher density of holes in the illuminated-fringe regions, and a higher density of electrons in the dark-fringe regions. This modulated charge distribution causes a space-charge field to form within the crystal, which persists even when the crystal is no longer illuminated due to the fact that the electrons and holes are fixed in place. Finally the space-charge field, via the electro-optic effect, causes a modulation of the refractive index within the crystal. The pattern produced by the refractive index modulation can now be used as a diffraction grating that follows the spatial pattern of the original incident light.
+\subsection{Thick Holograms and the Bragg Condition}\label{subsec:theo_bragg}
+A hologram which is thick in comparison to the wavelength of the light used to record it, is called \textit{volume hologram}. In this case the \textsc{bragg} condition 
+\begin{align*}
+\sin(\theta_\textrm{Bragg}) = \frac{\lambda}{2n\Lambda}
+\end{align*}
+has to be fulfilled in order to reconstruct the signal wave. Here $\theta_\textrm{Bragg}$ is the angle between the incoming wave and the normal to the hologram inside the medium, $n$ is the refractive index and $\Lambda = \frac{2\pi}{K}$ the grating constant of the material.
+
+One can define the diffraction effiency $\eta$ of holograms
+\begin{align*}
+\eta = \frac{I_\textrm{diff}}{I_\textrm{diff} + I_\textrm{trans}}
+\end{align*}
+with $I_\textrm{diff}$ being the intensity of the diffracted and $I_\textrm{trans}$ the intensity of the transmitted beam. 
+
+For the diffraction effiency in transmission geometry of phase holograms the \textsc{kogelnik}'s law of coupled waves yields
+\begin{align}
+\eta = \nu^2 \frac{\sin^2\sqrt{\nu^2+\xi^2}}{\nu^2+\xi^2}
+\label{eq:kogelnik}
+\end{align}
+where 
+\begin{align*}
+\xi = \frac{Kd}{2}\left(\theta - \theta_\textrm{Bragg}\right) \hspace{2cm} \nu = \frac{\pi d\Delta n_0}{\lambda \cos \theta}
+\end{align*}
+and $d$ being the thickness of the hologram, $\theta$ the angle between the incoming wave and the normal to the hologram inside the medium and $\Delta n_0$ the amplitude of the modulation of the refractive index. 
+
+\subsection{Lithium Niobate}
+Lithium niobate (\linbo) is a ferroelectric and therefore also pyro- and piezoelectric crystal. Figure \ref{fig:linbo} sketches the crystal structure of \linbo below (left) and above (right) its \textsc{Curie} temperature of about $T_\mathrm{C} = \unit[1210]{^\circ C}$.
+\begin{figure}[H]
+    \begin{minipage}{0.2\textheight}
+  \includegraphics[width=1.0\textwidth]{graphics/linbo_para}
+    \end{minipage}
+    \hspace{1.3cm}
+    \begin{minipage}{0.2\textheight}
+  \includegraphics[width=1.0\textwidth]{graphics/linbo_ferro}
+    \end{minipage}
+  \caption{Para- and ferroelectric phase of \linbo. Double cross-hatched circles denote lithium atoms, single cross-hatched ones niobium and big white circles depict oxygen atoms. ~\cite{weis}}
+  \label{fig:linbo}
+\end{figure}
+As one can see, the \linbo crystal consists of planar sheets of oxygen atoms in a distorted hexagonal close-packed configuration. Furthermore the interstices are occupied one-third by lithium ions, one-third by niobium ions and one-third vacant. The order is depicted in the figure above.
+
+Indeed the positive ions in the interstices are displaced from their position of inversionsymmetry at temperatures below the \textsc{Curie} temperature (see figure \ref{fig:linbo} right). This leads to a non-vanishing spontaneous polarisation of the crystal changing with temperature as also the displacement in the elementary cell changes with temperature (primary pyroelectricity). Another contribution occurs due to thermal expansion of the crystal, because it is also piezoelectric (secondary pyroelectricity).
+\linbo is even a ferroelectric crystal which just means that its direction of polarisation is revertible by an external electric field. If not insulated the change of the spontaneous polarisation due to temperature change can be observed as a current.
+
+\section{Experimentation and Analysis}
+\subsection{Transmission Hologram}
+To take a transmission hologram we install the set-up of figure \ref{fig:aufbau_transmiss}. It is useful to choose highly reflecting objects like silver objects.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{graphics/aufbau_transmiss}
+  \caption{Set-up for taking a transmission hologram}
+  \label{fig:aufbau_transmiss}
+\end{figure}
+First of all one has to consider that the object and the holographic film are illuminated homogeneously. But due to reasons of coherence it is also important that the difference in pathlength of object and reference beam does not exceed approximately $\unit[30]{cm}$. Furthermore one inserts an OD filter into the reference beam to adjust the intensities of both beams. If everything is aligned properly the light is switched off except for a small LED panel and the exposure of the holographic film is done for $\unit[5]{s}$. Then the film is developed like explained in the description~\cite{skript}. For reconstruction of the object the film is placed at its position of recording, the object is removed and the object beam is blocked. Now we are indeed able to observe a three dimensional transmission hologram at the former position of the object (see figure \ref{fig:transmiss}), but the angle range for observation is rather small.
+\begin{figure}[H]
+    \begin{minipage}{0.2\textheight}
+  \includegraphics[width=1.0\textwidth]{graphics/transmiss1}
+    \end{minipage}
+    \hspace{1.3cm}
+    \begin{minipage}{0.17\textheight}
+  \includegraphics[width=1.0\textwidth]{graphics/transmiss2}
+    \end{minipage}
+  \caption{Photographs of our transmission hologram}
+  \label{fig:transmiss}
+\end{figure}
+If one uses normal light only a spectral pattern due to the mentioned grating-like structure of the developed film is observed.
+
+\subsection{Reflection Hologram}
+The next task is to record a reflection hologram. Again a homogeneous illumination of the holographic plate is important (set-up see figure \ref{fig:aufbau_refl}).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{graphics/aufbau_refl}
+  \caption{Set-up for taking a reflection hologram}
+  \label{fig:aufbau_refl}
+\end{figure}
+The object has to be placed behind the holographic plate, whereas the coating points towards the object. The advantage is that the difference in pathlength is minimal and the illumination of the holographic plate has maximal intensity.
+
+With this set-up we take two holograms. While the first one uses a non-processed holographic plate, the other one first of all is treated with an expanding agent. Actually this is done directly at the beginning of the experimentation, because it takes some time to dry. Both are illuminated for about $\unit[8]{s}$ and are then treated as before with respect to developement.
+
+\subsubsection*{Without Expanding Agent}
+Unfortunately we missed to remove the OD filter while exposing the film. Therefore our hologram is weaker than it was supposed to be. Therefore it was difficult to compare it with the transmission hologram. The reflection hologram should have a higher intensity and be more detailed than the transmission hologram. Furthermore the angle range of possible observation is expected to be larger. Indeed we could hardly see anything. Besides removing the filter also a longer illumination time could have improved the recording.
+
+\subsubsection*{With Expanding Agent}
+Using an expanding agent indeed promises an even better result than simple reflection holography, because after the expansion the coating contracts again such that the lattice constant gets smaller. Therefore it is possible to see the hologram at shorter wavelength. So we expect that it is not possible to reconstruct it with the red laser light we used. Instead it should be possible to observe the hologram with a bulb of high intensity emitting white light, because the \textsc{Bragg} condition will just "choose" the right wavelength as described in section ...\ref{cha:bragg}.... But in practise a big problem arose because of a very long drying time. In fact the expanded plate was not dry after more than 22 hours. We are of the opinion that this should have happened because of wet desiccant. Anyway it of course was not possible to take a holograph with a wet holographic plate. So unfortunately we could not confirm the above mentioned indications.
+
+
+\subsection{Holography with Lithium Niobate}
+\label{subsec:ana_linbo3}
+\subsubsection{Recording the Writing Curve}
+\label{subsubsec:ana_writing}
+In this part of the experiment we want to store a transmission phase hologram in a photorefractive lithium niobate crystal. In oder to do this we set up the experiment as shown in figure \ref{fig:setup_writing}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{graphics/setup_writing}
+	\caption{Setup for recording the writing curve \cite{skript}}
+	\label{fig:setup_writing}
+\end{figure}
+We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(10.0\pm 0.1)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{Snellius'} law:
+\begin{align}
+\theta = \arcsin\left(\frac{n_\textrm{Air}}{n_\textrm{crystal}}\sin\gamma\right) = \unit[(8.59 \pm 0.08)]{^\circ}
+\end{align}
+because the refractive index of the \linbo crystal is given by $n_\textrm{crystal} = \unit[2.29]{}$ for light with a wavelength of $\lambda = \unit[633]{nm}$.
+After having optimized the setup we illuminate the crystal with a tungsten lamp for around one hour to erase possibly existing holograms. 
+
+Now we block the laser and perform background measurements for both photodiodes. Because they are connected to an amplifier, we do the measurement for each range. The results are displayed in table \ref{tab:ana_background}. Eventually we are ready to record the writing curve. We unblock the laser and measure the diffraction effiency in time intervalls of about one minute. To measure the intensities we block one of the writing beams so one of the photodiodes measures the diffracted and the other one the transmitted intensity.
+
+\begin{table}[H]
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{l|cc}
+    \toprule
+     Range & $I_\textrm{diff}^\textrm{bgd}$ [$\unit[]{mW}$] & $I_\textrm{trans}^\textrm{bgd}$ [$\unit[]{mW}$]\\
+    \midrule[0.75pt]
+$3$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$4$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$5$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$6$ & $-4.0 \pm 0.5$ & $0.0 \pm 0.5$\\
+$7$ & $-2.0 \pm 0.5$ & $2.0 \pm 0.5$\\
+$8$ & $17.0 \pm 0.5$ & $25.0 \pm 0.5$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Background measurements for the two photodiodes}
+  \label{tab:ana_background}
+\end{table}
+
+The first curve we recorded this way behaved well for the first 20 minutes, but then began contrary to our expectation to fall again. Indeed a reflection went through the crystal again an therefore it was deleted right after beiing written. So we realigned our setup, dropped the data and restarted the measurement. The data is shown in tables \ref{tab:ana_writing_first} and \ref{tab:ana_writing_second} in the appendix and plotted in figure \ref{fig:ana_writing}.
+\begin{figure}[H]
+\begin{floatrow}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_writing_eta.tex}
+}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_writing_n.tex}
+}
+	\caption{Diffraction intensity $\eta$ (left) and change in refractive index of the crystal (right) versus writing time}
+	\label{fig:ana_writing}
+\end{floatrow}
+\end{figure}
+The change of the refractive index should be described by an exponential increase. Therefore we would like to fit a function of the form $\Delta n(t) = \Delta n(t=\infty) \left(1-e^{-\frac{t}{\tau_\textrm{w}}}\right)$ to the obtained graph. As one can clearly see in figure \ref{fig:ana_writing} our data is not described by such a function. No fit with reasonable parameters can be performed, therefore we reject it.
+
+\subsubsection{Recording the Erasing Curve}
+\label{subsubsec:ana_erasing}
+With the same experimental setup as before we now measure the erasing curve. In order to do that we block one of the writing beams and measure the transmitted and the diffracted intensity of the crystal in time intervalls of about one minute. The results are displayed in table \ref{tab:ana_erasing} in the appendix and plotted in figure \ref{fig:ana_erasing}.
+\begin{figure}[H]
+\begin{floatrow}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_erasing_eta.tex}
+}
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_erasing_n.tex}
+}
+	\caption{Diffraction intensity $\eta$ (left) and change in refractive index of the crystal (right) versus erasing time}
+	\label{fig:ana_erasing}
+\end{floatrow}
+\end{figure}
+This time we fit a function of the form  $\Delta n(t) = \Delta n(t=\infty) \cdotp e^{-\frac{t}{\tau_\textrm{e}}} + \textrm{const.}$ to the graph. We get:
+\begin{align}
+\Delta n(t=\infty) &= \unit[(8.07 \pm 0.05)]{}\\
+\notag \tau_\textrm{e} &= \unit[(1726 \pm 23)]{s}\\
+\notag \textrm{const.} &= \unit[(97.40 \pm 0.06)]{}\\
+\end{align}
+
+\subsubsection{Measuring a rocking curve}
+\label{subsubsec:ana_rocking}
+In the last part of the experiment we want to measure the dependency of the diffraction effiency $\eta$ on the angle of incidence $\theta$ of the reading beam. This angle can be changed by rotating the \linbo crystal by using a micrometer screw at the rotation stage on which the crystal is mounted. In order to gauge the micrometer screw we take a gauge curve by measuring the rotation angle $\alpha$ of the crystal when rotating the micrometer screw. The origin of the scale of the screw is defined arbritary. The data is shown in table \ref{tab:ana_gauge} and plotted in figure \ref{fig:ana_gauge}, which also displays a linear fit to the graph. The fit result reads:
+\begin{align}
+\alpha(x) = \unit[(178.0 \pm 0.3)]{^\circ} + \unit[(1.9 \pm 0.2)]{\frac{^\circ}{mm}}\cdotp x
+\end{align}
+As one can see in figure \ref{fig:ana_gauge} the measured values differ strongly from the linear fit. This may be caused by the idling of the screw.
+\begin{figure}[H]
+\begin{floatrow}
+\floatbox[\nocapbeside]{table}[\FBwidth]{}
+{
+  \centering
+\resizebox{0.5\textwidth}{!}{
+  \begin{tabular}{lc}
+    \toprule
+	relative screw position [$\unit[]{mm}$] & Angle $\alpha$ [$\unit[]{^\circ}$]\\
+    \midrule[0.75pt]
+$0.0 \pm 0.01$	&$178.3 \pm 0.05$\\
+$0.5 \pm 0.01$	&$178.7 \pm 0.05$\\
+$1.0 \pm 0.01$	&$179.6 \pm 0.05$\\
+$1.5 \pm 0.01$	&$181.0 \pm 0.05$\\
+$2.0 \pm 0.01$	&$182.0 \pm 0.05$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Gauge of the micrometer screw}
+  \label{tab:ana_gauge}
+}
+\ffigbox{}
+{
+\resizebox{0.5\textwidth}{!}{
+	\input{graphics/ana_gauge.tex}
+}
+	\caption{Gauge of the micrometer screw}
+	\label{fig:ana_gauge}
+}
+\end{floatrow}
+\end{figure}
+With this gauge we are able to measure the rocking curve. Therefore we erase the crystal by illuminating it with the tungsten lamp for about 15 minutes and then rewrite a hologram as described in section \ref{subsubsec:ana_writing}. Due to the lack of time we just write the hologram for 30 instead of 40 minutes. After the recording is finished we attenuate the reading beam in order to minimize the erasing of the hologram and then measure the diffracted and the transmitted intensity for different rotation angles $\alpha$ of the crystal and therefore different angles of incidence $\theta$ of the reading beam. For $\alpha = \unit[180]{^\circ}$ the value of $\theta$ given in section \ref{subsubsec:ana_writing} holds.
+Our data is presented in table \ref{tab:ana_rocking} in the appendix. In figure \ref{fig:ana_rocking} the diffraction effiency $\eta$ is plotted versus $\theta$. We fit a function of the form (\ref{eq:kogelnik}) to the data. The fit yields:
+\begin{align}
+\theta_\textrm{Bragg} &= \unit[(8.5505 \pm 0.0007)]{^\circ}\\
+\notag \Lambda &= \unit[(1.03 \pm 0.03)]{\mu m}\\
+\notag \Delta n_0 &= \unit[(1.23 \pm  0.02)\cdotp 10^{-5}]{} 
+\end{align}
+\begin{figure}
+\resizebox{0.8\textwidth}{!}{
+	\input{graphics/ana_rocking.tex}
+}
+	\caption{Rocking curve with fit}
+	\label{fig:ana_rocking}
+\end{figure}
+The function seems to describe the data quite well and the fit results seem to be reasonable. The value of $\Delta n_0$ is somehow twice as high as we would have expected from our writing curve. The bragg angle however is in accordance with the one we used in the previous sections.
+\section{Abstract}
+
+\begin{appendix}
+\section{Tables}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$0$ & $545.5$ & $4$ & $355.8$ & $8$ & $0.0652 \pm 0.0001$ & $8.045 \pm 0.007$\\
+$65$ & $545.3$ & $4$ & $608.2$ & $8$ & $0.1115 \pm 0.0001$ & $10.520 \pm 0.006$\\
+$131$ & $544.3$ & $4$ & $109.7$ & $7$ & $0.202 \pm 0.001$ & $14.14 \pm 0.03$\\
+$199$ & $544.5$ & $4$ & $134.1$ & $7$ & $0.246 \pm 0.001$ & $15.63 \pm 0.03$\\
+$254$ & $543.9$ & $4$ & $170.8$ & $7$ & $0.314 \pm 0.001$ & $17.65 \pm 0.03$\\
+$305$ & $544.7$ & $4$ & $212.6$ & $7$ & $0.390 \pm 0.001$ & $19.68 \pm 0.02$\\
+$363$ & $544.0$ & $4$ & $256.5$ & $7$ & $0.471 \pm 0.001$ & $21.63 \pm 0.02$\\
+$430$ & $544.5$ & $4$ & $287.0$ & $7$ & $0.527 \pm 0.001$ & $22.87 \pm 0.02$\\
+$480$ & $544.5$ & $4$ & $340.6$ & $7$ & $0.625 \pm 0.001$ & $24.91 \pm 0.02$\\
+$546$ & $543.4$ & $4$ & $390.5$ & $7$ & $0.718 \pm 0.001$ & $26.69 \pm 0.02$\\
+$609$ & $544.1$ & $4$ & $447.8$ & $7$ & $0.822 \pm 0.001$ & $28.57 \pm 0.02$\\
+$674$ & $543.8$ & $4$ & $498.6$ & $7$ & $0.916 \pm 0.001$ & $30.15 \pm 0.02$\\
+$733$ & $543.7$ & $4$ & $568.3$ & $7$ & $1.044 \pm 0.001$ & $32.19 \pm 0.02$\\
+$799$ & $543.5$ & $4$ & $623.6$ & $7$ & $1.146 \pm 0.001$ & $33.73 \pm 0.02$\\
+$869$ & $543.2$ & $4$ & $674.7$ & $7$ & $1.241 \pm 0.001$ & $35.09 \pm 0.02$\\
+$919$ & $543.3$ & $4$ & $747.5$ & $7$ & $1.374 \pm 0.002$ & $36.93 \pm 0.02$\\
+$985$ & $543.1$ & $4$ & $805.0$ & $7$ & $1.480 \pm 0.002$ & $38.33 \pm 0.02$\\
+$1052$ & $543.5$ & $4$ & $871.2$ & $7$ & $1.600 \pm 0.002$ & $39.86 \pm 0.02$\\
+$1115$ & $542.0$ & $4$ & $939.2$ & $7$ & $1.730 \pm 0.002$ & $41.44 \pm 0.02$\\
+$1172$ & $542.7$ & $4$ & $103.0$ & $6$ & $1.894 \pm 0.009$ & $43.37 \pm 0.11$\\
+$1240$ & $542.3$ & $4$ & $111.5$ & $6$ & $2.052 \pm 0.009$ & $45.14 \pm 0.10$\\
+$1299$ & $541.8$ & $4$ & $119.4$ & $6$ & $2.199 \pm 0.009$ & $46.73 \pm 0.10$\\
+$1363$ & $541.8$ & $4$ & $128.0$ & $6$ & $2.356 \pm 0.009$ & $48.37 \pm 0.10$\\
+$1414$ & $542.1$ & $4$ & $135.8$ & $6$ & $2.498 \pm 0.009$ & $49.80 \pm 0.09$\\
+$1483$ & $542.1$ & $4$ & $146.1$ & $6$ & $2.69 \pm 0.01$ & $51.67 \pm 0.09$\\
+$1550$ & $542.0$ & $4$ & $154.6$ & $6$ & $2.84 \pm 0.01$ & $53.15 \pm 0.09$\\
+$1611$ & $541.1$ & $4$ & $166.1$ & $6$ & $3.06 \pm 0.01$ & $55.13 \pm 0.09$\\
+$1670$ & $540.8$ & $4$ & $177.7$ & $6$ & $3.28 \pm 0.01$ & $57.04 \pm 0.08$\\
+$1727$ & $541.4$ & $4$ & $190.4$ & $6$ & $3.50 \pm 0.01$ & $59.00 \pm 0.08$\\
+$1795$ & $540.8$ & $4$ & $202.5$ & $6$ & $3.73 \pm 0.01$ & $60.89 \pm 0.08$\\
+$1847$ & $540.5$ & $4$ & $218.3$ & $6$ & $4.02 \pm 0.01$ & $63.22 \pm 0.08$\\
+$1911$ & $540.5$ & $4$ & $231.1$ & $6$ & $4.26 \pm 0.01$ & $65.05 \pm 0.08$\\
+$1969$ & $540.2$ & $4$ & $245.2$ & $6$ & $4.52 \pm 0.01$ & $67.01 \pm 0.07$\\
+$2039$ & $540.7$ & $4$ & $262.7$ & $6$ & $4.84 \pm 0.01$ & $69.32 \pm 0.07$\\
+$2103$ & $540.2$ & $4$ & $278.7$ & $6$ & $5.13 \pm 0.01$ & $71.43 \pm 0.07$\\
+$2165$ & $539.5$ & $4$ & $293.2$ & $6$ & $5.41 \pm 0.01$ & $73.30 \pm 0.07$\\
+$2227$ & $539.7$ & $4$ & $313.0$ & $6$ & $5.77 \pm 0.01$ & $75.71 \pm 0.07$\\
+$2292$ & $539.1$ & $4$ & $332.2$ & $6$ & $6.12 \pm 0.01$ & $78.03 \pm 0.07$\\
+$2350$ & $539.1$ & $4$ & $349.7$ & $6$ & $6.45 \pm 0.01$ & $80.06 \pm 0.07$\\
+$2402$ & $539.6$ & $4$ & $369.9$ & $6$ & $6.81 \pm 0.01$ & $82.29 \pm 0.07$\\
+$2469$ & $539.1$ & $4$ & $392.8$ & $6$ & $7.23 \pm 0.01$ & $84.82 \pm 0.07$\\
+$2520$ & $538.5$ & $4$ & $416.1$ & $6$ & $7.67 \pm 0.01$ & $87.33 \pm 0.07$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the writing curve part 1. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_writing_first}
+\end{table}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$2587$ & $539.4$ & $4$ & $439.7$ & $6$ & $8.09 \pm 0.01$ & $89.69 \pm 0.07$\\
+$2644$ & $539.3$ & $4$ & $464.5$ & $6$ & $8.54 \pm 0.01$ & $92.18 \pm 0.07$\\
+$2696$ & $539.3$ & $4$ & $493.6$ & $6$ & $9.07 \pm 0.01$ & $95.01 \pm 0.06$\\
+$2763$ & $538.3$ & $4$ & $519.3$ & $6$ & $9.55 \pm 0.01$ & $97.52 \pm 0.06$\\
+$2826$ & $537.9$ & $4$ & $546.1$ & $6$ & $10.05 \pm 0.01$ & $100.03 \pm 0.06$\\
+$2892$ & $538.7$ & $4$ & $578.9$ & $6$ & $10.63 \pm 0.01$ & $102.90 \pm 0.06$\\
+$2955$ & $538.2$ & $4$ & $606.5$ & $6$ & $11.14 \pm 0.01$ & $105.35 \pm 0.06$\\
+$3008$ & $538.3$ & $4$ & $638.8$ & $6$ & $11.73 \pm 0.01$ & $108.09 \pm 0.07$\\
+$3061$ & $537.9$ & $4$ & $667.4$ & $6$ & $12.26 \pm 0.01$ & $110.50 \pm 0.07$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the writing curve part 2. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_writing_second}
+\end{table}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|cccc|cc}
+    \toprule
+t [$\unit[]{s}$] & $I_\textrm{trans,corr}$ [$\unit[]{mV}$] & Range & $I_\textrm{diffr,corr}$ [$\unit[]{mV}$] & Range & $\eta$ [$\unit[]{10^{-3}}$] & $\Delta n$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$0$ & $545.4$ & $4$ & $615.7$ & $6$ & $11.16 \pm 0.01$ & $105.44 \pm 0.06$\\
+$64$ & $545.4$ & $4$ & $612.0$ & $6$ & $11.10 \pm 0.01$ & $105.13 \pm 0.06$\\
+$134$ & $544.8$ & $4$ & $608.5$ & $6$ & $11.05 \pm 0.01$ & $104.89 \pm 0.06$\\
+$185$ & $545.7$ & $4$ & $607.1$ & $6$ & $11.00 \pm 0.01$ & $104.68 \pm 0.06$\\
+$239$ & $544.6$ & $4$ & $602.4$ & $6$ & $10.94 \pm 0.01$ & $104.38 \pm 0.06$\\
+$309$ & $545.4$ & $4$ & $601.1$ & $6$ & $10.90 \pm 0.01$ & $104.19 \pm 0.06$\\
+$371$ & $545.4$ & $4$ & $597.7$ & $6$ & $10.84 \pm 0.01$ & $103.91 \pm 0.06$\\
+$434$ & $545.8$ & $4$ & $595.8$ & $6$ & $10.80 \pm 0.01$ & $103.70 \pm 0.06$\\
+$494$ & $545.8$ & $4$ & $593.1$ & $6$ & $10.75 \pm 0.01$ & $103.46 \pm 0.06$\\
+$548$ & $545.2$ & $4$ & $589.8$ & $6$ & $10.70 \pm 0.01$ & $103.24 \pm 0.06$\\
+$614$ & $545.8$ & $4$ & $588.6$ & $6$ & $10.67 \pm 0.01$ & $103.07 \pm 0.06$\\
+$674$ & $544.8$ & $4$ & $585.1$ & $6$ & $10.62 \pm 0.01$ & $102.86 \pm 0.06$\\
+$734$ & $545.6$ & $4$ & $584.2$ & $6$ & $10.59 \pm 0.01$ & $102.71 \pm 0.06$\\
+$792$ & $545.4$ & $4$ & $581.6$ & $6$ & $10.55 \pm 0.01$ & $102.51 \pm 0.06$\\
+$849$ & $545.4$ & $4$ & $579.9$ & $6$ & $10.52 \pm 0.01$ & $102.35 \pm 0.06$\\
+$913$ & $546.1$ & $4$ & $578.2$ & $6$ & $10.48 \pm 0.01$ & $102.14 \pm 0.06$\\
+$979$ & $546.1$ & $4$ & $576.1$ & $6$ & $10.44 \pm 0.01$ & $101.96 \pm 0.06$\\
+$1041$ & $545.3$ & $4$ & $574.1$ & $6$ & $10.42 \pm 0.01$ & $101.85 \pm 0.06$\\
+$1101$ & $545.9$ & $4$ & $572.4$ & $6$ & $10.38 \pm 0.01$ & $101.65 \pm 0.06$\\
+$1157$ & $545.5$ & $4$ & $570.6$ & $6$ & $10.35 \pm 0.01$ & $101.53 \pm 0.06$\\
+$1216$ & $545.6$ & $4$ & $569.0$ & $6$ & $10.32 \pm 0.01$ & $101.38 \pm 0.06$\\
+$1274$ & $546.0$ & $4$ & $567.7$ & $6$ & $10.29 \pm 0.01$ & $101.22 \pm 0.06$\\
+$1331$ & $546.0$ & $4$ & $566.3$ & $6$ & $10.27 \pm 0.01$ & $101.10 \pm 0.06$\\
+$1392$ & $545.5$ & $4$ & $564.6$ & $6$ & $10.25 \pm 0.01$ & $101.00 \pm 0.06$\\
+$1449$ & $545.6$ & $4$ & $562.9$ & $6$ & $10.21 \pm 0.01$ & $100.83 \pm 0.06$\\
+$1518$ & $545.5$ & $4$ & $562.0$ & $6$ & $10.20 \pm 0.01$ & $100.76 \pm 0.06$\\
+$1582$ & $546.3$ & $4$ & $561.0$ & $6$ & $10.16 \pm 0.01$ & $100.59 \pm 0.06$\\
+$1633$ & $546.6$ & $4$ & $560.4$ & $6$ & $10.15 \pm 0.01$ & $100.52 \pm 0.06$\\
+$1702$ & $545.5$ & $4$ & $558.1$ & $6$ & $10.13 \pm 0.01$ & $100.41 \pm 0.06$\\
+$1768$ & $545.7$ & $4$ & $557.1$ & $6$ & $10.11 \pm 0.01$ & $100.31 \pm 0.06$\\
+$1834$ & $545.9$ & $4$ & $555.9$ & $6$ & $10.08 \pm 0.01$ & $100.18 \pm 0.06$\\
+$1887$ & $545.8$ & $4$ & $555.3$ & $6$ & $10.07 \pm 0.01$ & $100.14 \pm 0.06$\\
+$1951$ & $546.7$ & $4$ & $554.6$ & $6$ & $10.04 \pm 0.01$ & $99.99 \pm 0.06$\\
+$2003$ & $546.5$ & $4$ & $553.8$ & $6$ & $10.03 \pm 0.01$ & $99.94 \pm 0.06$\\
+$2066$ & $546.0$ & $4$ & $551.5$ & $6$ & $10.00 \pm 0.01$ & $99.79 \pm 0.06$\\
+$2135$ & $546.9$ & $4$ & $551.9$ & $6$ & $9.99 \pm 0.01$ & $99.73 \pm 0.06$\\
+$2202$ & $546.6$ & $4$ & $551.0$ & $6$ & $9.98 \pm 0.01$ & $99.67 \pm 0.06$\\
+$2269$ & $546.1$ & $4$ & $549.2$ & $6$ & $9.96 \pm 0.01$ & $99.56 \pm 0.06$\\
+$2322$ & $546.2$ & $4$ & $548.4$ & $6$ & $9.94 \pm 0.01$ & $99.48 \pm 0.06$\\
+$2386$ & $546.4$ & $4$ & $548.1$ & $6$ & $9.93 \pm 0.01$ & $99.44 \pm 0.06$\\
+$2450$ & $546.7$ & $4$ & $547.8$ & $6$ & $9.92 \pm 0.01$ & $99.38 \pm 0.06$\\
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the erasing curve. 'Range' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta t = \unit[0.5]{s}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_erasing}
+\end{table}
+\begin{table}[H]
+  \centering
+\footnotesize
+\resizebox{1.0\textwidth}{!}{
+  \begin{tabular}{l|ccc|cccc|cc}
+    \toprule
+$x$ [$\unit[]{mm}$] & $\alpha$ [$\unit[]{^\circ}$] & $\gamma$ [$\unit[]{^\circ}$] & $\theta$ [$\unit[]{^\circ}$] &   $I_\textrm{t,c}$ [$\unit[]{mV}$] & R & $I_\textrm{d,c}$ [$\unit[]{mV}$] & R & $\eta$ [$\unit[]{10^{-3}}$]\\
+    \midrule[0.75pt]
+$0.75$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $8.35 \pm 0.13$ & $540.4$ & $4$ & $29.9$ & $8$ & $0.0055 \pm 0.0002$\\
+$0.76$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $8.36 \pm 0.13$ & $540.7$ & $4$ & $1.1$ & $8$ & $0.0002 \pm 0.0002$\\
+$0.77$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.37 \pm 0.13$ & $541.4$ & $4$ & $29.7$ & $8$ & $0.0055 \pm 0.0002$\\
+$0.78$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.37 \pm 0.13$ & $540.5$ & $4$ & $184.5$ & $8$ & $0.0341 \pm 0.0002$\\
+$0.79$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.38 \pm 0.13$ & $541.2$ & $4$ & $77.1$ & $8$ & $0.0142 \pm 0.0002$\\
+$0.80$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.39 \pm 0.13$ & $547.0$ & $4$ & $43.0$ & $8$ & $0.0079 \pm 0.0002$\\
+$0.81$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.40 \pm 0.13$ & $542.8$ & $4$ & $0.3$ & $8$ & $0.0001 \pm 0.0002$\\
+$0.82$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.41 \pm 0.13$ & $542.4$ & $4$ & $115.2$ & $8$ & $0.0212 \pm 0.0002$\\
+$0.83$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.41 \pm 0.13$ & $541.1$ & $4$ & $317.1$ & $8$ & $0.0586 \pm 0.0002$\\
+$0.84$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.42 \pm 0.13$ & $547.2$ & $4$ & $566.8$ & $8$ & $0.1036 \pm 0.0003$\\
+$0.85$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.43 \pm 0.13$ & $547.2$ & $4$ & $237.4$ & $8$ & $0.0434 \pm 0.0002$\\
+$0.86$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.44 \pm 0.13$ & $548.8$ & $4$ & $51.5$ & $8$ & $0.0094 \pm 0.0002$\\
+$0.87$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.45 \pm 0.13$ & $548.4$ & $4$ & $10.9$ & $8$ & $0.0020 \pm 0.0002$\\
+$0.88$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.46 \pm 0.13$ & $541.4$ & $4$ & $363.0$ & $8$ & $0.0670 \pm 0.0002$\\
+$0.89$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.46 \pm 0.13$ & $544.7$ & $4$ & $548.0$ & $8$ & $0.1006 \pm 0.0003$\\
+$0.90$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.47 \pm 0.13$ & $542.3$ & $4$ & $125.6$ & $7$ & $0.232 \pm 0.002$\\
+$0.91$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.48 \pm 0.13$ & $548.4$ & $4$ & $683.8$ & $8$ & $0.1247 \pm 0.0003$\\
+$0.92$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.49 \pm 0.13$ & $548.2$ & $4$ & $335.0$ & $8$ & $0.0611 \pm 0.0002$\\
+$0.93$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.50 \pm 0.13$ & $548.1$ & $4$ & $5.3$ & $8$ & $0.0010 \pm 0.0002$\\
+$0.94$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.50 \pm 0.14$ & $549.0$ & $4$ & $662.2$ & $8$ & $0.1206 \pm 0.0003$\\
+$0.95$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.51 \pm 0.14$ & $547.7$ & $4$ & $179.3$ & $7$ & $0.327 \pm 0.002$\\
+$0.96$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.52 \pm 0.14$ & $548.3$ & $4$ & $831.6$ & $7$ & $1.514 \pm 0.003$\\
+$0.97$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.53 \pm 0.14$ & $545.9$ & $4$ & $14.7$ & $5$ & $2.7 \pm 0.2$\\
+$0.98$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.54 \pm 0.14$ & $544.9$ & $4$ & $15.1$ & $5$ & $2.8 \pm 0.2$\\
+$0.99$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.54 \pm 0.14$ & $540.6$ & $4$ & $22.4$ & $5$ & $4.1 \pm 0.2$\\
+$1.00$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.55 \pm 0.14$ & $547.5$ & $4$ & $19.6$ & $5$ & $3.6 \pm 0.2$\\
+$1.01$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.56 \pm 0.14$ & $548.7$ & $4$ & $15.3$ & $5$ & $2.8 \pm 0.2$\\
+$1.02$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.57 \pm 0.14$ & $547.3$ & $4$ & $17.4$ & $5$ & $3.2 \pm 0.2$\\
+$1.03$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.58 \pm 0.14$ & $548.9$ & $4$ & $13.7$ & $5$ & $2.5 \pm 0.2$\\
+$1.04$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.58 \pm 0.14$ & $549.4$ & $4$ & $539.0$ & $7$ & $0.980 \pm 0.003$\\
+$1.05$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.59 \pm 0.14$ & $544.1$ & $4$ & $185.7$ & $7$ & $0.341 \pm 0.002$\\
+$1.06$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.60 \pm 0.14$ & $540.7$ & $4$ & $594.5$ & $8$ & $0.1099 \pm 0.0003$\\
+$1.07$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.61 \pm 0.14$ & $549.0$ & $4$ & $5.4$ & $8$ & $0.0010 \pm 0.0002$\\
+$1.08$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.62 \pm 0.14$ & $546.1$ & $4$ & $369.0$ & $8$ & $0.0676 \pm 0.0002$\\
+$1.09$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.62 \pm 0.14$ & $548.6$ & $4$ & $708.6$ & $8$ & $0.1291 \pm 0.0003$\\
+$1.10$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.63 \pm 0.14$ & $541.0$ & $4$ & $661.7$ & $8$ & $0.1223 \pm 0.0003$\\
+$1.11$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.64 \pm 0.14$ & $547.7$ & $4$ & $820.3$ & $8$ & $0.1497 \pm 0.0003$\\
+$1.12$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.65 \pm 0.14$ & $548.1$ & $4$ & $293.8$ & $8$ & $0.0536 \pm 0.0002$\\
+$1.13$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.66 \pm 0.15$ & $545.8$ & $4$ & $15.1$ & $8$ & $0.0028 \pm 0.0002$\\
+$1.14$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.66 \pm 0.15$ & $541.3$ & $4$ & $70.7$ & $8$ & $0.0131 \pm 0.0002$\\
+$1.15$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.67 \pm 0.15$ & $546.9$ & $4$ & $152.6$ & $8$ & $0.0279 \pm 0.0002$\\
+$1.16$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.68 \pm 0.15$ & $545.3$ & $4$ & $301.2$ & $8$ & $0.0552 \pm 0.0002$\\
+$1.17$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.69 \pm 0.15$ & $548.9$ & $4$ & $206.4$ & $8$ & $0.0376 \pm 0.0002$\\
+$1.18$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.70 \pm 0.15$ & $546.4$ & $4$ & $125.8$ & $8$ & $0.0230 \pm 0.0002$\\
+$1.19$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.70 \pm 0.15$ & $548.7$ & $4$ & $0.2$ & $8$ & $0.0000 \pm 0.0002$\\
+$1.20$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.71 \pm 0.15$ & $540.6$ & $4$ & $77.0$ & $8$ & $0.0142 \pm 0.0002$\\
+$1.21$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.72 \pm 0.15$ & $540.7$ & $4$ & $200.3$ & $8$ & $0.0370 \pm 0.0002$\\
+$1.22$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.73 \pm 0.15$ & $548.7$ & $4$ & $208.7$ & $8$ & $0.0380 \pm 0.0002$\\
+$1.23$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.74 \pm 0.15$ & $541.8$ & $4$ & $28.4$ & $8$ & $0.0052 \pm 0.0002$\\
+$1.24$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.74 \pm 0.15$ & $540.6$ & $4$ & $1.0$ & $8$ & $0.0002 \pm 0.0002$\\
+$1.25$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.75 \pm 0.15$ & $543.2$ & $4$ & $18.3$ & $8$ & $0.0034 \pm 0.0002$\\
+
+    \bottomrule
+  \end{tabular}
+}
+\caption{Data for the rocking curve. 'R' determines the amplification in $\unit[10^{-x}]{\frac{W}{mV}}$. $\Delta x = \unit[0.01]{mm}$, $\Delta I = \unit[0.14]{mV}$}
+  \label{tab:ana_rocking}
+\end{table}
+\Literatur{quellen}
+
+\end{appendix}
+\end{document}
+
+
+
