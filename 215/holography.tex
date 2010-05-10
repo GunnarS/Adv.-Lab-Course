@@ -10,22 +10,6 @@
 The object of this experiment is to get familiar with basic characteristics of holography. First holograms on holographic films and plates are recorded and reconstructed. In a second step we write a elementary hologram in a \linbo crystal and determine some important parameters. For all these purposes we use a $\unit[633]{nm}$ He-Ne laser.
 
 \section{Theoretical Background}
-\subsection{The Principle of Holography}
-Holography is a technique that is used to record and reconstruct an image such that the image appears to be projected away from the surface of the film footage and into the position of the original object at the time of recording. Aside from recording on film footage, holograms can be recorded into photorefractive crystals like lithium niobate. In order to record a hologram, coherent light must be split into a signal wave (that reflects off the object to be recorded) and a reference wave which is superposed onto the signal wave at the site of the film footage or crystal. The two beams produce an interference pattern with an intensity distribution as follows:
-\begin{align}
-I=|S+R|^2=|S|^2 + |R|^2 + S^* R + R^* S
-\end{align}
-Where $I$ is the intensity distribution, $R$, $R^*$ is the amplitude of the reference wave and its complex conjugate, and $S$, $S^*$ is the amplitude of the signal wave and its conjugate. This is the same situation as was discussed in the section about coherence and interference, where the interference term is composed of the mixing of the amplitudes of each respective wave. The interference term will give rise to the pattern of light and dark regions that are spatially projected onto the recording material. Once the film footage has been developed or the crystal's refractive index has become modulated, the transmittance (which is the fraction of light incident on the object which is able to pass through it) is related to the incident light according to:
-\begin{align}
-\tau = a-b \left| S+R \right|^2
-\end{align}
-When the footage or crystal is illuminated with the reference beam in addition, the transmittance becomes:
-\begin{align}
-R \tau &= R \left( a - b \left| S+R \right|^2 \right)\\
-       &= R \left( a - b \left[|S|^2 + |R|^2 + S^* R + R^* S \right] \right)
-\end{align}
-In this relation, the amplitude of the reference beam is modified by the factors $|S|^2$ and $|R|^2$, which results in the diffraction of the reference beam around its central axis. The term proportional to $RR^* S$ corresponds to a reconstructed signal beam with the original phase information but modified amplitude. The term proportional to $S^* R^2$ is the "conjugate signal beam" and it projects the real image of the object in the space behind the film footage. In this way, the hologram is reconstructed from the interference pattern that was written onto the holographic material.
-
 \subsection{Coherence and Interference}
 The theory of optical interference rests on the principle of linear superposition of electromagnetic fields. This principle, which is a consequence of \textsc{Maxwell}'s equation for the vacuum, states that the electric field produced at one point in space by several sources will be the vector sum of the contributions from each of the sources (linear superposition does not always hold in the presence of matter, however, as is widely exploited in non-linear optics). Consider two electric fields given by:
 \begin{align}
@@ -38,7 +22,30 @@ I = |\vec{E}|^2 = I_1 + I_2 + 2 |\vec{E}_1| |\vec{E}_2| \cos{\theta}
 \end{align}
 The final term is the interference term, and this gives rise to the spatial variations in intensity we see as the interference pattern between the two waves. If the two waves are mutually incoherent on the other hand, then the phase difference $\phi_1 - \phi_2$ varies randomly which causes the average value of $\cos{\theta}$ to fall to zero, and thus there is no interference produced.
 
-\subsection{Photorefractive Effect}
+\subsection{The Principle of Holography}
+Holography is a technique that is used to record and reconstruct an image such that the image appears to be projected away from the surface of the film footage and into the position of the original object at the time of recording. One can distinguish holograms by the technique used to store them. In the case of \textit{amplitude holograms} the local transmittance of the material is changed, whereas the local optical path length is modulated in the case of \textit{phase holograms}. This can either be obtained by changing the thickness of the medium or the refractive index locally. The latter technique uses the \textit{photorefractive effect} which is explained in section \ref{subsec:theo_photorefractive}. Holograms can be further distinguished by the geometry used for recording and reconstruction of the holograms. These are compared in figure \ref{fig:theo_holograms}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{graphics/theo_holographs}
+  \caption{Comparison of writing and reconstructing geometrys for transmission and reflection holograms}
+  \label{fig:theo_holograms}
+\end{figure}
+ In order to record a hologram, coherent light must be split into a signal wave (that reflects off the object to be recorded) and a reference wave which is superposed onto the signal wave at the site of the film footage or crystal. The principle mode of operation of amplitude holograms can be demonstrated in the following way: Two interfering beams will produce an interference pattern with an intensity distribution as follows:
+\begin{align}
+I=|S+R|^2=|S|^2 + |R|^2 + S^* R + R^* S
+\end{align}
+Where $I$ is the intensity distribution, $R$ is the complex amplitude of the reference wave, and $S$ is the amplitude of the signal wave. This is the same situation as was discussed in the section about coherence and interference, where the interference term is composed of the mixing of the amplitudes of each respective wave. The interference term will give rise to the pattern of light and dark regions that are spatially projected onto the recording material. Once the film footage has been developed, the transmittance is related to the incident light according to:
+\begin{align}
+\tau = a-b \left| S+R \right|^2
+\end{align}
+When the footage is illuminated with the reference beam, the transmitted intensity becomes:
+\begin{align}
+R \tau &= R \left( a - b \left| S+R \right|^2 \right)\\
+       &= R \left( a - b \left[|S|^2 + |R|^2 + S^* R + R^* S \right] \right)
+\end{align}
+In this relation, the amplitude of the reference beam is modified by the factors $|S|^2$ and $|R|^2$, which results in the diffraction of the reference beam around its central axis. The term proportional to $RR^* S$ corresponds to a reconstructed signal beam with the original phase information but modified amplitude. The term proportional to $S^* R^2$ is the "conjugate signal beam" and it projects the real image of the object in the space behind the film footage. In this way, the hologram is reconstructed from the interference pattern that was written onto the holographic material.
+
+\subsection{Photorefractive Effect}\label{subsec:theo_photorefractive}
 When a photorefractive material is illuminated by coherent light, the resulting interference pattern that forms within the crystal is able to locally change the refractive index of the crystal. This occurs in various stages. Firstly, within the illuminated regions of the dark and bright fringes, electrons from an impurity level (which is in between the conduction band and the valence band) may be excited into the conduction band, where they are able to diffuse freely. Due to the density of electrons moving into the conduction band from the illuminated-fringe regions, the net diffusion in the conduction band is towards the dark-fringe regions. The electrons move until they encounter a hole and as such return to the impurity level, but in general this will occur in the dark-fringe regions to which the electrons have drifted. The result is a higher density of holes in the illuminated-fringe regions, and a higher density of electrons in the dark-fringe regions. This modulated charge distribution causes a space-charge field to form within the crystal, which persists even when the crystal is no longer illuminated due to the fact that the electrons and holes are fixed in place. Finally the space-charge field, via the electro-optic effect, causes a modulation of the refractive index within the crystal. The pattern produced by the refractive index modulation can now be used as a diffraction grating that follows the spatial pattern of the original incident light.
 
 \section{Experimentation and Analysis}
