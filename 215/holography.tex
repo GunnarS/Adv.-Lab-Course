@@ -10,8 +10,20 @@
 
 \section{Theoretical Background}
 \subsection{first}
-\subsection{second}
-\subsection{etc}
+\subsection{Coherence and Interference}
+The theory of optical interference rests on the principle of linear superposition of electromagnetic fields. This principle, which is a consequence of \textsc{Maxwell}'s equation for the vacuum, states that the electric field produced at one point in space by several sources will be the vector sum of the contributions from each of the sources (linear superposition does not always hold in the presence of matter, however, as is widely exploited in non-linear optics). Consider two electric fields given by:
+\begin{align}
+\vec{E}_1 &= \vec{E}_0 \exp{i \left( \vec{k}_1 \cdot \vec{r} - \omega t + \phi_1 \right)} \\
+\vec{E}_2 &= \vec{E'}_0 \exp{i \left( \vec{k}_2 \cdot \vec{r} - \omega t + \phi_2 \right)}
+\end{align}
+The two fields (and resulting plane waves) are mutually coherent if the phase difference $\phi_1 - \phi_2$ is constant within a relevant range. When two coherent plane waves are incident on a point, the irradiance function caused by the superposition of the waves at that point becomes
+\begin{align}
+I = |\vec{E}|^2 = I_1 + I_2 + 2 |\vec{E}_1| |\vec{E}_2| \cos{\theta}
+\end{align}
+The final term is the interference term, and this gives rise to the spatial variations in intensity we see as the interference pattern between the two waves. If the two waves are mutually incoherent on the other hand, then the phase difference $\phi_1 - \phi_2$ varies randomly which causes the average value of $\cos{\theta}$ to fall to zero, and thus there is no interference produced.
+
+\subsection{Photorefractive Effect}
+When a photorefractive material is illuminated by coherent light, the resulting interference pattern that forms within the crystal is able to locally change the refractive index of the crystal. This occurs in various stages. Firstly, within the illuminated regions of the dark and bright fringes, electrons from an impurity level (which is in between the conduction band and the valence band) may be excited into the conduction band, where they are able to diffuse freely. Due to the density of electrons moving into the conduction band from the illuminated-fringe regions, the net diffusion in the conduction band is towards the dark-fringe regions. The electrons move until they encounter a hole and as such return to the impurity level, but in general this will occur in the dark-fringe regions to which the electrons have drifted. The result is a higher density of holes in the illuminated-fringe regions, and a higher density of electrons in the dark-fringe regions. This modulated charge distribution causes a space-charge field to form within the crystal, which persists even when the crystal is no longer illuminated due to the fact that the electrons and holes are fixed in place. Finally the space-charge field, via the electro-optic effect, causes a modulation of the refractive index within the crystal. The pattern produced by the refractive index modulation can now be used as a diffraction grating that follows the spatial pattern of the original incident light.
 
 \section{Experimentation and Analysis}
 \subsection{Transmission Hologram}
@@ -22,7 +34,7 @@ To take a transmission hologram we install the set-up of figure \ref{fig:aufbau_
   \caption{Set-up for taking a transmission hologram}
   \label{fig:aufbau_transmiss}
 \end{figure}
-First of all one has to consider that the object and the holographic film are illuminated homogeneously. But due to reasons of coherence it is also important that the difference in pathlength of object and reference beam does not exceed approximately $\unit[30]{cm}$. Furthermore one inserts an OD filter into the reference beam to adjust the intensities of both beams. If everything is aligned properly the light is switched off except for a small LED panel and the exposure of the holographic film is done for $\unit[5]{s}$. Then the film is developed like explained in the description~\cite{skript}. For reconstruction of the object the film is placed at its position of recording, the object is removed and the object beam is blocked. Now we are indeed able to observe a three dimensional transmission hologram at the former position of the object (see figure \ref{fig:transmiss}). Unfortunately we missed to remove the OD filter while exposing the film. Therefore our hologram is weaker than it was supposed to be. Additionally the angle range for observation is rather small.
+First of all one has to consider that the object and the holographic film are illuminated homogeneously. But due to reasons of coherence it is also important that the difference in pathlength of object and reference beam does not exceed approximately $\unit[30]{cm}$. Furthermore one inserts an OD filter into the reference beam to adjust the intensities of both beams. If everything is aligned properly the light is switched off except for a small LED panel and the exposure of the holographic film is done for $\unit[5]{s}$. Then the film is developed like explained in the description~\cite{skript}. For reconstruction of the object the film is placed at its position of recording, the object is removed and the object beam is blocked. Now we are indeed able to observe a three dimensional transmission hologram at the former position of the object (see figure \ref{fig:transmiss}), but the angle range for observation is rather small.
 \begin{figure}[H]
     \begin{minipage}{0.2\textheight}
   \includegraphics[width=1.0\textwidth]{graphics/transmiss1}
@@ -36,7 +48,23 @@ First of all one has to consider that the object and the holographic film are il
 \end{figure}
 If one uses normal light only a spectral pattern due to the mentioned grating-like structure of the developed film is observed.
 
-\subsubsection{Reflection Hologram}
+\subsection{Reflection Hologram}
+The next task is to record a reflection hologram. Again a homogeneous illumination of the holographic plate is important (set-up see figure \ref{fig:aufbau_refl}).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{graphics/aufbau_refl}
+  \caption{Set-up for taking a reflection hologram}
+  \label{fig:aufbau_refl}
+\end{figure}
+The object has to be placed behind the holographic plate, whereas the coating points towards the object. The advantage is that the difference in pathlength is minimal and the illumination of the holographic plate has maximal intensity.
+
+With this set-up we take two holograms. While the first one uses a non-processed holographic plate, the other one first of all is treated with an expanding agent. Actually this is done directly at the beginning of the experimentation, because it takes some time to dry. Both are illuminated for about $\unit[8]{s}$ and are then treated as before with respect to developement.
+
+\subsubsection*{Without Expanding Agent}
+Unfortunately we missed to remove the OD filter while exposing the film. Therefore our hologram is weaker than it was supposed to be. Therefore it was difficult to compare it with the transmission hologram. The reflection hologram should have a higher intensity and be more detailed than the transmission hologram. Furthermore the angle range of possible observation is expected to be larger. Indeed we could hardly see anything. Besides removing the filter also a longer illumination time could have improved the recording.
+
+\subsubsection*{With Expanding Agent}
+Using an expanding agent indeed promises an even better result than simple reflection holography, because after the expansion the coating contracts again such that the lattice constant gets smaller. Therefore it is possible to see the hologram at shorter wavelength. So we expect that it is not possible to reconstruct it with the red laser light we used. Instead it should be possible to observe the hologram with a bulb of high intensity emitting white light, because the \textsc{Bragg} condition will just "choose" the right wavelength as described in section ...\ref{cha:bragg}.... But in practise a big problem arose because of a very long drying time. In fact the expanded plate was not dry after more than 22 hours. We are of the opinion that this should have happened because of wet desiccant. Anyway it of course was not possible to take a holograph with a wet holographic plate. So unfortunately we could not confirm the above mentioned indications.
 
 
 \subsection{Holography with Lithium Niobate}
