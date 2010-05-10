@@ -50,9 +50,9 @@ In this part of the experiment we want to store a transmission phase hologram in
 	\caption{Setup for recording the writing curve \cite{skript}}
 	\label{fig:setup_writing}
 \end{figure}
-We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(20.0\pm 0.2)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{Snellius'} law:
+We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(10.0\pm 0.1)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{Snellius'} law:
 \begin{align}
-2\theta = 2\arcsin\left(\frac{n_\textrm{Air}}{n_\textrm{crystal}}\sin\gamma\right) = \unit[(8.6 \pm 0.2)]{^\circ}
+\theta = \arcsin\left(\frac{n_\textrm{Air}}{n_\textrm{crystal}}\sin\gamma\right) = \unit[(8.59 \pm 0.08)]{^\circ}
 \end{align}
 because the refractive index of the \linbo crystal is given by $n_\textrm{crystal} = \unit[2.29]{}$ for light with a wavelength of $\lambda = \unit[633]{nm}$.
 After having optimized the setup we illuminate the crystal with a tungsten lamp for around one hour to erase possibly existing holograms. 
@@ -118,7 +118,7 @@ This time we fit a function of the form  $\Delta n(t) = \Delta n(t=\infty) \cdot
 
 \subsubsection{Measuring a rocking curve}
 \label{subsubsec:ana_rocking}
-In the last part of the experiment we want to measure the dependency of the diffraction effiency $\eta$ on the angle of incidence $\theta$ of the reading beam. This angle can be changed by rotating the \linbo crystal by using a micrometer screw at the rotation stage on which the crystal is mounted. In order to gauge the micrometer screw we take a gauge curve by measuring the rotation angle $\alpha$ of the crystal when rotating the micrometer screw. The origin of the scale of the screw is defined arbritary. The data is shown in table \ref{tab:ana_gauge} and plotted in figure \ref{fig:ana_gauge}, which also displays a linear fit to the graph. The fit results read:
+In the last part of the experiment we want to measure the dependency of the diffraction effiency $\eta$ on the angle of incidence $\theta$ of the reading beam. This angle can be changed by rotating the \linbo crystal by using a micrometer screw at the rotation stage on which the crystal is mounted. In order to gauge the micrometer screw we take a gauge curve by measuring the rotation angle $\alpha$ of the crystal when rotating the micrometer screw. The origin of the scale of the screw is defined arbritary. The data is shown in table \ref{tab:ana_gauge} and plotted in figure \ref{fig:ana_gauge}, which also displays a linear fit to the graph. The fit result reads:
 \begin{align}
 \alpha(x) = \unit[(178.0 \pm 0.3)]{^\circ} + \unit[(1.9 \pm 0.2)]{\frac{^\circ}{mm}}\cdotp x
 \end{align}
@@ -155,11 +155,11 @@ $2.0 \pm 0.01$	&$182.0 \pm 0.05$\\
 \end{floatrow}
 \end{figure}
 With this gauge we are able to measure the rocking curve. Therefore we erase the crystal by illuminating it with the tungsten lamp for about 15 minutes and then rewrite a hologram as described in section \ref{subsubsec:ana_writing}. Due to the lack of time we just write the hologram for 30 instead of 40 minutes. After the recording is finished we attenuate the reading beam in order to minimize the erasing of the hologram and then measure the diffracted and the transmitted intensity for different rotation angles $\alpha$ of the crystal and therefore different angles of incidence $\theta$ of the reading beam. For $\alpha = \unit[180]{^\circ}$ the value of $\theta$ given in section \ref{subsubsec:ana_writing} holds.
-Our data is presented in table \ref{tab:ana_rocking} in the appendix. In figure \ref{fig:ana_rocking} the diffraction effiency $\eta$ is plotted versus $\theta$. We fit a function of the form $\eta(\theta) = a\frac{\sin^2(b(\theta-c))}{(\theta-c)^2}$ to the data. The fit yields:
+Our data is presented in table \ref{tab:ana_rocking} in the appendix. In figure \ref{fig:ana_rocking} the diffraction effiency $\eta$ is plotted versus $\theta$. We fit a function of the form XXX (reference to equation in theory part) to the data. The fit yields:
 \begin{align}
-a &= \unit[(1.457 \pm  0.007)\cdotp 10^{-6}]{}\\
-\notag b &= \unit[(51 \pm 1)]{}\\
-\notag c &= \unit[(4.3083 \pm 0.0007)]{^\circ}\\
+\theta_\textrm{Bragg} &= \unit[(8.5505 \pm 0.0007)]{^\circ}\\
+\notag \Lambda &= \unit[(1.03 \pm 0.03)]{\mu m}\\
+\notag \Delta n_0 &= \unit[(1.23 \pm  0.02)\cdotp 10^{-5}]{} 
 \end{align}
 \begin{figure}
 \resizebox{0.8\textwidth}{!}{
@@ -168,6 +168,7 @@ a &= \unit[(1.457 \pm  0.007)\cdotp 10^{-6}]{}\\
 	\caption{Rocking curve with fit}
 	\label{fig:ana_rocking}
 \end{figure}
+The function seems to describe the data quite well and the fit results seem to be reasonable. The value of $\Delta n_0$ is somehow twice as high as we would have expected from our writing curve. The bragg angle however is in accordance with the one we used in the previous sections.
 \section{Abstract}
 
 \begin{appendix}
@@ -314,57 +315,57 @@ $2450$ & $546.7$ & $4$ & $547.8$ & $6$ & $9.92 \pm 0.01$ & $99.38 \pm 0.06$\\
     \toprule
 $x$ [$\unit[]{mm}$] & $\alpha$ [$\unit[]{^\circ}$] & $\gamma$ [$\unit[]{^\circ}$] & $\theta$ [$\unit[]{^\circ}$] &   $I_\textrm{t,c}$ [$\unit[]{mV}$] & R & $I_\textrm{d,c}$ [$\unit[]{mV}$] & R & $\eta$ [$\unit[]{10^{-3}}$]\\
     \midrule[0.75pt]
-$0.75$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $4.10 \pm 0.02$ & $540.4$ & $4$ & $29.9$ & $8$ & $0.0055 \pm 0.0002$\\
-$0.76$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $4.11 \pm 0.02$ & $540.7$ & $4$ & $1.1$ & $8$ & $0.0002 \pm 0.0002$\\
-$0.77$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $4.12 \pm 0.02$ & $541.4$ & $4$ & $29.7$ & $8$ & $0.0055 \pm 0.0002$\\
-$0.78$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $4.13 \pm 0.02$ & $540.5$ & $4$ & $184.5$ & $8$ & $0.0341 \pm 0.0002$\\
-$0.79$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $4.13 \pm 0.02$ & $541.2$ & $4$ & $77.1$ & $8$ & $0.0142 \pm 0.0002$\\
-$0.80$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $4.14 \pm 0.02$ & $547.0$ & $4$ & $43.0$ & $8$ & $0.0079 \pm 0.0002$\\
-$0.81$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $4.15 \pm 0.02$ & $542.8$ & $4$ & $0.3$ & $8$ & $0.0001 \pm 0.0002$\\
-$0.82$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $4.16 \pm 0.02$ & $542.4$ & $4$ & $115.2$ & $8$ & $0.0212 \pm 0.0002$\\
-$0.83$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $4.17 \pm 0.02$ & $541.1$ & $4$ & $317.1$ & $8$ & $0.0586 \pm 0.0002$\\
-$0.84$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $4.18 \pm 0.02$ & $547.2$ & $4$ & $566.8$ & $8$ & $0.1036 \pm 0.0003$\\
-$0.85$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $4.18 \pm 0.02$ & $547.2$ & $4$ & $237.4$ & $8$ & $0.0434 \pm 0.0002$\\
-$0.86$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $4.19 \pm 0.02$ & $548.8$ & $4$ & $51.5$ & $8$ & $0.0094 \pm 0.0002$\\
-$0.87$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $4.20 \pm 0.02$ & $548.4$ & $4$ & $10.9$ & $8$ & $0.0020 \pm 0.0002$\\
-$0.88$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $4.21 \pm 0.02$ & $541.4$ & $4$ & $363.0$ & $8$ & $0.0670 \pm 0.0002$\\
-$0.89$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $4.22 \pm 0.02$ & $544.7$ & $4$ & $548.0$ & $8$ & $0.1006 \pm 0.0003$\\
-$0.90$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $4.23 \pm 0.02$ & $542.3$ & $4$ & $125.6$ & $7$ & $0.232 \pm 0.002$\\
-$0.91$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $4.23 \pm 0.02$ & $548.4$ & $4$ & $683.8$ & $8$ & $0.1247 \pm 0.0003$\\
-$0.92$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $4.24 \pm 0.02$ & $548.2$ & $4$ & $335.0$ & $8$ & $0.0611 \pm 0.0002$\\
-$0.93$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $4.25 \pm 0.02$ & $548.1$ & $4$ & $5.3$ & $8$ & $0.0010 \pm 0.0002$\\
-$0.94$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $4.26 \pm 0.02$ & $549.0$ & $4$ & $662.2$ & $8$ & $0.1206 \pm 0.0003$\\
-$0.95$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $4.27 \pm 0.02$ & $547.7$ & $4$ & $179.3$ & $7$ & $0.327 \pm 0.002$\\
-$0.96$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $4.28 \pm 0.02$ & $548.3$ & $4$ & $831.6$ & $7$ & $1.514 \pm 0.003$\\
-$0.97$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.28 \pm 0.02$ & $545.9$ & $4$ & $14.7$ & $5$ & $2.7 \pm 0.2$\\
-$0.98$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.29 \pm 0.02$ & $544.9$ & $4$ & $15.1$ & $5$ & $2.8 \pm 0.2$\\
-$0.99$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.30 \pm 0.02$ & $540.6$ & $4$ & $22.4$ & $5$ & $4.1 \pm 0.2$\\
-$1.00$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.31 \pm 0.03$ & $547.5$ & $4$ & $19.6$ & $5$ & $3.6 \pm 0.2$\\
-$1.01$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.32 \pm 0.03$ & $548.7$ & $4$ & $15.3$ & $5$ & $2.8 \pm 0.2$\\
-$1.02$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $4.33 \pm 0.03$ & $547.3$ & $4$ & $17.4$ & $5$ & $3.2 \pm 0.2$\\
-$1.03$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $4.33 \pm 0.03$ & $548.9$ & $4$ & $13.7$ & $5$ & $2.5 \pm 0.2$\\
-$1.04$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $4.34 \pm 0.03$ & $549.4$ & $4$ & $539.0$ & $7$ & $0.980 \pm 0.003$\\
-$1.05$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $4.35 \pm 0.03$ & $544.1$ & $4$ & $185.7$ & $7$ & $0.341 \pm 0.002$\\
-$1.06$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $4.36 \pm 0.03$ & $540.7$ & $4$ & $594.5$ & $8$ & $0.1099 \pm 0.0003$\\
-$1.07$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $4.37 \pm 0.03$ & $549.0$ & $4$ & $5.4$ & $8$ & $0.0010 \pm 0.0002$\\
-$1.08$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $4.38 \pm 0.03$ & $546.1$ & $4$ & $369.0$ & $8$ & $0.0676 \pm 0.0002$\\
-$1.09$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $4.38 \pm 0.03$ & $548.6$ & $4$ & $708.6$ & $8$ & $0.1291 \pm 0.0003$\\
-$1.10$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $4.39 \pm 0.03$ & $541.0$ & $4$ & $661.7$ & $8$ & $0.1223 \pm 0.0003$\\
-$1.11$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $4.40 \pm 0.03$ & $547.7$ & $4$ & $820.3$ & $8$ & $0.1497 \pm 0.0003$\\
-$1.12$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $4.41 \pm 0.03$ & $548.1$ & $4$ & $293.8$ & $8$ & $0.0536 \pm 0.0002$\\
-$1.13$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $4.42 \pm 0.03$ & $545.8$ & $4$ & $15.1$ & $8$ & $0.0028 \pm 0.0002$\\
-$1.14$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $4.43 \pm 0.03$ & $541.3$ & $4$ & $70.7$ & $8$ & $0.0131 \pm 0.0002$\\
-$1.15$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $4.44 \pm 0.03$ & $546.9$ & $4$ & $152.6$ & $8$ & $0.0279 \pm 0.0002$\\
-$1.16$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $4.44 \pm 0.03$ & $545.3$ & $4$ & $301.2$ & $8$ & $0.0552 \pm 0.0002$\\
-$1.17$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $4.45 \pm 0.03$ & $548.9$ & $4$ & $206.4$ & $8$ & $0.0376 \pm 0.0002$\\
-$1.18$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $4.46 \pm 0.03$ & $546.4$ & $4$ & $125.8$ & $8$ & $0.0230 \pm 0.0002$\\
-$1.19$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $4.47 \pm 0.03$ & $548.7$ & $4$ & $0.2$ & $8$ & $0.0000 \pm 0.0002$\\
-$1.20$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $4.48 \pm 0.03$ & $540.6$ & $4$ & $77.0$ & $8$ & $0.0142 \pm 0.0002$\\
-$1.21$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $4.49 \pm 0.03$ & $540.7$ & $4$ & $200.3$ & $8$ & $0.0370 \pm 0.0002$\\
-$1.22$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $4.49 \pm 0.03$ & $548.7$ & $4$ & $208.7$ & $8$ & $0.0380 \pm 0.0002$\\
-$1.23$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $4.50 \pm 0.03$ & $541.8$ & $4$ & $28.4$ & $8$ & $0.0052 \pm 0.0002$\\
-$1.24$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $4.51 \pm 0.03$ & $540.6$ & $4$ & $1.0$ & $8$ & $0.0002 \pm 0.0002$\\
-$1.25$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $4.52 \pm 0.03$ & $543.2$ & $4$ & $18.3$ & $8$ & $0.0034 \pm 0.0002$\\
+$0.75$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $8.35 \pm 0.13$ & $540.4$ & $4$ & $29.9$ & $8$ & $0.0055 \pm 0.0002$\\
+$0.76$ & $179.4 \pm 0.3$ & $9.4 \pm 0.3$ & $8.36 \pm 0.13$ & $540.7$ & $4$ & $1.1$ & $8$ & $0.0002 \pm 0.0002$\\
+$0.77$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.37 \pm 0.13$ & $541.4$ & $4$ & $29.7$ & $8$ & $0.0055 \pm 0.0002$\\
+$0.78$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.37 \pm 0.13$ & $540.5$ & $4$ & $184.5$ & $8$ & $0.0341 \pm 0.0002$\\
+$0.79$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.38 \pm 0.13$ & $541.2$ & $4$ & $77.1$ & $8$ & $0.0142 \pm 0.0002$\\
+$0.80$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.39 \pm 0.13$ & $547.0$ & $4$ & $43.0$ & $8$ & $0.0079 \pm 0.0002$\\
+$0.81$ & $179.5 \pm 0.3$ & $9.5 \pm 0.3$ & $8.40 \pm 0.13$ & $542.8$ & $4$ & $0.3$ & $8$ & $0.0001 \pm 0.0002$\\
+$0.82$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.41 \pm 0.13$ & $542.4$ & $4$ & $115.2$ & $8$ & $0.0212 \pm 0.0002$\\
+$0.83$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.41 \pm 0.13$ & $541.1$ & $4$ & $317.1$ & $8$ & $0.0586 \pm 0.0002$\\
+$0.84$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.42 \pm 0.13$ & $547.2$ & $4$ & $566.8$ & $8$ & $0.1036 \pm 0.0003$\\
+$0.85$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.43 \pm 0.13$ & $547.2$ & $4$ & $237.4$ & $8$ & $0.0434 \pm 0.0002$\\
+$0.86$ & $179.6 \pm 0.3$ & $9.6 \pm 0.3$ & $8.44 \pm 0.13$ & $548.8$ & $4$ & $51.5$ & $8$ & $0.0094 \pm 0.0002$\\
+$0.87$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.45 \pm 0.13$ & $548.4$ & $4$ & $10.9$ & $8$ & $0.0020 \pm 0.0002$\\
+$0.88$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.46 \pm 0.13$ & $541.4$ & $4$ & $363.0$ & $8$ & $0.0670 \pm 0.0002$\\
+$0.89$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.46 \pm 0.13$ & $544.7$ & $4$ & $548.0$ & $8$ & $0.1006 \pm 0.0003$\\
+$0.90$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.47 \pm 0.13$ & $542.3$ & $4$ & $125.6$ & $7$ & $0.232 \pm 0.002$\\
+$0.91$ & $179.7 \pm 0.3$ & $9.7 \pm 0.3$ & $8.48 \pm 0.13$ & $548.4$ & $4$ & $683.8$ & $8$ & $0.1247 \pm 0.0003$\\
+$0.92$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.49 \pm 0.13$ & $548.2$ & $4$ & $335.0$ & $8$ & $0.0611 \pm 0.0002$\\
+$0.93$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.50 \pm 0.13$ & $548.1$ & $4$ & $5.3$ & $8$ & $0.0010 \pm 0.0002$\\
+$0.94$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.50 \pm 0.14$ & $549.0$ & $4$ & $662.2$ & $8$ & $0.1206 \pm 0.0003$\\
+$0.95$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.51 \pm 0.14$ & $547.7$ & $4$ & $179.3$ & $7$ & $0.327 \pm 0.002$\\
+$0.96$ & $179.8 \pm 0.3$ & $9.8 \pm 0.3$ & $8.52 \pm 0.14$ & $548.3$ & $4$ & $831.6$ & $7$ & $1.514 \pm 0.003$\\
+$0.97$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.53 \pm 0.14$ & $545.9$ & $4$ & $14.7$ & $5$ & $2.7 \pm 0.2$\\
+$0.98$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.54 \pm 0.14$ & $544.9$ & $4$ & $15.1$ & $5$ & $2.8 \pm 0.2$\\
+$0.99$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.54 \pm 0.14$ & $540.6$ & $4$ & $22.4$ & $5$ & $4.1 \pm 0.2$\\
+$1.00$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.55 \pm 0.14$ & $547.5$ & $4$ & $19.6$ & $5$ & $3.6 \pm 0.2$\\
+$1.01$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.56 \pm 0.14$ & $548.7$ & $4$ & $15.3$ & $5$ & $2.8 \pm 0.2$\\
+$1.02$ & $179.9 \pm 0.3$ & $9.9 \pm 0.3$ & $8.57 \pm 0.14$ & $547.3$ & $4$ & $17.4$ & $5$ & $3.2 \pm 0.2$\\
+$1.03$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.58 \pm 0.14$ & $548.9$ & $4$ & $13.7$ & $5$ & $2.5 \pm 0.2$\\
+$1.04$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.58 \pm 0.14$ & $549.4$ & $4$ & $539.0$ & $7$ & $0.980 \pm 0.003$\\
+$1.05$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.59 \pm 0.14$ & $544.1$ & $4$ & $185.7$ & $7$ & $0.341 \pm 0.002$\\
+$1.06$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.60 \pm 0.14$ & $540.7$ & $4$ & $594.5$ & $8$ & $0.1099 \pm 0.0003$\\
+$1.07$ & $180.0 \pm 0.3$ & $10.0 \pm 0.3$ & $8.61 \pm 0.14$ & $549.0$ & $4$ & $5.4$ & $8$ & $0.0010 \pm 0.0002$\\
+$1.08$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.62 \pm 0.14$ & $546.1$ & $4$ & $369.0$ & $8$ & $0.0676 \pm 0.0002$\\
+$1.09$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.62 \pm 0.14$ & $548.6$ & $4$ & $708.6$ & $8$ & $0.1291 \pm 0.0003$\\
+$1.10$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.63 \pm 0.14$ & $541.0$ & $4$ & $661.7$ & $8$ & $0.1223 \pm 0.0003$\\
+$1.11$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.64 \pm 0.14$ & $547.7$ & $4$ & $820.3$ & $8$ & $0.1497 \pm 0.0003$\\
+$1.12$ & $180.1 \pm 0.3$ & $10.1 \pm 0.3$ & $8.65 \pm 0.14$ & $548.1$ & $4$ & $293.8$ & $8$ & $0.0536 \pm 0.0002$\\
+$1.13$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.66 \pm 0.15$ & $545.8$ & $4$ & $15.1$ & $8$ & $0.0028 \pm 0.0002$\\
+$1.14$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.66 \pm 0.15$ & $541.3$ & $4$ & $70.7$ & $8$ & $0.0131 \pm 0.0002$\\
+$1.15$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.67 \pm 0.15$ & $546.9$ & $4$ & $152.6$ & $8$ & $0.0279 \pm 0.0002$\\
+$1.16$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.68 \pm 0.15$ & $545.3$ & $4$ & $301.2$ & $8$ & $0.0552 \pm 0.0002$\\
+$1.17$ & $180.2 \pm 0.4$ & $10.2 \pm 0.4$ & $8.69 \pm 0.15$ & $548.9$ & $4$ & $206.4$ & $8$ & $0.0376 \pm 0.0002$\\
+$1.18$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.70 \pm 0.15$ & $546.4$ & $4$ & $125.8$ & $8$ & $0.0230 \pm 0.0002$\\
+$1.19$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.70 \pm 0.15$ & $548.7$ & $4$ & $0.2$ & $8$ & $0.0000 \pm 0.0002$\\
+$1.20$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.71 \pm 0.15$ & $540.6$ & $4$ & $77.0$ & $8$ & $0.0142 \pm 0.0002$\\
+$1.21$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.72 \pm 0.15$ & $540.7$ & $4$ & $200.3$ & $8$ & $0.0370 \pm 0.0002$\\
+$1.22$ & $180.3 \pm 0.4$ & $10.3 \pm 0.4$ & $8.73 \pm 0.15$ & $548.7$ & $4$ & $208.7$ & $8$ & $0.0380 \pm 0.0002$\\
+$1.23$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.74 \pm 0.15$ & $541.8$ & $4$ & $28.4$ & $8$ & $0.0052 \pm 0.0002$\\
+$1.24$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.74 \pm 0.15$ & $540.6$ & $4$ & $1.0$ & $8$ & $0.0002 \pm 0.0002$\\
+$1.25$ & $180.4 \pm 0.4$ & $10.4 \pm 0.4$ & $8.75 \pm 0.15$ & $543.2$ & $4$ & $18.3$ & $8$ & $0.0034 \pm 0.0002$\\
 
     \bottomrule
   \end{tabular}
