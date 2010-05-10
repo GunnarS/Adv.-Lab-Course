@@ -3,3 +3,9 @@
     author={Universität Bonn},
     year={2008}
 }
+
+\bib{weis}{article}{
+    title={Lithium Niobate: Summary of Physical Properties and Crystal Structure},
+    author={R. S. Weis and T. K. Gaylord},
+    year={1985}
+}
