@@ -10,7 +10,22 @@
 The object of this experiment is to get familiar with basic characteristics of holography. First holograms on holographic films and plates are recorded and reconstructed. In a second step we write a elementary hologram in a \linbo crystal and determine some important parameters. For all these purposes we use a $\unit[633]{nm}$ He-Ne laser.
 
 \section{Theoretical Background}
-\subsection{first}
+\subsection{The Principle of Holography}
+Holography is a technique that is used to record and reconstruct an image such that the image appears to be projected away from the surface of the film footage and into the position of the original object at the time of recording. Aside from recording on film footage, holograms can be recorded into photorefractive crystals like lithium niobate. In order to record a hologram, coherent light must be split into a signal wave (that reflects off the object to be recorded) and a reference wave which is superposed onto the signal wave at the site of the film footage or crystal. The two beams produce an interference pattern with an intensity distribution as follows:
+\begin{align}
+I=|S+R|^2=|S|^2 + |R|^2 + S^* R + R^* S
+\end{align}
+Where $I$ is the intensity distribution, $R$, $R^*$ is the amplitude of the reference wave and its complex conjugate, and $S$, $S^*$ is the amplitude of the signal wave and its conjugate. This is the same situation as was discussed in the section about coherence and interference, where the interference term is composed of the mixing of the amplitudes of each respective wave. The interference term will give rise to the pattern of light and dark regions that are spatially projected onto the recording material. Once the film footage has been developed or the crystal's refractive index has become modulated, the transmittance (which is the fraction of light incident on the object which is able to pass through it) is related to the incident light according to:
+\begin{align}
+\tau = a-b \left| S+R \right|^2
+\end{align}
+When the footage or crystal is illuminated with the reference beam in addition, the transmittance becomes:
+\begin{align}
+R \tau &= R \left( a - b \left| S+R \right|^2 \right)\\
+       &= R \left( a - b \left[|S|^2 + |R|^2 + S^* R + R^* S \right] \right)
+\end{align}
+In this relation, the amplitude of the reference beam is modified by the factors $|S|^2$ and $|R|^2$, which results in the diffraction of the reference beam around its central axis. The term proportional to $RR^* S$ corresponds to a reconstructed signal beam with the original phase information but modified amplitude. The term proportional to $S^* R^2$ is the "conjugate signal beam" and it projects the real image of the object in the space behind the film footage. In this way, the hologram is reconstructed from the interference pattern that was written onto the holographic material.
+
 \subsection{Coherence and Interference}
 The theory of optical interference rests on the principle of linear superposition of electromagnetic fields. This principle, which is a consequence of \textsc{Maxwell}'s equation for the vacuum, states that the electric field produced at one point in space by several sources will be the vector sum of the contributions from each of the sources (linear superposition does not always hold in the presence of matter, however, as is widely exploited in non-linear optics). Consider two electric fields given by:
 \begin{align}
