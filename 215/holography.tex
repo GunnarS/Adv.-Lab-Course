@@ -79,7 +79,7 @@ In this part of the experiment we want to store a transmission phase hologram in
 	\caption{Setup for recording the writing curve \cite{skript}}
 	\label{fig:setup_writing}
 \end{figure}
-We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(10.0\pm 0.1)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{Snellius'} law:
+We adjust the angle between the normal to the recording surface and the writing beams to $\gamma = \unit[(20.0\pm 0.2)]{^\circ}$. Therefore the angle between the two beams inside the crystal is given by the \textsc{Snellius'} law:
 \begin{align}
 \theta = \arcsin\left(\frac{n_\textrm{Air}}{n_\textrm{crystal}}\sin\gamma\right) = \unit[(8.59 \pm 0.08)]{^\circ}
 \end{align}
@@ -108,7 +108,7 @@ $8$ & $17.0 \pm 0.5$ & $25.0 \pm 0.5$\\
   \label{tab:ana_background}
 \end{table}
 
-The first curve we recorded this way behaved well for the first 20 minutes, but then began contrary to our expectation to fall again. Indeed a reflection went through the crystal again an therefore it was deleted right after beiing written. So we realigned our setup, dropped the data and restarted the measurement. The data is shown in tables \ref{tab:ana_writing_first} and \ref{tab:ana_writing_second} in the appendix and plotted in figure \ref{fig:ana_writing}.
+The first curve we recorded this way behaved well for the first 20 minutes, but then began contrary to our expectation to fall again.  This was most likely caused by a reflection hitting the crystal, which then erased the hologram. So we realigned our setup, dropped the data and restarted the measurement. The data is shown in tables \ref{tab:ana_writing_first} and \ref{tab:ana_writing_second} in the appendix and plotted in figure \ref{fig:ana_writing}.
 \begin{figure}[H]
 \begin{floatrow}
 \resizebox{0.5\textwidth}{!}{
@@ -121,7 +121,7 @@ The first curve we recorded this way behaved well for the first 20 minutes, but 
 	\label{fig:ana_writing}
 \end{floatrow}
 \end{figure}
-The change of the refractive index should be described by an exponential increase. Therefore we would like to fit a function of the form $\Delta n(t) = \Delta n(t=\infty) \left(1-e^{-\frac{t}{\tau_\textrm{w}}}\right)$ to the obtained graph. As one can clearly see in figure \ref{fig:ana_writing} our data is not described by such a function. No fit with reasonable parameters can be performed, therefore we reject it.
+The change of the refractive index should be described by an exponential increase. Therefore we would like to fit a function of the form $\Delta n(t) = \Delta n(t=\infty) \left(1-e^{-\frac{t}{\tau_\textrm{w}}}\right)$ to the obtained graph. As one can clearly see in figure \ref{fig:ana_writing} our data is not described by such a function. No fit with reasonable parameters can be performed, therefore we reject it. The bad behaviour of our curve as well as the relatively low intensity of the diffracted beam even after 50 minutes of recording is, considering the fact that the setup of the experiment is relativley simple and therefore not very error prone, really astonishing.
 
 \subsubsection{Recording the Erasing Curve}
 \label{subsubsec:ana_erasing}
@@ -144,7 +144,7 @@ This time we fit a function of the form  $\Delta n(t) = \Delta n(t=\infty) \cdot
 \notag \tau_\textrm{e} &= \unit[(1726 \pm 23)]{s}\\
 \notag \textrm{const.} &= \unit[(97.40 \pm 0.06)]{}\\
 \end{align}
-
+The time constant should in principle be larger than the one obtained from the writing curve because less intensity is available for the erasing process. Even with this time constant we should have reached half of the maximal change of diffraction index while recording the writing curve after about 20 minutes. This confirms our assumption that the writing process didn't really work.
 \subsubsection{Measuring a rocking curve}
 \label{subsubsec:ana_rocking}
 In the last part of the experiment we want to measure the dependency of the diffraction effiency $\eta$ on the angle of incidence $\theta$ of the reading beam. This angle can be changed by rotating the \linbo crystal by using a micrometer screw at the rotation stage on which the crystal is mounted. In order to gauge the micrometer screw we take a gauge curve by measuring the rotation angle $\alpha$ of the crystal when rotating the micrometer screw. The origin of the scale of the screw is defined arbritary. The data is shown in table \ref{tab:ana_gauge} and plotted in figure \ref{fig:ana_gauge}, which also displays a linear fit to the graph. The fit result reads:
