@@ -47,8 +47,10 @@ In this relation, the amplitude of the reference beam is modified by the factors
 
 \subsection{Photorefractive Effect}\label{subsec:theo_photorefractive}
 When a photorefractive material is illuminated by coherent light, the resulting interference pattern that forms within the crystal is able to locally change the refractive index of the crystal. This occurs in various stages. Firstly, within the illuminated regions of the dark and bright fringes, electrons from an impurity level (which is in between the conduction band and the valence band) may be excited into the conduction band, where they are able to diffuse freely. Due to the density of electrons moving into the conduction band from the illuminated-fringe regions, the net diffusion in the conduction band is towards the dark-fringe regions. The electrons move until they encounter a hole and as such return to the impurity level, but in general this will occur in the dark-fringe regions to which the electrons have drifted. The result is a higher density of holes in the illuminated-fringe regions, and a higher density of electrons in the dark-fringe regions. This modulated charge distribution causes a space-charge field to form within the crystal, which persists even when the crystal is no longer illuminated due to the fact that the electrons and holes are fixed in place. Finally the space-charge field, via the electro-optic effect, causes a modulation of the refractive index within the crystal. The pattern produced by the refractive index modulation can now be used as a diffraction grating that follows the spatial pattern of the original incident light.
+
+
 \subsection{Thick Holograms and the Bragg Condition}\label{subsec:theo_bragg}
-A hologram which is thick in comparison to the wavelength of the light used to record it, is called \textit{volume hologram}. In this case the \textsc{bragg} condition 
+A hologram which is thick in comparison to the wavelength of the light used to record it, is called \textit{volume hologram}. In this case the \textsc{Bragg} condition 
 \begin{align*}
 \sin(\theta_\textrm{Bragg}) = \frac{\lambda}{2n\Lambda}
 \end{align*}
@@ -60,7 +62,7 @@ One can define the diffraction effiency $\eta$ of holograms
 \end{align*}
 with $I_\textrm{diff}$ being the intensity of the diffracted and $I_\textrm{trans}$ the intensity of the transmitted beam. 
 
-For the diffraction effiency in transmission geometry of phase holograms the \textsc{kogelnik}'s law of coupled waves yields
+For the diffraction effiency in transmission geometry of phase holograms the \textsc{Kogelnik}'s law of coupled waves yields
 \begin{align}
 \eta = \nu^2 \frac{\sin^2\sqrt{\nu^2+\xi^2}}{\nu^2+\xi^2}
 \label{eq:kogelnik}
@@ -84,10 +86,12 @@ Lithium niobate (\linbo) is a ferroelectric and therefore also pyro- and piezoel
   \caption{Para- and ferroelectric phase of \linbo. Double cross-hatched circles denote lithium atoms, single cross-hatched ones niobium and big white circles depict oxygen atoms. ~\cite{weis}}
   \label{fig:linbo}
 \end{figure}
-As one can see, the \linbo crystal consists of planar sheets of oxygen atoms in a distorted hexagonal close-packed configuration. Furthermore the interstices are occupied one-third by lithium ions, one-third by niobium ions and one-third vacant. The order is depicted in the figure above.
+As one can see, the \linbo crystal consists of planar sheets of oxygen atoms in a distorted hexagonal close-packed configuration. Furthermore the interstices are occupied one-third by lithium ions, one-third by niobium ions and one-third are vacant. The order is depicted in the figure above.
 
 Indeed the positive ions in the interstices are displaced from their position of inversionsymmetry at temperatures below the \textsc{Curie} temperature (see figure \ref{fig:linbo} right). This leads to a non-vanishing spontaneous polarisation of the crystal changing with temperature as also the displacement in the elementary cell changes with temperature (primary pyroelectricity). Another contribution occurs due to thermal expansion of the crystal, because it is also piezoelectric (secondary pyroelectricity).
 \linbo is even a ferroelectric crystal which just means that its direction of polarisation is revertible by an external electric field. If not insulated the change of the spontaneous polarisation due to temperature change can be observed as a current.
+
+In the present case the crystal is additionaly doped with iron. The electrons from the Fe$^{2+}$-impurities are being excited into the conduction band by illumination, where they migrate because of miscellaneous transport mechanisms. In that way they cause the photorefractive effect of the crystal (see also section \ref{subsec:theo_photorefractive}).
 
 \section{Experimentation and Analysis}
 \subsection{Transmission Hologram}
@@ -128,7 +132,7 @@ With this set-up we take two holograms. While the first one uses a non-processed
 Unfortunately we missed to remove the OD filter while exposing the film. Therefore our hologram is weaker than it was supposed to be. Therefore it was difficult to compare it with the transmission hologram. The reflection hologram should have a higher intensity and be more detailed than the transmission hologram. Furthermore the angle range of possible observation is expected to be larger. Indeed we could hardly see anything. Besides removing the filter also a longer illumination time could have improved the recording.
 
 \subsubsection*{With Expanding Agent}
-Using an expanding agent indeed promises an even better result than simple reflection holography, because after the expansion the coating contracts again such that the lattice constant gets smaller. Therefore it is possible to see the hologram at shorter wavelength. So we expect that it is not possible to reconstruct it with the red laser light we used. Instead it should be possible to observe the hologram with a bulb of high intensity emitting white light, because the \textsc{Bragg} condition will just "choose" the right wavelength as described in section ...\ref{cha:bragg}.... But in practise a big problem arose because of a very long drying time. In fact the expanded plate was not dry after more than 22 hours. We are of the opinion that this should have happened because of wet desiccant. Anyway it of course was not possible to take a holograph with a wet holographic plate. So unfortunately we could not confirm the above mentioned indications.
+Using an expanding agent indeed promises an even better result than simple reflection holography, because after the expansion the coating contracts again such that the lattice constant gets smaller. Therefore it is possible to see the hologram at shorter wavelength. So we expect that it is not possible to reconstruct it with the red laser light we used. Instead it should be possible to observe the hologram with a bulb of high intensity emitting white light, because the \textsc{Bragg} condition will just "choose" the right wavelength as described in section \ref{subsec:theo_bragg}. But in practise a big problem arose because of a very long drying time. In fact the expanded plate was not dry after more than 22 hours. We are of the opinion that this should have happened because of wet desiccant. Anyway it of course was not possible to take a holograph with a wet holographic plate. So unfortunately we could not confirm the above mentioned indications.
 
 
 \subsection{Holography with Lithium Niobate}
@@ -261,7 +265,15 @@ Our data is presented in table \ref{tab:ana_rocking} in the appendix. In figure 
 	\label{fig:ana_rocking}
 \end{figure}
 The function seems to describe the data quite well and the fit results seem to be reasonable. The value of $\Delta n_0$ is somehow twice as high as we would have expected from our writing curve. The bragg angle however is in accordance with the one we used in the previous sections.
+
 \section{Abstract}
+First of all, we successfully recorded the transmission hologram and the reflection hologram without using the expanding agend. Unfortunately we missed to remove the OD filter while exposing the holographic plate. Therefore our hologram is weaker than it was supposed to be.
+
+On account of a wet holographic plate we were not able to successfully use the expanded plate.
+
+Furthermore our writing curve shows an unexpected behaviour. No fit with reasonable parameters can be performed, therefore we reject it.
+
+Finally our measured erasing and \textsc{Rocking} curve are quite nice and show all the expected characteristics.
 
 \begin{appendix}
 \section{Tables}
